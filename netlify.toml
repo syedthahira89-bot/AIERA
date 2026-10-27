@@ -1,0 +1,13 @@
+# Netlify reads this automatically when you import the repo.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22.23.4"
+
+# Serve Astro's custom 404 page for unknown URLs
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

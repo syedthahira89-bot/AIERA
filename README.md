@@ -63,9 +63,10 @@ Reading time is calculated automatically. Code blocks get syntax highlighting an
 
 ## Deploy
 
-The build is a plain static site, so any static host works:
+The build is a plain static site, so any static host works. Node.js 22.23.4 is pinned in `.nvmrc`.
 
-- **Netlify** or **Vercel**: import the GitHub repo. Build command `npm run build`, output folder `dist`.
-- **Cloudflare Pages**: same settings, and set the `NODE_VERSION` environment variable to `22.23.4` or newer.
+- **Netlify** (recommended): import the GitHub repo. `netlify.toml` already sets the build command (`npm run build`), the output folder (`dist`) and the Node version, so the defaults just work.
+- **Vercel**: import the repo, choose the Astro preset, and set the Node.js version to 22.x in Project Settings.
+- **Cloudflare Pages**: build command `npm run build`, output folder `dist`, and the environment variable `NODE_VERSION=22.23.4`.
 
 Then point the `aiera.com` domain at the host. RSS (`/rss.xml`) and a sitemap (`/sitemap-index.xml`) are generated automatically.
