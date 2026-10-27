@@ -1,38 +1,62 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE } from '../data/site';
+import { getPosts } from '../lib/posts';
+
+const [latest] = await getPosts();
 ---
-<BaseLayout title="About" description="Who writes AIERA, how we choose topics, and how we check our work.">
+<BaseLayout title="About" description={`Meet ${SITE.author.name}, the tech futurist behind AIERA, a blog about AI's bright side.`}>
   <section class="page">
     <div class="wrap page-inner">
-      <h1>About AIERA</h1>
-      <p class="lede">AIERA explains how modern AI works for people who are curious enough to want the real mechanism, not just the headline.</p>
+      <h1>About me</h1>
+      <p class="lede">Hi, I’m {SITE.author.name}, and I’m betting on a future that’s bright, automated, and built for human flourishing.</p>
+
       <div class="prose">
-        <h2>Why this blog exists</h2>
-        <p>Most writing about AI sits at one of two extremes: hype with no detail, or research papers that assume years of background. AIERA sits in between. Every article takes one idea, such as attention, overfitting or reward hacking, and explains it with real numbers, short code you can run and diagrams you can explore.</p>
+        <p>Many headlines today present AI as something to fear. Look a little deeper, though, and a far more hopeful story is unfolding. AI is helping solve complex medical challenges, taking on repetitive tasks, and giving us something truly valuable: more time to be human.</p>
+        <p>This blog is for the curious, the tech-forward, and the optimists. Whether you work in AI, love following the latest innovations, or simply wonder what tomorrow will look like, you’re in the right place.</p>
 
-        <h2>Who it is for</h2>
-        <ul>
-          <li>Developers moving into machine learning.</li>
-          <li>Students who want intuition alongside the equations.</li>
-          <li>Product people and founders who need to understand what models can and cannot do.</li>
-          <li>Anyone who reads about AI every day and wants to know how it actually works.</li>
-        </ul>
-
-        <h2>How we write</h2>
-        <p>Each article is labelled Beginner, Intermediate or Advanced so you know what background to expect. We link to the original papers, run every code sample before publishing, and add an "Updated" date when something in a post changes.</p>
-
-        <h2>Who we are</h2>
-        <p>{SITE.author.bio}</p>
-        <blockquote><p>Replace this section with your own story: your name, background, and why you started AIERA. Readers trust a blog more when they can see who is behind it.</p></blockquote>
-
-        <h2>Get in touch</h2>
-        <p>Found a mistake, or want us to cover a topic? Visit the <a href="/contact/">contact page</a>.</p>
+        <h2>Why I focus on the bright side</h2>
+        <p>As a tech futurist, I follow where AI and machine learning are heading and explore what those advancements mean for everyday life. Technology matters, but its positive impact on people matters most.</p>
+        <p>Here’s what you’ll find on this blog:</p>
       </div>
+
+      <ul class="themes">
+        <li>
+          <h3>Smarter living</h3>
+          <p>How AI is improving personal health, wellness, and everyday productivity.</p>
+        </li>
+        <li>
+          <h3>Creative freedom</h3>
+          <p>How machine learning tools act as co-pilots that amplify human creativity.</p>
+        </li>
+        <li>
+          <h3>The new work paradigm</h3>
+          <p>How automation can create healthier, more balanced, and more meaningful careers.</p>
+        </li>
+      </ul>
+
+      <div class="prose">
+        <h2>When I’m offline</h2>
+        <p>When I’m not exploring the latest in AI, you’ll find me discovering new places, spending time with my family, or tending to my garden.</p>
+        <p class="closing">The future isn’t something that happens to us. We’re building it together. Let’s make it a future we’re excited to live in.</p>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="/#newsletter">Subscribe to the newsletter</a>
+        {latest && <a class="btn btn-quiet" href={`/blog/${latest.id}/`}>Read my latest post</a>}
+      </div>
+      <p class="note">The weekly newsletter brings a dose of data-backed tech optimism. Questions or ideas? <a href="/contact/">Get in touch</a>.</p>
     </div>
   </section>
 </BaseLayout>
 
 <style>
   .prose { margin-top: 32px; }
+  .themes { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 12px; }
+  .themes li { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 16px 20px; }
+  .themes h3 { font-size: var(--step-1); }
+  .themes p { color: var(--muted); margin-top: 4px; }
+  .closing { font-style: italic; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+  .note { margin-top: 16px; color: var(--muted); font-size: var(--step--1); }
 </style>

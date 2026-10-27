@@ -6,8 +6,8 @@ export const SITE = {
     'AIERA is a weekly blog for people who want more than headlines about AI. Each piece explains one idea in machine learning with real numbers, small code you can run, and diagrams you can explore.',
   email: 'hello@aiera.com',
   author: {
-    name: 'The AIERA team',
-    bio: 'Engineers and researchers who write about machine learning the way we wish it had been explained to us.',
+    name: 'Thahira S',
+    bio: 'Tech futurist exploring how AI and machine learning can make everyday life healthier, more creative and more human.',
   },
   social: [
     { label: 'X', href: 'https://x.com/' },

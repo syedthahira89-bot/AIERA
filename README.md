@@ -55,7 +55,7 @@ Reading time is calculated automatically. Code blocks get syntax highlighting an
 
 ## Before launch
 
-- [ ] Write your own story in the "Who we are" section of `src/pages/about.astro`.
+- [x] Write your own story in `src/pages/about.astro`.
 - [ ] Set the real email and social links in `src/data/site.ts`.
 - [ ] Connect the newsletter: paste your provider's form URL into `newsletterAction` in `src/data/site.ts`. Until then the form tells visitors signups are not open yet.
 - [ ] Review `src/pages/privacy.astro` against the services you actually use.
