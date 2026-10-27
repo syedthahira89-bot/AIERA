@@ -12,17 +12,17 @@
   --spark: #F2C14E;
   --glow: rgba(79, 216, 245, 0.18);
 
-  /* Fraunces: soft high-contrast serif for headings. Geist: crisp sans for reading and UI. */
-  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
-  --font-ui: "Geist", "Segoe UI", system-ui, -apple-system, sans-serif;
+  /* Instrument Serif: slim, fashionable serif for headings (one weight, 400). Inter Tight: clear sans for reading and UI. */
+  --font-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --font-ui: "Inter Tight", "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-code: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
   --step--1: 0.875rem;
   --step-0: 1rem;
-  --step-1: 1.1875rem;
-  --step-2: 1.5rem;
-  --step-3: 2rem;
-  --step-4: clamp(2.4rem, 5.2vw, 3.75rem);
+  --step-1: 1.25rem;
+  --step-2: 1.7rem;
+  --step-3: 2.3rem;
+  --step-4: clamp(2.7rem, 5.8vw, 4.25rem);
 
   --radius: 6px;
   --measure: 66ch;
@@ -110,7 +110,7 @@ img { max-width: 100%; height: auto; }
 a { color: var(--accent-strong); text-underline-offset: 3px; }
 a:hover { color: var(--accent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height: 1.15; letter-spacing: -0.01em; text-wrap: balance; margin: 0; font-optical-sizing: auto; font-variation-settings: "SOFT" 50; }
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.1; letter-spacing: -0.005em; text-wrap: balance; margin: 0; }
 p { margin: 0; }
 [hidden] { display: none !important; }
 
@@ -144,14 +144,14 @@ section.block { padding-block: clamp(48px, 7vw, 88px); border-top: 1px solid var
 /* Simple content pages (About, Contact, Privacy) */
 .page { padding-block: clamp(40px, 6vw, 72px) clamp(56px, 8vw, 96px); }
 .page-inner { max-width: 720px; margin: 0 auto; }
-.page h1 { font-size: clamp(2.2rem, 4.8vw, 3.2rem); font-weight: 400; letter-spacing: -0.015em; }
-.page .lede { font-family: var(--font-display); font-size: 1.3rem; color: var(--muted); margin-top: 16px; line-height: 1.45; }
+.page h1 { font-size: clamp(2.5rem, 5.4vw, 3.6rem); font-weight: 400; letter-spacing: -0.01em; }
+.page .lede { font-family: var(--font-display); font-size: 1.5rem; color: var(--muted); margin-top: 16px; line-height: 1.45; }
 
 /* Long-form prose (articles and simple pages) */
 .prose { font-family: var(--font-ui); font-size: 1.125rem; line-height: 1.75; }
 .prose > * + * { margin-top: 1.1em; }
-.prose h2 { font-size: 1.75rem; margin-top: 1.8em; }
-.prose h3 { font-size: 1.3rem; margin-top: 1.5em; }
+.prose h2 { font-size: 2rem; margin-top: 1.8em; }
+.prose h3 { font-size: 1.5rem; margin-top: 1.5em; }
 .prose ul, .prose ol { padding-left: 1.4em; }
 .prose li + li { margin-top: 0.35em; }
 .prose img { border-radius: 10px; }
