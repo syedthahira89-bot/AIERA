@@ -26,6 +26,7 @@ export const TOPICS = [
   { name: 'Math foundations', slug: 'math-foundations', blurb: 'The calculus, linear algebra and probability under every model.' },
   { name: 'Training', slug: 'training', blurb: 'Losses, overfitting, regularization and making training behave.' },
   { name: 'MLOps', slug: 'mlops', blurb: 'Shipping, serving and monitoring models in production.' },
+  { name: 'AI in everyday life', slug: 'ai-in-everyday-life', blurb: 'Where AI came from, and how it is quietly improving daily life for people and the planet.' },
 ] as const;
 
 /** Colour palettes for the header picker. Colours here are only for the swatches; the real tokens live in global.css. */
