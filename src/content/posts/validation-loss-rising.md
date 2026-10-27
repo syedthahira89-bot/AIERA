@@ -2,8 +2,10 @@
 title: "Why your validation loss went up while training loss kept falling"
 description: "Overfitting, explained with one small dataset and three fixes you can try today."
 pubDate: 2026-10-08
-topic: Training
+topic: Training & deployment
 level: Beginner
+cover: /images/validation-loss-rising-cover.jpg
+coverAlt: "Training loss keeps falling while validation loss curves back up, with the best stopping point marked."
 ---
 
 You start training, both curves fall together, and everything looks fine. Then, a few epochs later, training loss keeps dropping while validation loss turns around and climbs. That gap is overfitting.

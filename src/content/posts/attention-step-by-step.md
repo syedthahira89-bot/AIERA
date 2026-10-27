@@ -2,7 +2,7 @@
 title: "Attention, step by step: how a transformer decides what to look at"
 description: "Queries, keys and values sound abstract until you follow a few tokens through the math by hand."
 pubDate: 2026-10-22
-topic: LLMs
+topic: Language models
 level: Intermediate
 featured: true
 cover: /images/attention-cover.jpg

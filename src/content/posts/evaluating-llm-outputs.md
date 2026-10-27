@@ -2,8 +2,10 @@
 title: "Evaluating LLM outputs without fooling yourself"
 description: "Contaminated benchmarks, position bias in model graders, and how to build an eval set you can trust."
 pubDate: 2026-08-27
-topic: LLMs
+topic: Language models
 level: Advanced
+cover: /images/evaluating-llm-outputs-cover.jpg
+coverAlt: "A scatter of model scores along a dashed trend line, with two check marks and one cross."
 ---
 
 It is easy to convince yourself a language model is better than it is. Evaluating open-ended text is hard, and the shortcuts people take tend to flatter the model.

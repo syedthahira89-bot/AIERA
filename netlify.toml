@@ -6,6 +6,27 @@
 [build.environment]
   NODE_VERSION = "22.23.4"
 
+# Old topic pages, merged into "Training & deployment" (permanent redirects so links and search results keep working)
+[[redirects]]
+  from = "/topics/math-foundations/"
+  to = "/topics/training-and-deployment/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/training/"
+  to = "/topics/training-and-deployment/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/reinforcement-learning/"
+  to = "/topics/training-and-deployment/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/mlops/"
+  to = "/topics/training-and-deployment/"
+  status = 301
+
 # Serve Astro's custom 404 page for unknown URLs
 [[redirects]]
   from = "/*"

@@ -22,7 +22,7 @@ Add a Markdown file to `src/content/posts/`. The file name becomes the URL, so `
 title: "Your article title"
 description: "One or two sentences shown in lists, search results and link previews."
 pubDate: 2026-11-05
-topic: LLMs              # one of the topics in src/data/site.ts
+topic: Language models   # one of the topics in src/data/site.ts
 level: Beginner          # Beginner, Intermediate or Advanced
 cover: /images/my-cover.jpg       # optional, put the file in public/images/
 coverAlt: "What the image shows"  # describe the cover for screen readers
@@ -42,12 +42,25 @@ $$
 
 Reading time is calculated automatically. Code blocks get syntax highlighting and a copy button.
 
+## Tracks and topics
+
+Every topic belongs to one of two tracks, set in `TRACKS` and `TOPICS` in `src/data/site.ts`:
+
+- **Understand AI**: Language models, Computer vision, Training & deployment.
+- **Live with AI**: AI in everyday life, Health & wellbeing, Planet & nature, Ethics & safety, How-tos.
+
+## Publishing rhythm
+
+One article every Thursday, alternating between the two tracks. Planned articles live in `UPCOMING` in `src/data/site.ts` and show as "coming soon" on topic pages, learning paths and the home page. An entry disappears on its own once a post with the same title is published, or once its date has passed. See `CONTENT_CALENDAR.md` for the plan.
+
 ## Where things live
 
 | What | File |
 | --- | --- |
 | Site name, tagline, email, social links, newsletter endpoint | `src/data/site.ts` |
-| Topics and learning paths | `src/data/site.ts` |
+| Tracks, topics, learning paths and upcoming articles | `src/data/site.ts` |
+| Glossary terms | `src/data/glossary.ts` |
+| Publishing plan | `CONTENT_CALENDAR.md` |
 | Colours, fonts, spacing | `src/styles/global.css` |
 | Logo and images | `public/images/` |
 | Home page | `src/pages/index.astro` |

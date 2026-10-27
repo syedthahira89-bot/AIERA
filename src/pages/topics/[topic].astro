@@ -1,24 +1,27 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostList from '../../components/PostList.astro';
-import { TOPICS } from '../../data/site';
-import { getPosts, type Post } from '../../lib/posts';
+import ComingUp from '../../components/ComingUp.astro';
+import { TOPICS, TRACKS } from '../../data/site';
+import { getPosts, upcoming, type Post, type Planned } from '../../lib/posts';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
   return TOPICS.map((t) => ({
     params: { topic: t.slug },
-    props: { topic: t, posts: posts.filter((p) => p.data.topic === t.name) },
+    props: { topic: t, posts: posts.filter((p) => p.data.topic === t.name), planned: upcoming(posts).filter((u) => u.topic === t.name) },
   }));
 }
 
-interface Props { topic: (typeof TOPICS)[number]; posts: Post[] }
-const { topic, posts } = Astro.props;
+interface Props { topic: (typeof TOPICS)[number]; posts: Post[]; planned: Planned[] }
+const { topic, posts, planned } = Astro.props;
+const track = TRACKS.find((t) => t.id === topic.track)!;
 ---
 <BaseLayout title={topic.name} description={`AIERA articles on ${topic.name}: ${topic.blurb}`}>
   <section class="page">
     <div class="wrap">
       <a class="back" href="/topics/">All topics</a>
+      <p class="track">{track.name}</p>
       <h1>{topic.name}</h1>
       <p class="lede">{topic.blurb}</p>
       <div class="list">
@@ -26,6 +29,12 @@ const { topic, posts } = Astro.props;
           ? <PostList posts={posts} />
           : <p class="empty">No articles on this topic yet. <a href="/#newsletter">Subscribe</a> to hear when the first one is out.</p>}
       </div>
+      {planned.length > 0 && (
+        <div class="soon">
+          <h2>Coming up</h2>
+          <ComingUp items={planned} />
+        </div>
+      )}
     </div>
   </section>
 </BaseLayout>
@@ -34,5 +43,8 @@ const { topic, posts } = Astro.props;
   .back { display: inline-flex; min-height: 44px; align-items: center; font-size: var(--step--1); font-weight: 500; text-decoration: none; }
   .lede { max-width: 52ch; }
   .list { margin-top: 40px; }
+  .track { font-size: var(--step--1); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-strong); margin-top: 8px; }
+  .soon { margin-top: 48px; }
+  .soon h2 { font-size: var(--step-2); margin-bottom: 16px; }
   .empty { color: var(--muted); padding-block: 24px; border-top: 1px solid var(--line); }
 </style>

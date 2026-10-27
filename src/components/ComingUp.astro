@@ -1,0 +1,28 @@
+---
+import { topicSlug } from '../data/site';
+import { formatPlanned, type Planned } from '../lib/posts';
+
+interface Props { items: Planned[]; showTopic?: boolean }
+const { items, showTopic = false } = Astro.props;
+---
+<ul class="coming-up">
+  {items.map((u) => (
+    <li>
+      <time datetime={u.date}>{formatPlanned(u.date)}</time>
+      <span class="title">{u.title}</span>
+      {showTopic && <a class="topic" href={`/topics/${topicSlug(u.topic)}/`}>{u.topic}</a>}
+    </li>
+  ))}
+</ul>
+
+<style>
+  .coming-up { list-style: none; margin: 0; padding: 0; display: grid; }
+  li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr) auto; gap: 4px 20px; align-items: baseline; padding-block: 14px; border-bottom: 1px solid var(--line); }
+  li:first-child { border-top: 1px solid var(--line); }
+  time { font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .title { color: var(--ink); }
+  .topic { font-size: var(--step--1); font-weight: 500; text-decoration: none; white-space: nowrap; }
+  @media (max-width: 560px) {
+    li { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>

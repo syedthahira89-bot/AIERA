@@ -1,41 +1,56 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { TOPICS } from '../../data/site';
-import { getPosts } from '../../lib/posts';
+import { TRACKS, topicsIn } from '../../data/site';
+import { getPosts, upcoming } from '../../lib/posts';
 
 const posts = await getPosts();
+const planned = upcoming(posts);
 ---
-<BaseLayout title="Topics" description="Browse AIERA articles by topic, from language models to MLOps.">
+<BaseLayout title="Topics" description="Browse AIERA by track: Understand AI explains how models work, Live with AI shows how to use them well.">
   <section class="page">
     <div class="wrap">
       <h1>Topics</h1>
-      <p class="lede">Pick an area to see every article on it, from the basics to the research edge.</p>
-      <ul class="topic-grid">
-        {TOPICS.map((t) => {
-          const n = posts.filter((p) => p.data.topic === t.name).length;
-          return (
-            <li>
-              <a href={`/topics/${t.slug}/`}>
-                <h2>{t.name}</h2>
-                <p>{t.blurb}</p>
-                <span>{n} article{n === 1 ? '' : 's'}</span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+      <p class="lede">Two tracks, one blog. Learn how AI works under the hood, or how to make it work for you.</p>
+      {TRACKS.map((track) => (
+        <section class="track" aria-labelledby={`track-${track.id}`}>
+          <div class="track-head">
+            <h2 id={`track-${track.id}`}>{track.name}</h2>
+            <p>{track.blurb}</p>
+          </div>
+          <ul class="topic-grid">
+            {topicsIn(track.id).map((t) => {
+              const n = posts.filter((p) => p.data.topic === t.name).length;
+              const soon = planned.filter((u) => u.topic === t.name).length;
+              return (
+                <li>
+                  <a href={`/topics/${t.slug}/`}>
+                    <h3>{t.name}</h3>
+                    <p>{t.blurb}</p>
+                    <span>{n ? `${n} article${n === 1 ? '' : 's'}` : 'New topic'}{soon > 0 && <em> · {soon} coming soon</em>}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))}
     </div>
   </section>
 </BaseLayout>
 
 <style>
   .lede { max-width: 52ch; }
-  .topic-grid { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 40px; }
+  .track { margin-top: clamp(40px, 6vw, 64px); }
+  .track-head { display: grid; gap: 8px; margin-bottom: 8px; }
+  .track-head h2 { font-size: var(--step-3); }
+  .track-head p { color: var(--muted); max-width: 60ch; }
+  .topic-grid { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 40px; }
   @media (max-width: 900px) { .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 560px) { .topic-grid { grid-template-columns: minmax(0, 1fr); } }
   a { display: grid; gap: 8px; padding-block: 24px; border-top: 1px solid var(--line); color: inherit; text-decoration: none; height: 100%; align-content: start; }
-  a:hover h2 { color: var(--accent-strong); }
-  h2 { font-size: var(--step-2); transition: color .15s; }
-  p { color: var(--muted); }
+  a:hover h3 { color: var(--accent-strong); }
+  h3 { font-size: var(--step-2); transition: color .15s; }
+  a p { color: var(--muted); }
   span { font-size: var(--step--1); color: var(--accent-strong); font-weight: 500; }
+  em { font-style: normal; color: var(--muted); font-weight: 400; }
 </style>

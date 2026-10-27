@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { GLOSSARY } from '../data/glossary';
+import { getPosts } from '../lib/posts';
+
+const posts = new Map((await getPosts()).map((p) => [p.id, p]));
+const slug = (term: string) => term.toLowerCase().replace(/\(.*?\)/g, '').trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const terms = [...GLOSSARY].sort((a, b) => a.term.localeCompare(b.term));
+const letters = [...new Set(terms.map((t) => t.term[0].toUpperCase()))];
+---
+<BaseLayout title="AI glossary" description="Plain-English definitions of the AI and machine learning terms used across AIERA, from attention to the Turing test.">
+  <section class="page">
+    <div class="wrap page-inner">
+      <h1>AI glossary</h1>
+      <p class="lede">Plain-English definitions of the terms you will meet on AIERA. Where an article explains a term in depth, it is linked.</p>
+
+      <nav class="letters" aria-label="Jump to letter">
+        {letters.map((l) => <a href={`#letter-${l}`}>{l}</a>)}
+      </nav>
+
+      {letters.map((l) => (
+        <section class="group" aria-labelledby={`letter-${l}`}>
+          <h2 id={`letter-${l}`}>{l}</h2>
+          <dl>
+            {terms.filter((t) => t.term[0].toUpperCase() === l).map((t) => {
+              const post = t.post ? posts.get(t.post) : undefined;
+              return (
+                <div class="entry" id={slug(t.term)}>
+                  <dt>{t.term}</dt>
+                  <dd>
+                    {t.def}
+                    {post && <a class="more" href={`/blog/${post.id}/`}>Read: {post.data.title}</a>}
+                  </dd>
+                </div>
+              );
+            })}
+          </dl>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .letters { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .letters a { display: grid; place-items: center; min-width: 40px; min-height: 40px; border-radius: var(--radius); color: var(--muted); text-decoration: none; font-weight: 600; }
+  .letters a:hover { color: var(--ink); background: var(--raise); }
+  .group { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; padding-block: 24px; border-bottom: 1px solid var(--line); }
+  .group h2 { font-size: var(--step-3); color: var(--accent-strong); line-height: 1; }
+  dl { margin: 0; display: grid; gap: 20px; }
+  .entry { scroll-margin-top: 6rem; }
+  .entry:target dt { color: var(--accent-strong); }
+  dt { font-weight: 600; font-size: var(--step-1); }
+  dd { margin: 4px 0 0; color: var(--muted); max-width: var(--measure); display: grid; gap: 6px; }
+  .more { font-size: var(--step--1); font-weight: 500; justify-self: start; }
+  @media (max-width: 560px) { .group { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
+</style>

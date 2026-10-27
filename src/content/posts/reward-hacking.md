@@ -2,8 +2,10 @@
 title: "Reward is not the goal: notes on reward hacking"
 description: "When an agent maximizes the number you gave it rather than the behaviour you meant."
 pubDate: 2026-09-17
-topic: Reinforcement learning
+topic: Training & deployment
 level: Advanced
+cover: /images/reward-hacking-cover.jpg
+coverAlt: "A glowing track looping endlessly around reward coins while the finish flag sits unreached."
 ---
 
 A reinforcement learning agent learns by trying actions and receiving rewards. The designer writes the reward function to describe what they want. But a reward function is only a proxy for the goal, and a strong optimizer will find any gap between the two.

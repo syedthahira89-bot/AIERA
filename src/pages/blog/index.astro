@@ -1,13 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostList from '../../components/PostList.astro';
-import { TOPICS } from '../../data/site';
+import { TRACKS, topicsIn } from '../../data/site';
 import { getPosts } from '../../lib/posts';
 
 const posts = await getPosts();
-const filters = [{ name: 'All', count: posts.length }, ...TOPICS.map((t) => ({ name: t.name, count: posts.filter((p) => p.data.topic === t.name).length }))];
+const countFor = (name: string) => posts.filter((p) => p.data.topic === name).length;
+// Topics without articles yet are left out of the filter until their first post lands.
+const groups = TRACKS.map((track) => ({ name: track.name, topics: topicsIn(track.id).filter((t) => countFor(t.name) > 0) }));
 ---
-<BaseLayout title="All articles" description="Every AIERA article on language models, computer vision, reinforcement learning, math and MLOps.">
+<BaseLayout title="All articles" description="Every AIERA article, from how language models and vision models work to using AI well in everyday life.">
   <section class="page-top">
     <div class="wrap">
       <div class="section-head">
@@ -23,10 +25,16 @@ const filters = [{ name: 'All', count: posts.length }, ...TOPICS.map((t) => ({ n
       </div>
       <div class="index">
         <div class="topics" role="group" aria-label="Filter by topic">
-          {filters.map((f) => (
-            <button class="topic-btn" type="button" data-topic={f.name} aria-pressed={f.name === 'All' ? 'true' : 'false'}>
-              {f.name}<span class="count">{f.count}</span>
-            </button>
+          <button class="topic-btn" type="button" data-topic="All" aria-pressed="true">All<span class="count">{posts.length}</span></button>
+          {groups.map((g) => (
+            <>
+              <p class="track-label">{g.name}</p>
+              {g.topics.map((t) => (
+                <button class="topic-btn" type="button" data-topic={t.name} aria-pressed="false">
+                  {t.name}<span class="count">{countFor(t.name)}</span>
+                </button>
+              ))}
+            </>
           ))}
         </div>
         <div>
@@ -57,6 +65,8 @@ const filters = [{ name: 'All', count: posts.length }, ...TOPICS.map((t) => ({ n
   .topic-btn:hover { color: var(--ink); background: var(--raise); }
   .topic-btn[aria-pressed="true"] { color: var(--ink); background: var(--raise); border-color: var(--line); }
   .count { font-variant-numeric: tabular-nums; font-weight: 400; }
+  .track-label { font: 600 0.75rem var(--font-ui); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 14px 12px 4px; }
+  @media (max-width: 860px) { .track-label { display: none; } }
   @media (max-width: 860px) { .topic-btn { border-color: var(--line); flex: none; } }
   .search { position: relative; max-width: 320px; width: 100%; }
   .search input {

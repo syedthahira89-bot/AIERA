@@ -3,7 +3,7 @@ export const SITE = {
   url: 'https://aiera.com',
   tagline: 'Learn how AI models actually work, one layer at a time.',
   description:
-    'AIERA is a weekly blog for people who want more than headlines about AI. Each piece explains one idea in machine learning with real numbers, small code you can run, and diagrams you can explore.',
+    'AIERA is a weekly blog for people who want more than headlines about AI. One track explains how models really work, with real numbers and small code you can run. The other shows how to live well with AI, for your health, your daily life and the planet.',
   email: 'hello@aiera.com',
   author: {
     name: 'Thahira S',
@@ -19,15 +19,47 @@ export const SITE = {
   newsletterAction: '',
 };
 
-export const TOPICS = [
-  { name: 'LLMs', slug: 'llms', blurb: 'Tokenizers, attention, training and evaluating large language models.' },
-  { name: 'Computer vision', slug: 'computer-vision', blurb: 'Convolutions, diffusion and how models learn to see.' },
-  { name: 'Reinforcement learning', slug: 'reinforcement-learning', blurb: 'Agents, rewards and what goes wrong when you optimize hard.' },
-  { name: 'Math foundations', slug: 'math-foundations', blurb: 'The calculus, linear algebra and probability under every model.' },
-  { name: 'Training', slug: 'training', blurb: 'Losses, overfitting, regularization and making training behave.' },
-  { name: 'MLOps', slug: 'mlops', blurb: 'Shipping, serving and monitoring models in production.' },
-  { name: 'AI in everyday life', slug: 'ai-in-everyday-life', blurb: 'Where AI came from, and how it is quietly improving daily life for people and the planet.' },
+/** The two reading tracks. Every topic belongs to one. */
+export const TRACKS = [
+  { id: 'understand', name: 'Understand AI', blurb: 'How models work under the hood, explained with real numbers and small code you can run.' },
+  { id: 'live', name: 'Live with AI', blurb: 'Using AI well in daily life: for your health, the planet and each other.' },
 ] as const;
+
+export type TrackId = (typeof TRACKS)[number]['id'];
+
+export const TOPICS = [
+  { name: 'Language models', slug: 'llms', track: 'understand', blurb: 'Tokenizers, attention, training and evaluating large language models.' },
+  { name: 'Computer vision', slug: 'computer-vision', track: 'understand', blurb: 'Convolutions, diffusion and how models learn to see.' },
+  { name: 'Training & deployment', slug: 'training-and-deployment', track: 'understand', blurb: 'The math under every model, making training behave, rewards that backfire, and keeping models healthy after launch.' },
+  { name: 'AI in everyday life', slug: 'ai-in-everyday-life', track: 'live', blurb: 'Where AI came from, and how it is quietly improving daily life for people and the planet.' },
+  { name: 'Health & wellbeing', slug: 'health', track: 'live', blurb: 'What AI can and cannot do for your body and mind, from smartwatch alerts to medical screening.' },
+  { name: 'Planet & nature', slug: 'planet', track: 'live', blurb: 'AI that forecasts floods, protects forests and wildlife, and cuts energy use, plus its own footprint.' },
+  { name: 'Ethics & safety', slug: 'ethics', track: 'live', blurb: 'Bias, privacy, misinformation and keeping people in charge of the decisions that matter.' },
+  { name: 'How-tos', slug: 'how-tos', track: 'live', blurb: 'Practical, beginner-friendly guides to getting real value from AI tools.' },
+] as const;
+
+export const topicsIn = (track: TrackId) => TOPICS.filter((t) => t.track === track);
+
+/** Publishing rhythm: one article every Thursday, alternating between the two tracks. */
+export const SCHEDULE = {
+  day: 'Thursday',
+  summary: 'A new article every Thursday, alternating between Understand AI and Live with AI.',
+};
+
+/**
+ * The editorial calendar (see CONTENT_CALENDAR.md). Entries show as "coming soon" on topic pages,
+ * in learning paths and on the home page. Once a post with the same title is published, its entry hides itself.
+ */
+export const UPCOMING = [
+  { date: '2026-10-29', topic: 'Language models', title: 'Embeddings as coordinates for meaning' },
+  { date: '2026-11-05', topic: 'Health & wellbeing', title: 'What your smartwatch\'s heart alerts can and cannot tell you' },
+  { date: '2026-11-12', topic: 'Training & deployment', title: 'Backpropagation with a pencil' },
+  { date: '2026-11-19', topic: 'Planet & nature', title: 'How AI forecasts floods a week ahead' },
+  { date: '2026-11-26', topic: 'Training & deployment', title: 'Serving a model behind an API' },
+  { date: '2026-12-03', topic: 'Ethics & safety', title: 'Why AI can be unfair, and how fairness gets tested' },
+  { date: '2026-12-10', topic: 'Language models', title: 'Pretraining versus fine-tuning' },
+  { date: '2026-12-17', topic: 'How-tos', title: 'Ask better questions: a beginner\'s guide to prompting' },
+] satisfies { date: string; topic: (typeof TOPICS)[number]['name']; title: string }[];
 
 /** Colour palettes for the header picker. Colours here are only for the swatches; the real tokens live in global.css. */
 export const PALETTES = [
@@ -52,6 +84,11 @@ export const PATHS = [
     title: 'Understanding language models',
     text: 'From text to tokens to attention to evaluation.',
     steps: ['tokenizers-quirks', 'Embeddings as coordinates for meaning', 'attention-step-by-step', 'Pretraining versus fine-tuning', 'evaluating-llm-outputs'],
+  },
+  {
+    title: 'Live better with AI',
+    text: 'No technical background needed. Practical ways AI can help you, your health and the planet.',
+    steps: ['ai-origins-everyday-life', 'Ask better questions: a beginner\'s guide to prompting', 'What your smartwatch\'s heart alerts can and cannot tell you', 'How AI forecasts floods a week ahead', 'Why AI can be unfair, and how fairness gets tested'],
   },
   {
     title: 'Machine learning in production',
