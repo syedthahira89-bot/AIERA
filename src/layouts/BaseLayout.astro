@@ -19,7 +19,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-palette="peach">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -45,7 +45,11 @@ const ogImage = new URL(image, Astro.site);
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" />
 
     <script is:inline>
-      try { const t = localStorage.getItem('aiera-theme'); if (t) document.documentElement.dataset.theme = t; } catch (_) {}
+      try {
+        const t = localStorage.getItem('aiera-theme'); if (t) document.documentElement.dataset.theme = t;
+        const p = localStorage.getItem('aiera-palette');
+        if (['peach', 'aqua', 'mint', 'lavender'].includes(p)) document.documentElement.dataset.palette = p;
+      } catch (_) {}
     </script>
   </head>
   <body>

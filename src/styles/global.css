@@ -27,17 +27,68 @@
   --measure: 66ch;
   color-scheme: dark;
 }
+/* Fallback light theme, used only if no palette is set */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --bg: #F2F6F9; --surface: #FFFFFF; --raise: #E4EDF3; --ink: #0B2131; --muted: #4A6274;
-    --line: #CBD9E3; --accent: #0A6F8C; --accent-strong: #075A72; --on-accent: #FFFFFF;
-    --spark: #8F5E00; --glow: rgba(10, 111, 140, 0.10); color-scheme: light;
+    --bg: #F4FAFB; --surface: #FFFFFF; --raise: #E3F1F4; --ink: #0B2131; --muted: #46606F;
+    --line: #CFE3E8; --accent: #0B7A8F; --accent-strong: #075A6B; --on-accent: #FFFFFF;
+    --spark: #946016; --glow: rgba(11, 122, 143, 0.10); color-scheme: light;
   }
 }
 :root[data-theme="light"] {
-  --bg: #F2F6F9; --surface: #FFFFFF; --raise: #E4EDF3; --ink: #0B2131; --muted: #4A6274;
-  --line: #CBD9E3; --accent: #0A6F8C; --accent-strong: #075A72; --on-accent: #FFFFFF;
-  --spark: #8F5E00; --glow: rgba(10, 111, 140, 0.10); color-scheme: light;
+  --bg: #F4FAFB; --surface: #FFFFFF; --raise: #E3F1F4; --ink: #0B2131; --muted: #46606F;
+  --line: #CFE3E8; --accent: #0B7A8F; --accent-strong: #075A6B; --on-accent: #FFFFFF;
+  --spark: #946016; --glow: rgba(11, 122, 143, 0.10); color-scheme: light;
+}
+
+/* Colour palettes (data-palette on <html>, chosen in the header picker; Peach Glow is the default).
+   Dark mode keeps the navy base and swaps only the accents; light mode swaps everything.
+   Every text colour below passes WCAG AA (4.5:1) on its background. */
+:root[data-palette="peach"]    { --accent: #FF9A66; --accent-strong: #FFB58F; --on-accent: #2A1206; --spark: #5ED3E8; --glow: rgba(255, 154, 102, 0.16); }
+:root[data-palette="mint"]     { --accent: #4ADE9F; --accent-strong: #86EFC0; --on-accent: #062016; --spark: #F5C451; --glow: rgba(74, 222, 159, 0.15); }
+:root[data-palette="lavender"] { --accent: #A996FF; --accent-strong: #C7BBFF; --on-accent: #160F33; --spark: #FF8FA6; --glow: rgba(169, 150, 255, 0.18); }
+
+@media (prefers-color-scheme: light) {
+  :root[data-palette="peach"]:not([data-theme="dark"]) {
+    --bg: #FFF7F2; --surface: #FFFFFF; --raise: #FCE9DE; --ink: #2A1A12; --muted: #6B5446;
+    --line: #F0D9CB; --accent: #C2410C; --accent-strong: #9A3412; --on-accent: #FFFFFF;
+    --spark: #0E7490; --glow: rgba(194, 65, 12, 0.10);
+  }
+  :root[data-palette="aqua"]:not([data-theme="dark"]) {
+    --bg: #F4FAFB; --surface: #FFFFFF; --raise: #E3F1F4; --ink: #0B2131; --muted: #46606F;
+    --line: #CFE3E8; --accent: #0B7A8F; --accent-strong: #075A6B; --on-accent: #FFFFFF;
+    --spark: #946016; --glow: rgba(11, 122, 143, 0.10);
+  }
+  :root[data-palette="mint"]:not([data-theme="dark"]) {
+    --bg: #F5FAF6; --surface: #FFFFFF; --raise: #E2F1E6; --ink: #10261D; --muted: #4A6357;
+    --line: #D2E6D8; --accent: #0F7B5F; --accent-strong: #0A5E48; --on-accent: #FFFFFF;
+    --spark: #946010; --glow: rgba(15, 123, 95, 0.10);
+  }
+  :root[data-palette="lavender"]:not([data-theme="dark"]) {
+    --bg: #F7F5FF; --surface: #FFFFFF; --raise: #ECE8FF; --ink: #1C1633; --muted: #5A5478;
+    --line: #DDD7F5; --accent: #5B3FD6; --accent-strong: #4429B8; --on-accent: #FFFFFF;
+    --spark: #B83654; --glow: rgba(91, 63, 214, 0.10);
+  }
+}
+:root[data-palette="peach"][data-theme="light"] {
+  --bg: #FFF7F2; --surface: #FFFFFF; --raise: #FCE9DE; --ink: #2A1A12; --muted: #6B5446;
+  --line: #F0D9CB; --accent: #C2410C; --accent-strong: #9A3412; --on-accent: #FFFFFF;
+  --spark: #0E7490; --glow: rgba(194, 65, 12, 0.10);
+}
+:root[data-palette="aqua"][data-theme="light"] {
+  --bg: #F4FAFB; --surface: #FFFFFF; --raise: #E3F1F4; --ink: #0B2131; --muted: #46606F;
+  --line: #CFE3E8; --accent: #0B7A8F; --accent-strong: #075A6B; --on-accent: #FFFFFF;
+  --spark: #946016; --glow: rgba(11, 122, 143, 0.10);
+}
+:root[data-palette="mint"][data-theme="light"] {
+  --bg: #F5FAF6; --surface: #FFFFFF; --raise: #E2F1E6; --ink: #10261D; --muted: #4A6357;
+  --line: #D2E6D8; --accent: #0F7B5F; --accent-strong: #0A5E48; --on-accent: #FFFFFF;
+  --spark: #946010; --glow: rgba(15, 123, 95, 0.10);
+}
+:root[data-palette="lavender"][data-theme="light"] {
+  --bg: #F7F5FF; --surface: #FFFFFF; --raise: #ECE8FF; --ink: #1C1633; --muted: #5A5478;
+  --line: #DDD7F5; --accent: #5B3FD6; --accent-strong: #4429B8; --on-accent: #FFFFFF;
+  --spark: #B83654; --glow: rgba(91, 63, 214, 0.10);
 }
 
 *, *::before, *::after { box-sizing: border-box; }

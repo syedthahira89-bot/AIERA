@@ -126,7 +126,7 @@
     run(false);
   });
   document.getElementById('gd-run')!.addEventListener('click', () => run(true));
-  new MutationObserver(draw).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+  new MutationObserver(draw).observe(root, { attributes: true, attributeFilter: ['data-theme', 'data-palette'] });
   matchMedia('(prefers-color-scheme: light)').addEventListener('change', draw);
   run(false);
   document.fonts?.ready.then(draw);

@@ -28,6 +28,14 @@ export const TOPICS = [
   { name: 'MLOps', slug: 'mlops', blurb: 'Shipping, serving and monitoring models in production.' },
 ] as const;
 
+/** Colour palettes for the header picker. Colours here are only for the swatches; the real tokens live in global.css. */
+export const PALETTES = [
+  { id: 'peach', name: 'Peach Glow', swatch: ['#FFF7F2', '#C2410C', '#0E7490'] },
+  { id: 'aqua', name: 'Soft Aqua', swatch: ['#F4FAFB', '#0B7A8F', '#946016'] },
+  { id: 'mint', name: 'Mint & Sunshine', swatch: ['#F5FAF6', '#0F7B5F', '#946010'] },
+  { id: 'lavender', name: 'Lavender Dawn', swatch: ['#F7F5FF', '#5B3FD6', '#B83654'] },
+] as const;
+
 export const LEVELS = ['Beginner', 'Intermediate', 'Advanced'] as const;
 
 export const topicSlug = (name: string) => TOPICS.find((t) => t.name === name)?.slug ?? 'all';
