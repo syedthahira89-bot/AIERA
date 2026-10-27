@@ -1,0 +1,175 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostMeta from '../../components/PostMeta.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { SITE, formatDate } from '../../data/site';
+import { getPosts, relatedPosts, type Post } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post, all: posts } }));
+}
+
+interface Props { post: Post; all: Post[] }
+const { post, all } = Astro.props;
+const { Content, headings } = await render(post);
+const toc = headings.filter((h) => h.depth === 2);
+const related = relatedPosts(post, all);
+const url = new URL(`/blog/${post.id}/`, Astro.site).toString();
+const share = [
+  { label: 'X', href: `https://x.com/intent/post?url=${encodeURIComponent(url)}&text=${encodeURIComponent(post.data.title)}` },
+  { label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}` },
+  { label: 'Reddit', href: `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(post.data.title)}` },
+];
+---
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.cover}
+  type="article"
+  publishedTime={post.data.pubDate}
+>
+  <article class="reader wrap">
+    <header class="reader-head">
+      <a class="back" href="/blog/">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        All articles
+      </a>
+      <h1>{post.data.title}</h1>
+      <p class="dek">{post.data.description}</p>
+      <PostMeta post={post} showDate linkTopic />
+      {post.data.updatedDate && <p class="updated">Updated {formatDate(post.data.updatedDate)}</p>}
+      {post.data.cover && <img class="cover" src={post.data.cover} width="622" height="350" alt={post.data.coverAlt ?? ''} />}
+    </header>
+
+    <div class="reader-grid">
+      {toc.length > 1 && (
+        <nav class="toc" aria-labelledby="toc-title">
+          <h2 id="toc-title">On this page</h2>
+          <ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+        </nav>
+      )}
+      <div class="prose">
+        <Content />
+      </div>
+    </div>
+
+    <footer class="reader-foot">
+      <div class="author">
+        <img src="/images/logo.jpg" width="56" height="56" alt="" />
+        <div>
+          <p class="author-name">Written by {SITE.author.name}</p>
+          <p>{SITE.author.bio} <a href="/about/">More about AIERA</a></p>
+        </div>
+      </div>
+      <div class="share">
+        <span>Share this article</span>
+        {share.map((s) => <a href={s.href} target="_blank" rel="noopener">{s.label}</a>)}
+        <button class="btn btn-quiet copy-link" type="button" data-url={url}>Copy link</button>
+      </div>
+    </footer>
+  </article>
+
+  <section class="block" aria-labelledby="related-title">
+    <div class="wrap">
+      <h2 id="related-title" class="related-title">Keep reading</h2>
+      <div class="related">
+        {related.map((r) => (
+          <a href={`/blog/${r.id}/`}>
+            <h3>{r.data.title}</h3>
+            <p>{r.data.description}</p>
+            <PostMeta post={r} />
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Newsletter />
+</BaseLayout>
+
+<style>
+  .reader { padding-block: 40px 72px; }
+  .reader-head { max-width: 760px; margin: 0 auto; display: grid; gap: 16px; }
+  .back { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: var(--step--1); font-weight: 500; text-decoration: none; justify-self: start; }
+  h1 { font-size: clamp(2.1rem, 4.6vw, 3.1rem); font-weight: 400; letter-spacing: -0.015em; }
+  .dek { font-family: var(--font-display); font-size: 1.3rem; color: var(--muted); line-height: 1.45; }
+  .reader-head :global(.meta) { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .updated { font-size: var(--step--1); color: var(--muted); margin-top: -8px; }
+  .cover { border-radius: 10px; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-top: 8px; }
+
+  .reader-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 720px) minmax(0, 1fr); gap: 40px; margin-top: 40px; }
+  .prose { grid-column: 2; min-width: 0; }
+  .toc { grid-column: 1; justify-self: end; width: 100%; max-width: 220px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 96px); align-self: start; }
+  .toc h2 { font-family: var(--font-ui); font-size: var(--step--1); font-weight: 600; margin-bottom: 10px; }
+  .toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; border-left: 1px solid var(--line); }
+  .toc a { display: block; padding: 4px 0 4px 14px; margin-left: -1px; border-left: 1px solid transparent; color: var(--muted); text-decoration: none; font-size: var(--step--1); line-height: 1.4; }
+  .toc a:hover, .toc a.active { color: var(--ink); border-left-color: var(--accent); }
+  @media (max-width: 1100px) {
+    .reader-grid { grid-template-columns: minmax(0, 1fr); max-width: 760px; margin-inline: auto; }
+    .prose, .toc { grid-column: 1; }
+    .toc { position: static; max-width: none; justify-self: stretch; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
+  }
+
+  .reader-foot { max-width: 760px; margin: 56px auto 0; padding-top: 28px; border-top: 1px solid var(--line); display: grid; gap: 24px; }
+  .author { display: flex; gap: 16px; align-items: flex-start; }
+  .author img { border-radius: 10px; flex: none; }
+  .author p { color: var(--muted); font-size: var(--step--1); }
+  .author .author-name { color: var(--ink); font-weight: 600; font-size: var(--step-0); margin-bottom: 4px; }
+  .share { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: var(--step--1); }
+  .share span { color: var(--muted); }
+  .share .btn { min-height: 36px; padding: 0 14px; }
+
+  .related-title { font-size: var(--step-3); margin-bottom: 28px; }
+  .related { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  @media (max-width: 860px) { .related { grid-template-columns: minmax(0, 1fr); gap: 0; } }
+  .related a { display: grid; gap: 10px; align-content: start; color: inherit; text-decoration: none; padding-block: 20px; border-top: 1px solid var(--line); }
+  .related a:hover h3 { color: var(--accent-strong); }
+  .related h3 { font-size: var(--step-1); transition: color .15s; }
+  .related p { color: var(--muted); font-size: var(--step--1); }
+</style>
+
+<script>
+  // Copy buttons on code blocks
+  document.querySelectorAll<HTMLPreElement>('.prose pre').forEach((pre) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'code-wrap';
+    pre.replaceWith(wrap);
+    wrap.append(pre);
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy-btn';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(pre.innerText);
+        btn.textContent = 'Copied';
+      } catch {
+        btn.textContent = 'Press Ctrl+C';
+        getSelection()?.selectAllChildren(pre);
+      }
+      setTimeout(() => (btn.textContent = 'Copy'), 2000);
+    });
+    wrap.append(btn);
+  });
+
+  // Copy article link
+  document.querySelector<HTMLButtonElement>('.copy-link')?.addEventListener('click', async (e) => {
+    const btn = e.currentTarget as HTMLButtonElement;
+    try { await navigator.clipboard.writeText(btn.dataset.url!); btn.textContent = 'Link copied'; }
+    catch { btn.textContent = btn.dataset.url!; }
+  });
+
+  // Highlight the current section in the table of contents
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a')];
+  if (links.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        links.forEach((a) => a.classList.toggle('active', a.hash === `#${entry.target.id}`));
+      }
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    links.forEach((a) => { const h = document.getElementById(decodeURIComponent(a.hash.slice(1))); if (h) io.observe(h); });
+  }
+</script>

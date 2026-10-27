@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../data/site';
+---
+<BaseLayout title="Privacy policy" description="What data AIERA collects and how it is used.">
+  <section class="page">
+    <div class="wrap page-inner">
+      <h1>Privacy policy</h1>
+      <p class="lede">Last updated October 27, 2026.</p>
+      <div class="prose">
+        <blockquote><p>This is a starting template, not legal advice. Update it to match the newsletter, analytics and hosting services you actually use, and have it reviewed if you operate in a regulated region.</p></blockquote>
+
+        <h2>What we collect</h2>
+        <p>If you subscribe to the newsletter, we store your email address so we can send you each issue. We do not ask for any other personal information.</p>
+        <p>We may use privacy-friendly analytics to count page views. These do not use cookies to track you across other websites.</p>
+
+        <h2>How we use it</h2>
+        <p>Your email address is used only to send the AIERA newsletter. We never sell or share it. Every issue includes a link to unsubscribe, and unsubscribing deletes your address from our list.</p>
+
+        <h2>Third-party services</h2>
+        <p>Our newsletter is delivered by an email provider that stores subscriber addresses on our behalf. Fonts are loaded from Google Fonts. Links to other sites are covered by those sites' own policies.</p>
+
+        <h2>Your rights</h2>
+        <p>You can ask us what data we hold about you, or ask us to delete it, by emailing <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose { margin-top: 32px; }
+</style>

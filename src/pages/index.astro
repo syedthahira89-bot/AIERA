@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostMeta from '../components/PostMeta.astro';
+import PostList from '../components/PostList.astro';
+import GradientDemo from '../components/GradientDemo.astro';
+import LearningPaths from '../components/LearningPaths.astro';
+import Newsletter from '../components/Newsletter.astro';
+import { SITE, TOPICS } from '../data/site';
+import { getPosts } from '../lib/posts';
+
+const posts = await getPosts();
+const featured = posts.find((p) => p.data.featured) ?? posts[0];
+const latest = posts.filter((p) => p.id !== featured.id).slice(0, 5);
+const counts = Object.fromEntries(TOPICS.map((t) => [t.name, posts.filter((p) => p.data.topic === t.name).length]));
+---
+<BaseLayout>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>{SITE.tagline}</h1>
+        <p class="hero-lede">{SITE.description}</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/blog/">Start reading</a>
+          <a class="btn btn-quiet" href="#newsletter">Get the weekly issue</a>
+        </div>
+      </div>
+      <a class="featured" href={`/blog/${featured.id}/`}>
+        {featured.data.cover && <img src={featured.data.cover} width="622" height="350" alt={featured.data.coverAlt ?? ''} />}
+        <div class="featured-body">
+          <span class="kicker">Featured this week</span>
+          <h2>{featured.data.title}</h2>
+          <p>{featured.data.description}</p>
+          <PostMeta post={featured} />
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="latest-title">
+    <div class="wrap latest">
+      <div>
+        <div class="section-head">
+          <h2 id="latest-title">Latest articles</h2>
+        </div>
+        <PostList posts={latest} />
+        <a class="btn btn-quiet more" href="/blog/">See all {posts.length} articles</a>
+      </div>
+      <aside aria-labelledby="topics-title">
+        <h2 id="topics-title">Browse by topic</h2>
+        <ul>
+          {TOPICS.map((t) => (
+            <li><a href={`/topics/${t.slug}/`}>{t.name}<span>{counts[t.name]}</span></a></li>
+          ))}
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <GradientDemo />
+  <LearningPaths posts={posts} />
+  <Newsletter />
+</BaseLayout>
+
+<style>
+  .hero { padding-block: clamp(40px, 7vw, 88px) clamp(40px, 6vw, 72px); position: relative; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: -40% -10% auto auto; width: 70vw; height: 70vw; max-width: 900px; max-height: 900px;
+    background: radial-gradient(closest-side, var(--glow), transparent); pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: center; position: relative; }
+  @media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } }
+  h1 { font-size: var(--step-4); letter-spacing: -0.02em; font-weight: 400; max-width: 16ch; }
+  .hero-lede { margin-top: 20px; font-size: var(--step-1); color: var(--muted); max-width: 46ch; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .featured { display: block; color: inherit; text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; transition: border-color .2s; }
+  .featured:hover { color: inherit; border-color: var(--accent); }
+  .featured img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .featured-body { padding: 22px 24px 24px; display: grid; gap: 10px; }
+  .featured h2 { font-size: var(--step-2); }
+  .featured p { color: var(--muted); }
+
+  .latest { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 56px; }
+  @media (max-width: 860px) { .latest { grid-template-columns: minmax(0, 1fr); gap: 40px; } }
+  .more { margin-top: 24px; }
+  aside h2 { font-size: var(--step-1); margin-bottom: 12px; }
+  aside ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+  aside a { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-radius: var(--radius); color: var(--muted); text-decoration: none; font-size: var(--step--1); font-weight: 500; }
+  aside a:hover { color: var(--ink); background: var(--raise); }
+  aside span { font-variant-numeric: tabular-nums; font-weight: 400; }
+</style>

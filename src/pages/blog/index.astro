@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import { TOPICS } from '../../data/site';
+import { getPosts } from '../../lib/posts';
+
+const posts = await getPosts();
+const filters = [{ name: 'All', count: posts.length }, ...TOPICS.map((t) => ({ name: t.name, count: posts.filter((p) => p.data.topic === t.name).length }))];
+---
+<BaseLayout title="All articles" description="Every AIERA article on language models, computer vision, reinforcement learning, math and MLOps.">
+  <section class="page-top">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h1>All articles</h1>
+          <p>Filter by topic, or search for a model, method, or term.</p>
+        </div>
+        <div class="search">
+          <label class="visually-hidden" for="search-input">Search articles</label>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="search-input" type="search" placeholder="Search articles" autocomplete="off" />
+        </div>
+      </div>
+      <div class="index">
+        <div class="topics" role="group" aria-label="Filter by topic">
+          {filters.map((f) => (
+            <button class="topic-btn" type="button" data-topic={f.name} aria-pressed={f.name === 'All' ? 'true' : 'false'}>
+              {f.name}<span class="count">{f.count}</span>
+            </button>
+          ))}
+        </div>
+        <div>
+          <p class="visually-hidden" id="result-status" aria-live="polite"></p>
+          <PostList posts={posts} />
+          <div class="empty" id="empty" hidden>
+            <p>No articles match your search. Try a broader term or clear the filters.</p>
+            <button class="btn btn-quiet" type="button" id="clear-filters">Clear filters</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-top { padding-block: clamp(40px, 6vw, 72px) clamp(56px, 8vw, 96px); }
+  h1 { font-size: clamp(2.2rem, 4.8vw, 3.2rem); font-weight: 400; letter-spacing: -0.015em; }
+  .index { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; }
+  @media (max-width: 860px) { .index { grid-template-columns: minmax(0, 1fr); gap: 24px; } }
+  .topics { display: grid; gap: 2px; align-content: start; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 84px); }
+  @media (max-width: 860px) { .topics { position: static; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; } }
+  .topic-btn {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 40px; padding: 8px 12px;
+    background: transparent; color: var(--muted); border: 1px solid transparent; border-radius: var(--radius);
+    font: 500 var(--step--1) var(--font-ui); text-align: left; cursor: pointer; white-space: nowrap; transition: color .15s, background-color .15s;
+  }
+  .topic-btn:hover { color: var(--ink); background: var(--raise); }
+  .topic-btn[aria-pressed="true"] { color: var(--ink); background: var(--raise); border-color: var(--line); }
+  .count { font-variant-numeric: tabular-nums; font-weight: 400; }
+  @media (max-width: 860px) { .topic-btn { border-color: var(--line); flex: none; } }
+  .search { position: relative; max-width: 320px; width: 100%; }
+  .search input {
+    width: 100%; min-height: 44px; padding: 0 14px 0 40px; font: 400 var(--step-0) var(--font-ui);
+    color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  }
+  .search input::placeholder { color: var(--muted); }
+  .search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+  .empty { padding: 40px 4px; color: var(--muted); border-top: 1px solid var(--line); display: grid; gap: 12px; justify-items: start; }
+</style>
+
+<script>
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>('.topic-btn')];
+  const rows = [...document.querySelectorAll<HTMLElement>('.article-row')];
+  const search = document.getElementById('search-input') as HTMLInputElement;
+  const empty = document.getElementById('empty')!;
+  const status = document.getElementById('result-status')!;
+  let topic = new URLSearchParams(location.search).get('topic') ?? 'All';
+
+  function apply() {
+    const q = search.value.trim().toLowerCase();
+    let shown = 0;
+    for (const row of rows) {
+      const match = (topic === 'All' || row.dataset.topic === topic) && (!q || row.dataset.search!.includes(q));
+      row.hidden = !match;
+      if (match) shown++;
+    }
+    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.topic === topic)));
+    empty.hidden = shown > 0;
+    status.textContent = `${shown} article${shown === 1 ? '' : 's'} shown`;
+  }
+  buttons.forEach((b) => b.addEventListener('click', () => { topic = b.dataset.topic!; apply(); }));
+  search.addEventListener('input', apply);
+  document.getElementById('clear-filters')!.addEventListener('click', () => { topic = 'All'; search.value = ''; apply(); search.focus(); });
+  apply();
+</script>

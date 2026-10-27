@@ -1,0 +1,18 @@
+---
+import { LEVELS, topicSlug, formatDate } from '../data/site';
+import { minutesFor, type Post } from '../lib/posts';
+
+interface Props { post: Post; showDate?: boolean; linkTopic?: boolean }
+const { post, showDate = false, linkTopic = false } = Astro.props;
+const { topic, level, pubDate } = post.data;
+const n = LEVELS.indexOf(level) + 1;
+---
+<div class="meta">
+  {linkTopic ? <a class="topic-tag" href={`/topics/${topicSlug(topic)}/`}>{topic}</a> : <span class="topic-tag">{topic}</span>}
+  <span class="level">
+    <span class="level-bars" aria-hidden="true">{[1, 2, 3].map((i) => <i class={i <= n ? 'on' : ''}></i>)}</span>
+    {level}
+  </span>
+  <span>{minutesFor(post)} min read</span>
+  {showDate && <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>}
+</div>

@@ -1,0 +1,50 @@
+---
+import { PATHS } from '../data/site';
+import type { Post } from '../lib/posts';
+
+interface Props { posts: Post[] }
+const byId = new Map(Astro.props.posts.map((p) => [p.id, p]));
+---
+<section class="block" id="paths" aria-labelledby="paths-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2 id="paths-title">Learning paths</h2>
+        <p>Read these in order. Each step builds on the one before it.</p>
+      </div>
+    </div>
+    <div class="paths">
+      {PATHS.map((path) => (
+        <div class="path">
+          <h3>{path.title}</h3>
+          <p>{path.text}</p>
+          <ol>
+            {path.steps.map((step) => {
+              const post = byId.get(step);
+              return post
+                ? <li><a href={`/blog/${post.id}/`}>{post.data.title}</a></li>
+                : <li><span>{step} <em>(coming soon)</em></span></li>;
+            })}
+          </ol>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .paths { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+  @media (max-width: 960px) { .paths { grid-template-columns: minmax(0, 1fr); gap: 32px; } }
+  h3 { font-size: var(--step-2); }
+  .path > p { color: var(--muted); margin-top: 8px; }
+  ol { list-style: none; counter-reset: step; margin: 20px 0 0; padding: 0; display: grid; }
+  li { counter-increment: step; display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; padding-block: 10px; position: relative; }
+  li::before {
+    content: counter(step); display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
+    border: 1px solid var(--line); color: var(--muted); font-size: 0.8125rem; font-variant-numeric: tabular-nums;
+    background: var(--bg); position: relative; z-index: 1;
+  }
+  li:not(:last-child)::after { content: ""; position: absolute; left: 13.5px; top: 38px; bottom: -10px; width: 1px; background: var(--line); }
+  li a, li span { padding-top: 3px; }
+  li span { color: var(--muted); }
+</style>

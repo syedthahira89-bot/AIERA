@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../data/site';
+---
+<BaseLayout title="About" description="Who writes AIERA, how we choose topics, and how we check our work.">
+  <section class="page">
+    <div class="wrap page-inner">
+      <h1>About AIERA</h1>
+      <p class="lede">AIERA explains how modern AI works for people who are curious enough to want the real mechanism, not just the headline.</p>
+      <div class="prose">
+        <h2>Why this blog exists</h2>
+        <p>Most writing about AI sits at one of two extremes: hype with no detail, or research papers that assume years of background. AIERA sits in between. Every article takes one idea, such as attention, overfitting or reward hacking, and explains it with real numbers, short code you can run and diagrams you can explore.</p>
+
+        <h2>Who it is for</h2>
+        <ul>
+          <li>Developers moving into machine learning.</li>
+          <li>Students who want intuition alongside the equations.</li>
+          <li>Product people and founders who need to understand what models can and cannot do.</li>
+          <li>Anyone who reads about AI every day and wants to know how it actually works.</li>
+        </ul>
+
+        <h2>How we write</h2>
+        <p>Each article is labelled Beginner, Intermediate or Advanced so you know what background to expect. We link to the original papers, run every code sample before publishing, and add an "Updated" date when something in a post changes.</p>
+
+        <h2>Who we are</h2>
+        <p>{SITE.author.bio}</p>
+        <blockquote><p>Replace this section with your own story: your name, background, and why you started AIERA. Readers trust a blog more when they can see who is behind it.</p></blockquote>
+
+        <h2>Get in touch</h2>
+        <p>Found a mistake, or want us to cover a topic? Visit the <a href="/contact/">contact page</a>.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose { margin-top: 32px; }
+</style>

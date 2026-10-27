@@ -1,0 +1,42 @@
+---
+import { SITE, TOPICS } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap grid">
+    <div class="about">
+      <a class="name" href="/">{SITE.name}</a>
+      <p>{SITE.tagline}</p>
+    </div>
+    <nav aria-label="Topics">
+      <h2>Topics</h2>
+      {TOPICS.map((t) => <a href={`/topics/${t.slug}/`}>{t.name}</a>)}
+    </nav>
+    <nav aria-label="Site">
+      <h2>AIERA</h2>
+      <a href="/blog/">All articles</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/rss.xml">RSS feed</a>
+      <a href="/privacy/">Privacy</a>
+    </nav>
+    <nav aria-label="Social">
+      <h2>Follow</h2>
+      {SITE.social.map((s) => <a href={s.href} rel="me noopener" target="_blank">{s.label}</a>)}
+    </nav>
+  </div>
+  <div class="wrap legal">© {year} {SITE.name}. Articles may be quoted with a link back.</div>
+</footer>
+
+<style>
+  .site-footer { border-top: 1px solid var(--line); padding-block: 48px 32px; color: var(--muted); font-size: var(--step--1); }
+  .grid { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 32px; }
+  @media (max-width: 760px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .about { grid-column: 1 / -1; } }
+  .name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; letter-spacing: 0.02em; }
+  .about p { margin-top: 8px; max-width: 34ch; }
+  nav { display: grid; gap: 8px; align-content: start; }
+  h2 { font-family: var(--font-ui); font-size: var(--step--1); font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  a { color: var(--muted); text-decoration: none; }
+  a:hover { color: var(--ink); text-decoration: underline; }
+  .legal { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); }
+</style>

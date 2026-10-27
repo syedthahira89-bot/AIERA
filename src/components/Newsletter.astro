@@ -1,0 +1,57 @@
+---
+import { SITE } from '../data/site';
+---
+<section class="block" id="newsletter" aria-labelledby="newsletter-title">
+  <div class="wrap newsletter">
+    <div>
+      <h2 id="newsletter-title">One idea, every Thursday</h2>
+      <p>The weekly AIERA issue brings the new article, a paper worth reading, and one small experiment to try yourself. It takes about ten minutes to read.</p>
+    </div>
+    <form class="subscribe" id="subscribe-form" method="post" action={SITE.newsletterAction || undefined} data-live={SITE.newsletterAction ? 'true' : 'false'} novalidate>
+      <label for="email-input">Email address</label>
+      <div class="row">
+        <input id="email-input" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="email-hint" required />
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </div>
+      <p class="hint" id="email-hint">No spam. Unsubscribe from any issue. Read our <a href="/privacy/">privacy policy</a>.</p>
+      <p class="error" id="email-error" role="alert" hidden>Enter an email address in the form name@example.com.</p>
+    </form>
+  </div>
+</section>
+
+<style>
+  .newsletter { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 64px; align-items: center; }
+  @media (max-width: 860px) { .newsletter { grid-template-columns: minmax(0, 1fr); } }
+  h2 { font-size: var(--step-3); }
+  .newsletter > div > p { color: var(--muted); margin-top: 12px; max-width: 46ch; }
+  .subscribe { display: grid; gap: 8px; }
+  label { font-size: var(--step--1); font-weight: 500; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; }
+  input {
+    flex: 1 1 220px; min-width: 0; min-height: 48px; padding: 0 14px; font: 400 var(--step-0) var(--font-ui);
+    color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  }
+  input[aria-invalid="true"] { border-color: var(--spark); }
+  .hint { font-size: var(--step--1); color: var(--muted); }
+  .error { font-size: var(--step--1); color: var(--spark); }
+  :global(.subscribe-done) { color: var(--accent-strong); font-weight: 500; }
+</style>
+
+<script>
+  const form = document.getElementById('subscribe-form') as HTMLFormElement | null;
+  if (form) {
+    const input = form.querySelector('input')!;
+    const error = document.getElementById('email-error')!;
+    form.addEventListener('submit', (e) => {
+      const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+      error.hidden = ok;
+      input.setAttribute('aria-invalid', String(!ok));
+      input.setAttribute('aria-describedby', ok ? 'email-hint' : 'email-error email-hint');
+      if (!ok) { e.preventDefault(); input.focus(); return; }
+      if (form.dataset.live === 'true') return; // real provider: let the browser submit
+      e.preventDefault();
+      // No provider configured yet (SITE.newsletterAction is empty), so say so rather than pretend.
+      form.innerHTML = '<p class="subscribe-done" role="status">Thanks for your interest. Email signups open soon, so your address was not saved yet.</p>';
+    });
+  }
+</script>

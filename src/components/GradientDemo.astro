@@ -1,0 +1,133 @@
+---
+// Interactive learning-rate demo: gradient descent on L(x) = x², where each step is x ← x(1 − 2η).
+---
+<section class="block" id="concept" aria-labelledby="concept-title">
+  <div class="wrap demo">
+    <div class="demo-copy">
+      <span class="kicker">Concept of the week</span>
+      <h2 id="concept-title">The learning rate decides whether training ever settles</h2>
+      <p>Gradient descent moves a parameter a little way downhill on every step. The learning rate sets how far. Here the loss is a simple bowl, so the best value of <em>x</em> is 0.</p>
+      <div class="formula">x ← x − η · dL/dx &nbsp;&nbsp; where L(x) = x²</div>
+      <p>Try a tiny rate, then something near 0.5, then push past 1.0. On this bowl every step multiplies <em>x</em> by (1 − 2η), so any rate above 1.0 makes each step overshoot further than the last.</p>
+      <a href="/blog/gradient-descent-felt/">Read the full article on gradient descent</a>
+    </div>
+    <div class="demo-panel">
+      <canvas id="gd-canvas" width="800" height="450" role="img" aria-label="Plot of the loss curve L of x equals x squared, with the path taken by gradient descent."></canvas>
+      <div class="controls">
+        <label for="lr-input">Learning rate η <output id="lr-output" for="lr-input">0.10</output>
+          <input id="lr-input" type="range" min="0.01" max="1.10" step="0.01" value="0.10" />
+        </label>
+        <button class="btn btn-primary" id="gd-run" type="button">Run 20 steps</button>
+      </div>
+      <div class="verdict" aria-live="polite">
+        <span class="pill" id="gd-pill" data-state="slow">Slow</span>
+        <span id="gd-text"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .demo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+  @media (max-width: 860px) { .demo { grid-template-columns: minmax(0, 1fr); } }
+  .demo-copy { display: grid; gap: 16px; justify-items: start; }
+  h2 { font-size: var(--step-3); }
+  .demo-copy p { color: var(--muted); max-width: 48ch; }
+  .formula { font-family: var(--font-code); font-size: var(--step--1); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; overflow-x: auto; max-width: 100%; }
+  .demo-panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 16px; min-width: 0; }
+  canvas { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; border-radius: var(--radius); background: var(--bg); }
+  .controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 16px; align-items: end; }
+  label { display: grid; gap: 6px; font-size: var(--step--1); color: var(--muted); }
+  output { color: var(--ink); font-family: var(--font-code); font-variant-numeric: tabular-nums; }
+  input[type="range"] { width: 100%; accent-color: var(--accent); min-height: 28px; }
+  .verdict { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; font-size: var(--step--1); color: var(--muted); }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-weight: 600; font-size: 0.8125rem; border: 1px solid currentColor; }
+  .pill[data-state="slow"] { color: var(--muted); }
+  .pill[data-state="good"] { color: var(--accent-strong); }
+  .pill[data-state="oscillating"], .pill[data-state="diverging"] { color: var(--spark); }
+</style>
+
+<script>
+  const root = document.documentElement;
+  const canvas = document.getElementById('gd-canvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d')!;
+  const lrInput = document.getElementById('lr-input') as HTMLInputElement;
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const X0 = -3.5, STEPS = 20, XR = 4, YMAX = 16;
+  let path: number[] = [], shown = 0, timer: number | undefined;
+
+  const computePath = (lr: number) => {
+    const pts = [X0];
+    for (let i = 0; i < STEPS; i++) pts.push(pts[i] * (1 - 2 * lr));
+    return pts;
+  };
+  const classify = (lr: number): [string, string, string] => {
+    if (lr > 1.0) return ['diverging', 'Diverging', 'Each step overshoots by more than the last, so the loss grows without limit.'];
+    if (Math.abs(lr - 1.0) < 1e-9) return ['oscillating', 'Stuck', 'At exactly 1.0, x flips between −3.5 and 3.5 forever.'];
+    if (lr > 0.5) return ['oscillating', 'Oscillating', 'Steps jump across the minimum and back. It still converges, but less directly.'];
+    if (lr >= 0.2) return ['good', 'Converging', 'Big enough to make progress, small enough to stay on one side of the minimum.'];
+    return ['slow', 'Slow', 'Every step heads the right way, but 20 steps are not enough to reach the bottom.'];
+  };
+  const fmt = (v: number) => (Math.abs(v) > 1e4 ? v.toExponential(1) : v.toFixed(3));
+
+  function draw() {
+    const css = getComputedStyle(root);
+    const c = (n: string) => css.getPropertyValue(n).trim();
+    const W = canvas.width, H = canvas.height, pad = 36;
+    const sx = (x: number) => pad + ((x + XR) / (2 * XR)) * (W - 2 * pad);
+    const sy = (y: number) => H - pad - (Math.min(y, YMAX * 1.1) / YMAX) * (H - 2 * pad);
+    ctx.fillStyle = c('--bg'); ctx.fillRect(0, 0, W, H);
+
+    ctx.strokeStyle = c('--line'); ctx.lineWidth = 1;
+    ctx.fillStyle = c('--muted'); ctx.font = '20px ' + c('--font-ui'); ctx.textAlign = 'center';
+    for (let x = -4; x <= 4; x += 2) {
+      ctx.beginPath(); ctx.moveTo(sx(x), pad - 10); ctx.lineTo(sx(x), H - pad); ctx.stroke();
+      ctx.fillText(String(x).replace('-', '−'), sx(x), H - 8);
+    }
+    ctx.strokeStyle = c('--accent'); ctx.lineWidth = 3; ctx.beginPath();
+    for (let i = 0; i <= 200; i++) {
+      const x = -XR + (i / 200) * 2 * XR;
+      i ? ctx.lineTo(sx(x), sy(x * x)) : ctx.moveTo(sx(x), sy(x * x));
+    }
+    ctx.stroke();
+
+    const visible = path.slice(0, shown + 1).filter((x) => Math.abs(x) <= XR);
+    ctx.strokeStyle = c('--spark'); ctx.lineWidth = 1.5; ctx.setLineDash([5, 5]); ctx.beginPath();
+    visible.forEach((x, i) => (i ? ctx.lineTo(sx(x), sy(x * x)) : ctx.moveTo(sx(x), sy(x * x))));
+    ctx.stroke(); ctx.setLineDash([]);
+    visible.forEach((x, i) => {
+      const last = i === visible.length - 1;
+      ctx.fillStyle = c('--spark'); ctx.globalAlpha = last ? 1 : 0.55;
+      ctx.beginPath(); ctx.arc(sx(x), sy(x * x), last ? 9 : 5, 0, Math.PI * 2); ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+
+    const cur = path[shown];
+    ctx.textAlign = 'left'; ctx.fillStyle = c('--ink'); ctx.font = '22px ' + c('--font-code');
+    ctx.fillText(`step ${shown}   x = ${fmt(cur)}   loss = ${fmt(cur * cur)}`, pad, pad + 4);
+    if (Math.abs(cur) > XR) { ctx.fillStyle = c('--spark'); ctx.fillText('x has left the chart', pad, pad + 34); }
+  }
+
+  function run(animate: boolean) {
+    clearInterval(timer);
+    const lr = parseFloat(lrInput.value);
+    path = computePath(lr);
+    const [state, label, text] = classify(lr);
+    const pill = document.getElementById('gd-pill')!;
+    pill.dataset.state = state; pill.textContent = label;
+    document.getElementById('gd-text')!.textContent = text;
+    if (!animate || reduceMotion) { shown = STEPS; draw(); return; }
+    shown = 0; draw();
+    timer = window.setInterval(() => { shown++; draw(); if (shown >= STEPS) clearInterval(timer); }, 160);
+  }
+
+  lrInput.addEventListener('input', () => {
+    document.getElementById('lr-output')!.textContent = parseFloat(lrInput.value).toFixed(2);
+    run(false);
+  });
+  document.getElementById('gd-run')!.addEventListener('click', () => run(true));
+  new MutationObserver(draw).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+  matchMedia('(prefers-color-scheme: light)').addEventListener('change', draw);
+  run(false);
+  document.fonts?.ready.then(draw);
+</script>

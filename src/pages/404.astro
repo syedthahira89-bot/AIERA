@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page not found">
+  <section class="page">
+    <div class="wrap page-inner">
+      <h1>That page does not exist</h1>
+      <p class="lede">The link may be old, or the article may have moved. Try the full list of articles instead.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/blog/">Browse all articles</a>
+        <a class="btn btn-quiet" href="/">Go to the home page</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+</style>
