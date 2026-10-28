@@ -2,8 +2,10 @@
 title: "Gradient descent, felt rather than memorized"
 description: "Build intuition for slopes, step sizes and why the loss sometimes explodes, before touching any framework."
 pubDate: 2026-10-15
-topic: Math foundations
+topic: Training & deployment
 level: Beginner
+cover: /images/gradient-descent-felt-cover.jpg
+coverAlt: "A path zig-zagging down oval contour lines and settling at the lowest point."
 ---
 
 Training a model means adjusting numbers, its parameters, so that a loss gets smaller. The loss measures how wrong the model is. Gradient descent is the method almost every model uses to make it smaller.

@@ -4,6 +4,8 @@ description: "Visualize trained filters and you find edge and colour detectors, 
 pubDate: 2026-10-01
 topic: Computer vision
 level: Beginner
+cover: /images/cnn-first-layer-cover.jpg
+coverAlt: "A grid of small learned filters showing edge, stripe and colour patterns."
 ---
 
 A convolutional layer slides a set of small filters, often 3×3 or 7×7 pixels, across an image. At each position it computes how strongly the patch underneath matches the filter. The result is a feature map that lights up wherever that pattern appears.

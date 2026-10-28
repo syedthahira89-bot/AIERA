@@ -1,9 +1,10 @@
 ---
 import { PATHS } from '../data/site';
-import type { Post } from '../lib/posts';
+import { upcoming, formatPlanned, type Post } from '../lib/posts';
 
 interface Props { posts: Post[] }
 const byId = new Map(Astro.props.posts.map((p) => [p.id, p]));
+const planned = new Map(upcoming(Astro.props.posts).map((u) => [u.title, u.date]));
 ---
 <section class="block" id="paths" aria-labelledby="paths-title">
   <div class="wrap">
@@ -21,9 +22,10 @@ const byId = new Map(Astro.props.posts.map((p) => [p.id, p]));
           <ol>
             {path.steps.map((step) => {
               const post = byId.get(step);
+              const date = planned.get(step);
               return post
                 ? <li><a href={`/blog/${post.id}/`}>{post.data.title}</a></li>
-                : <li><span>{step} <em>(coming soon)</em></span></li>;
+                : <li><span>{step} <em>({date ? `coming ${formatPlanned(date)}` : 'coming soon'})</em></span></li>;
             })}
           </ol>
         </div>
@@ -33,7 +35,7 @@ const byId = new Map(Astro.props.posts.map((p) => [p.id, p]));
 </section>
 
 <style>
-  .paths { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+  .paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 64px; }
   @media (max-width: 960px) { .paths { grid-template-columns: minmax(0, 1fr); gap: 32px; } }
   h3 { font-size: var(--step-2); }
   .path > p { color: var(--muted); margin-top: 8px; }

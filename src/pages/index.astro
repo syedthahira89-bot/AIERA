@@ -5,12 +5,14 @@ import PostList from '../components/PostList.astro';
 import GradientDemo from '../components/GradientDemo.astro';
 import LearningPaths from '../components/LearningPaths.astro';
 import Newsletter from '../components/Newsletter.astro';
-import { SITE, TOPICS } from '../data/site';
-import { getPosts } from '../lib/posts';
+import ComingUp from '../components/ComingUp.astro';
+import { SITE, TOPICS, TRACKS, SCHEDULE, topicsIn } from '../data/site';
+import { getPosts, upcoming } from '../lib/posts';
 
 const posts = await getPosts();
 const featured = posts.find((p) => p.data.featured) ?? posts[0];
 const latest = posts.filter((p) => p.id !== featured.id).slice(0, 5);
+const next = upcoming(posts).slice(0, 3);
 const counts = Object.fromEntries(TOPICS.map((t) => [t.name, posts.filter((p) => p.data.topic === t.name).length]));
 ---
 <BaseLayout>
@@ -47,14 +49,34 @@ const counts = Object.fromEntries(TOPICS.map((t) => [t.name, posts.filter((p) =>
       </div>
       <aside aria-labelledby="topics-title">
         <h2 id="topics-title">Browse by topic</h2>
-        <ul>
-          {TOPICS.map((t) => (
-            <li><a href={`/topics/${t.slug}/`}>{t.name}<span>{counts[t.name]}</span></a></li>
-          ))}
-        </ul>
+        {TRACKS.map((track) => (
+          <>
+            <h3 class="track">{track.name}</h3>
+            <ul>
+              {topicsIn(track.id).map((t) => (
+                <li><a href={`/topics/${t.slug}/`}>{t.name}<span>{counts[t.name] || 'New'}</span></a></li>
+              ))}
+            </ul>
+          </>
+        ))}
       </aside>
     </div>
   </section>
+
+  {next.length > 0 && (
+    <section class="block" aria-labelledby="next-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="next-title">Coming up</h2>
+            <p>{SCHEDULE.summary}</p>
+          </div>
+          <a class="btn btn-quiet" href="#newsletter">Get them by email</a>
+        </div>
+        <ComingUp items={next} showTopic />
+      </div>
+    </section>
+  )}
 
   <GradientDemo />
   <LearningPaths posts={posts} />
@@ -83,6 +105,7 @@ const counts = Object.fromEntries(TOPICS.map((t) => [t.name, posts.filter((p) =>
   @media (max-width: 860px) { .latest { grid-template-columns: minmax(0, 1fr); gap: 40px; } }
   .more { margin-top: 24px; }
   aside h2 { font-size: var(--step-1); margin-bottom: 12px; }
+  aside .track { font: 600 0.75rem var(--font-ui); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 16px 12px 6px; }
   aside ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
   aside a { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-radius: var(--radius); color: var(--muted); text-decoration: none; font-size: var(--step--1); font-weight: 500; }
   aside a:hover { color: var(--ink); background: var(--raise); }

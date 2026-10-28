@@ -4,6 +4,8 @@ description: "Train a network to remove a little noise, then run it many times i
 pubDate: 2026-09-10
 topic: Computer vision
 level: Intermediate
+cover: /images/diffusion-noise-to-image-cover.jpg
+coverAlt: "Five panels going from random noise to a clear flower shape, step by step."
 ---
 
 Diffusion models power most modern image generators. The core idea is surprisingly simple: if you can remove a small amount of noise from an image, you can remove a lot of noise by doing it many times.

@@ -2,8 +2,10 @@
 title: "Shipping a model is the easy part: watching for drift"
 description: "How input data quietly changes after launch, and the checks that catch it before your users do."
 pubDate: 2026-09-03
-topic: MLOps
+topic: Training & deployment
 level: Intermediate
+cover: /images/monitoring-drift-cover.jpg
+coverAlt: "Two histograms, the live data shifted to the right of the training data, with an arrow showing the shift."
 ---
 
 A model is trained on a snapshot of the world. After launch the world keeps moving: new products appear, users behave differently, and an upstream team changes how a field is recorded. Accuracy slips, and nothing throws an error.

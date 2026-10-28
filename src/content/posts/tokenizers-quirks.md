@@ -2,8 +2,10 @@
 title: "Tokenizers are where your model's quirks start"
 description: "Byte-pair encoding explains why language models struggle to count letters and do arithmetic on long numbers."
 pubDate: 2026-09-24
-topic: LLMs
+topic: Language models
 level: Intermediate
+cover: /images/tokenizers-quirks-cover.jpg
+coverAlt: "A sentence split into glowing token chips, each labelled with a numeric token ID."
 ---
 
 Language models never see characters. They see tokens: chunks of text chosen by an algorithm before training starts. Many of the strange failures people notice in chatbots trace back to this step.
