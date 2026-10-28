@@ -1,10 +1,12 @@
 export const SITE = {
   name: 'AIERA',
-  url: 'https://aiera.com',
+  url: 'https://aiera-ts.com',
   tagline: 'Learn how AI models actually work, one layer at a time.',
   description:
     'AIERA is a weekly blog for people who want more than headlines about AI. One track explains how models really work, with real numbers and small code you can run. The other shows how to live well with AI, for your health, your daily life and the planet.',
   email: 'hello@aiera.com',
+    'AIERA is a weekly blog for people who want more than headlines about AI. Each piece explains one idea in machine learning with real numbers, small code you can run, and diagrams you can explore.',
+  email: 'hello@aiera-ts.com',
   author: {
     name: 'Thahira S',
     bio: 'Tech futurist exploring how AI and machine learning can make everyday life healthier, more creative and more human.',

@@ -26,6 +26,16 @@
   from = "/topics/mlops/"
   to = "/topics/training-and-deployment/"
   status = 301
+# Browsers and crawlers request these legacy icon paths by default; serve the PNG icons instead of a 404
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/favicon.png"
+  status = 200
+
+[[redirects]]
+  from = "/apple-touch-icon-precomposed.png"
+  to = "/apple-touch-icon.png"
+  status = 200
 
 # Serve Astro's custom 404 page for unknown URLs
 [[redirects]]

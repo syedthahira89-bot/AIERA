@@ -1,6 +1,6 @@
 # AIERA
 
-The AIERA blog (aiera.com), built with [Astro](https://astro.build). It explains how AI and machine learning work for curious readers.
+The AIERA blog (aiera-ts.com), built with [Astro](https://astro.build). It explains how AI and machine learning work for curious readers.
 
 ## Run it locally
 
@@ -82,4 +82,4 @@ The build is a plain static site, so any static host works. Node.js 22.23.4 is p
 - **Vercel**: import the repo, choose the Astro preset, and set the Node.js version to 22.x in Project Settings.
 - **Cloudflare Pages**: build command `npm run build`, output folder `dist`, and the environment variable `NODE_VERSION=22.23.4`.
 
-Then point the `aiera.com` domain at the host. RSS (`/rss.xml`) and a sitemap (`/sitemap-index.xml`) are generated automatically.
+Then point the `aiera-ts.com` domain at the host. RSS (`/rss.xml`) and a sitemap (`/sitemap-index.xml`) are generated automatically.
