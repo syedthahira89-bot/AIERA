@@ -6,7 +6,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
-  site: 'https://aiera.com',
+  site: 'https://aiera-ts.com',
   integrations: [sitemap()],
   markdown: {
     // remark/rehype pipeline so articles can use $inline$ and $$block$$ math (rendered by KaTeX)
