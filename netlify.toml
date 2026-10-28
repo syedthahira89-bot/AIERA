@@ -26,6 +26,7 @@
   from = "/topics/mlops/"
   to = "/topics/training-and-deployment/"
   status = 301
+
 # Browsers and crawlers request these legacy icon paths by default; serve the PNG icons instead of a 404
 [[redirects]]
   from = "/favicon.ico"
