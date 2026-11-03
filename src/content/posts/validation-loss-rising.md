@@ -2,7 +2,7 @@
 title: "Why your validation loss went up while training loss kept falling"
 description: "Overfitting, explained with one small dataset and three fixes you can try today."
 pubDate: 2026-10-08
-topic: Training
+topic: "How AI Learns"
 level: Beginner
 ---
 

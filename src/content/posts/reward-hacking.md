@@ -2,7 +2,7 @@
 title: "Reward is not the goal: notes on reward hacking"
 description: "When an agent maximizes the number you gave it rather than the behaviour you meant."
 pubDate: 2026-09-17
-topic: Reinforcement learning
+topic: "Learning by Trying"
 level: Advanced
 ---
 

@@ -2,7 +2,7 @@
 title: "Tokenizers are where your model's quirks start"
 description: "Byte-pair encoding explains why language models struggle to count letters and do arithmetic on long numbers."
 pubDate: 2026-09-24
-topic: LLMs
+topic: "Talking Machines"
 level: Intermediate
 ---
 

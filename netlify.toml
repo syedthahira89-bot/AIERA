@@ -17,6 +17,42 @@
   to = "/apple-touch-icon.png"
   status = 200
 
+# Old topic addresses, renamed in November 2026
+[[redirects]]
+  from = "/topics/llms/*"
+  to = "/topics/talking-machines/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/computer-vision/*"
+  to = "/topics/eyes-of-ai/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/reinforcement-learning/*"
+  to = "/topics/learning-by-trying/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/math-foundations/*"
+  to = "/topics/numbers-behind-the-magic/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/training/*"
+  to = "/topics/how-ai-learns/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/mlops/*"
+  to = "/topics/from-lab-to-life/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/ai-in-everyday-life/*"
+  to = "/topics/ai-and-you/"
+  status = 301
+
 # Serve Astro's custom 404 page for unknown URLs
 [[redirects]]
   from = "/*"

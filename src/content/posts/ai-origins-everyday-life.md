@@ -2,7 +2,7 @@
 title: "AI, made human: how a 75-year-old idea is making life easier for people and the planet"
 description: "From Alan Turing's 1950 question to flood warnings and talking cameras: where AI came from, real examples of it improving daily life and nature, and simple ways to use it yourself."
 pubDate: 2026-10-27
-topic: AI in everyday life
+topic: "AI & You"
 level: Beginner
 featured: true
 cover: /images/ai-everyday-cover.jpg

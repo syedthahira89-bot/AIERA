@@ -2,7 +2,7 @@
 title: "What the first layer of a CNN learns to see"
 description: "Visualize trained filters and you find edge and colour detectors, much like the early stages of the visual cortex."
 pubDate: 2026-10-01
-topic: Computer vision
+topic: "Eyes of AI"
 level: Beginner
 ---
 

@@ -2,7 +2,7 @@
 title: "Evaluating LLM outputs without fooling yourself"
 description: "Contaminated benchmarks, position bias in model graders, and how to build an eval set you can trust."
 pubDate: 2026-08-27
-topic: LLMs
+topic: "Talking Machines"
 level: Advanced
 ---
 

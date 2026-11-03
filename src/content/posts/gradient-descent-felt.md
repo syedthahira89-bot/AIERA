@@ -2,7 +2,7 @@
 title: "Gradient descent, felt rather than memorized"
 description: "Build intuition for slopes, step sizes and why the loss sometimes explodes, before touching any framework."
 pubDate: 2026-10-15
-topic: Math foundations
+topic: "Numbers Behind the Magic"
 level: Beginner
 ---
 

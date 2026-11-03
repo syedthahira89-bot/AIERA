@@ -22,7 +22,7 @@ Add a Markdown file to `src/content/posts/`. The file name becomes the URL, so `
 title: "Your article title"
 description: "One or two sentences shown in lists, search results and link previews."
 pubDate: 2026-11-05
-topic: LLMs              # one of the topics in src/data/site.ts
+topic: "Talking Machines"  # one of the topic names in src/data/site.ts
 level: Beginner          # Beginner, Intermediate or Advanced
 cover: /images/my-cover.jpg       # optional, put the file in public/images/
 coverAlt: "What the image shows"  # describe the cover for screen readers

@@ -2,7 +2,7 @@
 title: "Shipping a model is the easy part: watching for drift"
 description: "How input data quietly changes after launch, and the checks that catch it before your users do."
 pubDate: 2026-09-03
-topic: MLOps
+topic: "From Lab to Life"
 level: Intermediate
 ---
 

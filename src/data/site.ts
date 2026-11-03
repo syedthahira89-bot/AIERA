@@ -20,13 +20,13 @@ export const SITE = {
 };
 
 export const TOPICS = [
-  { name: 'LLMs', slug: 'llms', blurb: 'Tokenizers, attention, training and evaluating large language models.' },
-  { name: 'Computer vision', slug: 'computer-vision', blurb: 'Convolutions, diffusion and how models learn to see.' },
-  { name: 'Reinforcement learning', slug: 'reinforcement-learning', blurb: 'Agents, rewards and what goes wrong when you optimize hard.' },
-  { name: 'Math foundations', slug: 'math-foundations', blurb: 'The calculus, linear algebra and probability under every model.' },
-  { name: 'Training', slug: 'training', blurb: 'Losses, overfitting, regularization and making training behave.' },
-  { name: 'MLOps', slug: 'mlops', blurb: 'Shipping, serving and monitoring models in production.' },
-  { name: 'AI in everyday life', slug: 'ai-in-everyday-life', blurb: 'Where AI came from, and how it is quietly improving daily life for people and the planet.' },
+  { name: 'Talking Machines', slug: 'talking-machines', blurb: 'How chatbots read, write and reason, from tokens to attention.' },
+  { name: 'Eyes of AI', slug: 'eyes-of-ai', blurb: 'How machines learn to see, recognise and even create images.' },
+  { name: 'Learning by Trying', slug: 'learning-by-trying', blurb: 'How AI learns from rewards and mistakes, and what can go wrong.' },
+  { name: 'Numbers Behind the Magic', slug: 'numbers-behind-the-magic', blurb: 'The friendly maths that makes every AI model work.' },
+  { name: 'How AI Learns', slug: 'how-ai-learns', blurb: 'What happens while a model trains, and how to keep it on track.' },
+  { name: 'From Lab to Life', slug: 'from-lab-to-life', blurb: 'How AI leaves the lab and keeps working for real people.' },
+  { name: 'AI & You', slug: 'ai-and-you', blurb: 'Where AI came from, and how it quietly makes daily life better for people and the planet.' },
 ] as const;
 
 /** Colour palettes for the header picker. Colours here are only for the swatches; the real tokens live in global.css. */

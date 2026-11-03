@@ -2,7 +2,7 @@
 title: "Diffusion models, from pure noise to an image"
 description: "Train a network to remove a little noise, then run it many times in a row."
 pubDate: 2026-09-10
-topic: Computer vision
+topic: "Eyes of AI"
 level: Intermediate
 ---
 
