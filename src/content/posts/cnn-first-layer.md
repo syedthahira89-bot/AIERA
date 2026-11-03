@@ -1,9 +1,11 @@
 ---
-title: "What does AI see first? Peeking inside an image model"
+title: "How image AI sees: what a vision model notices first"
 description: "Open up a vision model and you'll find it starts by noticing edges and colours, a lot like our own eyes."
 pubDate: 2026-10-01
-topic: "Eyes of AI"
+topic: "Images & Learning"
 level: Beginner
+cover: /images/cover-image-filters.jpg
+coverAlt: "A grid of 32 small tiles showing edges at different angles, light-to-dark fades and soft colour spots, like the first patterns an image model learns."
 ---
 
 When you look at a photo of a cat, you just *see* a cat. But what does an AI see first? The answer is surprisingly charming, and it looks a lot like how our own eyes and brain begin.
@@ -34,3 +36,9 @@ print(filters.shape)
 ```
 
 Scale each of the 64 filters to the 0 to 1 range and display them in a grid. You'll see the edge and colour detectors for yourself. Which ones do you recognise?
+
+## Sources & further reading
+
+- Krizhevsky, Sutskever & Hinton, [*ImageNet Classification with Deep Convolutional Neural Networks*](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html) (2012), the AlexNet paper, whose first-layer filters are famously edge-like.
+- Olah, Mordvintsev & Schubert, [*Feature Visualization*](https://distill.pub/2017/feature-visualization/) (Distill, 2017), a beautiful look at what each layer responds to.
+- Related: [how diffusion models work](/blog/diffusion-noise-to-image/).

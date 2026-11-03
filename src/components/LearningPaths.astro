@@ -4,6 +4,9 @@ import type { Post } from '../lib/posts';
 
 interface Props { posts: Post[] }
 const byId = new Map(Astro.props.posts.map((p) => [p.id, p]));
+// Only published articles are shown; planned steps appear automatically once their post exists.
+const paths = PATHS.map((path) => ({ ...path, posts: path.steps.map((s) => byId.get(s)).filter((p) => p !== undefined) }))
+  .filter((path) => path.posts.length > 0);
 ---
 <section class="block" id="paths" aria-labelledby="paths-title">
   <div class="wrap">
@@ -14,17 +17,12 @@ const byId = new Map(Astro.props.posts.map((p) => [p.id, p]));
       </div>
     </div>
     <div class="paths">
-      {PATHS.map((path) => (
+      {paths.map((path) => (
         <div class="path">
           <h3>{path.title}</h3>
           <p>{path.text}</p>
           <ol>
-            {path.steps.map((step) => {
-              const post = byId.get(step);
-              return post
-                ? <li><a href={`/blog/${post.id}/`}>{post.data.title}</a></li>
-                : <li><span>{step} <em>(coming soon)</em></span></li>;
-            })}
+            {path.posts.map((post) => <li><a href={`/blog/${post.id}/`}>{post.data.title}</a></li>)}
           </ol>
         </div>
       ))}

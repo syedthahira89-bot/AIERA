@@ -1,9 +1,11 @@
 ---
-title: "When AI takes a clever shortcut: lessons from learning by rewards"
+title: "Reward shortcuts: when AI finds a clever way around the goal"
 description: "Reward an AI for a goal and it may find a surprising shortcut instead. Here's why that happens, and how researchers guide it back on course."
 pubDate: 2026-09-17
-topic: "Learning by Trying"
+topic: "Images & Learning"
 level: Advanced
+cover: /images/cover-clever-shortcuts.jpg
+coverAlt: "A winding race course leading to a finish flag, while a small boat circles a lagoon of stars near the start."
 ---
 
 Imagine telling a child, "You'll get a sticker for every toy you put away," and then finding them taking toys out just to put them back again. Technically, they followed the rule perfectly!
@@ -37,3 +39,9 @@ Researchers guide it back on course in a few thoughtful ways:
 ## Something to think about
 
 Can you think of a rule at school or work that people followed to the letter but not in spirit? Writing good rewards for AI is a lot like writing good rules for people: the clearer the goal, the better the result.
+
+## Sources & further reading
+
+- OpenAI, [*Faulty reward functions in the wild*](https://openai.com/index/faulty-reward-functions/) (2016), the original CoastRunners write-up.
+- Krakovna et al., [*Specification gaming: the flip side of AI ingenuity*](https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/) (DeepMind, 2020), with a long list of real examples.
+- Related: [how to test a chatbot fairly](/blog/evaluating-llm-outputs/).

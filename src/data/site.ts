@@ -1,32 +1,37 @@
 export const SITE = {
   name: 'AIERA',
   url: 'https://aiera-ts.com',
-  tagline: 'Learn how AI models actually work, one layer at a time.',
+  tagline: 'The bright side of AI, explained simply.',
   description:
-    'AIERA is a weekly blog for people who want more than headlines about AI. Each piece explains one idea in machine learning with real numbers, small code you can run, and diagrams you can explore.',
-  email: 'hello@aiera-ts.com',
+    'AIERA is a friendly weekly blog about how AI is making life healthier, more creative and more human, and how it actually works, explained in plain language.',
+  email: 'aiera.blog@gmail.com',
   author: {
     name: 'Thahira S',
     bio: 'Tech futurist exploring how AI and machine learning can make everyday life healthier, more creative and more human.',
   },
   social: [
-    { label: 'X', href: 'https://x.com/' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
-    { label: 'GitHub', href: 'https://github.com/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/thahira-syed-2827ba426/' },
   ],
-  // Paste your newsletter provider's form endpoint here (Buttondown, ConvertKit, Mailchimp...).
+  // Paste your newsletter provider's form endpoint here. Examples:
+  //   Buttondown: 'https://buttondown.com/api/emails/embed-subscribe/YOUR-USERNAME'
+  //   Mailchimp:  the form "action" URL from Audience > Signup forms > Embedded form
   // While empty, the signup form validates the address but does not send it anywhere.
-  newsletterAction: '',
+  newsletterAction: 'https://buttondown.com/api/emails/embed-subscribe/aiera',
 };
 
+/** The two content pillars. Every topic belongs to one. */
+export const PILLARS = [
+  { id: 'better-life', name: 'AI for a better life', blurb: 'How AI is making everyday life healthier, more creative, more balanced and kinder to the planet.' },
+  { id: 'how-it-works', name: 'How AI works', blurb: 'The ideas behind the tools, explained simply, with friendly examples and small experiments to try.' },
+] as const;
+
 export const TOPICS = [
-  { name: 'Talking Machines', slug: 'talking-machines', blurb: 'How chatbots read, write and reason, from tokens to attention.' },
-  { name: 'Eyes of AI', slug: 'eyes-of-ai', blurb: 'How machines learn to see, recognise and even create images.' },
-  { name: 'Learning by Trying', slug: 'learning-by-trying', blurb: 'How AI learns from rewards and practice, and the clever shortcuts it sometimes finds.' },
-  { name: 'Numbers Behind the Magic', slug: 'numbers-behind-the-magic', blurb: 'The friendly maths that makes every AI model work.' },
-  { name: 'How AI Learns', slug: 'how-ai-learns', blurb: 'What happens while a model trains, and how to keep it on track.' },
-  { name: 'From Lab to Life', slug: 'from-lab-to-life', blurb: 'How AI leaves the lab and keeps working for real people.' },
-  { name: 'AI & You', slug: 'ai-and-you', blurb: 'Where AI came from, and how it quietly makes daily life better for people and the planet.' },
+  { name: 'Smarter Living', slug: 'smarter-living', pillar: 'better-life', blurb: 'How AI is improving health, wellness, home life and everyday productivity.' },
+  { name: 'Creative Freedom', slug: 'creative-freedom', pillar: 'better-life', blurb: 'How AI tools act as co-pilots that amplify human creativity.' },
+  { name: 'The New Work Paradigm', slug: 'new-work-paradigm', pillar: 'better-life', blurb: 'How automation can make careers healthier, more balanced and more meaningful.' },
+  { name: 'AI & the Planet', slug: 'ai-and-the-planet', pillar: 'better-life', blurb: 'How AI is helping protect forests, wildlife, farmland and the climate.' },
+  { name: 'Chatbots & Language', slug: 'chatbots-and-language', pillar: 'how-it-works', blurb: 'How chatbots read, understand and write text, and how we check their answers.' },
+  { name: 'Images & Learning', slug: 'images-and-learning', pillar: 'how-it-works', blurb: 'How AI sees and creates pictures, and how models learn, improve and stay up to date.' },
 ] as const;
 
 /** Colour palettes for the header picker. Colours here are only for the swatches; the real tokens live in global.css. */
@@ -41,7 +46,7 @@ export const LEVELS = ['Beginner', 'Intermediate', 'Advanced'] as const;
 
 export const topicSlug = (name: string) => TOPICS.find((t) => t.name === name)?.slug ?? 'all';
 
-/** A step is either a post id (links to it) or plain text (shown as coming soon). */
+/** A step is a post id. Plain-text steps are planned articles: they stay hidden until a post with that id exists. */
 export const PATHS = [
   {
     title: 'Your first steps into AI',

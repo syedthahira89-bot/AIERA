@@ -17,40 +17,75 @@
   to = "/apple-touch-icon.png"
   status = 200
 
-# Old topic addresses, renamed in November 2026
+# Old topic addresses (renamed twice in 2026), sent straight to the current topic
 [[redirects]]
   from = "/topics/llms/*"
-  to = "/topics/talking-machines/"
+  to = "/topics/chatbots-and-language/"
   status = 301
 
 [[redirects]]
   from = "/topics/computer-vision/*"
-  to = "/topics/eyes-of-ai/"
+  to = "/topics/images-and-learning/"
   status = 301
 
 [[redirects]]
   from = "/topics/reinforcement-learning/*"
-  to = "/topics/learning-by-trying/"
+  to = "/topics/images-and-learning/"
   status = 301
 
 [[redirects]]
   from = "/topics/math-foundations/*"
-  to = "/topics/numbers-behind-the-magic/"
+  to = "/topics/images-and-learning/"
   status = 301
 
 [[redirects]]
   from = "/topics/training/*"
-  to = "/topics/how-ai-learns/"
+  to = "/topics/images-and-learning/"
   status = 301
 
 [[redirects]]
   from = "/topics/mlops/*"
-  to = "/topics/from-lab-to-life/"
+  to = "/topics/images-and-learning/"
   status = 301
 
 [[redirects]]
   from = "/topics/ai-in-everyday-life/*"
-  to = "/topics/ai-and-you/"
+  to = "/topics/smarter-living/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/talking-machines/*"
+  to = "/topics/chatbots-and-language/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/eyes-of-ai/*"
+  to = "/topics/images-and-learning/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/learning-by-trying/*"
+  to = "/topics/images-and-learning/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/numbers-behind-the-magic/*"
+  to = "/topics/images-and-learning/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/how-ai-learns/*"
+  to = "/topics/images-and-learning/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/from-lab-to-life/*"
+  to = "/topics/images-and-learning/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/ai-and-you/*"
+  to = "/topics/smarter-living/"
   status = 301
 
 # Renamed article address

@@ -1,8 +1,8 @@
 ---
-title: "AI, made human: how a 75-year-old idea is making life easier for people and the planet"
+title: "AI and you: a friendly beginner’s guide"
 description: "From Alan Turing's 1950 question to flood warnings and talking cameras: where AI came from, real examples of it improving daily life and nature, and simple ways to use it yourself."
 pubDate: 2026-10-27
-topic: "AI & You"
+topic: "Smarter Living"
 level: Beginner
 featured: true
 cover: /images/ai-everyday-cover.jpg
@@ -90,24 +90,9 @@ AI is a powerful helper, but it is not perfect. A few habits keep it working for
 - **Mind the footprint.** Training and running large models uses electricity and water. Use AI where it truly saves time or resources.
 - **Keep humans in charge.** The best results come when AI handles the repetitive work and people make the decisions that need judgment and care.
 
-## Glossary
+## Words to know
 
-- **Artificial intelligence (AI)**: Computer systems that perform tasks that usually need human intelligence, such as understanding language, recognizing images or making decisions.
-- **Machine learning (ML)**: A way of building AI where the computer learns patterns from examples rather than following rules written by hand.
-- **Neural network**: A machine learning model made of many simple connected units, loosely inspired by neurons in the brain.
-- **Deep learning**: Machine learning with neural networks that have many layers. It powers modern speech, image and language AI.
-- **Training data**: The examples a model learns from, such as labelled photos, recorded speech or text.
-- **Algorithm**: A step-by-step set of instructions a computer follows to solve a problem.
-- **Large language model (LLM)**: A model trained on huge amounts of text to understand and generate language. ChatGPT, Claude and Gemini are examples.
-- **Transformer**: The neural network design, introduced in 2017, that most large language models are built on.
-- **Computer vision**: AI that interprets images and video, used in weed-spotting sprayers, camera-trap sorting and eye-disease screening.
-- **Natural language processing (NLP)**: AI that works with human language, including translation, captions and chatbots.
-- **Generative AI**: AI that creates new content, such as text, images, music or code.
-- **Turing test**: Alan Turing's 1950 proposal for judging machine intelligence: can a person tell the machine apart from a human in a text conversation?
-- **AI winter**: A period when interest and funding in AI dropped because results did not match expectations. There were two, in the 1970s and late 1980s.
-- **Bias (in AI)**: When a model's outputs are unfair to some groups, usually because of gaps or imbalances in its training data.
-- **Hallucination**: When an AI system produces information that sounds plausible but is false.
-- **Human in the loop**: A design where people review or approve AI decisions, especially when the stakes are high.
+New to some of these terms? Our friendly [AI glossary](/glossary/) explains words like [machine learning](/glossary/#machine-learning-ml), [neural network](/glossary/#neural-network), [large language model](/glossary/#large-language-model-llm), [bias](/glossary/#bias-in-ai) and [hallucination](/glossary/#hallucination) in plain language, with links to articles that explore each one.
 
 ## The takeaway
 

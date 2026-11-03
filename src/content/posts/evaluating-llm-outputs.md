@@ -1,9 +1,11 @@
 ---
-title: "How do we know if a chatbot is doing well? A friendly guide to testing AI"
+title: "How to test a chatbot: simple, fair ways to check AI"
 description: "Measuring a chatbot's answers is trickier than it looks. Here are simple, fair ways to test AI and trust the results."
 pubDate: 2026-08-27
-topic: "Talking Machines"
+topic: "Chatbots & Language"
 level: Advanced
+cover: /images/cover-testing-chatbots.jpg
+coverAlt: "A chat message bubble with an arrow pointing to a checklist with ticks for Accurate, Clear, Helpful and Kind."
 ---
 
 How would you grade an essay, a poem or a helpful explanation? There's rarely one right answer. That's exactly the challenge when we test chatbots, and it's why careful, fair testing is such an interesting part of AI.
@@ -35,3 +37,8 @@ Before relying on an AI grader, compare its scores with a sample of human rating
 ## Something to think about
 
 If you were testing a chatbot to help with your own work or studies, what are five questions you'd want it to answer well? Writing them down is the first step to a great test set.
+
+## Sources & further reading
+
+- Zheng et al., [*Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*](https://arxiv.org/abs/2306.05685) (2023), which studies the order, length and style preferences of AI graders.
+- Related: [reward shortcuts in AI](/blog/ai-clever-shortcuts/), on why measures can drift from goals.

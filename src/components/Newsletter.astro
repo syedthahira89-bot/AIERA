@@ -7,7 +7,8 @@ import { SITE } from '../data/site';
       <h2 id="newsletter-title">One idea, every Thursday</h2>
       <p>The weekly AIERA issue brings the new article, a paper worth reading, and one small experiment to try yourself. It takes about ten minutes to read.</p>
     </div>
-    <form class="subscribe" id="subscribe-form" method="post" action={SITE.newsletterAction || undefined} data-live={SITE.newsletterAction ? 'true' : 'false'} novalidate>
+    <form class="subscribe" id="subscribe-form" method="post" action={SITE.newsletterAction || undefined} target={SITE.newsletterAction ? '_blank' : undefined} data-live={SITE.newsletterAction ? 'true' : 'false'} novalidate>
+      {SITE.newsletterAction && <input type="hidden" name="embed" value="1" />}
       <label for="email-input">Email address</label>
       <div class="row">
         <input id="email-input" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="email-hint" required />
@@ -40,7 +41,7 @@ import { SITE } from '../data/site';
 <script>
   const form = document.getElementById('subscribe-form') as HTMLFormElement | null;
   if (form) {
-    const input = form.querySelector('input')!;
+    const input = form.querySelector<HTMLInputElement>('#email-input')!;
     const error = document.getElementById('email-error')!;
     form.addEventListener('submit', (e) => {
       const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
@@ -48,7 +49,13 @@ import { SITE } from '../data/site';
       input.setAttribute('aria-invalid', String(!ok));
       input.setAttribute('aria-describedby', ok ? 'email-hint' : 'email-error email-hint');
       if (!ok) { e.preventDefault(); input.focus(); return; }
-      if (form.dataset.live === 'true') return; // real provider: let the browser submit
+      if (form.dataset.live === 'true') {
+        // Buttondown opens its confirmation page in a new tab; thank the reader here too
+        setTimeout(() => {
+          form.innerHTML = '<p class="subscribe-done" role="status">Almost there! Check your inbox and click the link to confirm your subscription.</p>';
+        }, 50);
+        return;
+      }
       e.preventDefault();
       // No provider configured yet (SITE.newsletterAction is empty), so say so rather than pretend.
       form.innerHTML = '<p class="subscribe-done" role="status">Thanks for your interest. Email signups open soon, so your address was not saved yet.</p>';

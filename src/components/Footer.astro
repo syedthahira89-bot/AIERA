@@ -15,15 +15,18 @@ const year = new Date().getFullYear();
     <nav aria-label="Site">
       <h2>AIERA</h2>
       <a href="/blog/">All articles</a>
+      <a href="/glossary/">Glossary</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
       <a href="/rss.xml">RSS feed</a>
       <a href="/privacy/">Privacy</a>
     </nav>
-    <nav aria-label="Social">
-      <h2>Follow</h2>
-      {SITE.social.map((s) => <a href={s.href} rel="me noopener" target="_blank">{s.label}</a>)}
-    </nav>
+    {SITE.social.length > 0 && (
+      <nav aria-label="Social">
+        <h2>Follow</h2>
+        {SITE.social.map((s) => <a href={s.href} rel="me noopener" target="_blank">{s.label}</a>)}
+      </nav>
+    )}
   </div>
   <div class="wrap legal">© {year} {SITE.name}. Articles may be quoted with a link back.</div>
 </footer>

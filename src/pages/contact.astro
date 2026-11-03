@@ -28,7 +28,9 @@ import { SITE } from '../data/site';
         </div>
       </div>
 
-      <p class="social">You can also find us on {SITE.social.map((s, i) => <>{i > 0 && (i === SITE.social.length - 1 ? ' and ' : ', ')}<a href={s.href} target="_blank" rel="noopener">{s.label}</a></>)}.</p>
+      {SITE.social.length > 0 && (
+        <p class="social">You can also find us on {SITE.social.map((s, i) => <>{i > 0 && (i === SITE.social.length - 1 ? ' and ' : ', ')}<a href={s.href} target="_blank" rel="noopener">{s.label}</a></>)}.</p>
+      )}
     </div>
   </section>
 </BaseLayout>
