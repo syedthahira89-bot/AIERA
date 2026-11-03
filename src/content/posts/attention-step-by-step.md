@@ -1,6 +1,6 @@
 ---
-title: "Attention, step by step: how a transformer decides what to look at"
-description: "Queries, keys and values sound abstract until you follow a few tokens through the math by hand."
+title: "How does AI know what “it” means? A friendly guide to attention"
+description: "Follow one little word through a transformer and discover how AI decides which other words matter most."
 pubDate: 2026-10-22
 topic: "Talking Machines"
 level: Intermediate
@@ -9,29 +9,33 @@ cover: /images/attention-cover.jpg
 coverAlt: "Diagram of the sentence \"The robot picked up the ball because it was light\", with curves from the word \"it\" to every other word. The thickest curve goes to \"ball\"."
 ---
 
-Every token in a transformer asks the same question: which other tokens should I pay attention to right now? Self-attention answers it with three learned projections and one softmax. Once you have followed the numbers through once, the rest of the architecture becomes much easier to read.
+Read this sentence: *"The robot picked up the ball because it was light."* What does "it" mean? You probably knew straight away: the ball. But how would a computer work that out?
 
-## Queries, keys and values
+That small puzzle is exactly what **attention** solves. It is the idea at the heart of every modern chatbot, and once you see how it works, a lot of AI suddenly makes sense. Let's follow that one little word, "it", through the process together.
 
-Each token starts as an embedding vector $x_i$. The layer multiplies it by three learned weight matrices to produce three new vectors:
+## Every word gets three name tags
 
-- a **query** $q_i = x_i W_Q$, describing what this token is looking for,
-- a **key** $k_i = x_i W_K$, describing what this token offers to others,
-- a **value** $v_i = x_i W_V$, the information it passes along if chosen.
+Inside a transformer, each word (more precisely, each *token*) starts as a list of numbers called an embedding, $x_i$. The model then creates three new versions of it by multiplying with three learned tables of numbers:
 
-A useful analogy is a library search. The query is what you typed, the keys are the catalogue entries, and the values are the books themselves.
+- a **query** $q_i = x_i W_Q$: *"What am I looking for?"*
+- a **key** $k_i = x_i W_K$: *"What do I have to offer?"*
+- a **value** $v_i = x_i W_V$: *"Here's what I'll share if you pick me."*
 
-## Scoring every pair of tokens
+A friendly way to picture it is a library. The query is what you type into the search box, the keys are the labels on every book, and the values are the books themselves.
 
-To decide how much token $i$ should attend to token $j$, take the dot product of query $i$ with key $j$. Doing that for every pair gives a square matrix of scores. Stack the queries and keys as matrices $Q$ and $K$ and the whole computation becomes one formula:
+## Asking every other word a question
+
+Now "it" holds up its query and compares it with every other word's key. The comparison is a simple dot product: multiply matching numbers together and add them up. A high score means "you look relevant to me".
+
+Do this for every pair of words and you get a grid of scores. Written for all words at once, the whole idea fits in one tidy formula:
 
 $$
 \text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right) V
 $$
 
-The softmax turns each row of scores into weights that are positive and sum to 1. Each output vector is then a weighted average of all the value vectors.
+The **softmax** turns each row of scores into percentages that add up to 100%. Then each word gathers information from the others in proportion to those percentages. In our sentence, "it" gives most of its attention to "ball", which is exactly the cover picture above.
 
-Here is the whole thing in a few lines of NumPy:
+Curious to try it? Here is the whole thing in a few lines of Python:
 
 ```python
 import numpy as np
@@ -39,7 +43,7 @@ import numpy as np
 def attention(Q, K, V):
     d_k = Q.shape[-1]
     scores = Q @ K.T / np.sqrt(d_k)
-    scores -= scores.max(axis=-1, keepdims=True)  # numerical stability
+    scores -= scores.max(axis=-1, keepdims=True)  # keeps the numbers tidy
     weights = np.exp(scores)
     weights /= weights.sum(axis=-1, keepdims=True)
     return weights @ V, weights
@@ -47,24 +51,28 @@ def attention(Q, K, V):
 rng = np.random.default_rng(0)
 Q, K, V = (rng.normal(size=(4, 8)) for _ in range(3))
 out, w = attention(Q, K, V)
-print(w.round(2))  # each row sums to 1
+print(w.round(2))  # each row adds up to 1
 ```
 
-## Why divide by the square root of d_k
+## Why divide by the square root of d_k?
 
-If the entries of $q$ and $k$ are roughly independent with variance 1, their dot product has variance $d_k$. With $d_k = 64$, typical scores are around ±8. Softmax on numbers that large puts almost all the weight on one token, and its gradients become tiny, so learning stalls.
+Here's a lovely detail. If each query and key has $d_k$ numbers, their dot products tend to grow as $d_k$ grows. With $d_k = 64$, typical scores land around ±8. Softmax on numbers that big puts nearly all the attention on a single word, and the model finds it very hard to keep learning.
 
-Dividing by $\sqrt{d_k}$ brings the variance back to about 1. Attention stays spread out early in training, and the model can still learn to sharpen it where that helps.
+Dividing by $\sqrt{d_k}$ gently brings the scores back to a comfortable size. Attention stays nicely spread out early in training, and the model can learn to focus sharply only where that really helps.
 
-> In decoder models such as GPT, a causal mask sets the scores for future positions to $-\infty$ before the softmax. Each token can then attend only to itself and earlier tokens, which is what lets the model generate text one token at a time.
+> **A fun fact:** chatbots that write text one word at a time use a "mask" so each word can only look at itself and the words before it. That way the model never peeks at words it hasn't written yet.
 
 ## Many heads, many questions
 
-A single attention layer can only compute one weighted average per token. Multi-head attention runs several smaller attention operations in parallel, each with its own $W_Q$, $W_K$ and $W_V$. One head might learn to link pronouns to the nouns they refer to while another tracks matching brackets.
+One round of attention lets each word ask one question. **Multi-head attention** lets it ask several at once. One head might learn to connect pronouns like "it" to their nouns, while another keeps track of matching brackets or quotation marks.
 
-The heads' outputs are concatenated and multiplied by one more matrix, $W_O$, to return to the model's dimension. The original transformer used 8 heads of size 64 for a model dimension of 512.
+Each head has its own $W_Q$, $W_K$ and $W_V$. Their answers are joined together and passed through one more table, $W_O$. The original transformer used 8 heads of size 64 for a model dimension of 512.
 
-## What to read next
+## Try it yourself
+
+Pick a sentence with a tricky "it", "they" or "this", and guess which word each one should pay attention to. You've just done, by intuition, what a transformer learns to do with numbers.
+
+## Where to go next
 
 - Vaswani et al., *Attention Is All You Need* (2017), the paper that introduced the transformer.
-- Our article on [tokenizers](/blog/tokenizers-quirks/), which explains what the "tokens" in this post actually are.
+- Our friendly guide to [tokens](/blog/tokenizers-quirks/), which explains what the "words" in this post really are.

@@ -21,7 +21,7 @@ Artificial intelligence can feel like it arrived overnight. In reality it is an 
 
 **1958 to 1966: first steps.** Frank Rosenblatt's perceptron learned simple patterns, an ancestor of today's neural networks. Joseph Weizenbaum's ELIZA chatted by matching keywords, the great-grandparent of modern chatbots.
 
-**1970s and late 1980s: two "AI winters".** Promises ran ahead of what computers could do, and funding dried up twice.
+**1970s and late 1980s: two "AI winters".** Hopes ran ahead of what computers could do at the time, so interest and funding cooled off twice.
 
 **1997 to 2016: landmark wins.** IBM's Deep Blue beat chess champion Garry Kasparov in 1997. AlexNet started the deep learning boom in 2012, and DeepMind's AlphaGo beat Go champion Lee Sedol in 2016.
 
@@ -63,7 +63,7 @@ Smart thermostats learn your routine and heat or cool the home only when needed.
 
 AI is also becoming a tool for protecting forests, wildlife, farmland and the climate.
 
-- **Listening for illegal logging:** [Rainforest Connection](https://rfcx.org/) hangs recycled smartphones in rainforest trees. AI listens for chainsaws and alerts local rangers in real time.
+- **Listening out for the forest:** [Rainforest Connection](https://rfcx.org/) hangs recycled smartphones in rainforest trees. AI listens for the sound of logging saws in protected areas and alerts local rangers in real time.
 - **Tracking wildlife:** [Wildlife Insights](https://www.wildlifeinsights.org/) sorts millions of camera-trap photos in a fraction of the time it would take by hand, and [Wildbook](https://www.wildme.org/) recognizes individual whale sharks and zebras from their unique spots and stripes.
 - **Smarter farming:** John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) spots individual weeds and sprays only them, with reported herbicide savings of more than half. The PlantVillage Nuru app helps farmers in East Africa diagnose crop diseases from a phone photo, even offline.
 - **Flood warnings:** Google's [Flood Hub](https://sites.research.google/floods/) forecasts floods up to seven days ahead in more than 80 countries, giving families time to reach safety.
@@ -84,7 +84,7 @@ You do not need to be technical to benefit. Some simple starting points:
 
 AI is a powerful helper, but it is not perfect. A few habits keep it working for you:
 
-- **Check important facts.** Chatbots can sound confident and still be wrong. Verify anything about health, money or law with a trusted source.
+- **Check important facts.** Chatbots can sound sure of themselves and still be mistaken. Verify anything about health, money or law with a trusted source.
 - **Protect your privacy.** Avoid sharing passwords, ID numbers or private medical details with AI tools.
 - **Watch for bias.** AI learns from data made by people, so it can repeat unfair patterns. Good systems are tested across different groups of people.
 - **Mind the footprint.** Training and running large models uses electricity and water. Use AI where it truly saves time or resources.
@@ -111,4 +111,4 @@ AI is a powerful helper, but it is not perfect. A few habits keep it working for
 
 ## The takeaway
 
-AI began as a question about whether machines could think. Today a better question is how to use them well. From a nurse screening for eye disease to a ranger hearing a chainsaw miles away, the best examples share one thing: AI takes on the tedious or impossible part of the job so that people can focus on care, judgment and connection. Used thoughtfully, it can help both people and nature live better.
+AI began as a question about whether machines could think. Today a better question is how to use them well. From a nurse screening for eye disease to a ranger protecting a forest miles away, the best examples share one thing: AI takes on the tedious or impossible part of the job so that people can focus on care, judgment and connection. Used thoughtfully, it can help both people and nature live better.

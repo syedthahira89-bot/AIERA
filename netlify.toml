@@ -53,6 +53,12 @@
   to = "/topics/ai-and-you/"
   status = 301
 
+# Renamed article address
+[[redirects]]
+  from = "/blog/reward-hacking/*"
+  to = "/blog/ai-clever-shortcuts/"
+  status = 301
+
 # Serve Astro's custom 404 page for unknown URLs
 [[redirects]]
   from = "/*"

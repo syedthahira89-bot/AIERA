@@ -1,27 +1,37 @@
 ---
-title: "Evaluating LLM outputs without fooling yourself"
-description: "Contaminated benchmarks, position bias in model graders, and how to build an eval set you can trust."
+title: "How do we know if a chatbot is doing well? A friendly guide to testing AI"
+description: "Measuring a chatbot's answers is trickier than it looks. Here are simple, fair ways to test AI and trust the results."
 pubDate: 2026-08-27
 topic: "Talking Machines"
 level: Advanced
 ---
 
-It is easy to convince yourself a language model is better than it is. Evaluating open-ended text is hard, and the shortcuts people take tend to flatter the model.
+How would you grade an essay, a poem or a helpful explanation? There's rarely one right answer. That's exactly the challenge when we test chatbots, and it's why careful, fair testing is such an interesting part of AI.
 
-## Public benchmarks leak
+## Why well-known tests aren't the whole story
 
-Popular benchmarks are published online, and web-scale training data can include them. A model can then score well by recall rather than reasoning. Scores on public benchmarks are useful for rough comparisons, but they say little about your specific task.
+Popular AI tests, often called **benchmarks**, are published online so everyone can compare results. But AI models learn from enormous amounts of online text, which can include those very tests. A high score might partly reflect familiarity rather than real skill.
 
-## Build a private eval set
+Benchmarks are still useful for broad comparisons. They just can't tell you how well a model will do on *your* particular task.
 
-Collect 100 to 300 real examples from your own use case, including the hard and awkward ones. Write down what a good answer looks like for each. Keep this set out of any prompt, fine-tuning data or few-shot examples, so it stays a fair test.
+## Build your own small test set
 
-## Model graders have biases
+A wonderful habit is to create your own set of questions:
 
-Using one model to grade another scales well, but graders have known biases:
+1. Gather **100 to 300 real examples** from the task you care about, including the tricky and unusual ones.
+2. **Write down what a good answer looks like** for each.
+3. **Keep the set private.** Don't use it in prompts or training, so it stays a fair test.
 
-- **Position bias**: preferring whichever answer is shown first. Randomize the order, or grade both orders and average.
-- **Length bias**: preferring longer answers. Ask the grader to judge specific criteria rather than overall quality.
-- **Self-preference**: favouring text in their own style.
+## When AI helps grade AI
 
-Check the grader against a sample of human ratings before trusting it, and re-check whenever you change the grader prompt.
+Using one model to grade another saves a lot of time, but AI graders have a few habits worth knowing about:
+
+- **Order preference:** they may favour whichever answer they read first. Shuffle the order, or grade both orders and average the results.
+- **Length preference:** they may favour longer answers. Ask them to judge specific qualities, like accuracy or clarity, instead of overall impressions.
+- **Style preference:** they may favour writing that sounds like their own.
+
+Before relying on an AI grader, compare its scores with a sample of human ratings, and check again whenever you change its instructions.
+
+## Something to think about
+
+If you were testing a chatbot to help with your own work or studies, what are five questions you'd want it to answer well? Writing them down is the first step to a great test set.

@@ -1,26 +1,41 @@
 ---
-title: "Why your validation loss went up while training loss kept falling"
-description: "Overfitting, explained with one small dataset and three fixes you can try today."
+title: "When AI memorises instead of learning: a friendly look at overfitting"
+description: "Why a model can ace its practice questions yet stumble on new ones, plus three gentle ways to help it learn."
 pubDate: 2026-10-08
 topic: "How AI Learns"
 level: Beginner
 ---
 
-You start training, both curves fall together, and everything looks fine. Then, a few epochs later, training loss keeps dropping while validation loss turns around and climbs. That gap is overfitting.
+Think back to studying for a test. You could learn *why* each answer is right, or you could simply memorise the practice questions. Both work well on the practice sheet. Only one helps on the real exam.
 
-## What the model is doing
+AI models face exactly the same choice, and watching for it is one of the most useful habits in machine learning.
 
-The training set is a sample of the world, complete with noise and quirks. A model with enough capacity can eventually fit those quirks exactly. At that point every further improvement on the training data comes from memorizing details that do not carry over to new examples, so performance on held-out data gets worse.
+## Spotting the moment it happens
 
-## Three fixes to try first
+While a model trains, we usually track two numbers:
 
-1. **Stop early.** Keep the checkpoint from the epoch with the lowest validation loss. Most frameworks have an early-stopping callback that does this for you.
-2. **Regularize.** Weight decay penalizes large weights, and dropout randomly switches off units during training so the network cannot rely on any single path.
-3. **Add variety to the data.** More examples help most, but augmentation such as flips, crops and noise for images, or paraphrases for text, also makes memorizing harder.
+- **Training loss:** how well it does on the examples it is studying.
+- **Validation loss:** how well it does on examples it has never seen.
+
+At first both go down together, which is great news. But sometimes, a few rounds later, training loss keeps falling while validation loss starts to rise. That gentle turn is the sign of **overfitting**: the model has started memorising its practice examples instead of learning patterns that carry over to new ones.
+
+## Why it happens
+
+Every set of training examples contains a little randomness: unusual cases, typos, one-off details. A model with lots of capacity can eventually learn those details too. They help on the practice examples but not on anything new.
+
+## Three friendly ways to help
+
+1. **Stop at the right moment.** Keep the version of the model from the round when validation loss was lowest. Most tools call this *early stopping* and can do it for you.
+2. **Encourage simpler answers.** Techniques like *weight decay* and *dropout* nudge the model toward general patterns rather than tiny details.
+3. **Show it more variety.** More examples help most. You can also create variety by flipping or cropping images, or rephrasing sentences.
 
 ```python
-# PyTorch: weight decay is one argument on the optimizer
+# In PyTorch, weight decay is a single setting on the optimizer
 optimizer = torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=0.01)
 ```
 
-> A rising validation loss can also mean your validation set differs from your training set, for example if it was collected later or from different users. Check that before adding regularization.
+> **A helpful check first:** sometimes validation loss rises because the new examples are simply different, for example collected later or from different people. It's worth checking that before changing the model.
+
+## Something to think about
+
+Can you remember a time you memorised something without really understanding it? What helped you finally *get* it? The same ideas, practice with variety and knowing when to stop, help AI too.

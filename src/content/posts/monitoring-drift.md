@@ -1,29 +1,35 @@
 ---
-title: "Shipping a model is the easy part: watching for drift"
-description: "How input data quietly changes after launch, and the checks that catch it before your users do."
+title: "Keeping AI helpful after launch: a friendly guide to drift"
+description: "The world keeps changing after an AI model goes live. Here's how teams notice the change and keep their models up to date."
 pubDate: 2026-09-03
 topic: "From Lab to Life"
 level: Intermediate
 ---
 
-A model is trained on a snapshot of the world. After launch the world keeps moving: new products appear, users behave differently, and an upstream team changes how a field is recorded. Accuracy slips, and nothing throws an error.
+Launching an AI model is a wonderful milestone, but it's really the start of a journey. A model learns from a snapshot of the world, and the world keeps changing: new products appear, people's habits shift, and the way information is recorded gets updated. Over time, a model's answers can slowly become less accurate, quietly and without any warning signs.
 
-## Two kinds of drift
+This gentle change is called **drift**, and looking after it is one of the most caring parts of working with AI.
 
-- **Data drift**: the distribution of inputs changes. A fraud model trained before a holiday season sees very different purchase patterns during it.
-- **Concept drift**: the relationship between inputs and the right answer changes. The same transaction pattern that was safe last year is now a known fraud technique.
+## Two kinds of change
 
-## What to monitor
+- **Data drift:** the kind of information coming in changes. A shopping model trained in spring may see very different buying patterns during the holiday season.
+- **Concept drift:** the meaning behind the information changes. A pattern that used to mean one thing can come to mean something else.
 
-1. **Input feature distributions.** Compare recent data with the training data using a statistic such as the population stability index or a Kolmogorov–Smirnov test, and alert on large shifts.
-2. **Prediction distribution.** If your model suddenly predicts "fraud" twice as often, something changed, even before you have labels.
-3. **Real accuracy on a labelled sample.** Keep a small stream of recent examples flowing to human review so you can measure performance directly.
+## Three friendly check-ups
+
+1. **Compare what's coming in with what the model learned from.** Simple statistics, such as the population stability index or a Kolmogorov–Smirnov test, can highlight when an input starts to look different.
+2. **Watch the model's answers.** If it suddenly gives one answer twice as often as usual, that's a helpful early hint, even before you know whether the answers are right.
+3. **Keep checking a small sample by hand.** A steady trickle of recent examples reviewed by people shows how well the model is really doing.
 
 ```python
 from scipy.stats import ks_2samp
 stat, p_value = ks_2samp(train_df["amount"], last_week_df["amount"])
 if p_value < 0.01:
-    print("amount has drifted, investigate before the next retrain")
+    print("'amount' looks different from the training data. Time for a closer look.")
 ```
 
-> Monitoring is only useful if someone acts on it. Decide in advance who gets alerted and what the retraining process is.
+> **Tip:** checks are most helpful when someone is ready to act on them. Agree in advance who gets notified and how the model will be refreshed.
+
+## Something to think about
+
+What in your own life has changed over the last year: your routines, your favourite apps, the way you shop? Every one of those changes is something an AI model would need to learn about too.

@@ -22,7 +22,7 @@ export const SITE = {
 export const TOPICS = [
   { name: 'Talking Machines', slug: 'talking-machines', blurb: 'How chatbots read, write and reason, from tokens to attention.' },
   { name: 'Eyes of AI', slug: 'eyes-of-ai', blurb: 'How machines learn to see, recognise and even create images.' },
-  { name: 'Learning by Trying', slug: 'learning-by-trying', blurb: 'How AI learns from rewards and mistakes, and what can go wrong.' },
+  { name: 'Learning by Trying', slug: 'learning-by-trying', blurb: 'How AI learns from rewards and practice, and the clever shortcuts it sometimes finds.' },
   { name: 'Numbers Behind the Magic', slug: 'numbers-behind-the-magic', blurb: 'The friendly maths that makes every AI model work.' },
   { name: 'How AI Learns', slug: 'how-ai-learns', blurb: 'What happens while a model trains, and how to keep it on track.' },
   { name: 'From Lab to Life', slug: 'from-lab-to-life', blurb: 'How AI leaves the lab and keeps working for real people.' },
@@ -44,19 +44,19 @@ export const topicSlug = (name: string) => TOPICS.find((t) => t.name === name)?.
 /** A step is either a post id (links to it) or plain text (shown as coming soon). */
 export const PATHS = [
   {
-    title: 'Zero to neural networks',
-    text: 'For readers comfortable with high-school algebra.',
-    steps: ['gradient-descent-felt', 'Linear regression as a one-neuron network', 'validation-loss-rising', 'Backpropagation with a pencil', 'cnn-first-layer'],
+    title: 'Your first steps into AI',
+    text: 'A gentle start. If you remember a little school maths, you are ready.',
+    steps: ['gradient-descent-felt', 'Drawing the best line: your first tiny model', 'validation-loss-rising', 'How a network learns from its mistakes, step by step', 'cnn-first-layer'],
   },
   {
-    title: 'Understanding language models',
-    text: 'From text to tokens to attention to evaluation.',
-    steps: ['tokenizers-quirks', 'Embeddings as coordinates for meaning', 'attention-step-by-step', 'Pretraining versus fine-tuning', 'evaluating-llm-outputs'],
+    title: 'How chatbots think',
+    text: 'Follow a sentence from your keyboard all the way through a chatbot.',
+    steps: ['tokenizers-quirks', 'Maps of meaning: how AI places words', 'attention-step-by-step', 'From reading everything to being helpful', 'evaluating-llm-outputs'],
   },
   {
-    title: 'Machine learning in production',
-    text: 'What changes once real users depend on your model.',
-    steps: ['Versioning data alongside code', 'Serving a model behind an API', 'monitoring-drift', 'reward-hacking'],
+    title: 'AI out in the world',
+    text: 'What it takes to keep AI helpful once real people rely on it.',
+    steps: ['Keeping track of the data behind a model', 'Sharing your model so apps can use it', 'monitoring-drift', 'ai-clever-shortcuts'],
   },
 ];
 
