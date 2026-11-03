@@ -25,7 +25,7 @@ Artificial intelligence can feel like it arrived overnight. In reality it is an 
 
 **1997 to 2016: landmark wins.** IBM's Deep Blue beat chess champion Garry Kasparov in 1997. AlexNet started the deep learning boom in 2012, and DeepMind's AlphaGo beat Go champion Lee Sedol in 2016.
 
-**2017 to today: AI for everyone.** The transformer, introduced in 2017, became the design behind today's language models. ChatGPT reached an estimated 100 million users within about two months of its 2022 launch, and AlphaFold's protein predictions earned a share of the 2024 Nobel Prize in Chemistry.
+**2017 to today: AI for everyone.** The transformer, introduced in 2017, became the design behind today's language models. ChatGPT reached an estimated 100 million users within about two months of its 2022 launch ([Reuters](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/)), and AlphaFold's protein predictions earned a share of the 2024 Nobel Prize in Chemistry ([Nobel Prize](https://www.nobelprize.org/prizes/chemistry/2024/press-release/)).
 
 > The big shift: early AI followed rules that people wrote by hand. Modern AI learns patterns from examples. That is why it can handle messy tasks like understanding speech or spotting disease in a photo.
 
@@ -37,25 +37,25 @@ Most helpful AI is not dramatic. It removes small frictions, many times a day.
 
 ### Getting around
 
-Google Maps uses machine learning on live location data to predict traffic. Google and DeepMind reported up to 50% better arrival-time accuracy in some cities, which means less time stuck in traffic.
+Google Maps uses machine learning on live location data to predict traffic. Google and DeepMind [reported up to 50% better arrival-time accuracy](https://deepmind.google/discover/blog/traffic-prediction-with-advanced-graph-neural-networks/) in some cities, which means less time stuck in traffic.
 
 ### Communication and language
 
-- **Spam filtering:** Google says Gmail's machine learning filters block more than 99.9% of spam, phishing and malware before it reaches inboxes.
+- **Spam filtering:** Google says Gmail's machine learning filters [block more than 99.9% of spam, phishing and malware](https://safety.google/gmail/) before it reaches inboxes.
 - **Translation:** apps like Google Translate can translate text from a phone camera in real time, so a traveller can read a street sign or a menu instantly.
 - **Live captions:** phones from Apple, Google and Samsung can caption any audio on screen, helping people who are deaf or hard of hearing, or anyone watching a video in a quiet place.
 
 ### Accessibility
 
-Microsoft's free Seeing AI app describes people, text and objects aloud for blind and low-vision users. Be My Eyes added an AI assistant that can read a medicine label or explain the buttons on a washing machine, so tasks that once needed help can be done independently.
+Microsoft's free [Seeing AI](https://www.seeingai.com/) app describes people, text and objects aloud for blind and low-vision users. [Be My Eyes](https://www.bemyeyes.com/) added an AI assistant that can read a medicine label or explain the buttons on a washing machine, so tasks that once needed help can be done independently.
 
 ### Health
 
-In 2018 the US Food and Drug Administration authorized IDx-DR (now LumineticsCore), the first autonomous AI system to screen for diabetic eye disease. A nurse takes the photo and the patient gets a result in minutes, which matters in places with few eye doctors. Smartwatches can also flag irregular heart rhythms and prompt the wearer to see a doctor.
+In 2018 the US Food and Drug Administration [authorized IDx-DR](https://www.fda.gov/news-events/press-announcements/fda-permits-marketing-artificial-intelligence-based-device-detect-certain-diabetes-related-eye-problems) (now LumineticsCore), the first autonomous AI system to screen for diabetic eye disease. A nurse takes the photo and the patient gets a result in minutes, which matters in places with few eye doctors. Smartwatches can also flag irregular heart rhythms and prompt the wearer to see a doctor.
 
 ### Home and energy
 
-Smart thermostats learn your routine and heat or cool the home only when needed. Google Nest reports average savings of roughly 10 to 12% on heating and about 15% on cooling: lower bills and lower energy use at once.
+Smart thermostats learn your routine and heat or cool the home only when needed. Google Nest [reports average savings](https://nest.com/-downloads/press/documents/energy-savings-white-paper.pdf) of roughly 10 to 12% on heating and about 15% on cooling: lower bills and lower energy use at once.
 
 ## Helping nature and the planet
 
@@ -63,11 +63,11 @@ Smart thermostats learn your routine and heat or cool the home only when needed.
 
 AI is also becoming a tool for protecting forests, wildlife, farmland and the climate.
 
-- **Listening for illegal logging:** Rainforest Connection hangs recycled smartphones in rainforest trees. AI listens for chainsaws and alerts local rangers in real time.
-- **Tracking wildlife:** Wildlife Insights sorts millions of camera-trap photos in a fraction of the time it would take by hand, and Wildbook recognizes individual whale sharks and zebras from their unique spots and stripes.
-- **Smarter farming:** John Deere's See & Spray spots individual weeds and sprays only them, with reported herbicide savings of more than half. The PlantVillage Nuru app helps farmers in East Africa diagnose crop diseases from a phone photo, even offline.
-- **Flood warnings:** Google's Flood Hub forecasts floods up to seven days ahead in more than 80 countries, giving families time to reach safety.
-- **Cleaner traffic and buildings:** Google's Project Green Light tunes traffic-light timing, with early results of up to 10% lower emissions at intersections. DeepMind's AI cut the energy used to cool Google's data centres by up to 40%.
+- **Listening for illegal logging:** [Rainforest Connection](https://rfcx.org/) hangs recycled smartphones in rainforest trees. AI listens for chainsaws and alerts local rangers in real time.
+- **Tracking wildlife:** [Wildlife Insights](https://www.wildlifeinsights.org/) sorts millions of camera-trap photos in a fraction of the time it would take by hand, and [Wildbook](https://www.wildme.org/) recognizes individual whale sharks and zebras from their unique spots and stripes.
+- **Smarter farming:** John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) spots individual weeds and sprays only them, with reported herbicide savings of more than half. The PlantVillage Nuru app helps farmers in East Africa diagnose crop diseases from a phone photo, even offline.
+- **Flood warnings:** Google's [Flood Hub](https://sites.research.google/floods/) forecasts floods up to seven days ahead in more than 80 countries, giving families time to reach safety.
+- **Cleaner traffic and buildings:** Google's [Project Green Light](https://sites.research.google/greenlight/) tunes traffic-light timing, with early results of up to 10% lower emissions at intersections. DeepMind's AI [cut the energy used to cool Google's data centres by up to 40%](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
 
 ## How to use AI to improve your own quality of life
 

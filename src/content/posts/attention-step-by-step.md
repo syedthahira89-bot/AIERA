@@ -6,7 +6,7 @@ topic: LLMs
 level: Intermediate
 featured: true
 cover: /images/attention-cover.jpg
-coverAlt: "A white robotic hand touching a glowing AI symbol on a circuit board."
+coverAlt: "Diagram of the sentence \"The robot picked up the ball because it was light\", with curves from the word \"it\" to every other word. The thickest curve goes to \"ball\"."
 ---
 
 Every token in a transformer asks the same question: which other tokens should I pay attention to right now? Self-attention answers it with three learned projections and one softmax. Once you have followed the numbers through once, the rest of the architecture becomes much easier to read.
