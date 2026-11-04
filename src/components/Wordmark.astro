@@ -1,11 +1,11 @@
 ---
-// AIERA-TS wordmark: glossy green "aiera" with a gold bead on the i, plus a glossy "ts" badge.
+// AIERA-TS wordmark: glossy green "Aiera" with a gold bead on the i, and a glossy badge with gold "TS".
 interface Props { size?: 'md' | 'lg' }
 const { size = 'md' } = Astro.props;
 ---
 <span class={`wordmark ${size}`} aria-label="AIERA-TS" role="img">
-  <span class="word" aria-hidden="true">a<span class="i">ı<span class="dot"></span></span>era</span>
-  <span class="badge" aria-hidden="true"><span class="ts">ts</span></span>
+  <span class="word" aria-hidden="true">A<span class="i">ı<span class="dot"></span></span>era</span>
+  <span class="badge" aria-hidden="true"><span class="ts">TS</span></span>
 </span>
 
 <style>
@@ -13,10 +13,10 @@ const { size = 'md' } = Astro.props;
     --wm-top: #2F9A62; --wm-mid: #17603C; --wm-low: #0F4A2C; --wm-shine: rgba(255, 255, 255, 0.55);
     --badge-top: #36A86B; --badge-low: #11502F; --badge-ink: #FFFFFF;
     display: inline-flex; align-items: center; gap: 0.26em;
-    font-family: var(--font-ui); font-weight: 700; letter-spacing: -0.04em; line-height: 1;
+    font-family: var(--font-ui); font-weight: 700; letter-spacing: -0.03em; line-height: 1;
   }
-  .md { font-size: clamp(1.65rem, 5.2vw, 1.95rem); }
-  .lg { font-size: 2.3rem; }
+  .md { font-size: clamp(1.6rem, 5vw, 1.9rem); }
+  .lg { font-size: 2.25rem; }
 
   /* Glossy gradient letters with a soft sheen across the top half */
   .word {
@@ -39,7 +39,7 @@ const { size = 'md' } = Astro.props;
   /* Glossy pill badge */
   .badge {
     position: relative; overflow: hidden;
-    font-size: 0.58em; font-weight: 700; letter-spacing: 0.01em; padding: 0.3em 0.66em 0.34em; border-radius: 999px;
+    font-size: 0.62em; font-weight: 700; letter-spacing: 0.04em; padding: 0.32em 0.6em 0.34em; border-radius: 999px;
     color: var(--badge-ink);
     background: linear-gradient(180deg, var(--badge-top), var(--badge-low));
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), inset 0 -1px 0 rgba(0, 0, 0, 0.18), 0 3px 8px rgba(15, 74, 44, 0.28);
