@@ -42,14 +42,20 @@
   --spark: #946016; --glow: rgba(11, 122, 143, 0.10); color-scheme: light;
 }
 
-/* Colour palettes (data-palette on <html>, chosen in the header picker; Peach Glow is the default).
+/* Colour palettes (data-palette on <html>, chosen in the header picker; Forest & Gold is the default).
    Dark mode keeps the navy base and swaps only the accents; light mode swaps everything.
    Every text colour below passes WCAG AA (4.5:1) on its background. */
+:root[data-palette="forest"]   { --accent: #6FCF97; --accent-strong: #9BE0B6; --on-accent: #0A2416; --spark: #F2C14E; --glow: rgba(111, 207, 151, 0.16); }
 :root[data-palette="peach"]    { --accent: #FF9A66; --accent-strong: #FFB58F; --on-accent: #2A1206; --spark: #5ED3E8; --glow: rgba(255, 154, 102, 0.16); }
 :root[data-palette="mint"]     { --accent: #4ADE9F; --accent-strong: #86EFC0; --on-accent: #062016; --spark: #F5C451; --glow: rgba(74, 222, 159, 0.15); }
 :root[data-palette="lavender"] { --accent: #A996FF; --accent-strong: #C7BBFF; --on-accent: #160F33; --spark: #FF8FA6; --glow: rgba(169, 150, 255, 0.18); }
 
 @media (prefers-color-scheme: light) {
+  :root[data-palette="forest"]:not([data-theme="dark"]) {
+    --bg: #F6F8F1; --surface: #FFFFFF; --raise: #E7EFE3; --ink: #13261B; --muted: #4D6355;
+    --line: #D3E0D2; --accent: #17603C; --accent-strong: #0F4A2C; --on-accent: #FFFFFF;
+    --spark: #8A5A0E; --glow: rgba(23, 96, 60, 0.10);
+  }
   :root[data-palette="peach"]:not([data-theme="dark"]) {
     --bg: #FFF7F2; --surface: #FFFFFF; --raise: #FCE9DE; --ink: #2A1A12; --muted: #6B5446;
     --line: #F0D9CB; --accent: #C2410C; --accent-strong: #9A3412; --on-accent: #FFFFFF;
@@ -70,6 +76,11 @@
     --line: #DDD7F5; --accent: #5B3FD6; --accent-strong: #4429B8; --on-accent: #FFFFFF;
     --spark: #B83654; --glow: rgba(91, 63, 214, 0.10);
   }
+}
+:root[data-palette="forest"][data-theme="light"] {
+  --bg: #F6F8F1; --surface: #FFFFFF; --raise: #E7EFE3; --ink: #13261B; --muted: #4D6355;
+  --line: #D3E0D2; --accent: #17603C; --accent-strong: #0F4A2C; --on-accent: #FFFFFF;
+  --spark: #8A5A0E; --glow: rgba(23, 96, 60, 0.10);
 }
 :root[data-palette="peach"][data-theme="light"] {
   --bg: #FFF7F2; --surface: #FFFFFF; --raise: #FCE9DE; --ink: #2A1A12; --muted: #6B5446;

@@ -36,6 +36,7 @@ export const TOPICS = [
 
 /** Colour palettes for the header picker. Colours here are only for the swatches; the real tokens live in global.css. */
 export const PALETTES = [
+  { id: 'forest', name: 'Forest & Gold', swatch: ['#F6F8F1', '#17603C', '#C9A227'] },
   { id: 'peach', name: 'Peach Glow', swatch: ['#FFF7F2', '#C2410C', '#0E7490'] },
   { id: 'aqua', name: 'Soft Aqua', swatch: ['#F4FAFB', '#0B7A8F', '#946016'] },
   { id: 'mint', name: 'Mint & Sunshine', swatch: ['#F5FAF6', '#0F7B5F', '#946010'] },
