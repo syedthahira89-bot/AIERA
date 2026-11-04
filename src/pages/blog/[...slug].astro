@@ -57,7 +57,7 @@ const share = [
 
     <footer class="reader-foot">
       <div class="author">
-        <img src="/images/logo.svg" width="56" height="56" alt="" />
+        <img class="author-photo" src="/images/thahira.jpg" width="56" height="56" alt={`Photo of ${SITE.author.name}`} />
         <div>
           <p class="author-name">Written by {SITE.author.name}</p>
           <p>{SITE.author.bio} <a href="/about/">More about AIERA-TS</a></p>
@@ -114,7 +114,7 @@ const share = [
 
   .reader-foot { max-width: 760px; margin: 56px auto 0; padding-top: 28px; border-top: 1px solid var(--line); display: grid; gap: 24px; }
   .author { display: flex; gap: 16px; align-items: flex-start; }
-  .author img { border-radius: 10px; flex: none; }
+  .author img { width: 56px; height: 56px; border-radius: 50%; flex: none; object-fit: cover; object-position: 50% 30%; box-shadow: 0 0 0 3px var(--surface), 0 0 0 4px var(--line); }
   .author p { color: var(--muted); font-size: var(--step--1); }
   .author .author-name { color: var(--ink); font-weight: 600; font-size: var(--step-0); margin-bottom: 4px; }
   .share { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: var(--step--1); }
