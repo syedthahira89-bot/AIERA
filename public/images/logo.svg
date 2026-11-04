@@ -1,13 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AIERA-TS">
-  <!-- AIERA-TS mark: Instrument Serif "S" on a sunrise gradient, with an AI sparkle -->
+  <!-- AIERA-TS mark: a network head in profile with a glowing gold circuit, on deep green (original artwork) -->
   <defs>
-    <linearGradient id="aiera-sunrise" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFB38A"/>
-      <stop offset="0.55" stop-color="#F0757A"/>
-      <stop offset="1" stop-color="#8E7CF0"/>
+    <linearGradient id="aiera-forest" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#164A30"/>
+      <stop offset="1" stop-color="#0A2416"/>
     </linearGradient>
+    <radialGradient id="aiera-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F5D36B" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#F5D36B" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="64" height="64" rx="18" fill="url(#aiera-sunrise)"/>
-  <path transform="translate(17.69 51.51) scale(0.0541 -0.0541)" fill="#FFFFFF" d="M184 -9Q164 -9 139.5 -5.0Q115 -1 93.5 5.0Q72 11 60 18Q53 22 49.5 26.5Q46 31 46 42L41 199Q41 219 54 219Q65 219 69 201L78 163Q112 20 205 20Q255 20 284.5 53.5Q314 87 314 148Q314 207 283.5 258.0Q253 309 186 359Q112 412 78.0 461.5Q44 511 44 567Q44 641 95.5 685.5Q147 730 227 730Q257 730 285.0 723.0Q313 716 331 703Q337 699 340.5 694.0Q344 689 344 681L347 530Q347 513 334 513Q325 513 321 527L314 552Q292 629 268.5 664.5Q245 700 201 700Q158 700 132.5 672.0Q107 644 107 593Q107 550 135.0 511.0Q163 472 233 416Q308 355 342.5 298.5Q377 242 377 178Q377 122 352.0 80.0Q327 38 283.5 14.5Q240 -9 184 -9Z"/>
-  <path fill="#FFFFFF" d="M48.5 9 C49.5 14.4 51.1 16 56.5 17 C51.1 18 49.5 19.6 48.5 25 C47.5 19.6 45.9 18 40.5 17 C45.9 16 47.5 14.4 48.5 9 Z"/>
+  <rect width="64" height="64" rx="18" fill="url(#aiera-forest)"/>
+  <!-- head outline, facing right -->
+  <path d="M21 55 V47 C14.5 43 12 35 13 27.5 C14.5 17 22.5 10 32.5 10 C42.5 10 50 17 50.5 26 L54.5 33 L50.5 35 L51 40 C51 43.5 48 44.5 45 44.5 L44 51 L37 55"
+        fill="none" stroke="#86C39D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- network mesh inside the head -->
+  <g stroke="#86C39D" stroke-width="1" stroke-linecap="round" opacity="0.55">
+    <path d="M17 34 L21 21 L29 14 L40 14 L47 21"/>
+    <path d="M17 34 L24 41 L34 45 L44 40 L48 31"/>
+    <path d="M21 21 L24 41"/><path d="M40 14 L48 31"/><path d="M24 41 L44 40"/>
+  </g>
+  <g fill="#86C39D">
+    <circle cx="17" cy="34" r="1.5"/><circle cx="21" cy="21" r="1.5"/><circle cx="29" cy="14" r="1.5"/><circle cx="40" cy="14" r="1.5"/>
+    <circle cx="47" cy="21" r="1.5"/><circle cx="48" cy="31" r="1.5"/><circle cx="44" cy="40" r="1.5"/><circle cx="34" cy="45" r="1.5"/><circle cx="24" cy="41" r="1.5"/>
+  </g>
+  <!-- glowing gold circuit -->
+  <circle cx="32" cy="28" r="14" fill="url(#aiera-glow)"/>
+  <circle cx="32" cy="28" r="7.5" fill="none" stroke="#F5D36B" stroke-width="2.2" stroke-dasharray="9 2.8"/>
+  <circle cx="32" cy="28" r="3" fill="#F5D36B"/>
+  <g stroke="#F5D36B" stroke-width="1.5" stroke-linecap="round" fill="none">
+    <path d="M39.5 28 H44 L48 31"/><path d="M27 22.5 L21 21"/><path d="M29 35 L24 41"/>
+  </g>
+  <g fill="#F5D36B"><circle cx="48" cy="31" r="1.9"/><circle cx="21" cy="21" r="1.9"/><circle cx="24" cy="41" r="1.9"/></g>
 </svg>

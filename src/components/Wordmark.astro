@@ -9,13 +9,18 @@ const { size = 'md' } = Astro.props;
 </span>
 
 <style>
-  .wordmark { display: inline-flex; align-items: center; gap: 0.28em; font-family: var(--font-ui); font-weight: 600; letter-spacing: -0.035em; line-height: 1; color: var(--ink); }
+  .wordmark { display: inline-flex; align-items: center; gap: 0.28em; font-family: var(--font-ui); font-weight: 600; letter-spacing: -0.035em; line-height: 1; color: #164A30; }
   .md { font-size: 1.55rem; }
   .lg { font-size: 1.8rem; }
   .i { position: relative; display: inline-block; }
   .dot { position: absolute; left: 50%; top: -0.06em; width: 0.24em; height: 0.24em; border-radius: 50%; transform: translateX(-50%);
-    background: var(--accent); box-shadow: 0 0 0 0.09em color-mix(in srgb, var(--accent) 22%, transparent); }
-  .badge { font-size: 0.6em; letter-spacing: 0; padding: 0.28em 0.6em 0.32em; border-radius: 999px; background: var(--spark); color: #FFFFFF; }
-  :root[data-theme="dark"] .badge { color: #061522; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .badge { color: #061522; } }
+    background: #E8B93C; box-shadow: 0 0 0 0.09em rgba(232, 185, 60, 0.28); }
+  .badge { font-size: 0.6em; letter-spacing: 0; padding: 0.28em 0.6em 0.32em; border-radius: 999px; background: #164A30; color: #FFFFFF; }
+  /* Logo colours: gold dot and forest-green badge; the badge lightens to sage in dark mode */
+  :root[data-theme="dark"] .wordmark { color: #86C39D; }
+  :root[data-theme="dark"] .badge { background: #86C39D; color: #0A2416; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .wordmark { color: #86C39D; }
+    :root:not([data-theme="light"]) .badge { background: #86C39D; color: #0A2416; }
+  }
 </style>
