@@ -5,7 +5,7 @@ const { size = 'md' } = Astro.props;
 ---
 <span class={`wordmark ${size}`} aria-label="AIERA-TS" role="img">
   <span class="word" aria-hidden="true">a<span class="i">ı<span class="dot"></span></span>era</span>
-  <span class="badge" aria-hidden="true">ts</span>
+  <span class="badge" aria-hidden="true"><span class="ts">ts</span></span>
 </span>
 
 <style>
@@ -43,7 +43,13 @@ const { size = 'md' } = Astro.props;
     color: var(--badge-ink);
     background: linear-gradient(180deg, var(--badge-top), var(--badge-low));
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), inset 0 -1px 0 rgba(0, 0, 0, 0.18), 0 3px 8px rgba(15, 74, 44, 0.28);
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
+  }
+  /* Shiny gold letters inside the badge */
+  .ts {
+    position: relative; z-index: 1;
+    background: linear-gradient(180deg, #FFF4C2 0%, #F5CC4E 40%, #C98F14 68%, #F0C75A 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 1px 0 rgba(10, 51, 32, 0.55));
   }
   .badge::before {
     content: ""; position: absolute; left: 8%; right: 8%; top: 6%; height: 45%; border-radius: 999px;
@@ -53,12 +59,12 @@ const { size = 'md' } = Astro.props;
   /* Dark mode: lighter, luminous greens */
   :root[data-theme="dark"] .wordmark {
     --wm-top: #C9F0D6; --wm-mid: #8FD1A8; --wm-low: #5DAE7F; --wm-shine: rgba(255, 255, 255, 0.35);
-    --badge-top: #A8E2BE; --badge-low: #5DAE7F; --badge-ink: #0A2416;
+    --badge-top: #2F9A62; --badge-low: #0F4A2C; --badge-ink: #FFFFFF;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) .wordmark {
       --wm-top: #C9F0D6; --wm-mid: #8FD1A8; --wm-low: #5DAE7F; --wm-shine: rgba(255, 255, 255, 0.35);
-      --badge-top: #A8E2BE; --badge-low: #5DAE7F; --badge-ink: #0A2416;
+      --badge-top: #2F9A62; --badge-low: #0F4A2C; --badge-ink: #FFFFFF;
     }
   }
 </style>
