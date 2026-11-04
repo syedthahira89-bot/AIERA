@@ -1,6 +1,6 @@
-# AIERA content plan
+# AIERA-TS content plan
 
-AIERA has two pillars. Aim for roughly two "better life" posts for every "how it works" post.
+AIERA-TS has two pillars. Aim for roughly two "better life" posts for every "how it works" post.
 
 | Pillar | Topics |
 | --- | --- |

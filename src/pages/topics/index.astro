@@ -5,11 +5,11 @@ import { getPosts } from '../../lib/posts';
 
 const posts = await getPosts();
 ---
-<BaseLayout title="Topics" description="Browse AIERA by topic: AI for a better life, and how AI works, explained simply.">
+<BaseLayout title="Topics" description="Browse AIERA-TS by topic: AI for a better life, and how AI works, explained simply.">
   <section class="page">
     <div class="wrap">
       <h1>Topics</h1>
-      <p class="lede">AIERA has two sides: how AI is making life better, and how it actually works. Pick a topic to see every article on it.</p>
+      <p class="lede">AIERA-TS has two sides: how AI is making life better, and how it actually works. Pick a topic to see every article on it.</p>
       {PILLARS.map((pillar) => (
         <section class="pillar" aria-labelledby={`pillar-${pillar.id}`}>
           <h2 id={`pillar-${pillar.id}`}>{pillar.name}</h2>

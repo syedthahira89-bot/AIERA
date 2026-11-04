@@ -5,8 +5,8 @@ pubDate: 2026-10-27
 topic: "Smarter Living"
 level: Beginner
 featured: true
-cover: /images/ai-everyday-cover.jpg
-coverAlt: "Illustration of a smiling woman adjusting a smart thermostat with her phone in a sunny kitchen, with forests, farm fields and a river visible through the window."
+cover: /images/cover-ai-and-you.jpg
+coverAlt: "A friendly illustrated collage: a smiling woman setting a smart thermostat from her phone in a sunny kitchen, labelled AI at home, beside three smaller scenes labelled 75 years of AI, Out and about, and Caring for nature."
 ---
 
 Artificial intelligence can feel like it arrived overnight. In reality it is an idea more than 75 years old, and it has been quietly filtering your email, estimating your arrival time and translating menus for years. Here is where it came from, how it is making life easier for people and the planet, and how you can put it to work yourself.
@@ -51,11 +51,11 @@ Microsoft's free [Seeing AI](https://www.seeingai.com/) app describes people, te
 
 ### Health
 
-In 2018 the US Food and Drug Administration [authorized IDx-DR](https://www.fda.gov/news-events/press-announcements/fda-permits-marketing-artificial-intelligence-based-device-detect-certain-diabetes-related-eye-problems) (now LumineticsCore), the first autonomous AI system to screen for diabetic eye disease. A nurse takes the photo and the patient gets a result in minutes, which matters in places with few eye doctors. Smartwatches can also flag irregular heart rhythms and prompt the wearer to see a doctor.
+In 2018 the US Food and Drug Administration authorized IDx-DR (now LumineticsCore), the first autonomous AI system to screen for diabetic eye disease, after a [clinical trial in primary care clinics](https://doi.org/10.1038/s41746-018-0040-6). A nurse takes the photo and the patient gets a result in minutes, which matters in places with few eye doctors. Smartwatches can also flag irregular heart rhythms and prompt the wearer to see a doctor.
 
 ### Home and energy
 
-Smart thermostats learn your routine and heat or cool the home only when needed. Google Nest [reports average savings](https://nest.com/-downloads/press/documents/energy-savings-white-paper.pdf) of roughly 10 to 12% on heating and about 15% on cooling: lower bills and lower energy use at once.
+Smart thermostats learn your routine and heat or cool the home only when needed. [ENERGY STAR estimates](https://www.energystar.gov/products/smart_thermostats) that certified smart thermostats save about 8% on heating and cooling bills on average: lower bills and lower energy use at once.
 
 ## Helping nature and the planet
 

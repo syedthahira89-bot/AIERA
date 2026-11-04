@@ -7,7 +7,7 @@ import { getPosts } from '../../lib/posts';
 const posts = await getPosts();
 const filters = [{ name: 'All', count: posts.length }, ...TOPICS.map((t) => ({ name: t.name, count: posts.filter((p) => p.data.topic === t.name).length }))];
 ---
-<BaseLayout title="All articles" description="Every AIERA article: how AI is making life better, and how it actually works, explained simply.">
+<BaseLayout title="All articles" description="Every AIERA-TS article: how AI is making life better, and how it actually works, explained simply.">
   <section class="page-top">
     <div class="wrap">
       <div class="section-head">

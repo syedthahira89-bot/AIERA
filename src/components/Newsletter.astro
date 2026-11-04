@@ -5,7 +5,7 @@ import { SITE } from '../data/site';
   <div class="wrap newsletter">
     <div>
       <h2 id="newsletter-title">One idea, every Thursday</h2>
-      <p>The weekly AIERA issue brings the new article, a paper worth reading, and one small experiment to try yourself. It takes about ten minutes to read.</p>
+      <p>The weekly AIERA-TS issue brings the new article, a paper worth reading, and one small experiment to try yourself. It takes about ten minutes to read.</p>
     </div>
     <form class="subscribe" id="subscribe-form" method="post" action={SITE.newsletterAction || undefined} target={SITE.newsletterAction ? '_blank' : undefined} data-live={SITE.newsletterAction ? 'true' : 'false'} novalidate>
       {SITE.newsletterAction && <input type="hidden" name="embed" value="1" />}

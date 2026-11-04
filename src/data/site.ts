@@ -1,9 +1,9 @@
 export const SITE = {
-  name: 'AIERA',
+  name: 'AIERA-TS',
   url: 'https://aiera-ts.com',
   tagline: 'The bright side of AI, explained simply.',
   description:
-    'AIERA is a friendly weekly blog about how AI is making life healthier, more creative and more human, and how it actually works, explained in plain language.',
+    'AIERA-TS is a friendly weekly blog about how AI is making life healthier, more creative and more human, and how it actually works, explained in plain language.',
   email: 'aiera.blog@gmail.com',
   author: {
     name: 'Thahira S',

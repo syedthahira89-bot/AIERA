@@ -1,6 +1,6 @@
-# AIERA
+# AIERA-TS
 
-The AIERA blog (aiera-ts.com), built with [Astro](https://astro.build). It explains how AI and machine learning work for curious readers.
+The AIERA-TS blog (aiera-ts.com), built with [Astro](https://astro.build). It explains how AI and machine learning work for curious readers.
 
 ## Run it locally
 

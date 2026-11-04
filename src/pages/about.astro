@@ -4,57 +4,87 @@ import { SITE } from '../data/site';
 import { getPosts } from '../lib/posts';
 
 const [latest] = await getPosts();
+
+const themes = [
+  { title: 'Smarter Living', slug: 'smarter-living', text: 'How AI is quietly making everyday life a little easier, from health and wellness to the small daily tasks we’d happily hand over.' },
+  { title: 'Creative Freedom', slug: 'creative-freedom', text: 'How AI can be a creative partner that helps you start, explore and finish your ideas, in your own voice.' },
+  { title: 'The New Work Paradigm', slug: 'new-work-paradigm', text: 'How automation can make work healthier, more balanced and more meaningful, and how to grow with the change.' },
+  { title: 'AI & the Planet', slug: 'ai-and-the-planet', text: 'How AI is helping people care for forests, wildlife, farmland and the climate.' },
+];
 ---
-<BaseLayout title="About" description={`Meet ${SITE.author.name}, the tech futurist behind AIERA, a blog about AI's bright side.`}>
+<BaseLayout title="About" description={`Meet ${SITE.author.name}, the tech futurist behind AIERA-TS, a friendly blog about the bright side of AI.`}>
   <section class="page">
     <div class="wrap page-inner">
-      <h1>About me</h1>
-      <p class="lede">Hi, I’m {SITE.author.name}, and I’m betting on a future that’s bright, automated, and built for human flourishing.</p>
+      <header class="intro">
+        <figure class="portrait">
+          <img src="/images/thahira.jpg" width="480" height="600" alt={`Portrait of ${SITE.author.name} outdoors in warm evening light.`} />
+        </figure>
+        <div>
+          <h1>Hello, I’m {SITE.author.name}</h1>
+          <p class="lede">I’m a tech futurist with a hopeful hunch: the future can be bright, helpful and built around people. AIERA-TS is where I explore it, and I’m so glad you’re here.</p>
+          <p class="role">Tech futurist and founder of AIERA-TS</p>
+        </div>
+      </header>
 
       <div class="prose">
-        <p>Many headlines today present AI as something to fear. Look a little deeper, though, and a far more hopeful story is unfolding. AI is helping solve complex medical challenges, taking on repetitive tasks, and giving us something truly valuable: more time to be human.</p>
-        <p>This blog is for the curious, the tech-forward, and the optimists. Whether you work in AI, love following the latest innovations, or simply wonder what tomorrow will look like, you’re in the right place.</p>
+        <h2>Why I started AIERA-TS</h2>
+        <p>Have you noticed how often AI is talked about as something to worry about? I understand why. New technology can feel big and a little mysterious. But whenever I look a bit closer, I find a far more hopeful story unfolding.</p>
+        <p>AI is helping doctors spot illness earlier, taking on the repetitive tasks that eat up our days, and giving us back something truly precious: more time to be human. I started AIERA-TS to share those stories, and to explain the ideas behind them in a way that feels friendly rather than overwhelming.</p>
 
-        <h2>Why I focus on the bright side</h2>
-        <p>As a tech futurist, I follow where AI and machine learning are heading and explore what those advancements mean for everyday life. Technology matters, but its positive impact on people matters most.</p>
-        <p>Here’s what you’ll find on this blog:</p>
+        <h2>Who this blog is for</h2>
+        <p>If you’re curious, you belong here. Maybe you work in tech, maybe you love following new ideas, or maybe you simply wonder what tomorrow might look like for you and your family. You don’t need a technical background. Every article starts from everyday life and builds up gently, one idea at a time.</p>
+        <p>And if a word ever feels unfamiliar, our friendly <a href="/glossary/">AI glossary</a> is always one click away.</p>
+
+        <h2>What we’ll explore together</h2>
+        <p>Most of AIERA-TS looks at how AI can make life better:</p>
       </div>
 
       <ul class="themes">
-        <li>
-          <h3>Smarter living</h3>
-          <p>How AI is improving personal health, wellness, and everyday productivity.</p>
-        </li>
-        <li>
-          <h3>Creative freedom</h3>
-          <p>How machine learning tools act as co-pilots that amplify human creativity.</p>
-        </li>
-        <li>
-          <h3>The new work paradigm</h3>
-          <p>How automation can create healthier, more balanced, and more meaningful careers.</p>
-        </li>
+        {themes.map((t) => (
+          <li>
+            <a href={`/topics/${t.slug}/`}>
+              <h3>{t.title}</h3>
+              <p>{t.text}</p>
+            </a>
+          </li>
+        ))}
       </ul>
 
       <div class="prose">
+        <p>Alongside those, I write friendly explainers on <a href="/topics/chatbots-and-language/">how chatbots understand language</a> and <a href="/topics/images-and-learning/">how AI sees and learns</a>. Understanding how something works is often the best cure for worrying about it, and honestly, it’s fascinating.</p>
+
         <h2>When I’m offline</h2>
-        <p>When I’m not exploring the latest in AI, you’ll find me discovering new places, spending time with my family, or tending to my garden.</p>
-        <p class="closing">The future isn’t something that happens to us. We’re building it together. Let’s make it a future we’re excited to live in.</p>
+        <p>When I’m not reading about the latest in AI, you’ll find me discovering new places, spending time with my family, or tending to my garden. I think the garden has taught me a lot about technology, too: the best things grow with patience, care and a little curiosity.</p>
+
+        <h2>Let’s stay in touch</h2>
+        <p>I’d love to hear what you’re curious about. Every week, the AIERA-TS newsletter brings one friendly idea, a hopeful story and a small experiment to try yourself.</p>
+        <p class="closing">The future isn’t something that simply happens to us. We’re building it together, so let’s make it one we’re excited to live in.</p>
       </div>
 
       <div class="actions">
-        <a class="btn btn-primary" href="/#newsletter">Subscribe to the newsletter</a>
+        <a class="btn btn-primary" href="/#newsletter">Join the weekly newsletter</a>
         {latest && <a class="btn btn-quiet" href={`/blog/${latest.id}/`}>Read my latest post</a>}
       </div>
-      <p class="note">The weekly newsletter brings a dose of data-backed tech optimism. Questions or ideas? <a href="/contact/">Get in touch</a>.</p>
+      <p class="note">Have a question or an idea for an article? <a href="/contact/">Say hello</a>. I read every message.</p>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  .intro { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 36px; align-items: center; }
+  @media (max-width: 600px) { .intro { grid-template-columns: minmax(0, 1fr); gap: 24px; justify-items: start; } }
+  .portrait { margin: 0; width: 200px; max-width: 100%; aspect-ratio: 4 / 5; border-radius: 24px; overflow: hidden;
+    box-shadow: 0 0 0 6px var(--surface), 0 0 0 7px var(--line), 0 18px 40px rgba(154, 52, 18, .16); background: var(--raise); }
+  @media (max-width: 600px) { .portrait { width: 160px; } }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .role { margin-top: 12px; font-size: var(--step--1); font-weight: 600; color: var(--accent-strong); }
   .prose { margin-top: 32px; }
-  .themes { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 12px; }
-  .themes li { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 16px 20px; }
-  .themes h3 { font-size: var(--step-1); }
+  .themes { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  @media (max-width: 600px) { .themes { grid-template-columns: minmax(0, 1fr); } }
+  .themes a { display: block; height: 100%; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 16px 20px; color: inherit; text-decoration: none; transition: border-color .15s; }
+  .themes a:hover { border-color: var(--accent); }
+  .themes a:hover h3 { color: var(--accent-strong); }
+  .themes h3 { font-size: var(--step-1); transition: color .15s; }
   .themes p { color: var(--muted); margin-top: 4px; }
   .closing { font-style: italic; }
   .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }

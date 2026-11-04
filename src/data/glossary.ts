@@ -1,5 +1,5 @@
 /**
- * AIERA glossary. Each term has a friendly, plain-language definition and,
+ * AIERA-TS glossary. Each term has a friendly, plain-language definition and,
  * where one exists, the article that explains it (by post id).
  */
 export interface GlossaryTerm {
