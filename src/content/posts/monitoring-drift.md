@@ -1,5 +1,5 @@
 ---
-title: "What is model drift? Keeping AI helpful after launch"
+title: "Model drift explained: keeping AI reliable after launch"
 description: "The world keeps changing after an AI model goes live. Here's how teams notice the change and keep their models up to date."
 pubDate: 2026-09-03
 topic: "ML Fundamentals"

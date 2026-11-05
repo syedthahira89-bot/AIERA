@@ -1,5 +1,5 @@
 ---
-title: "Will AI take my job? A calm, practical look"
+title: "AI and your career: how to thrive in the future of work"
 description: "AI is changing work, but mostly task by task. Here's a calm way to think about your own role, and five practical steps to grow with the change."
 pubDate: 2026-11-03
 topic: "Future of Work"
@@ -74,5 +74,5 @@ Write down three tasks from your week that you'd happily hand to a helper. Pick 
 ## Sources & further reading
 
 - World Economic Forum, [*The Future of Jobs Report 2025*](https://www.weforum.org/publications/the-future-of-jobs-report-2025/), a large survey of employers on how skills and roles are changing.
-- [AI and you: a friendly beginner's guide](/blog/ai-origins-everyday-life/)
-- [Can AI make you more creative? A friendly guide](/blog/ai-creativity-guide/)
+- [Everyday AI: a beginner’s guide from Turing to today](/blog/ai-origins-everyday-life/)
+- [Creative AI: how to use AI as your creative co-pilot](/blog/ai-creativity-guide/)

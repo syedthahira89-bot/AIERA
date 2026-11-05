@@ -1,5 +1,5 @@
 ---
-title: "AI and you: a friendly beginner’s guide"
+title: "Everyday AI: a beginner’s guide from Turing to today"
 description: "From Alan Turing's 1950 question to flood warnings and talking cameras: where AI came from, real examples of it improving daily life and nature, and simple ways to use it yourself."
 pubDate: 2026-10-27
 topic: "Everyday AI"

@@ -1,5 +1,5 @@
 ---
-title: "Top 7 free AI tools that make everyday life easier"
+title: "AI toolkit: the 7 best free AI tools for everyday life"
 description: "Seven friendly AI tools anyone can try for free: for answering questions, planning your week, studying, designing and even identifying plants with your camera."
 pubDate: 2026-11-05
 topic: "AI Toolkit"
@@ -126,6 +126,6 @@ Pick **one** tool from this list and use it for one small task each day for a we
 
 ## Further reading
 
-- [Agentic AI explained: your new digital helper](/blog/what-is-agentic-ai/)
-- [How to test a chatbot: simple, fair ways to check AI](/blog/evaluating-llm-outputs/)
-- [Can AI make you more creative? A friendly guide](/blog/ai-creativity-guide/)
+- [AI agents explained: your new digital helper](/blog/what-is-agentic-ai/)
+- [LLM evaluation made simple: how to test a chatbot fairly](/blog/evaluating-llm-outputs/)
+- [Creative AI: how to use AI as your creative co-pilot](/blog/ai-creativity-guide/)

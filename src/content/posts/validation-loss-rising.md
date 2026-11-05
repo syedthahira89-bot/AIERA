@@ -1,5 +1,5 @@
 ---
-title: "What is overfitting? When AI memorises instead of learning"
+title: "Overfitting explained: when AI memorises instead of learns"
 description: "Why a model can ace its practice questions yet stumble on new ones, plus three gentle ways to help it learn."
 pubDate: 2026-10-08
 updatedDate: 2026-11-03

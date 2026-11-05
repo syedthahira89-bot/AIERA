@@ -1,5 +1,5 @@
 ---
-title: "Reward shortcuts: when AI finds a clever way around the goal"
+title: "Reward hacking explained: when AI games the goal"
 description: "Reward an AI for a goal and it may find a surprising shortcut instead. Here's why that happens, and how researchers guide it back on course."
 pubDate: 2026-09-17
 topic: "ML Fundamentals"

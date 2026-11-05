@@ -1,5 +1,5 @@
 ---
-title: "How image AI sees: what a vision model notices first"
+title: "Computer vision basics: what AI notices first in an image"
 description: "Open up a vision model and you'll find it starts by noticing edges and colours, a lot like our own eyes."
 pubDate: 2026-10-01
 topic: "ML Fundamentals"

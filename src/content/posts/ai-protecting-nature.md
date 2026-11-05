@@ -1,5 +1,5 @@
 ---
-title: "5 ways AI is helping protect nature"
+title: "AI for the planet: 5 ways AI is protecting nature"
 description: "From listening to rainforests to warning families about floods, here are five hopeful ways AI is helping people care for the planet, and how you can join in."
 pubDate: 2026-11-03
 topic: "AI for the Planet"
@@ -67,5 +67,5 @@ Next time you hear birdsong on a walk, imagine a phone in a rainforest tree list
 
 ## Further reading
 
-- [AI and you: a friendly beginner's guide](/blog/ai-origins-everyday-life/), which covers more everyday examples.
-- [How image AI sees: what a vision model notices first](/blog/cnn-first-layer/), the idea behind weed-spotting cameras.
+- [Everyday AI: a beginner’s guide from Turing to today](/blog/ai-origins-everyday-life/), which covers more everyday examples.
+- [Computer vision basics: what AI notices first in an image](/blog/cnn-first-layer/), the idea behind weed-spotting cameras.

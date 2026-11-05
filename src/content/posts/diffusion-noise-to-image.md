@@ -1,5 +1,5 @@
 ---
-title: "How diffusion models work: AI that paints from static"
+title: "Diffusion models explained: how AI turns noise into images"
 description: "Many AI image tools start with pure noise and tidy it up, a little at a time, until a picture appears."
 pubDate: 2026-09-10
 updatedDate: 2026-11-03

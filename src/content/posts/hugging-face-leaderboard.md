@@ -1,5 +1,5 @@
 ---
-title: "What is a Hugging Face leaderboard? AI's friendly scoreboard"
+title: "Hugging Face leaderboards: how to read AI model rankings"
 description: "A one-minute guide to the online scoreboards that compare AI models, and how to read them wisely."
 pubDate: 2026-11-04
 topic: "LLMs Decoded"

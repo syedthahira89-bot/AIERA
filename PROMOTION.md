@@ -51,7 +51,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 
 ### Ready-to-use posts
 
-**Hugging Face leaderboards** (newest)
+**Hugging Face leaderboards: how to read AI model rankings**
 > Ever seen people say "this AI model is #1"? I wondered who keeps score, so I wrote a one-minute guide.
 >
 > Hugging Face leaderboards are friendly online scoreboards that compare AI models. Here's how to read them, and why the top spot isn't always the best choice for you.
@@ -62,7 +62,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #AI #MachineLearning #HuggingFace
 
-**Will AI take my job?**
+**AI and your career: how to thrive in the future of work**
 > It's the question I hear most from friends and family, so I wanted to give a calm, practical answer.
 >
 > AI is changing work mostly task by task, not job by job. The article shares a simple way to think about your own role, plus five steps to grow with the change.
@@ -73,7 +73,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #FutureOfWork #AI #Careers
 
-**Can AI make you more creative?**
+**Creative AI: how to use AI as your creative co-pilot**
 > I've been using AI as a creative partner, not a replacement, and it has changed how I start new ideas.
 >
 > Here's a friendly guide to using AI to start, explore and finish creative projects while keeping your own voice.
@@ -84,7 +84,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #Creativity #AI #GenerativeAI
 
-**5 ways AI is helping protect nature**
+**AI for the planet: 5 ways AI is protecting nature**
 > Some of the most hopeful AI stories aren't about chatbots at all.
 >
 > From listening to rainforests to warning families about floods, here are five ways AI is helping people care for the planet, and how you can join in.
@@ -95,7 +95,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #AIforGood #Climate #Sustainability
 
-**AI and you: a beginner's guide**
+**Everyday AI: a beginner’s guide from Turing to today**
 > If you've ever wondered where AI actually came from, this one's for you.
 >
 > A friendly tour from Alan Turing's 1950 question to flood warnings and talking cameras, with simple ways to start using AI yourself.
@@ -106,7 +106,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #AI #Beginners #Technology
 
-**What is attention in AI?**
+**LLM attention explained: how models know what “it” means**
 > How does a chatbot know what "it" means in a sentence? I followed one little word through an AI model to find out.
 >
 > This explainer shows, step by step, how AI decides which words matter most.
@@ -117,7 +117,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #AI #LLM #Transformers
 
-**What are tokens?**
+**LLM tokens explained: how AI models read text**
 > Chatbots don't read letters the way we do, and that explains some of their funny habits.
 >
 > Here's how they break text into small pieces called tokens, in plain language.
@@ -128,7 +128,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #AI #ChatGPT #LLM
 
-**How to test a chatbot**
+**LLM evaluation made simple: how to test a chatbot fairly**
 > How do you know if a chatbot's answers are actually good? It's trickier than it looks.
 >
 > Here are simple, fair ways to test AI and trust the results.
@@ -139,7 +139,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #AI #LLM #ResponsibleAI
 
-**Gradient descent explained**
+**Gradient descent explained: how AI learns step by step**
 > The way AI learns reminds me of walking down a foggy hill, one careful step at a time.
 >
 > This explainer shows how AI improves itself step by step, and why the size of each step matters so much.
@@ -150,7 +150,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #MachineLearning #AI #DataScience
 
-**What is overfitting?**
+**Overfitting explained: when AI memorises instead of learns**
 > Ever known a student who aces the practice test but struggles in the real exam? AI can do that too.
 >
 > Here's why it happens, plus three gentle ways to help a model truly learn.
@@ -159,14 +159,14 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #MachineLearning #AI #DataScience
 
-**How image AI sees**
+**Computer vision basics: what AI notices first in an image**
 > When a vision model looks at a photo, what does it notice first? The answer is a lot like our own eyes.
 >
 > https://aiera-ts.com/blog/cnn-first-layer/
 >
 > #ComputerVision #AI #DeepLearning
 
-**How diffusion models work**
+**Diffusion models explained: how AI turns noise into images**
 > Many AI image tools start with pure static and tidy it up, a little at a time, until a picture appears.
 >
 > Here's how that works, in plain language.
@@ -177,7 +177,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #GenerativeAI #AIArt #AI
 
-**What is model drift?**
+**Model drift explained: keeping AI reliable after launch**
 > An AI model's work isn't finished on launch day, because the world keeps changing.
 >
 > Here's how teams notice that change and keep their models helpful.
@@ -186,7 +186,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #MachineLearning #MLOps #AI
 
-**Reward shortcuts**
+**Reward hacking explained: when AI games the goal**
 > Reward an AI for a goal and it may find a surprising shortcut instead.
 >
 > Here's why that happens, and how researchers gently guide it back on course.

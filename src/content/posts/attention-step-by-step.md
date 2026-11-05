@@ -1,5 +1,5 @@
 ---
-title: "What is attention in AI? How chatbots know what “it” means"
+title: "LLM attention explained: how models know what “it” means"
 description: "Follow one little word through a transformer and discover how AI decides which other words matter most."
 pubDate: 2026-10-22
 updatedDate: 2026-11-03

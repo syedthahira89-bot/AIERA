@@ -1,5 +1,5 @@
 ---
-title: "How to test a chatbot: simple, fair ways to check AI"
+title: "LLM evaluation made simple: how to test a chatbot fairly"
 description: "Measuring a chatbot's answers is trickier than it looks. Here are simple, fair ways to test AI and trust the results."
 pubDate: 2026-08-27
 topic: "LLMs Decoded"

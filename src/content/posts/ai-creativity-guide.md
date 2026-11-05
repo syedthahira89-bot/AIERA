@@ -1,5 +1,5 @@
 ---
-title: "Can AI make you more creative? A friendly guide"
+title: "Creative AI: how to use AI as your creative co-pilot"
 description: "AI won't replace your imagination, but it can be a wonderful creative partner. Here's how to use it to start, explore and finish your ideas, in your own voice."
 pubDate: 2026-11-03
 topic: "Creative AI"
@@ -76,6 +76,6 @@ Pick one small creative project: a birthday poem, a new recipe, a weekend sketch
 
 ## Further reading
 
-- [How diffusion models work: AI that paints from static](/blog/diffusion-noise-to-image/)
-- [What are tokens? How chatbots read text](/blog/tokenizers-quirks/)
-- [AI and you: a friendly beginner's guide](/blog/ai-origins-everyday-life/)
+- [Diffusion models explained: how AI turns noise into images](/blog/diffusion-noise-to-image/)
+- [LLM tokens explained: how AI models read text](/blog/tokenizers-quirks/)
+- [Everyday AI: a beginner’s guide from Turing to today](/blog/ai-origins-everyday-life/)

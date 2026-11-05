@@ -1,5 +1,5 @@
 ---
-title: "Gradient descent explained: finding the bottom of the valley"
+title: "Gradient descent explained: how AI learns step by step"
 description: "Discover how AI improves itself one small step at a time, and why the size of each step matters so much."
 pubDate: 2026-10-15
 updatedDate: 2026-11-03

@@ -1,5 +1,5 @@
 ---
-title: "What are tokens? How chatbots read text"
+title: "LLM tokens explained: how AI models read text"
 description: "Chatbots don't read letters the way we do. Discover how they break text into pieces, and why that explains some of their surprising habits."
 pubDate: 2026-09-24
 updatedDate: 2026-11-03

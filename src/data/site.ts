@@ -32,14 +32,14 @@ export const PILLARS = [
 ] as const;
 
 export const TOPICS = [
-  { name: 'Everyday AI', slug: 'everyday-ai', pillar: 'better-life', blurb: 'Practical ways AI is improving health, home life and everyday productivity.' },
-  { name: 'Creative AI', slug: 'creative-ai', pillar: 'better-life', blurb: 'AI as a creative co-pilot for writing, design, music and ideas, in your own voice.' },
-  { name: 'Future of Work', slug: 'future-of-work', pillar: 'better-life', blurb: 'How AI is reshaping jobs and careers, and how to grow with the change.' },
-  { name: 'AI for the Planet', slug: 'ai-for-the-planet', pillar: 'better-life', blurb: 'How AI is helping protect forests, wildlife, farmland and the climate.' },
-  { name: 'AI Toolkit', slug: 'ai-toolkit', pillar: 'better-life', blurb: 'Hand-picked AI tools anyone can use to save time, learn and create.' },
-  { name: 'LLMs Decoded', slug: 'llms-decoded', pillar: 'how-it-works', blurb: 'How large language models read and write text, and how to check their answers.' },
-  { name: 'ML Fundamentals', slug: 'ml-fundamentals', pillar: 'how-it-works', blurb: 'How models learn, how they see and create images, and how they stay reliable after launch.' },
-  { name: 'Agents & GenAI', slug: 'agents-and-genai', pillar: 'how-it-works', blurb: 'Generative AI and AI agents: how they create, plan and get tasks done for you.' },
+  { name: 'Everyday AI', slug: 'everyday-ai', pillar: 'better-life', blurb: 'Smart, practical ways to use AI for your health, home and daily routine.' },
+  { name: 'Creative AI', slug: 'creative-ai', pillar: 'better-life', blurb: 'Write, design and create faster with AI as your co-pilot, without losing your voice.' },
+  { name: 'Future of Work', slug: 'future-of-work', pillar: 'better-life', blurb: 'How AI is reshaping careers, and the skills that help you stay ahead.' },
+  { name: 'AI for the Planet', slug: 'ai-for-the-planet', pillar: 'better-life', blurb: 'Real stories of AI protecting forests, wildlife, farmland and the climate.' },
+  { name: 'AI Toolkit', slug: 'ai-toolkit', pillar: 'better-life', blurb: 'Tried-and-tested AI tools that save you time and make everyday tasks easier.' },
+  { name: 'LLMs Decoded', slug: 'llms-decoded', pillar: 'how-it-works', blurb: 'Inside large language models: how they read and write, and how to judge their answers.' },
+  { name: 'ML Fundamentals', slug: 'ml-fundamentals', pillar: 'how-it-works', blurb: 'The core ideas of machine learning: training, vision, image generation and reliability.' },
+  { name: 'Agents & GenAI', slug: 'agents-and-genai', pillar: 'how-it-works', blurb: 'Generative AI and AI agents: how they create content, plan tasks and get things done.' },
 ] as const;
 
 /** Colour palettes for the header picker. Colours here are only for the swatches; the real tokens live in global.css. */
