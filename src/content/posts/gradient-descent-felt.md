@@ -3,7 +3,7 @@ title: "Gradient descent explained: finding the bottom of the valley"
 description: "Discover how AI improves itself one small step at a time, and why the size of each step matters so much."
 pubDate: 2026-10-15
 updatedDate: 2026-11-03
-topic: "Images & Learning"
+topic: "ML Fundamentals"
 level: Beginner
 cover: /images/cover-gradient-descent.jpg
 coverAlt: "A curved valley with a trail of dots stepping down one side to a glowing dot at the lowest point, marked with a star."

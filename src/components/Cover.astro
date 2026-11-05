@@ -1,0 +1,31 @@
+---
+// A cover image that lets each browser download the right size.
+// Uses the WebP copies made by scripts/optimize-images.mjs, and falls back to the original image.
+import { existsSync } from 'node:fs';
+
+interface Props {
+  src: string;
+  alt?: string;
+  width: number;
+  height: number;
+  sizes: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+}
+const { src, alt = '', width, height, sizes, class: cls, loading = 'lazy', fetchpriority } = Astro.props;
+
+const WIDTHS = [400, 800, 1280, 1920];
+const m = src.match(/^\/images\/([^/]+)\.(jpe?g|png)$/i);
+const srcset = m
+  ? WIDTHS.filter((w) => existsSync(`public/images/sized/${m[1]}-${w}.webp`)).map((w) => `/images/sized/${m[1]}-${w}.webp ${w}w`).join(', ')
+  : '';
+---
+{srcset ? (
+  <picture>
+    <source type="image/webp" srcset={srcset} sizes={sizes} />
+    <img class={cls} src={src} width={width} height={height} alt={alt} loading={loading} decoding="async" fetchpriority={fetchpriority} />
+  </picture>
+) : (
+  <img class={cls} src={src} width={width} height={height} alt={alt} loading={loading} decoding="async" fetchpriority={fetchpriority} />
+)}

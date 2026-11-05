@@ -2,7 +2,7 @@
 title: "What is a Hugging Face leaderboard? AI's friendly scoreboard"
 description: "A one-minute guide to the online scoreboards that compare AI models, and how to read them wisely."
 pubDate: 2026-11-04
-topic: "Chatbots & Language"
+topic: "LLMs Decoded"
 level: Beginner
 cover: /images/cover-leaderboard.jpg
 coverAlt: "A leaderboard illustration: a gold trophy above a podium for Model A, B and C, tags for Reasoning, Maths, Coding and Language, and a table ranking five models by average score from 92.4 down to 69.8."

@@ -32,14 +32,14 @@ export const PILLARS = [
 ] as const;
 
 export const TOPICS = [
-  { name: 'Smarter Living', slug: 'smarter-living', pillar: 'better-life', blurb: 'How AI is improving health, wellness, home life and everyday productivity.' },
-  { name: 'Creative Freedom', slug: 'creative-freedom', pillar: 'better-life', blurb: 'How AI tools act as co-pilots that amplify human creativity.' },
-  { name: 'The New Work Paradigm', slug: 'new-work-paradigm', pillar: 'better-life', blurb: 'How automation can make careers healthier, more balanced and more meaningful.' },
-  { name: 'AI & the Planet', slug: 'ai-and-the-planet', pillar: 'better-life', blurb: 'How AI is helping protect forests, wildlife, farmland and the climate.' },
-  { name: 'Top 7 AI Tools for Everyone', slug: 'top-ai-tools', pillar: 'better-life', blurb: 'Friendly, hands-on picks of AI tools anyone can use to save time, learn and create.' },
-  { name: 'Chatbots & Language', slug: 'chatbots-and-language', pillar: 'how-it-works', blurb: 'How chatbots read, understand and write text, and how we check their answers.' },
-  { name: 'Images & Learning', slug: 'images-and-learning', pillar: 'how-it-works', blurb: 'How AI sees and creates pictures, and how models learn, improve and stay up to date.' },
-  { name: 'Agentic & Gen AI', slug: 'agentic-and-gen-ai', pillar: 'how-it-works', blurb: 'How generative AI creates text, images and more, and how AI agents plan and complete tasks for you.' },
+  { name: 'Everyday AI', slug: 'everyday-ai', pillar: 'better-life', blurb: 'Practical ways AI is improving health, home life and everyday productivity.' },
+  { name: 'Creative AI', slug: 'creative-ai', pillar: 'better-life', blurb: 'AI as a creative co-pilot for writing, design, music and ideas, in your own voice.' },
+  { name: 'Future of Work', slug: 'future-of-work', pillar: 'better-life', blurb: 'How AI is reshaping jobs and careers, and how to grow with the change.' },
+  { name: 'AI for the Planet', slug: 'ai-for-the-planet', pillar: 'better-life', blurb: 'How AI is helping protect forests, wildlife, farmland and the climate.' },
+  { name: 'AI Toolkit', slug: 'ai-toolkit', pillar: 'better-life', blurb: 'Hand-picked AI tools anyone can use to save time, learn and create.' },
+  { name: 'LLMs Decoded', slug: 'llms-decoded', pillar: 'how-it-works', blurb: 'How large language models read and write text, and how to check their answers.' },
+  { name: 'ML Fundamentals', slug: 'ml-fundamentals', pillar: 'how-it-works', blurb: 'How models learn, how they see and create images, and how they stay reliable after launch.' },
+  { name: 'Agents & GenAI', slug: 'agents-and-genai', pillar: 'how-it-works', blurb: 'Generative AI and AI agents: how they create, plan and get tasks done for you.' },
 ] as const;
 
 /** Colour palettes for the header picker. Colours here are only for the swatches; the real tokens live in global.css. */

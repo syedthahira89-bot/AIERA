@@ -2,7 +2,7 @@
 title: "Top 7 free AI tools that make everyday life easier"
 description: "Seven friendly AI tools anyone can try for free: for answering questions, planning your week, studying, designing and even identifying plants with your camera."
 pubDate: 2026-11-05
-topic: "Top 7 AI Tools for Everyone"
+topic: "AI Toolkit"
 level: Beginner
 cover: /images/cover-top-7-tools.jpg
 coverAlt: "A bento-style collage: a green title card with a big gold 7 reading 'free AI tools for everyone', beside seven numbered tiles marked free, each showing a small app scene: a chat suggesting quick dinners, a Saturday plan with a map pin, a laptop summarising a page, an answer with numbered sources, class notes with an audio overview, a phone camera identifying a daisy, and a garden picnic invitation with a paint palette."

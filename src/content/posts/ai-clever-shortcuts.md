@@ -2,7 +2,7 @@
 title: "Reward shortcuts: when AI finds a clever way around the goal"
 description: "Reward an AI for a goal and it may find a surprising shortcut instead. Here's why that happens, and how researchers guide it back on course."
 pubDate: 2026-09-17
-topic: "Images & Learning"
+topic: "ML Fundamentals"
 level: Advanced
 cover: /images/cover-clever-shortcuts.jpg
 coverAlt: "A winding race course leading to a finish flag, while a small boat circles a lagoon of stars near the start."

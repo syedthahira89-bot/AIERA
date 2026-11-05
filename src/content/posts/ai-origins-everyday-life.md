@@ -2,7 +2,7 @@
 title: "AI and you: a friendly beginner’s guide"
 description: "From Alan Turing's 1950 question to flood warnings and talking cameras: where AI came from, real examples of it improving daily life and nature, and simple ways to use it yourself."
 pubDate: 2026-10-27
-topic: "Smarter Living"
+topic: "Everyday AI"
 level: Beginner
 cover: /images/cover-ai-and-you.jpg
 coverAlt: "A friendly illustrated collage: a smiling woman setting a smart thermostat from her phone in a sunny kitchen, labelled AI at home, beside three smaller scenes labelled 75 years of AI, Out and about, and Caring for nature."

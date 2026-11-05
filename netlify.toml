@@ -17,75 +17,75 @@
   to = "/apple-touch-icon.png"
   status = 200
 
-# Old topic addresses (renamed twice in 2026), sent straight to the current topic
+# Old topic addresses (renamed in 2026), sent straight to the current topic
 [[redirects]]
   from = "/topics/llms/*"
-  to = "/topics/chatbots-and-language/"
+  to = "/topics/llms-decoded/"
   status = 301
 
 [[redirects]]
   from = "/topics/computer-vision/*"
-  to = "/topics/images-and-learning/"
+  to = "/topics/ml-fundamentals/"
   status = 301
 
 [[redirects]]
   from = "/topics/reinforcement-learning/*"
-  to = "/topics/images-and-learning/"
+  to = "/topics/ml-fundamentals/"
   status = 301
 
 [[redirects]]
   from = "/topics/math-foundations/*"
-  to = "/topics/images-and-learning/"
+  to = "/topics/ml-fundamentals/"
   status = 301
 
 [[redirects]]
   from = "/topics/training/*"
-  to = "/topics/images-and-learning/"
+  to = "/topics/ml-fundamentals/"
   status = 301
 
 [[redirects]]
   from = "/topics/mlops/*"
-  to = "/topics/images-and-learning/"
+  to = "/topics/ml-fundamentals/"
   status = 301
 
 [[redirects]]
   from = "/topics/ai-in-everyday-life/*"
-  to = "/topics/smarter-living/"
+  to = "/topics/everyday-ai/"
   status = 301
 
 [[redirects]]
   from = "/topics/talking-machines/*"
-  to = "/topics/chatbots-and-language/"
+  to = "/topics/llms-decoded/"
   status = 301
 
 [[redirects]]
   from = "/topics/eyes-of-ai/*"
-  to = "/topics/images-and-learning/"
+  to = "/topics/ml-fundamentals/"
   status = 301
 
 [[redirects]]
   from = "/topics/learning-by-trying/*"
-  to = "/topics/images-and-learning/"
+  to = "/topics/ml-fundamentals/"
   status = 301
 
 [[redirects]]
   from = "/topics/numbers-behind-the-magic/*"
-  to = "/topics/images-and-learning/"
+  to = "/topics/ml-fundamentals/"
   status = 301
 
 [[redirects]]
   from = "/topics/how-ai-learns/*"
-  to = "/topics/images-and-learning/"
+  to = "/topics/ml-fundamentals/"
   status = 301
 
 [[redirects]]
   from = "/topics/from-lab-to-life/*"
-  to = "/topics/images-and-learning/"
+  to = "/topics/ml-fundamentals/"
   status = 301
 
 [[redirects]]
   from = "/topics/ai-and-you/*"
-  to = "/topics/smarter-living/"
+  to = "/topics/everyday-ai/"
   status = 301
 
 # Renamed article address
@@ -99,3 +99,43 @@
   from = "/*"
   to = "/404.html"
   status = 404
+
+[[redirects]]
+  from = "/topics/smarter-living/*"
+  to = "/topics/everyday-ai/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/creative-freedom/*"
+  to = "/topics/creative-ai/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/new-work-paradigm/*"
+  to = "/topics/future-of-work/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/ai-and-the-planet/*"
+  to = "/topics/ai-for-the-planet/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/top-ai-tools/*"
+  to = "/topics/ai-toolkit/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/chatbots-and-language/*"
+  to = "/topics/llms-decoded/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/images-and-learning/*"
+  to = "/topics/ml-fundamentals/"
+  status = 301
+
+[[redirects]]
+  from = "/topics/agentic-and-gen-ai/*"
+  to = "/topics/agents-and-genai/"
+  status = 301

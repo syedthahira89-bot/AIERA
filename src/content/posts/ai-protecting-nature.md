@@ -2,7 +2,7 @@
 title: "5 ways AI is helping protect nature"
 description: "From listening to rainforests to warning families about floods, here are five hopeful ways AI is helping people care for the planet, and how you can join in."
 pubDate: 2026-11-03
-topic: "AI & the Planet"
+topic: "AI for the Planet"
 level: Beginner
 cover: /images/cover-nature.jpg
 coverAlt: "A tree with a small phone listening device sending out sound waves, a leaf and the sun above, and a river with a location marker on its bank."

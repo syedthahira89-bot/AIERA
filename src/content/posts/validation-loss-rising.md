@@ -3,7 +3,7 @@ title: "What is overfitting? When AI memorises instead of learning"
 description: "Why a model can ace its practice questions yet stumble on new ones, plus three gentle ways to help it learn."
 pubDate: 2026-10-08
 updatedDate: 2026-11-03
-topic: "Images & Learning"
+topic: "ML Fundamentals"
 level: Beginner
 cover: /images/cover-overfitting.jpg
 coverAlt: "A chart with two falling curves: practice examples keep improving, while new examples improve, level off, then rise again. A star marks the best moment to stop."

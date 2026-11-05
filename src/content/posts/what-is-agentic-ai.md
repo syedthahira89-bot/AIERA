@@ -2,7 +2,7 @@
 title: "Agentic AI explained: your new digital helper"
 description: "Chatbots chat. AI agents get it done. Meet the digital helpers everyone's talking about: how they plan, act and check their work, and how you stay in the driver's seat."
 pubDate: 2026-11-05
-topic: "Agentic & Gen AI"
+topic: "Agents & GenAI"
 level: Beginner
 featured: true
 cover: /images/cover-agentic.jpg

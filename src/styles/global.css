@@ -196,3 +196,6 @@ section.block { padding-block: clamp(48px, 7vw, 88px); border-top: 1px solid var
 .level-bars i { display: block; width: 3px; background: var(--line); border-radius: 1px; }
 .level-bars i:nth-child(1) { height: 5px; } .level-bars i:nth-child(2) { height: 8px; } .level-bars i:nth-child(3) { height: 12px; }
 .level-bars i.on { background: var(--spark); }
+
+/* Responsive cover images: the <picture> wrapper shouldn't change layout */
+picture { display: contents; }

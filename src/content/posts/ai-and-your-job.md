@@ -2,7 +2,7 @@
 title: "Will AI take my job? A calm, practical look"
 description: "AI is changing work, but mostly task by task. Here's a calm way to think about your own role, and five practical steps to grow with the change."
 pubDate: 2026-11-03
-topic: "The New Work Paradigm"
+topic: "Future of Work"
 level: Beginner
 cover: /images/cover-work.jpg
 coverAlt: "A calendar of tasks where the repetitive ones flow to a small AI helper, freeing up time shown by a clock with an open, highlighted section."

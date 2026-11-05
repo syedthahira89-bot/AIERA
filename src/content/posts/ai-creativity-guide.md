@@ -2,7 +2,7 @@
 title: "Can AI make you more creative? A friendly guide"
 description: "AI won't replace your imagination, but it can be a wonderful creative partner. Here's how to use it to start, explore and finish your ideas, in your own voice."
 pubDate: 2026-11-03
-topic: "Creative Freedom"
+topic: "Creative AI"
 level: Beginner
 cover: /images/cover-creativity.jpg
 coverAlt: "Two pencils and a row of colour swatches, with dotted lines connecting them to a glowing light bulb."

@@ -3,7 +3,7 @@ title: "How diffusion models work: AI that paints from static"
 description: "Many AI image tools start with pure noise and tidy it up, a little at a time, until a picture appears."
 pubDate: 2026-09-10
 updatedDate: 2026-11-03
-topic: "Images & Learning"
+topic: "ML Fundamentals"
 level: Intermediate
 cover: /images/cover-diffusion.jpg
 coverAlt: "Five squares in a row, changing from random static into a clear picture of a sun over green hills."

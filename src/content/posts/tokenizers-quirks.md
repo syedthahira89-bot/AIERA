@@ -3,7 +3,7 @@ title: "What are tokens? How chatbots read text"
 description: "Chatbots don't read letters the way we do. Discover how they break text into pieces, and why that explains some of their surprising habits."
 pubDate: 2026-09-24
 updatedDate: 2026-11-03
-topic: "Chatbots & Language"
+topic: "LLMs Decoded"
 level: Intermediate
 cover: /images/cover-tokens.jpg
 coverAlt: "The word \"strawberry\" with an arrow pointing to three coloured pieces, \"str\", \"aw\" and \"berry\", each with an example token number underneath."

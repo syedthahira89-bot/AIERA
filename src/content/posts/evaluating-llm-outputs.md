@@ -2,7 +2,7 @@
 title: "How to test a chatbot: simple, fair ways to check AI"
 description: "Measuring a chatbot's answers is trickier than it looks. Here are simple, fair ways to test AI and trust the results."
 pubDate: 2026-08-27
-topic: "Chatbots & Language"
+topic: "LLMs Decoded"
 level: Advanced
 cover: /images/cover-testing-chatbots.jpg
 coverAlt: "A chat message bubble with an arrow pointing to a checklist with ticks for Accurate, Clear, Helpful and Kind."

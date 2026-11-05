@@ -2,7 +2,7 @@
 title: "What is model drift? Keeping AI helpful after launch"
 description: "The world keeps changing after an AI model goes live. Here's how teams notice the change and keep their models up to date."
 pubDate: 2026-09-03
-topic: "Images & Learning"
+topic: "ML Fundamentals"
 level: Intermediate
 cover: /images/cover-drift.jpg
 coverAlt: "Two overlapping bell curves, labelled \"what it learned from\" and \"what it sees now\", with an arrow showing the shift between them."

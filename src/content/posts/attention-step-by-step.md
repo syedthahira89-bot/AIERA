@@ -3,7 +3,7 @@ title: "What is attention in AI? How chatbots know what “it” means"
 description: "Follow one little word through a transformer and discover how AI decides which other words matter most."
 pubDate: 2026-10-22
 updatedDate: 2026-11-03
-topic: "Chatbots & Language"
+topic: "LLMs Decoded"
 level: Intermediate
 cover: /images/attention-cover.jpg
 coverAlt: "Diagram of the sentence \"The robot picked up the ball because it was light\", with curves from the word \"it\" to every other word. The thickest curve goes to \"ball\"."

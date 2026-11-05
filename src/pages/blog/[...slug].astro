@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostMeta from '../../components/PostMeta.astro';
+import Cover from '../../components/Cover.astro';
 import Newsletter from '../../components/Newsletter.astro';
 import { SITE, formatDate } from '../../data/site';
 import { getPosts, relatedPosts, type Post } from '../../lib/posts';
@@ -40,7 +41,7 @@ const share = [
       <p class="dek">{post.data.description}</p>
       <PostMeta post={post} showDate linkTopic />
       {post.data.updatedDate && <p class="updated">Updated {formatDate(post.data.updatedDate)}</p>}
-      {post.data.cover && <img class="cover" src={post.data.cover} width="622" height="350" alt={post.data.coverAlt ?? ''} />}
+      {post.data.cover && <Cover class="post-cover" src={post.data.cover} width={622} height={350} alt={post.data.coverAlt ?? ''} sizes="(max-width: 800px) 100vw, 760px" loading="eager" fetchpriority="high" />}
     </header>
 
     <div class="reader-grid">
@@ -97,7 +98,7 @@ const share = [
   .dek { font-family: var(--font-display); font-size: 1.5rem; color: var(--muted); line-height: 1.45; }
   .reader-head :global(.meta) { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
   .updated { font-size: var(--step--1); color: var(--muted); margin-top: -8px; }
-  .cover { border-radius: 10px; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-top: 8px; }
+  :global(.post-cover) { border-radius: 10px; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-top: 8px; }
 
   .reader-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 720px) minmax(0, 1fr); gap: 40px; margin-top: 40px; }
   .prose { grid-column: 2; min-width: 0; }

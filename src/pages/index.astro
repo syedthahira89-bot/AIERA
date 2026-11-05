@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostMeta from '../components/PostMeta.astro';
 import PostList from '../components/PostList.astro';
+import Cover from '../components/Cover.astro';
 import GradientDemo from '../components/GradientDemo.astro';
 import LearningPaths from '../components/LearningPaths.astro';
 import Newsletter from '../components/Newsletter.astro';
@@ -25,7 +26,7 @@ const counts = Object.fromEntries(TOPICS.map((t) => [t.name, posts.filter((p) =>
         </div>
       </div>
       <a class="featured" href={`/blog/${featured.id}/`}>
-        {featured.data.cover && <img src={featured.data.cover} width="622" height="350" alt={featured.data.coverAlt ?? ''} />}
+        {featured.data.cover && <Cover src={featured.data.cover} width={622} height={350} alt={featured.data.coverAlt ?? ''} sizes="(max-width: 860px) 100vw, 560px" loading="eager" fetchpriority="high" />}
         <div class="featured-body">
           <span class="kicker">Featured this week</span>
           <h2>{featured.data.title}</h2>
@@ -74,7 +75,7 @@ const counts = Object.fromEntries(TOPICS.map((t) => [t.name, posts.filter((p) =>
   .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
   .featured { display: block; color: inherit; text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; transition: border-color .2s; }
   .featured:hover { color: inherit; border-color: var(--accent); }
-  .featured img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .featured :global(img) { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
   .featured-body { padding: 22px 24px 24px; display: grid; gap: 10px; }
   .featured h2 { font-size: var(--step-2); }
   .featured p { color: var(--muted); }
