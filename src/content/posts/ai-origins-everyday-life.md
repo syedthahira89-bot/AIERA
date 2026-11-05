@@ -4,7 +4,6 @@ description: "From Alan Turing's 1950 question to flood warnings and talking cam
 pubDate: 2026-10-27
 topic: "Smarter Living"
 level: Beginner
-featured: true
 cover: /images/cover-ai-and-you.jpg
 coverAlt: "A friendly illustrated collage: a smiling woman setting a smart thermostat from her phone in a sunny kitchen, labelled AI at home, beside three smaller scenes labelled 75 years of AI, Out and about, and Caring for nature."
 ---
