@@ -7,7 +7,7 @@ export const SITE = {
   email: 'aiera.blog@gmail.com',
   author: {
     name: 'Thahira S',
-    bio: 'Tech futurist exploring how AI and machine learning can make everyday life healthier, more creative and more human.',
+    bio: 'Tech futurist with a background in banking and insurance, now studying AI and machine learning. I explore how AI can make everyday life healthier, more creative and more human.',
   },
   social: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/thahira-syed-2827ba426/' },
