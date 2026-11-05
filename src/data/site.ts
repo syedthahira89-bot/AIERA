@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'AIERA-TS',
   url: 'https://aiera-ts.com',
-  tagline: 'The bright side of AI, made clear.',
+  tagline: 'The bright side of AI, for curious minds.',
   description:
     'Curious about AI? Every Thursday, AIERA-TS shares hopeful real-world stories and jargon-free guides to how AI works. No tech background needed.',
   email: 'aiera.blog@gmail.com',
