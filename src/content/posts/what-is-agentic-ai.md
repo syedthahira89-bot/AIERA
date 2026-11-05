@@ -6,7 +6,7 @@ topic: "Agentic & Gen AI"
 level: Beginner
 featured: true
 cover: /images/cover-agentic.jpg
-coverAlt: "An illustrated picnic scene: a picnic blanket and basket on green hills by a river, and a phone where an AI agent answers the request \"Plan a picnic for Saturday\" with three ticked steps. Three smaller pictures show the steps: a sunny 24° Saturday forecast, a park with a map pin and picnic table, and a ticked shopping list beside a basket."
+coverAlt: "A shiny green and gold cover: the gold headline 'Agentic AI' above 'your new digital helper' and three glossy buttons, Plan, Act and Check. Beside it a glass phone shows the request 'Plan a picnic for Saturday, please!' answered with four ticked steps: weather checked, park found, list ready and reminder set. Glowing icons for the weather, a map pin, a picnic basket and a calendar orbit the phone, with a 'Task complete' badge in the corner."
 ---
 
 **Agentic AI** is one of the biggest AI trends right now, and for good reason. It's the moment AI goes from *talking* about your to-do list to actually *ticking things off* it.
