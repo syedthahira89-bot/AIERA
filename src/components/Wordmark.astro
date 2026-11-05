@@ -20,11 +20,14 @@ const { size = 'md' } = Astro.props;
 
   /* Glossy gradient letters with a soft sheen across the top half */
   .word {
+    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.35)) drop-shadow(0 3px 6px rgba(15, 74, 44, 0.22));
+  }
+  /* The i gets its own gradient too: iPhone browsers don't pass the parent's text clip into an inline-block */
+  .word, .i {
     background:
       linear-gradient(180deg, var(--wm-shine) 0%, rgba(255, 255, 255, 0) 46%),
       linear-gradient(180deg, var(--wm-top) 0%, var(--wm-mid) 55%, var(--wm-low) 100%);
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.35)) drop-shadow(0 3px 6px rgba(15, 74, 44, 0.22));
+    -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
     padding-block: 0.08em;
   }
 
