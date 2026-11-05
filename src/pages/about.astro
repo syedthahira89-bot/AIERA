@@ -4,15 +4,16 @@ import { SITE } from '../data/site';
 import { getPosts } from '../lib/posts';
 
 const [latest] = await getPosts();
+const linkedin = SITE.social.find((s) => s.label === 'LinkedIn')?.href;
 
 const themes = [
-  { title: 'Everyday AI', slug: 'everyday-ai', text: 'How AI is quietly making everyday life a little easier, from health and wellness to the small daily tasks we’d happily hand over.' },
-  { title: 'Creative AI', slug: 'creative-ai', text: 'How AI can be a creative partner that helps you start, explore and finish your ideas, in your own voice.' },
-  { title: 'Future of Work', slug: 'future-of-work', text: 'How automation can make work healthier, more balanced and more meaningful, and how to grow with the change.' },
-  { title: 'AI for the Planet', slug: 'ai-for-the-planet', text: 'How AI is helping people care for forests, wildlife, farmland and the climate.' },
+  { title: 'Everyday AI', slug: 'everyday-ai', text: 'Practical ways AI is making daily life easier, from health and wellbeing to the small tasks we’d happily hand over.' },
+  { title: 'Creative AI', slug: 'creative-ai', text: 'How AI can be a creative partner that helps you start, explore and finish ideas, in your own voice.' },
+  { title: 'Future of Work', slug: 'future-of-work', text: 'How AI is reshaping careers, and how to grow with the change and make work more meaningful.' },
+  { title: 'AI for the Planet', slug: 'ai-for-the-planet', text: 'How AI is helping people protect forests, wildlife, farmland and the climate.' },
 ];
 ---
-<BaseLayout title="About" description={`Meet ${SITE.author.name}, the tech futurist behind AIERA-TS, a friendly blog about the bright side of AI.`}>
+<BaseLayout title="About" description={`Meet ${SITE.author.name}, the tech futurist behind AIERA-TS: hopeful, jargon-free stories about the bright side of AI, made for curious minds.`}>
   <section class="page">
     <div class="wrap page-inner">
       <header class="intro">
@@ -21,22 +22,22 @@ const themes = [
         </figure>
         <div>
           <h1>Hello, I’m {SITE.author.name}</h1>
-          <p class="lede">I’m a tech futurist with a hopeful hunch: the future can be bright, helpful and built around people. AIERA-TS is where I explore it, and I’m so glad you’re here.</p>
-          <p class="role">Tech futurist and founder of AIERA-TS</p>
+          <p class="lede">I’m a tech futurist with a simple belief: technology is at its best when it makes life better for people. AIERA-TS is where I explore that idea, one clear and hopeful story at a time. I’m really glad you’re here.</p>
+          <p class="role">Tech futurist · Founder of AIERA-TS</p>
         </div>
       </header>
 
       <div class="prose">
         <h2>Why I started AIERA-TS</h2>
-        <p>Have you noticed how often AI is talked about as something to worry about? I understand why. New technology can feel big and a little mysterious. But whenever I look a bit closer, I find a far more hopeful story unfolding.</p>
-        <p>AI is helping doctors spot illness earlier, taking on the repetitive tasks that eat up our days, and giving us back something truly precious: more time to be human. I started AIERA-TS to share those stories, and to explain the ideas behind them in a way that feels friendly rather than overwhelming.</p>
+        <p>AI is often talked about as something to worry about, and I understand why. New technology can feel big, fast and a little mysterious. Yet every time I look more closely, I find a more hopeful story: AI helping doctors spot illness earlier, protecting forests and wildlife, and taking on the repetitive tasks that fill our days, so we have more time for the work and the people we care about.</p>
+        <p>I started AIERA-TS to share those stories, and to explain the ideas behind them clearly and honestly, without the hype or the jargon.</p>
 
         <h2>Who this blog is for</h2>
-        <p>If you’re curious, you belong here. Maybe you work in tech, maybe you love following new ideas, or maybe you simply wonder what tomorrow might look like for you and your family. You don’t need a technical background. Every article starts from everyday life and builds up gently, one idea at a time.</p>
-        <p>And if a word ever feels unfamiliar, our friendly <a href="/glossary/">AI glossary</a> is always one click away.</p>
+        <p>Anyone who’s curious about AI. You might work in tech, lead a team, run a small business or study, or you might simply wonder what tomorrow holds for you and your family. You don’t need a technical background: every article starts with everyday life and builds up one idea at a time.</p>
+        <p>If a term ever feels unfamiliar, the <a href="/glossary/">AI glossary</a> is always one click away.</p>
 
         <h2>What we’ll explore together</h2>
-        <p>Most of AIERA-TS looks at how AI can make life better:</p>
+        <p>Most articles look at how AI is making life better:</p>
       </div>
 
       <ul class="themes">
@@ -51,21 +52,21 @@ const themes = [
       </ul>
 
       <div class="prose">
-        <p>Alongside those, I write friendly explainers on <a href="/topics/llms-decoded/">how chatbots understand language</a>, <a href="/topics/ml-fundamentals/">how AI sees and learns</a>, and <a href="/topics/agents-and-genai/">how AI agents get things done</a>. Understanding how something works is often the best cure for worrying about it, and honestly, it’s fascinating.</p>
+        <p>I also share hand-picked tools in the <a href="/topics/ai-toolkit/">AI Toolkit</a>, plus clear explainers on <a href="/topics/llms-decoded/">how chatbots understand language</a>, <a href="/topics/ml-fundamentals/">how AI sees and learns</a> and <a href="/topics/agents-and-genai/">how AI agents get things done</a>. Understanding how something works is often the best answer to worrying about it, and it’s genuinely fascinating.</p>
 
         <h2>When I’m offline</h2>
-        <p>When I’m not reading about the latest in AI, you’ll find me discovering new places, spending time with my family, or tending to my garden. I think the garden has taught me a lot about technology, too: the best things grow with patience, care and a little curiosity.</p>
+        <p>Away from the screen, I love discovering new places, spending time with my family and tending my garden. Gardening has taught me a lot about technology, too: the best things grow with patience, care and a little curiosity.</p>
 
         <h2>Let’s stay in touch</h2>
-        <p>I’d love to hear what you’re curious about. Every week, the AIERA-TS newsletter brings one friendly idea, a hopeful story and a small experiment to try yourself.</p>
-        <p class="closing">The future isn’t something that simply happens to us. We’re building it together, so let’s make it one we’re excited to live in.</p>
+        <p>I’d love to hear what you’re curious about. Every Thursday, the AIERA-TS newsletter brings the new article, a paper worth reading and one small experiment to try yourself. It takes about ten minutes to read.</p>
+        <p class="closing">The future isn’t something that simply happens to us. We’re shaping it together, so let’s make it one we’re excited to live in.</p>
       </div>
 
       <div class="actions">
         <a class="btn btn-primary" href="/#newsletter">Join the weekly newsletter</a>
         {latest && <a class="btn btn-quiet" href={`/blog/${latest.id}/`}>Read my latest post</a>}
       </div>
-      <p class="note">Have a question or an idea for an article? <a href="/contact/">Say hello</a>. I read every message.</p>
+      <p class="note">Have a question, or an idea for an article? <a href="/contact/">Say hello</a>. I read every message.{linkedin && <> You can also <a href={linkedin} target="_blank" rel="noopener me">connect with me on LinkedIn</a>.</>}</p>
     </div>
   </section>
 </BaseLayout>
