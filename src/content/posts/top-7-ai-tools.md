@@ -5,7 +5,7 @@ pubDate: 2026-11-05
 topic: "Top 7 AI Tools for Everyone"
 level: Beginner
 cover: /images/cover-top-7-tools.jpg
-coverAlt: "A green title card reading '7 free AI tools for everyone' beside seven numbered illustrated tiles: chat bubbles (ask anything), a calendar with a map pin (plan your day), a laptop (help on your PC), a magnifying glass over linked notes (answers with sources), a notebook with headphones (learn from your notes), a phone camera framing a daisy (ask with your camera), and a paint palette with an invitation card (design in minutes)."
+coverAlt: "A bento-style collage: a green title card with a big gold 7 reading 'free AI tools for everyone', beside seven numbered tiles marked free, each showing a small app scene: a chat suggesting quick dinners, a Saturday plan with a map pin, a laptop summarising a page, an answer with numbered sources, class notes with an audio overview, a phone camera identifying a daisy, and a garden picnic invitation with a paint palette."
 ---
 
 There are thousands of AI tools out there, and new ones seem to arrive every week. It's easy to feel you're missing out, or to not know where to begin.
