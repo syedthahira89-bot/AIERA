@@ -6,7 +6,7 @@ topic: "Agents & GenAI"
 level: Beginner
 featured: true
 cover: /images/cover-agentic.jpg
-coverAlt: "A shiny moss-green cover: the golden headline 'AI agents unpacked' above 'your new digital assistant' and three glossy buttons, Plan, Act and Check. A glass phone shows the request 'Plan a picnic for Saturday, please!' with four ticked steps, surrounded by four illustrated picture cards: a sunny 24° forecast, a park with a map pin and picnic table, a ticked shopping list beside a basket, and a checked picnic blanket with a basket on the grass, plus a 'Task complete' badge."
+coverAlt: "A split cover. On a deep green panel on the left: the headline 'AI agents unpacked', a gold line, 'your new digital assistant', the line 'You set the goal. It plans, acts and checks, step by step.' and three buttons, Plan, Act and Check. On the right, a sunny illustrated park with a picnic blanket and basket, trees and a river, and a phone where an AI agent answers 'Plan a picnic for Saturday, please!' with three ticked steps: check the weather, find a park and make a list."
 takeaways:
   - "Generative AI answers a prompt; an AI agent works towards a goal through many steps."
   - "Agents follow a simple loop: plan, act with tools, check the result, repeat."
