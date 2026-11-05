@@ -1,12 +1,12 @@
 ---
-title: "AI agents unpacked: your new digital helper"
-description: "Chatbots chat. AI agents get it done. Meet the digital helpers everyone's talking about: how they plan, act and check their work, and how you stay in the driver's seat."
+title: "AI agents unpacked: your new digital assistant"
+description: "Chatbots chat. AI agents get it done. Meet the digital assistants everyone's talking about: how they plan, act and check their work, and how you stay in the driver's seat."
 pubDate: 2026-11-05
 topic: "Agents & GenAI"
 level: Beginner
 featured: true
 cover: /images/cover-agentic.jpg
-coverAlt: "A shiny pastel green cover: the glossy green headline 'AI agents unpacked' above 'your new digital helper' and three glossy buttons, Plan, Act and Check. A glass phone shows the request 'Plan a picnic for Saturday, please!' with four ticked steps, surrounded by four illustrated picture cards: a sunny 24° forecast, a park with a map pin and picnic table, a ticked shopping list beside a basket, and a checked picnic blanket with a basket on the grass, plus a 'Task complete' badge."
+coverAlt: "A shiny pastel green cover: the glossy green headline 'AI agents unpacked' above 'your new digital assistant' and three glossy buttons, Plan, Act and Check. A glass phone shows the request 'Plan a picnic for Saturday, please!' with four ticked steps, surrounded by four illustrated picture cards: a sunny 24° forecast, a park with a map pin and picnic table, a ticked shopping list beside a basket, and a checked picnic blanket with a basket on the grass, plus a 'Task complete' badge."
 takeaways:
   - "Generative AI answers a prompt; an AI agent works towards a goal through many steps."
   - "Agents follow a simple loop: plan, act with tools, check the result, repeat."
@@ -17,15 +17,15 @@ takeaways:
 
 Picture this: you ask a friend, *"Can you help me plan a picnic for Saturday?"* One friend sends you a lovely list of ideas. The other checks the weather, finds a park nearby, and hands you a ready-made shopping list.
 
-Both are helpful. But that second friend? That's **agentic AI**: your new digital helper.
+Both are helpful. But that second friend? That's **agentic AI**: your new digital assistant.
 
-## Generative AI: the creative helper
+## Generative AI: the creative partner
 
 **Generative AI** (often shortened to **gen AI**) is the AI you've probably already met. You ask a question or give it a prompt, and it *creates* something new: an answer, a poem, a picture, a summary or a piece of code.
 
 It works one reply at a time. You ask, it answers, and you decide what happens next. (Curious how it writes? See [how chatbots read text](/blog/tokenizers-quirks/) and [how image AI paints from static](/blog/diffusion-noise-to-image/).)
 
-## Agentic AI: your new digital helper
+## Agentic AI: your new digital assistant
 
 An **AI agent** uses the same kind of model, but instead of stopping after one reply, it works towards a **goal**. You describe what you'd like, and the agent figures out the steps, uses tools to carry them out, and checks how it's going along the way.
 
@@ -50,14 +50,14 @@ The agent repeats this loop until the goal is done, or until it needs your help.
 
 ## Agents you might already use
 
-- **Research helpers** that search several websites, read them, and write you a summary with links.
+- **Research assistants** that search several websites, read them, and write you a summary with links.
 - **Coding assistants** that read a project, make changes across many files, and run tests to check their work.
-- **Browser and computer helpers** that can click, type and fill in forms for you, with your permission.
+- **Browser and computer assistants** that can click, type and fill in forms for you, with your permission.
 - **Customer support agents** that can look up an order and arrange a return, instead of only answering questions.
 
 ## Staying in charge
 
-Agents are most helpful when you set clear, friendly boundaries, just as you would for a new helper at home or work.
+Agents are most helpful when you set clear, friendly boundaries, just as you would for a new assistant at home or work.
 
 - **Give a clear goal.** "Find three parks within 15 minutes of home with picnic tables" works better than "sort out Saturday."
 - **Choose what it can touch.** Only connect the apps and accounts it really needs.

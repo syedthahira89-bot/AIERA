@@ -130,6 +130,6 @@ Pick **one** tool from this list and use it for one small task each day for a we
 
 ## Further reading
 
-- [AI agents unpacked: your new digital helper](/blog/what-is-agentic-ai/)
+- [AI agents unpacked: your new digital assistant](/blog/what-is-agentic-ai/)
 - [LLM evaluation made simple: how to test a chatbot fairly](/blog/evaluating-llm-outputs/)
 - [Creative AI: how to use AI as your creative co-pilot](/blog/ai-creativity-guide/)
