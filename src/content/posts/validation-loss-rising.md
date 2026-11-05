@@ -7,6 +7,10 @@ topic: "ML Fundamentals"
 level: Beginner
 cover: /images/cover-overfitting.jpg
 coverAlt: "A chart with two falling curves: practice examples keep improving, while new examples improve, level off, then rise again. A star marks the best moment to stop."
+takeaways:
+  - "Overfitting is when a model memorises its practice examples instead of learning the real pattern."
+  - "Watch validation loss: when it rises while training loss keeps falling, the model is overfitting."
+  - "Stop early, encourage simpler models and add more varied examples to help it generalise."
 ---
 
 Think back to studying for a test. You could learn *why* each answer is right, or you could simply memorise the practice questions. Both work well on the practice sheet. Only one helps on the real exam.

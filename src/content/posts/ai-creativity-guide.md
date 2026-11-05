@@ -6,6 +6,10 @@ topic: "Creative AI"
 level: Beginner
 cover: /images/cover-creativity.jpg
 coverAlt: "Two pencils and a row of colour swatches, with dotted lines connecting them to a glowing light bulb."
+takeaways:
+  - "AI works best as a creative partner that widens your options, not as a replacement for your ideas."
+  - "Use it to beat the blank page, explore \"what if?\", build mood boards and handle the boring bits."
+  - "Start with your own idea, edit everything, and add details only you know to keep your voice."
 ---
 
 Have you ever stared at a blank page, a blank canvas or a silent piano and thought, *"Where do I even start?"* Every creative person knows that feeling. Here's the hopeful news: AI tools can be a wonderful partner for exactly that moment.

@@ -7,6 +7,10 @@ topic: "LLMs Decoded"
 level: Intermediate
 cover: /images/attention-cover.jpg
 coverAlt: "Diagram of the sentence \"The robot picked up the ball because it was light\", with curves from the word \"it\" to every other word. The thickest curve goes to \"ball\"."
+takeaways:
+  - "Attention lets every word in a sentence decide which other words matter most to its meaning."
+  - "Each word has a query, a key and a value; softmax turns their scores into shares of attention."
+  - "Many attention heads work in parallel, which is what made today's large language models possible."
 ---
 
 Read this sentence: *"The robot picked up the ball because it was light."* What does "it" mean? You probably knew straight away: the ball. But how would a computer work that out?

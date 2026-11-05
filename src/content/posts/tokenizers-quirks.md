@@ -7,6 +7,10 @@ topic: "LLMs Decoded"
 level: Intermediate
 cover: /images/cover-tokens.jpg
 coverAlt: "The word \"strawberry\" with an arrow pointing to three coloured pieces, \"str\", \"aw\" and \"berry\", each with an example token number underneath."
+takeaways:
+  - "Chatbots don't read letters; they read tokens, small pieces of words turned into numbers."
+  - "In English, one token is about four characters, which matters for limits and pricing."
+  - "Tokens explain quirks like miscounting letters in \"strawberry\" and stumbling on long numbers."
 ---
 
 Here's a curious fact: chatbots don't actually read letters. Before any text reaches the model, it is chopped into pieces called **tokens**. Once you know how that works, some of AI's surprising habits, and even how chatbots are priced, start to make perfect sense.

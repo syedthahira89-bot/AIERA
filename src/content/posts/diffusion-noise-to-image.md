@@ -7,6 +7,10 @@ topic: "ML Fundamentals"
 level: Intermediate
 cover: /images/cover-diffusion.jpg
 coverAlt: "Five squares in a row, changing from random static into a clear picture of a sun over green hills."
+takeaways:
+  - "Diffusion models create images by starting from pure static and removing a little noise at each step."
+  - "They learn by guessing which noise was added to millions of real pictures."
+  - "Your prompt steers every step, and latent diffusion makes it fast enough for everyday computers."
 ---
 
 Have you ever watched an old TV showing nothing but static, and imagined a picture hiding inside? Many of today's AI image tools work in a surprisingly similar way. They start with pure noise and gently clean it up, step by step, until a picture appears. They're called **diffusion models**, and the idea behind them is elegant.

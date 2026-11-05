@@ -3,6 +3,7 @@ import 'katex/dist/katex.min.css';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { existsSync } from 'node:fs';
 import { SITE } from '../data/site';
 
 interface Props {
@@ -10,13 +11,33 @@ interface Props {
   description?: string;
   image?: string;
   type?: 'website' | 'article';
+  imageAlt?: string;
   publishedTime?: Date;
+  modifiedTime?: Date;
+  /** Structured data for search engines (schema.org), added as JSON-LD */
+  jsonLd?: Record<string, unknown>;
 }
 
-const { title, description = SITE.description, image = '/images/og-default.jpg', type = 'website', publishedTime } = Astro.props;
+const { title, description = SITE.description, image = '/images/og-default.jpg', imageAlt, type = 'website', publishedTime, modifiedTime, jsonLd } = Astro.props;
 const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name}: ${SITE.tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL(image, Astro.site);
+// Use the 1200x627 sharing version of the image when the build made one (scripts/optimize-images.mjs)
+const m = image.match(/^\/images\/([^/]+)\.(jpe?g|png)$/i);
+const ogPath = m && existsSync(`public/images/sized/${m[1]}-og.jpg`) ? `/images/sized/${m[1]}-og.jpg` : image;
+const ogImage = new URL(ogPath, Astro.site);
+const ogSize = ogPath.endsWith('-og.jpg') ? [1200, 627] : image === '/images/og-default.jpg' ? [1200, 630] : null;
+// Site-wide structured data on every page, plus any page-specific data
+const siteLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'WebSite', '@id': `${SITE.url}/#website`, url: `${SITE.url}/`, name: SITE.name, description: SITE.description, inLanguage: 'en',
+      publisher: { '@id': `${SITE.url}/#author` } },
+    { '@type': 'Person', '@id': `${SITE.url}/#author`, name: SITE.author.name, url: `${SITE.url}/about/`, description: SITE.author.bio,
+      sameAs: SITE.social.map((s) => s.href) },
+    ...(jsonLd ? [jsonLd] : []),
+  ],
+};
+const ldJson = JSON.stringify(siteLd).replace(/</g, '\\u003c');
 ---
 <!doctype html>
 <html lang="en" data-palette="forest">
@@ -38,8 +59,19 @@ const ogImage = new URL(image, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    {ogSize && <meta property="og:image:width" content={String(ogSize[0])} />}
+    {ogSize && <meta property="og:image:height" content={String(ogSize[1])} />}
+    <meta property="og:image:alt" content={imageAlt ?? `${SITE.name}: ${SITE.tagline}`} />
+    <meta property="og:locale" content="en_GB" />
     {publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime.toISOString()} />}
+    {type === 'article' && <meta property="article:author" content={SITE.author.name} />}
+    <meta name="author" content={SITE.author.name} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title ?? SITE.name} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={ldJson} />
     {SITE.googleSiteVerification && <meta name="google-site-verification" content={SITE.googleSiteVerification} />}
     {SITE.analyticsSnippet && <Fragment set:html={SITE.analyticsSnippet} />}
 

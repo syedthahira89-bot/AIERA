@@ -1,27 +1,46 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE } from '../data/site';
+const hasAnalytics = Boolean(SITE.analyticsSnippet);
 ---
-<BaseLayout title="Privacy policy" description="What data AIERA-TS collects and how it is used.">
+<BaseLayout title="Privacy policy" description="How AIERA-TS handles your information: what we collect, why, and the choices you have.">
   <section class="page">
     <div class="wrap page-inner">
       <h1>Privacy policy</h1>
-      <p class="lede">Last updated October 27, 2026.</p>
+      <p class="lede">Last updated November 5, 2026.</p>
       <div class="prose">
-        <blockquote><p>This is a starting template, not legal advice. Update it to match the newsletter, analytics and hosting services you actually use, and have it reviewed if you operate in a regulated region.</p></blockquote>
+        <p>Your privacy matters. AIERA-TS is a reading-first blog, so we collect as little as possible. This page explains what that is, why we need it and the choices you have.</p>
 
-        <h2>What we collect</h2>
-        <p>If you subscribe to the newsletter, we store your email address so we can send you each issue. We do not ask for any other personal information.</p>
-        <p>We may use privacy-friendly analytics to count page views. These do not use cookies to track you across other websites.</p>
+        <h2>Reading the blog</h2>
+        <p>You can read every article without an account, and we don't use advertising or tracking cookies.</p>
+        <p>The site remembers two small preferences in your own browser: your light or dark theme and your colour palette. These stay on your device, are never sent to us, and you can clear them at any time through your browser settings.</p>
+        {hasAnalytics
+          ? <p>We use privacy-friendly analytics to count page views and see which articles are most helpful. It doesn't use cookies, doesn't follow you across other websites and doesn't identify you personally.</p>
+          : <p>We don't currently use analytics. If we add it in future, we'll choose a privacy-friendly service that doesn't use cookies or follow you across other websites, and we'll update this page first.</p>}
 
-        <h2>How we use it</h2>
-        <p>Your email address is used only to send the AIERA-TS newsletter. We never sell or share it. Every issue includes a link to unsubscribe, and unsubscribing deletes your address from our list.</p>
+        <h2>The newsletter</h2>
+        <p>If you subscribe, we store your email address so we can send you each weekly issue. We don't ask for any other personal information.</p>
+        <p>Your address is used only for the AIERA-TS newsletter. We never sell, rent or share it. Every issue includes an unsubscribe link, and unsubscribing removes you from our mailing list.</p>
 
-        <h2>Third-party services</h2>
-        <p>Our newsletter is delivered by <a href="https://buttondown.com/legal/privacy">Buttondown</a>, which stores subscriber addresses on our behalf. The site is hosted by Netlify, and fonts are loaded from Google Fonts. Links to other sites are covered by those sites' own policies.</p>
+        <h2>Services we rely on</h2>
+        <ul>
+          <li><strong>Buttondown</strong> delivers the newsletter and stores subscriber addresses on our behalf. See the <a href="https://buttondown.com/legal/privacy">Buttondown privacy policy</a>.</li>
+          <li><strong>Netlify</strong> hosts the site. Like most web hosts, it briefly processes technical information such as your IP address to deliver pages securely. See the <a href="https://www.netlify.com/privacy/">Netlify privacy policy</a>.</li>
+          <li><strong>Google Fonts</strong> provides the site's typefaces, so your browser connects to Google's servers to load them. See the <a href="https://policies.google.com/privacy">Google privacy policy</a>.</li>
+        </ul>
+        <p>Articles link to other websites for sources and further reading. Those sites have their own privacy policies.</p>
 
-        <h2>Your rights</h2>
-        <p>You can ask us what data we hold about you, or ask us to delete it, by emailing <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+        <h2>Keeping information safe</h2>
+        <p>The site is served over a secure connection (HTTPS), and we keep the information we hold to a minimum.</p>
+
+        <h2>Children</h2>
+        <p>AIERA-TS is written for a general audience. The newsletter isn't intended for children under 13, and we don't knowingly collect their information.</p>
+
+        <h2>Your choices and rights</h2>
+        <p>You can unsubscribe from the newsletter at any time. You can also ask what information we hold about you, or ask us to correct or delete it, by emailing <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. We'll reply as soon as we can, usually within a few days.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If anything here changes, we'll update this page and the date at the top. For significant changes, we'll also let newsletter subscribers know.</p>
       </div>
     </div>
   </section>

@@ -7,6 +7,10 @@ topic: "ML Fundamentals"
 level: Beginner
 cover: /images/cover-gradient-descent.jpg
 coverAlt: "A curved valley with a trail of dots stepping down one side to a glowing dot at the lowest point, marked with a star."
+takeaways:
+  - "Gradient descent is how AI improves: measure the error, take a small step downhill, repeat."
+  - "The learning rate sets the step size; too small is slow and too large overshoots."
+  - "The same idea scales to billions of settings with mini-batches and smart optimisers like Adam."
 ---
 
 Have you ever wondered how an AI model actually *gets better*? It isn't magic. Behind almost every model, from photo filters to chatbots, is one beautifully simple idea called **gradient descent**. Let's explore it together, no framework required.

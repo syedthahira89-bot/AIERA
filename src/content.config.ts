@@ -14,6 +14,8 @@ const posts = defineCollection({
     level: z.enum(LEVELS),
     cover: z.string().optional(),
     coverAlt: z.string().optional(),
+    /** Up to four short bullet points shown in a Key takeaways box at the top of the article */
+    takeaways: z.array(z.string()).max(4).optional(),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),
   }),

@@ -6,6 +6,10 @@ topic: "AI for the Planet"
 level: Beginner
 cover: /images/cover-nature.jpg
 coverAlt: "A tree with a small phone listening device sending out sound waves, a leaf and the sun above, and a river with a location marker on its bank."
+takeaways:
+  - "AI helps protect nature by listening to rainforests, counting wildlife and warning about floods."
+  - "Smart farming and energy tools cut waste, though AI itself uses electricity and water."
+  - "You can join in with apps like iNaturalist and Merlin, and by saving energy at home."
 ---
 
 When we picture nature, we don't usually picture computers. But some of the most hopeful uses of AI today are happening in rainforests, oceans and farm fields. Let's explore five of them, and some simple ways you can help too.

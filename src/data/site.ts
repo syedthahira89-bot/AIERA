@@ -1,9 +1,9 @@
 export const SITE = {
   name: 'AIERA-TS',
   url: 'https://aiera-ts.com',
-  tagline: 'The bright side of AI, explained simply.',
+  tagline: 'The bright side of AI, made clear.',
   description:
-    'AIERA-TS is a friendly weekly blog about how AI is making life healthier, more creative and more human, and how it actually works, explained in plain language.',
+    'AIERA-TS is a weekly blog exploring how AI is making everyday life healthier, more creative and more human, with clear, jargon-free guides to how it really works.',
   email: 'aiera.blog@gmail.com',
   author: {
     name: 'Thahira S',
@@ -28,7 +28,7 @@ export const SITE = {
 /** The two content pillars. Every topic belongs to one. */
 export const PILLARS = [
   { id: 'better-life', name: 'AI for a better life', blurb: 'How AI is making everyday life healthier, more creative, more balanced and kinder to the planet.' },
-  { id: 'how-it-works', name: 'How AI works', blurb: 'The ideas behind the tools, explained simply, with friendly examples and small experiments to try.' },
+  { id: 'how-it-works', name: 'How AI works', blurb: 'The ideas behind the tools, made clear with everyday examples and small experiments to try.' },
 ] as const;
 
 export const TOPICS = [

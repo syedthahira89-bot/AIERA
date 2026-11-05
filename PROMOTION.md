@@ -49,6 +49,16 @@ Post one article a week, on the day it's published. Posting in the morning on a 
 
 LinkedIn shows the article's cover image automatically when you paste the link.
 
+### LinkedIn carousels (swipeable slides)
+
+Carousels usually reach more people on LinkedIn than a plain link post.
+
+1. Make them with `npm run carousels` (all articles) or `npm run carousels -- what-is-agentic-ai` (one article). Each is a 6-slide PDF in the `linkedin/` folder.
+2. On LinkedIn, start a post, choose **Add a document**, upload the PDF and give it a title, such as the article title.
+3. Write a short intro (the ready-to-use posts below work well) and put the article link in the first comment or the post.
+
+Each carousel has a cover slide, an "In short" summary, the article's three key takeaways and a closing slide with the link.
+
 ### Ready-to-use posts
 
 **Hugging Face leaderboards: how to read AI model rankings**

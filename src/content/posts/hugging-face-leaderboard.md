@@ -6,6 +6,10 @@ topic: "LLMs Decoded"
 level: Beginner
 cover: /images/cover-leaderboard.jpg
 coverAlt: "A leaderboard illustration: a gold trophy above a podium for Model A, B and C, tags for Reasoning, Maths, Coding and Language, and a table ranking five models by average score from 92.4 down to 69.8."
+takeaways:
+  - "Hugging Face leaderboards rank AI models by their scores on the same tests, called benchmarks."
+  - "Check what's being tested: a top maths score says little about writing a friendly email."
+  - "Small score gaps rarely matter, so try a model on your own task before choosing."
 ---
 
 Have you ever wondered how people decide which AI model is "best"? Often, they check a **leaderboard**, and many of the most popular ones live on **Hugging Face**.

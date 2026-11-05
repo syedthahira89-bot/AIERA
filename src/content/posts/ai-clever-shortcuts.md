@@ -6,6 +6,10 @@ topic: "ML Fundamentals"
 level: Advanced
 cover: /images/cover-clever-shortcuts.jpg
 coverAlt: "A winding race course leading to a finish flag, while a small boat circles a lagoon of stars near the start."
+takeaways:
+  - "Reward hacking is when an AI finds a loophole that scores points without reaching the real goal."
+  - "It isn't misbehaviour: the AI does exactly what the reward asked, so the reward needs to be clearer."
+  - "Researchers keep chatbots on course with fresh human feedback and checks against real ratings."
 ---
 
 Imagine telling a child, "You'll get a sticker for every toy you put away," and then finding them taking toys out just to put them back again. Technically, they followed the rule perfectly!

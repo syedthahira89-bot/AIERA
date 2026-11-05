@@ -6,6 +6,10 @@ topic: "ML Fundamentals"
 level: Beginner
 cover: /images/cover-image-filters.jpg
 coverAlt: "A grid of 32 small tiles showing edges at different angles, light-to-dark fades and soft colour spots, like the first patterns an image model learns."
+takeaways:
+  - "Image models start by noticing simple edges, fades and colours, much like our own eyes."
+  - "Nobody programs these patterns; the model discovers them because they're the most useful building blocks."
+  - "Layer by layer, edges become textures, then parts, then whole objects."
 ---
 
 When you look at a photo of a cat, you just *see* a cat. But what does an AI see first? The answer is surprisingly intuitive, and it looks a lot like how our own eyes and brain begin.

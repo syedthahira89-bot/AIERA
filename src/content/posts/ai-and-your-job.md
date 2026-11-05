@@ -6,6 +6,10 @@ topic: "Future of Work"
 level: Beginner
 cover: /images/cover-work.jpg
 coverAlt: "A calendar of tasks where the repetitive ones flow to a small AI helper, freeing up time shown by a clock with an open, highlighted section."
+takeaways:
+  - "AI changes work task by task, not job by job."
+  - "Routine drafting, searching and data work change first; judgement, care and hands-on skills stay human."
+  - "Map your week, try AI on one repetitive task, and keep learning in small steps."
 ---
 
 It's one of the most common questions about AI, and a very natural one: *"Will AI take my job?"* Headlines can make it sound like a sudden switch. The reality is calmer, more gradual and, for many people, more hopeful.

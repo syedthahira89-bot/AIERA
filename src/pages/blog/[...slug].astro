@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostMeta from '../../components/PostMeta.astro';
 import Cover from '../../components/Cover.astro';
 import Newsletter from '../../components/Newsletter.astro';
+import InlineSignup from '../../components/InlineSignup.astro';
 import { SITE, formatDate } from '../../data/site';
 import { getPosts, relatedPosts, type Post } from '../../lib/posts';
 
@@ -18,6 +19,23 @@ const { Content, headings } = await render(post);
 const toc = headings.filter((h) => h.depth === 2);
 const related = relatedPosts(post, all);
 const url = new URL(`/blog/${post.id}/`, Astro.site).toString();
+const linkedin = SITE.social.find((s) => s.label === 'LinkedIn')?.href;
+// What search engines read about this article (schema.org BlogPosting)
+const articleLd = {
+  '@type': 'BlogPosting',
+  '@id': `${url}#article`,
+  mainEntityOfPage: url,
+  headline: post.data.title,
+  description: post.data.description,
+  image: post.data.cover ? [new URL(post.data.cover, Astro.site).toString()] : undefined,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+  author: { '@id': `${SITE.url}/#author` },
+  publisher: { '@type': 'Organization', name: SITE.name, logo: { '@type': 'ImageObject', url: `${SITE.url}/apple-touch-icon.png` } },
+  articleSection: post.data.topic,
+  inLanguage: 'en',
+  isPartOf: { '@id': `${SITE.url}/#website` },
+};
 const share = [
   { label: 'X', href: `https://x.com/intent/post?url=${encodeURIComponent(url)}&text=${encodeURIComponent(post.data.title)}` },
   { label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}` },
@@ -28,8 +46,11 @@ const share = [
   title={post.data.title}
   description={post.data.description}
   image={post.data.cover}
+  imageAlt={post.data.coverAlt}
   type="article"
   publishedTime={post.data.pubDate}
+  modifiedTime={post.data.updatedDate}
+  jsonLd={articleLd}
 >
   <article class="reader wrap">
     <header class="reader-head">
@@ -52,7 +73,14 @@ const share = [
         </nav>
       )}
       <div class="prose">
+        {post.data.takeaways?.length && (
+          <aside class="takeaways" aria-labelledby="takeaways-title">
+            <h2 id="takeaways-title">Key takeaways</h2>
+            <ul>{post.data.takeaways.map((t) => <li>{t}</li>)}</ul>
+          </aside>
+        )}
         <Content />
+        <InlineSignup />
       </div>
     </div>
 
@@ -61,7 +89,8 @@ const share = [
         <img class="author-photo" src="/images/icon.svg" width="56" height="56" alt="AIERA-TS" />
         <div>
           <p class="author-name">Written by {SITE.author.name}</p>
-          <p>{SITE.author.bio} <a href="/about/">More about AIERA-TS</a></p>
+          <p>{SITE.author.bio}</p>
+          <p class="author-links"><a href="/about/">More about AIERA-TS</a>{linkedin && <> · <a href={linkedin} target="_blank" rel="noopener me">Connect on LinkedIn</a></>}</p>
         </div>
       </div>
       <div class="share">
@@ -113,10 +142,16 @@ const share = [
     .toc { position: static; max-width: none; justify-self: stretch; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
   }
 
+  .takeaways { margin: 0 0 36px; padding: 20px 24px 18px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); }
+  .takeaways h2 { font-family: var(--font-ui); font-size: var(--step--1); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-strong); margin: 0 0 10px; }
+  .takeaways ul { margin: 0; padding-left: 1.15em; display: grid; gap: 8px; }
+  .takeaways li { font-size: var(--step-0); line-height: 1.55; }
+  .takeaways li::marker { color: var(--accent); }
   .reader-foot { max-width: 760px; margin: 56px auto 0; padding-top: 28px; border-top: 1px solid var(--line); display: grid; gap: 24px; }
   .author { display: flex; gap: 16px; align-items: flex-start; }
   .author img { width: 56px; height: 56px; border-radius: 14px; flex: none; box-shadow: 0 4px 12px rgba(15, 74, 44, 0.22); }
   .author p { color: var(--muted); font-size: var(--step--1); }
+  .author .author-links { margin-top: 6px; }
   .author .author-name { color: var(--ink); font-weight: 600; font-size: var(--step-0); margin-bottom: 4px; }
   .share { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: var(--step--1); }
   .share span { color: var(--muted); }

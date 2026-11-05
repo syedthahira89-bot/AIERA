@@ -6,6 +6,10 @@ topic: "ML Fundamentals"
 level: Intermediate
 cover: /images/cover-drift.jpg
 coverAlt: "Two overlapping bell curves, labelled \"what it learned from\" and \"what it sees now\", with an arrow showing the shift between them."
+takeaways:
+  - "Model drift happens when the world changes after launch and a model's answers slowly become less accurate."
+  - "Data drift means the inputs change; concept drift means what they mean changes."
+  - "Compare new data with training data, watch the model's answers and review a sample by hand."
 ---
 
 Launching an AI model is a wonderful milestone, but it's only the start of the journey. A model learns from a snapshot of the world, and the world keeps changing: new products appear, people's habits shift, and the way information is recorded gets updated. Over time, a model's answers can slowly become less accurate, quietly and without any warning signs.

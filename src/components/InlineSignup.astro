@@ -1,0 +1,59 @@
+---
+// A small newsletter signup placed halfway through an article.
+// It starts inside a <template>; the script moves it before the middle section heading.
+// Articles with fewer than three sections skip it (the full signup is already at the end).
+import { SITE } from '../data/site';
+---
+<template id="inline-signup-tpl">
+  <aside class="inline-signup" aria-labelledby="inline-signup-title">
+    <div class="is-text">
+      <p class="is-title" id="inline-signup-title">Enjoying this article?</p>
+      <p class="is-sub">Get one friendly AI idea in your inbox every Thursday. Free, and about ten minutes to read.</p>
+    </div>
+    <form class="is-form" method="post" action={SITE.newsletterAction || undefined} target={SITE.newsletterAction ? '_blank' : undefined} data-live={SITE.newsletterAction ? 'true' : 'false'} novalidate>
+      {SITE.newsletterAction && <input type="hidden" name="embed" value="1" />}
+      <label class="visually-hidden" for="inline-email">Email address</label>
+      <input id="inline-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+      <p class="is-error" role="alert" hidden>Enter an email address in the form name@example.com.</p>
+    </form>
+  </aside>
+</template>
+
+<style is:global>
+  .inline-signup { margin: 40px 0; padding: 22px 24px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line);
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 16px 24px; align-items: center; }
+  @media (max-width: 720px) { .inline-signup { grid-template-columns: minmax(0, 1fr); } }
+  .inline-signup .is-title { font-family: var(--font-display); font-size: var(--step-2); line-height: 1.15; margin: 0; color: var(--ink); }
+  .inline-signup .is-sub { margin: 6px 0 0; font-size: var(--step--1); color: var(--muted); }
+  .inline-signup .is-form { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+  .inline-signup input { flex: 1 1 180px; min-width: 0; min-height: 46px; padding: 0 14px; font: 400 var(--step-0) var(--font-ui);
+    color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); }
+  .inline-signup input[aria-invalid="true"] { border-color: var(--spark); }
+  .inline-signup .is-error { flex-basis: 100%; margin: 0; font-size: var(--step--1); color: var(--spark); }
+  .inline-signup .is-done { margin: 0; color: var(--accent-strong); font-weight: 500; }
+</style>
+
+<script>
+  const tpl = document.getElementById('inline-signup-tpl') as HTMLTemplateElement | null;
+  const headings = [...document.querySelectorAll<HTMLHeadingElement>('.prose > h2:not(#takeaways-title)')];
+  if (tpl && headings.length >= 3) {
+    const box = tpl.content.firstElementChild!.cloneNode(true) as HTMLElement;
+    headings[Math.floor(headings.length / 2)].before(box);
+    const form = box.querySelector('form')!;
+    const input = form.querySelector('input[type="email"]') as HTMLInputElement;
+    const error = form.querySelector('.is-error') as HTMLElement;
+    form.addEventListener('submit', (e) => {
+      const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+      error.hidden = ok;
+      input.setAttribute('aria-invalid', String(!ok));
+      if (!ok) { e.preventDefault(); input.focus(); return; }
+      if (form.dataset.live === 'true') {
+        setTimeout(() => { form.innerHTML = '<p class="is-done" role="status">Almost there! Check your inbox and click the link to confirm.</p>'; }, 50);
+        return;
+      }
+      e.preventDefault();
+      form.innerHTML = '<p class="is-done" role="status">Thanks for your interest. Email signups open soon, so your address was not saved yet.</p>';
+    });
+  }
+</script>

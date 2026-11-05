@@ -6,6 +6,10 @@ topic: "LLMs Decoded"
 level: Advanced
 cover: /images/cover-testing-chatbots.jpg
 coverAlt: "A chat message bubble with an arrow pointing to a checklist with ticks for Accurate, Clear, Helpful and Kind."
+takeaways:
+  - "Public benchmarks are useful, but they can't show how well a model does on your task."
+  - "Build a small, private test set of 100 to 300 real examples with clear good answers."
+  - "If AI grades AI, watch for its preference for order, length and its own style."
 ---
 
 How would you grade an essay, a poem or a helpful explanation? There's rarely one right answer. That's exactly the challenge when we test chatbots, and it's why careful, fair testing is such an interesting part of AI.

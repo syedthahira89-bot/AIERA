@@ -6,6 +6,10 @@ topic: "AI Toolkit"
 level: Beginner
 cover: /images/cover-top-7-tools.jpg
 coverAlt: "A bento-style collage: a green title card with a big gold 7 reading 'free AI tools for everyone', beside seven numbered tiles marked free, each showing a small app scene: a chat suggesting quick dinners, a Saturday plan with a map pin, a laptop summarising a page, an answer with numbered sources, class notes with an audio overview, a phone camera identifying a daisy, and a garden picnic invitation with a paint palette."
+takeaways:
+  - "You only need one or two AI tools to start, and all seven here have a free version."
+  - "Pick by job: chat assistants for ideas, Perplexity for sources, NotebookLM for notes, Lens for the world around you, Canva for design."
+  - "Double-check important facts and keep private details out of your chats."
 ---
 
 There are thousands of AI tools out there, and new ones seem to arrive every week. It's easy to feel you're missing out, or to not know where to begin.

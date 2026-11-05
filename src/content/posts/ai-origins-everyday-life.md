@@ -6,6 +6,10 @@ topic: "Everyday AI"
 level: Beginner
 cover: /images/cover-ai-and-you.jpg
 coverAlt: "A friendly illustrated collage: a smiling woman setting a smart thermostat from her phone in a sunny kitchen, labelled AI at home, beside three smaller scenes labelled 75 years of AI, Out and about, and Caring for nature."
+takeaways:
+  - "AI is a 75-year-old idea, from Alan Turing's 1950 question to today's helpers."
+  - "It already makes daily life easier, from spam filters and maps to live captions and health screening."
+  - "Use it wisely: check important facts, protect your privacy and keep people in charge of decisions."
 ---
 
 Artificial intelligence can feel like it arrived overnight. In reality, it's an idea more than 75 years old, and it has been quietly filtering your email, estimating your arrival time and translating menus for years. Here's where it came from, how it's making life easier for people and the planet, and how you can put it to work yourself.
