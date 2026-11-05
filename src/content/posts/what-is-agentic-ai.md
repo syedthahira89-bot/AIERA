@@ -1,6 +1,6 @@
 ---
-title: "What is agentic AI? A friendly guide to AI agents"
-description: "Generative AI answers your questions. Agentic AI goes a step further and completes tasks for you. Here's how AI agents plan, act and check their work, and how to stay in charge."
+title: "Agentic AI explained: your new digital helper"
+description: "Chatbots chat. AI agents get it done. Meet the digital helpers everyone's talking about: how they plan, act and check their work, and how you stay in the driver's seat."
 pubDate: 2026-11-05
 topic: "Agentic & Gen AI"
 level: Beginner
@@ -9,9 +9,11 @@ cover: /images/cover-agentic.jpg
 coverAlt: "An illustrated picnic scene: a picnic blanket and basket on green hills by a river, and a phone where an AI agent answers the request \"Plan a picnic for Saturday\" with three ticked steps. Three smaller pictures show the steps: a sunny 24° Saturday forecast, a park with a map pin and picnic table, and a ticked shopping list beside a basket."
 ---
 
-Imagine asking a friend, *"Can you help me plan a picnic for Saturday?"* One kind of friend gives you a lovely list of ideas. Another kind checks the weather, finds a park nearby, and hands you a shopping list.
+**Agentic AI** is one of the biggest AI trends right now, and for good reason. It's the moment AI goes from *talking* about your to-do list to actually *ticking things off* it.
 
-Both are helpful. The second one is a bit like **agentic AI**.
+Picture this: you ask a friend, *"Can you help me plan a picnic for Saturday?"* One friend sends you a lovely list of ideas. The other checks the weather, finds a park nearby, and hands you a ready-made shopping list.
+
+Both are helpful. But that second friend? That's **agentic AI**: your new digital helper.
 
 ## Generative AI: the creative helper
 
@@ -19,7 +21,7 @@ Both are helpful. The second one is a bit like **agentic AI**.
 
 It works one reply at a time. You ask, it answers, and you decide what happens next. (Curious how it writes? See [how chatbots read text](/blog/tokenizers-quirks/) and [how image AI paints from static](/blog/diffusion-noise-to-image/).)
 
-## Agentic AI: the helper that gets things done
+## Agentic AI: your new digital helper
 
 An **AI agent** uses the same kind of model, but instead of stopping after one reply, it works towards a **goal**. You describe what you'd like, and the agent figures out the steps, uses tools to carry them out, and checks how it's going along the way.
 

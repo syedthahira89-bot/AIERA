@@ -20,7 +20,7 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 | 1 | Nov 3, 2026 | Creative Freedom | Can AI make you more creative? A friendly guide | ✅ Published (`ai-creativity-guide`) |
 | 2 | Nov 3, 2026 | The New Work Paradigm | Will AI take my job? A calm, practical look | ✅ Published (`ai-and-your-job`) |
 | 3 | Nov 3, 2026 | AI & the Planet | 5 ways AI is helping protect nature | ✅ Published (`ai-protecting-nature`) |
-| ⭐ | Nov 5, 2026 | Agentic & Gen AI | What is agentic AI? A friendly guide to AI agents | ✅ Published, Thursday feature (`what-is-agentic-ai`) |
+| ⭐ | Nov 5, 2026 | Agentic & Gen AI | Agentic AI explained: your new digital helper | ✅ Published, Thursday feature (`what-is-agentic-ai`) |
 | 4 | Nov 5, 2026 | Top 7 AI Tools for Everyone | Top 7 free AI tools that make everyday life easier | ✅ Published (`top-7-ai-tools`), feature it on Nov 12 |
 | 5 | Nov 19, 2026 | Chatbots & Language | What is a chatbot, really? A beginner's guide | Planned |
 | 6 | Nov 26, 2026 | Smarter Living | How AI is helping doctors spot disease earlier | Planned |

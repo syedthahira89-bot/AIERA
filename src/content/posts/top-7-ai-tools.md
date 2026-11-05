@@ -126,6 +126,6 @@ Pick **one** tool from this list and use it for one small task each day for a we
 
 ## Further reading
 
-- [What is agentic AI? A friendly guide to AI agents](/blog/what-is-agentic-ai/)
+- [Agentic AI explained: your new digital helper](/blog/what-is-agentic-ai/)
 - [How to test a chatbot: simple, fair ways to check AI](/blog/evaluating-llm-outputs/)
 - [Can AI make you more creative? A friendly guide](/blog/ai-creativity-guide/)
