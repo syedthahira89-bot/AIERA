@@ -17,6 +17,12 @@ export const SITE = {
   //   Mailchimp:  the form "action" URL from Audience > Signup forms > Embedded form
   // While empty, the signup form validates the address but does not send it anywhere.
   newsletterAction: 'https://buttondown.com/api/emails/embed-subscribe/aiera',
+  // Google Search Console: choose "URL prefix", pick the "HTML tag" method and paste only the
+  // content="..." value here, e.g. 'AbC123xyz'. While empty, no tag is added.
+  googleSiteVerification: '',
+  // Analytics (e.g. Plausible): paste the full snippet the provider gives you, script tags included.
+  // While empty, no analytics script loads.
+  analyticsSnippet: '',
 };
 
 /** The two content pillars. Every topic belongs to one. */
