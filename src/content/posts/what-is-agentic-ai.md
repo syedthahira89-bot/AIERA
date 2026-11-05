@@ -6,7 +6,7 @@ topic: "Agents & GenAI"
 level: Beginner
 featured: true
 cover: /images/cover-agentic.jpg
-coverAlt: "A clean, glossy, professional cover on a soft sage-green background. On the left: the headline 'AI agents unpacked', a gold line, 'your new digital assistant', 'You set the goal. It plans, acts and checks, step by step.' and three buttons, Plan, Act and Check. On the right, a diagram of how an AI agent works: a goal card reading 'Plan a picnic for Saturday' flows into a green AI agent core, which connects to four tool cards (Search, Calendar, Maps and Tasks) and produces a result card reading 'Plan ready: sunny, Riverside Park, 8 items', beside a small, friendly green and white robot waving."
+coverAlt: "A clean, glossy cover on a soft sage-green background. On the left: the headline 'AI agents unpacked', a gold line, 'your new digital assistant', 'You set the goal. It plans, acts and checks, step by step.' and three buttons, Plan, Act and Check. On the right, a diagram of how an AI agent works: a goal card reading 'Plan a picnic for Saturday' flows into a green AI agent core, connected to four picture cards: Search (a park with a map pin and picnic table), Calendar (a sunny 24° Saturday forecast), Maps (a route map, 10 minutes away) and Tasks (a ticked shopping list beside a basket). A result card reads 'Plan ready: sunny, Riverside Park, 8 items'."
 takeaways:
   - "Generative AI answers a prompt; an AI agent works towards a goal through many steps."
   - "Agents follow a simple loop: plan, act with tools, check the result, repeat."
