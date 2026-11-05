@@ -52,7 +52,7 @@ These shifts weren't painless for everyone, and some roles did shrink. But the p
 
 ## A note of balance
 
-It's okay to feel uncertain. Change can be unsettling even when it brings good things. Some industries will change faster than others, and it's reasonable to want employers and governments to support people through those changes with training and time to adapt.
+It's OK to feel uncertain. Change can be unsettling even when it brings good things. Some industries will change faster than others, and it's reasonable to want employers and governments to support people through those changes with training and time to adapt.
 
 The most empowering thing you can do is stay curious and get hands-on. People who understand a tool's strengths and limits are best placed to decide how it should be used.
 

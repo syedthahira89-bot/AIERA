@@ -106,7 +106,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #AI #Beginners #Technology
 
-**LLM attention explained: how models know what “it” means**
+**LLM attention, demystified: how models know what “it” means**
 > How does a chatbot know what "it" means in a sentence? I followed one little word through an AI model to find out.
 >
 > This explainer shows, step by step, how AI decides which words matter most.
@@ -117,7 +117,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #AI #LLM #Transformers
 
-**LLM tokens explained: how AI models read text**
+**LLM tokens decoded: how AI models read text**
 > Chatbots don't read letters the way we do, and that explains some of their funny habits.
 >
 > Here's how they break text into small pieces called tokens, in plain language.
@@ -139,7 +139,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #AI #LLM #ResponsibleAI
 
-**Gradient descent explained: how AI learns step by step**
+**Gradient descent 101: how AI learns step by step**
 > The way AI learns reminds me of walking down a foggy hill, one careful step at a time.
 >
 > This explainer shows how AI improves itself step by step, and why the size of each step matters so much.
@@ -150,7 +150,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #MachineLearning #AI #DataScience
 
-**Overfitting explained: when AI memorises instead of learns**
+**Overfitting in plain English: when AI memorises, not learns**
 > Ever known a student who aces the practice test but struggles in the real exam? AI can do that too.
 >
 > Here's why it happens, plus three gentle ways to help a model truly learn.
@@ -166,7 +166,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #ComputerVision #AI #DeepLearning
 
-**Diffusion models explained: how AI turns noise into images**
+**Diffusion models unpacked: how AI turns noise into images**
 > Many AI image tools start with pure static and tidy it up, a little at a time, until a picture appears.
 >
 > Here's how that works, in plain language.
@@ -177,7 +177,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #GenerativeAI #AIArt #AI
 
-**Model drift explained: keeping AI reliable after launch**
+**Model drift 101: keeping AI reliable after launch**
 > An AI model's work isn't finished on launch day, because the world keeps changing.
 >
 > Here's how teams notice that change and keep their models helpful.
@@ -186,7 +186,7 @@ LinkedIn shows the article's cover image automatically when you paste the link.
 >
 > #MachineLearning #MLOps #AI
 
-**Reward hacking explained: when AI games the goal**
+**Reward hacking, decoded: when AI games the goal**
 > Reward an AI for a goal and it may find a surprising shortcut instead.
 >
 > Here's why that happens, and how researchers gently guide it back on course.

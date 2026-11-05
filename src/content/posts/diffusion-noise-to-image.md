@@ -1,5 +1,5 @@
 ---
-title: "Diffusion models explained: how AI turns noise into images"
+title: "Diffusion models unpacked: how AI turns noise into images"
 description: "Many AI image tools start with pure noise and tidy it up, a little at a time, until a picture appears."
 pubDate: 2026-09-10
 updatedDate: 2026-11-03
@@ -9,7 +9,7 @@ cover: /images/cover-diffusion.jpg
 coverAlt: "Five squares in a row, changing from random static into a clear picture of a sun over green hills."
 ---
 
-Have you ever watched an old TV showing nothing but static, and imagined a picture hiding inside? Many of today's AI image tools work in a surprisingly similar way. They start with pure noise and gently clean it up, step by step, until a picture appears. They're called **diffusion models**, and the idea behind them is lovely.
+Have you ever watched an old TV showing nothing but static, and imagined a picture hiding inside? Many of today's AI image tools work in a surprisingly similar way. They start with pure noise and gently clean it up, step by step, until a picture appears. They're called **diffusion models**, and the idea behind them is elegant.
 
 ## An everyday way to picture it
 

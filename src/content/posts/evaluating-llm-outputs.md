@@ -18,7 +18,7 @@ Benchmarks are still useful for broad comparisons. They just can't tell you how 
 
 ## Build your own small test set
 
-A wonderful habit is to create your own set of questions:
+A great habit is to build your own set of questions:
 
 1. Gather **100 to 300 real examples** from the task you care about, including the tricky and unusual ones.
 2. **Write down what a good answer looks like** for each.
@@ -41,4 +41,4 @@ If you were testing a chatbot to help with your own work or studies, what are fi
 ## Sources & further reading
 
 - Zheng et al., [*Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*](https://arxiv.org/abs/2306.05685) (2023), which studies the order, length and style preferences of AI graders.
-- Related: [reward shortcuts in AI](/blog/ai-clever-shortcuts/), on why measures can drift from goals.
+- Related: [reward hacking, decoded](/blog/ai-clever-shortcuts/), on why measures can drift from goals.

@@ -8,7 +8,7 @@ cover: /images/cover-ai-and-you.jpg
 coverAlt: "A friendly illustrated collage: a smiling woman setting a smart thermostat from her phone in a sunny kitchen, labelled AI at home, beside three smaller scenes labelled 75 years of AI, Out and about, and Caring for nature."
 ---
 
-Artificial intelligence can feel like it arrived overnight. In reality it is an idea more than 75 years old, and it has been quietly filtering your email, estimating your arrival time and translating menus for years. Here is where it came from, how it is making life easier for people and the planet, and how you can put it to work yourself.
+Artificial intelligence can feel like it arrived overnight. In reality, it's an idea more than 75 years old, and it has been quietly filtering your email, estimating your arrival time and translating menus for years. Here's where it came from, how it's making life easier for people and the planet, and how you can put it to work yourself.
 
 ## Where AI came from
 
@@ -16,7 +16,7 @@ Artificial intelligence can feel like it arrived overnight. In reality it is an 
 
 **1950: a question.** Alan Turing asked, "Can machines think?" and proposed the Turing test: if a person chatting by text cannot tell a machine from a human, perhaps the machine is intelligent.
 
-**1956: a name.** John McCarthy and colleagues organized a summer workshop at Dartmouth College, and the term "artificial intelligence" was born.
+**1956: a name.** John McCarthy and colleagues organised a summer workshop at Dartmouth College, and the term "artificial intelligence" was born.
 
 **1958 to 1966: first steps.** Frank Rosenblatt's perceptron learned simple patterns, an ancestor of today's neural networks. Joseph Weizenbaum's ELIZA chatted by matching keywords, the great-grandparent of modern chatbots.
 
@@ -26,13 +26,13 @@ Artificial intelligence can feel like it arrived overnight. In reality it is an 
 
 **2017 to today: AI for everyone.** The transformer, introduced in 2017, became the design behind today's language models. ChatGPT reached an estimated 100 million users within about two months of its 2022 launch ([Reuters](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/)), and AlphaFold's protein predictions earned a share of the 2024 Nobel Prize in Chemistry ([Nobel Prize](https://www.nobelprize.org/prizes/chemistry/2024/press-release/)).
 
-> The big shift: early AI followed rules that people wrote by hand. Modern AI learns patterns from examples. That is why it can handle messy tasks like understanding speech or spotting disease in a photo.
+> The big shift: early AI followed rules that people wrote by hand. Modern AI learns patterns from examples. That's why it can handle messy tasks like understanding speech or spotting disease in a photo.
 
 ## Making daily life simpler
 
 ![Illustration of a city street where people use AI in daily life: a woman following a map app, a man reading live captions, a blind man using a phone camera to describe his surroundings, and a nurse photographing an older woman's eye.](/images/ai-everyday-daily-life.jpg)
 
-Most helpful AI is not dramatic. It removes small frictions, many times a day.
+Most helpful AI isn't dramatic. It removes small frictions, many times a day.
 
 ### Getting around
 
@@ -50,7 +50,7 @@ Microsoft's free [Seeing AI](https://www.seeingai.com/) app describes people, te
 
 ### Health
 
-In 2018 the US Food and Drug Administration authorized IDx-DR (now LumineticsCore), the first autonomous AI system to screen for diabetic eye disease, after a [clinical trial in primary care clinics](https://doi.org/10.1038/s41746-018-0040-6). A nurse takes the photo and the patient gets a result in minutes, which matters in places with few eye doctors. Smartwatches can also flag irregular heart rhythms and prompt the wearer to see a doctor.
+In 2018, the US Food and Drug Administration authorised IDx-DR (now LumineticsCore), the first autonomous AI system to screen for diabetic eye disease, after a [clinical trial in primary care clinics](https://doi.org/10.1038/s41746-018-0040-6). A nurse takes the photo and the patient gets a result in minutes, which matters in places with few eye doctors. Smartwatches can also flag irregular heart rhythms and prompt the wearer to see a doctor.
 
 ### Home and energy
 
@@ -63,16 +63,16 @@ Smart thermostats learn your routine and heat or cool the home only when needed.
 AI is also becoming a tool for protecting forests, wildlife, farmland and the climate.
 
 - **Listening out for the forest:** [Rainforest Connection](https://rfcx.org/) hangs recycled smartphones in rainforest trees. AI listens for the sound of logging saws in protected areas and alerts local rangers in real time.
-- **Tracking wildlife:** [Wildlife Insights](https://www.wildlifeinsights.org/) sorts millions of camera-trap photos in a fraction of the time it would take by hand, and [Wildbook](https://www.wildme.org/) recognizes individual whale sharks and zebras from their unique spots and stripes.
+- **Tracking wildlife:** [Wildlife Insights](https://www.wildlifeinsights.org/) sorts millions of camera-trap photos in a fraction of the time it would take by hand, and [Wildbook](https://www.wildme.org/) recognises individual whale sharks and zebras from their unique spots and stripes.
 - **Smarter farming:** John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) spots individual weeds and sprays only them, with reported herbicide savings of more than half. The PlantVillage Nuru app helps farmers in East Africa diagnose crop diseases from a phone photo, even offline.
 - **Flood warnings:** Google's [Flood Hub](https://sites.research.google/floods/) forecasts floods up to seven days ahead in more than 80 countries, giving families time to reach safety.
 - **Cleaner traffic and buildings:** Google's [Project Green Light](https://sites.research.google/greenlight/) tunes traffic-light timing, with early results of up to 10% lower emissions at intersections. DeepMind's AI [cut the energy used to cool Google's data centres by up to 40%](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
 
 ## How to use AI to improve your own quality of life
 
-You do not need to be technical to benefit. Some simple starting points:
+You don't need to be technical to benefit. Some simple starting points:
 
-1. **Plan your day.** Ask an AI assistant to turn a messy to-do list into a schedule, or to suggest a weekly meal plan from what is already in your fridge, which also reduces food waste.
+1. **Plan your day.** Ask an AI assistant to turn a messy to-do list into a schedule, or to suggest a weekly meal plan from what's already in your fridge, which also reduces food waste.
 2. **Learn something new.** Ask a chatbot to explain a topic "like I am 12", then ask follow-up questions. Language apps like Duolingo use AI to adjust lessons to your level.
 3. **Save energy.** Use a smart thermostat or smart plugs, and check your energy supplier's app for usage insights.
 4. **Stay healthy.** Use step, sleep and heart-rate tracking as gentle reminders, but treat any health alert as a reason to talk to a professional, not as a diagnosis.
@@ -81,13 +81,13 @@ You do not need to be technical to benefit. Some simple starting points:
 
 ## Using AI wisely
 
-AI is a powerful helper, but it is not perfect. A few habits keep it working for you:
+AI is a powerful helper, but it isn't perfect. A few habits keep it working for you:
 
 - **Check important facts.** Chatbots can sound sure of themselves and still be mistaken. Verify anything about health, money or law with a trusted source.
 - **Protect your privacy.** Avoid sharing passwords, ID numbers or private medical details with AI tools.
 - **Watch for bias.** AI learns from data made by people, so it can repeat unfair patterns. Good systems are tested across different groups of people.
 - **Mind the footprint.** Training and running large models uses electricity and water. Use AI where it truly saves time or resources.
-- **Keep humans in charge.** The best results come when AI handles the repetitive work and people make the decisions that need judgment and care.
+- **Keep humans in charge.** The best results come when AI handles the repetitive work and people make the decisions that need judgement and care.
 
 ## Words to know
 
@@ -95,4 +95,4 @@ New to some of these terms? Our friendly [AI glossary](/glossary/) explains word
 
 ## The takeaway
 
-AI began as a question about whether machines could think. Today a better question is how to use them well. From a nurse screening for eye disease to a ranger protecting a forest miles away, the best examples share one thing: AI takes on the tedious or impossible part of the job so that people can focus on care, judgment and connection. Used thoughtfully, it can help both people and nature live better.
+AI began as a question about whether machines could think. Today a better question is how to use them well. From a nurse screening for eye disease to a ranger protecting a forest miles away, the best examples share one thing: AI takes on the tedious or impossible part of the job so that people can focus on care, judgement and connection. Used thoughtfully, it can help both people and nature live better.

@@ -1,5 +1,5 @@
 ---
-title: "LLM tokens explained: how AI models read text"
+title: "LLM tokens decoded: how AI models read text"
 description: "Chatbots don't read letters the way we do. Discover how they break text into pieces, and why that explains some of their surprising habits."
 pubDate: 2026-09-24
 updatedDate: 2026-11-03
@@ -76,4 +76,4 @@ It would work, but texts would become very long lists, which makes models slower
 
 - Sennrich, Haddow & Birch, [*Neural Machine Translation of Rare Words with Subword Units*](https://arxiv.org/abs/1508.07909) (2016), which brought byte-pair encoding to language models.
 - OpenAI's open-source tokenizer, [tiktoken](https://github.com/openai/tiktoken), used in the example above.
-- Next in this series: [what is attention in AI?](/blog/attention-step-by-step/)
+- Next in this series: [LLM attention, demystified](/blog/attention-step-by-step/)

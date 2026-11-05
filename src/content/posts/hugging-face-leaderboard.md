@@ -16,7 +16,7 @@ Hugging Face is a website where people share AI models, datasets and demos, a bi
 
 ## What does a leaderboard show?
 
-A leaderboard is a scoreboard. Models take the same set of tests, called **benchmarks**, and get ranked by their scores. Some leaderboards test general knowledge or reasoning, others focus on maths, coding, or a particular language. One of the best known was the **Open LLM Leaderboard**, which compared thousands of openly shared language models side by side.
+A leaderboard is a scoreboard. Models take the same set of tests, called **benchmarks**, and get ranked by their scores. Some leaderboards test general knowledge or reasoning; others focus on maths, coding or a particular language. One of the best known was the **Open LLM Leaderboard**, which compared thousands of openly shared language models side by side.
 
 ## How to read one wisely
 

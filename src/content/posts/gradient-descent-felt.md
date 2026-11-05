@@ -1,5 +1,5 @@
 ---
-title: "Gradient descent explained: how AI learns step by step"
+title: "Gradient descent 101: how AI learns step by step"
 description: "Discover how AI improves itself one small step at a time, and why the size of each step matters so much."
 pubDate: 2026-10-15
 updatedDate: 2026-11-03
@@ -93,4 +93,4 @@ Change `lr` to 0.05, then 0.9, then 1.1. Can you predict what will happen before
 
 - Google, [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course), a free, beginner-friendly course with lessons on loss and gradient descent.
 - Kingma & Ba, [*Adam: A Method for Stochastic Optimization*](https://arxiv.org/abs/1412.6980) (2014), the paper behind the Adam optimizer.
-- Next in this series: [what is overfitting?](/blog/validation-loss-rising/)
+- Next in this series: [overfitting in plain English](/blog/validation-loss-rising/)

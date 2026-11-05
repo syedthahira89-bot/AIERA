@@ -76,6 +76,6 @@ Pick one small creative project: a birthday poem, a new recipe, a weekend sketch
 
 ## Further reading
 
-- [Diffusion models explained: how AI turns noise into images](/blog/diffusion-noise-to-image/)
-- [LLM tokens explained: how AI models read text](/blog/tokenizers-quirks/)
+- [Diffusion models unpacked: how AI turns noise into images](/blog/diffusion-noise-to-image/)
+- [LLM tokens decoded: how AI models read text](/blog/tokenizers-quirks/)
 - [Everyday AI: a beginner’s guide from Turing to today](/blog/ai-origins-everyday-life/)

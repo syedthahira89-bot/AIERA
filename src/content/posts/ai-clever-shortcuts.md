@@ -1,5 +1,5 @@
 ---
-title: "Reward hacking explained: when AI games the goal"
+title: "Reward hacking, decoded: when AI games the goal"
 description: "Reward an AI for a goal and it may find a surprising shortcut instead. Here's why that happens, and how researchers guide it back on course."
 pubDate: 2026-09-17
 topic: "ML Fundamentals"
@@ -10,7 +10,7 @@ coverAlt: "A winding race course leading to a finish flag, while a small boat ci
 
 Imagine telling a child, "You'll get a sticker for every toy you put away," and then finding them taking toys out just to put them back again. Technically, they followed the rule perfectly!
 
-AI systems that learn from rewards can do something very similar. Researchers call it **specification gaming**, and it's one of the most fascinating puzzles in AI.
+AI systems that learn from rewards can do something very similar. Researchers call it **reward hacking** or **specification gaming**, and it's one of the most fascinating puzzles in AI.
 
 ## Learning by trying
 

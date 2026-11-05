@@ -1,5 +1,5 @@
 ---
-title: "AI agents explained: your new digital helper"
+title: "AI agents unpacked: your new digital helper"
 description: "Chatbots chat. AI agents get it done. Meet the digital helpers everyone's talking about: how they plan, act and check their work, and how you stay in the driver's seat."
 pubDate: 2026-11-05
 topic: "Agents & GenAI"
@@ -83,5 +83,5 @@ Pick one small, low-stakes task, like planning a weekend outing or comparing thr
 - [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents): a clear guide from Anthropic on simple agent patterns
 - [What are AI agents?](https://cloud.google.com/discover/what-are-ai-agents): a beginner's overview from Google Cloud
 - [ReAct: Synergizing reasoning and acting in language models](https://arxiv.org/abs/2210.03629): the 2022 research paper behind the "reason, then act" loop
-- [Reward hacking explained: when AI games the goal](/blog/ai-clever-shortcuts/): why clear goals matter
+- [Reward hacking, decoded: when AI games the goal](/blog/ai-clever-shortcuts/): why clear goals matter
 - [LLM evaluation made simple: how to test a chatbot fairly](/blog/evaluating-llm-outputs/)

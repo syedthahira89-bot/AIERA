@@ -1,5 +1,5 @@
 ---
-title: "LLM attention explained: how models know what “it” means"
+title: "LLM attention, demystified: how models know what “it” means"
 description: "Follow one little word through a transformer and discover how AI decides which other words matter most."
 pubDate: 2026-10-22
 updatedDate: 2026-11-03
@@ -74,7 +74,7 @@ print(w.round(2))  # each row adds up to 1
 
 ## Why divide by the square root of d_k?
 
-Here's a lovely detail. If each query and key has $d_k$ numbers, their dot products tend to grow as $d_k$ grows. With $d_k = 64$, typical scores land around ±8. Softmax on numbers that big puts nearly all the attention on a single word, and the model finds it very hard to keep learning.
+Here's a neat detail. If each query and key has $d_k$ numbers, their dot products tend to grow as $d_k$ grows. With $d_k = 64$, typical scores land around ±8. Softmax on numbers that big puts nearly all the attention on a single word, and the model finds it very hard to keep learning.
 
 Dividing by $\sqrt{d_k}$ gently brings the scores back to a comfortable size. Attention stays nicely spread out early in training, and the model can learn to focus sharply only where that really helps.
 

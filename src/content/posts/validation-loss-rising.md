@@ -1,5 +1,5 @@
 ---
-title: "Overfitting explained: when AI memorises instead of learns"
+title: "Overfitting in plain English: when AI memorises, not learns"
 description: "Why a model can ace its practice questions yet stumble on new ones, plus three gentle ways to help it learn."
 pubDate: 2026-10-08
 updatedDate: 2026-11-03
@@ -78,4 +78,4 @@ Can you remember a time you memorised something without really understanding it?
 
 - Google, [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course), with friendly lessons on generalisation and overfitting.
 - Srivastava et al., [*Dropout: A Simple Way to Prevent Neural Networks from Overfitting*](https://jmlr.org/papers/v15/srivastava14a.html) (2014).
-- Previous in this series: [gradient descent explained](/blog/gradient-descent-felt/).
+- Previous in this series: [gradient descent 101](/blog/gradient-descent-felt/).
