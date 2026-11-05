@@ -36,8 +36,10 @@ export const TOPICS = [
   { name: 'Creative Freedom', slug: 'creative-freedom', pillar: 'better-life', blurb: 'How AI tools act as co-pilots that amplify human creativity.' },
   { name: 'The New Work Paradigm', slug: 'new-work-paradigm', pillar: 'better-life', blurb: 'How automation can make careers healthier, more balanced and more meaningful.' },
   { name: 'AI & the Planet', slug: 'ai-and-the-planet', pillar: 'better-life', blurb: 'How AI is helping protect forests, wildlife, farmland and the climate.' },
+  { name: 'Top 7 AI Tools for Everyone', slug: 'top-ai-tools', pillar: 'better-life', blurb: 'Friendly, hands-on picks of AI tools anyone can use to save time, learn and create.' },
   { name: 'Chatbots & Language', slug: 'chatbots-and-language', pillar: 'how-it-works', blurb: 'How chatbots read, understand and write text, and how we check their answers.' },
   { name: 'Images & Learning', slug: 'images-and-learning', pillar: 'how-it-works', blurb: 'How AI sees and creates pictures, and how models learn, improve and stay up to date.' },
+  { name: 'Agentic & Gen AI', slug: 'agentic-and-gen-ai', pillar: 'how-it-works', blurb: 'How generative AI creates text, images and more, and how AI agents plan and complete tasks for you.' },
 ] as const;
 
 /** Colour palettes for the header picker. Colours here are only for the swatches; the real tokens live in global.css. */
