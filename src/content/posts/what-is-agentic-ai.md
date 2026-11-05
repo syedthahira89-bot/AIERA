@@ -6,7 +6,7 @@ topic: "Agents & GenAI"
 level: Beginner
 featured: true
 cover: /images/cover-agentic.jpg
-coverAlt: "A clean, glossy cover on a soft sage-green background. On the left: the headline 'AI agents unpacked', a gold line, 'your new digital assistant', 'You set the goal. It plans, acts and checks, step by step.' and three buttons, Plan, Act and Check. On the right, a diagram of how an AI agent works: a goal card reading 'Plan a picnic for Saturday' flows into a green AI agent core, connected to four picture cards: Search (a park with a map pin and picnic table), Calendar (a sunny 24° Saturday forecast), Maps (a route map, 10 minutes away) and Tasks (a ticked shopping list beside a basket). A result card reads 'Plan ready: sunny, Riverside Park, 8 items'."
+coverAlt: "A clean, glossy cover on a soft sage-green background. On the left: the headline 'AI agents unpacked', a gold line, 'your new digital assistant', 'You set the goal. It plans, acts and checks, step by step.' and three buttons, Plan, Act and Check. On the right, a diagram of how an AI agent works: a goal card reading 'Plan a picnic for Sunday' flows into a green AI agent core, connected to four picture cards: Search (a park with a map pin and picnic table), Calendar (a sunny 24° Sunday forecast), Maps (a route map, 10 minutes away) and Tasks (a ticked shopping list beside a basket). A result card reads 'Plan ready: sunny, Riverside Park, 8 items'."
 takeaways:
   - "Generative AI answers a prompt; an AI agent works towards a goal through many steps."
   - "Agents follow a simple loop: plan, act with tools, check the result, repeat."
@@ -15,7 +15,7 @@ takeaways:
 
 **Agentic AI** is one of the biggest AI trends right now, and for good reason. It's the moment AI goes from *talking* about your to-do list to actually *ticking things off* it.
 
-Picture this: you ask a friend, *"Can you help me plan a picnic for Saturday?"* One friend sends you a lovely list of ideas. The other checks the weather, finds a park nearby, and hands you a ready-made shopping list.
+Picture this: you ask a friend, *"Can you help me plan a picnic for Sunday?"* One friend sends you a lovely list of ideas. The other checks the weather, finds a park nearby, and hands you a ready-made shopping list.
 
 Both are helpful. But that second friend? That's **agentic AI**: your new digital assistant.
 
@@ -59,7 +59,7 @@ The agent repeats this loop until the goal is done, or until it needs your help.
 
 Agents are most helpful when you set clear, friendly boundaries, just as you would for a new assistant at home or work.
 
-- **Give a clear goal.** "Find three parks within 15 minutes of home with picnic tables" works better than "sort out Saturday."
+- **Give a clear goal.** "Find three parks within 15 minutes of home with picnic tables" works better than "sort out Sunday."
 - **Choose what it can touch.** Only connect the apps and accounts it really needs.
 - **Ask it to check with you** before anything important, like spending money, sending a message or deleting something.
 - **Review the result.** Agents can still make mistakes, so a quick look at the finished work is always worth it.
