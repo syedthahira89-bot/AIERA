@@ -2,14 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE } from '../data/site';
 ---
-<BaseLayout title="Contact" description="How to reach the AIERA-TS team with corrections, topic ideas or partnership questions.">
+<BaseLayout title="Contact" description="Get in touch with Thahira at AIERA-TS with corrections, topic ideas or partnership questions.">
   <section class="page">
     <div class="wrap page-inner">
       <h1>Contact</h1>
-      <p class="lede">We read every message. Corrections get the fastest reply.</p>
+      <p class="lede">I’d love to hear from you. I read every message, and corrections get the fastest reply.</p>
 
       <div class="email">
-        <span>Email us at</span>
+        <span>Email me at</span>
         <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
       </div>
 
@@ -20,16 +20,16 @@ import { SITE } from '../data/site';
         </div>
         <div>
           <h2>Topic ideas</h2>
-          <p>Tell us which idea in machine learning you would like explained next.</p>
+          <p>Tell me which AI idea, tool or story you’d like me to explore next.</p>
         </div>
         <div>
           <h2>Guest posts and partnerships</h2>
-          <p>We publish a small number of guest articles. Send a short outline and a link to something you have written.</p>
+          <p>I welcome a small number of guest articles and collaborations. Send a short outline and a link to something you’ve written.</p>
         </div>
       </div>
 
       {SITE.social.length > 0 && (
-        <p class="social">You can also find us on {SITE.social.map((s, i) => <>{i > 0 && (i === SITE.social.length - 1 ? ' and ' : ', ')}<a href={s.href} target="_blank" rel="noopener">{s.label}</a></>)}.</p>
+        <p class="social">You can also find me on {SITE.social.map((s, i) => <>{i > 0 && (i === SITE.social.length - 1 ? ' and ' : ', ')}<a href={s.href} target="_blank" rel="noopener">{s.label}</a></>)}.</p>
       )}
     </div>
   </section>

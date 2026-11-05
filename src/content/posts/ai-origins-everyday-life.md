@@ -1,6 +1,6 @@
 ---
 title: "Everyday AI: a beginner’s guide from Turing to today"
-description: "From Alan Turing's 1950 question to flood warnings and talking cameras: where AI came from, real examples of it improving daily life and nature, and simple ways to use it yourself."
+description: "From Alan Turing's 1950 question to flood warnings and talking cameras: where AI came from, how it helps daily life, and easy ways to start."
 pubDate: 2026-10-27
 topic: "Everyday AI"
 level: Beginner
