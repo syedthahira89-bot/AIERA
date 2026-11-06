@@ -6,6 +6,7 @@ import Cover from '../components/Cover.astro';
 import GradientDemo from '../components/GradientDemo.astro';
 import LearningPaths from '../components/LearningPaths.astro';
 import Newsletter from '../components/Newsletter.astro';
+import AgentSearch from '../components/AgentSearch.astro';
 import { SITE, TOPICS } from '../data/site';
 import { getPosts } from '../lib/posts';
 
@@ -36,6 +37,8 @@ const counts = Object.fromEntries(TOPICS.map((t) => [t.name, posts.filter((p) =>
       </a>
     </div>
   </section>
+
+  <AgentSearch posts={posts} />
 
   <section class="block" aria-labelledby="latest-title">
     <div class="wrap latest">

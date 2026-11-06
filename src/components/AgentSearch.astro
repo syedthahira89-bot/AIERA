@@ -1,0 +1,138 @@
+---
+// "Ask AIERA": a friendly, agent-style search on the home page.
+// It is not a chatbot: it searches the site's own articles and glossary in the reader's browser,
+// so it is instant, private and never makes things up.
+import type { Post } from '../lib/posts';
+import { GLOSSARY, termId } from '../data/glossary';
+
+interface Props { posts: Post[] }
+const { posts } = Astro.props;
+
+const index = {
+  posts: posts.map((p) => ({
+    url: `/blog/${p.id}/`,
+    title: p.data.title,
+    desc: p.data.description,
+    topic: p.data.topic,
+    extra: (p.data.takeaways ?? []).join(' '),
+    mins: Math.max(1, Math.round((p.body ?? '').split(/\s+/).length / 230)),
+  })),
+  terms: GLOSSARY.map((g) => ({ url: `/glossary/#${termId(g.term)}`, term: g.term, def: g.definition })),
+};
+const suggestions = ['What is an AI agent?', 'Free AI tools', 'How do chatbots read text?', 'AI and my job', 'How does AI make images?'];
+---
+<section class="block ask" aria-labelledby="ask-title">
+  <div class="wrap">
+    <div class="ask-card">
+      <div class="ask-head">
+        <span class="ask-avatar" aria-hidden="true">
+          <svg width="26" height="26" viewBox="-16 -16 32 32"><path d="M0 -16 C 2 -5, 5 -2, 16 0 C 5 2, 2 5, 0 16 C -2 5, -5 2, -16 0 C -5 -2, -2 -5, 0 -16 Z" fill="url(#ask-g)"/><defs><linearGradient id="ask-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF1B8"/><stop offset=".5" stop-color="#F5CC4E"/><stop offset="1" stop-color="#C98F14"/></linearGradient></defs></svg>
+        </span>
+        <div>
+          <h2 id="ask-title">Ask AIERA</h2>
+          <p class="ask-sub">Your friendly guide to this blog. Ask a question in your own words and I’ll find the best articles and terms for you.</p>
+        </div>
+      </div>
+
+      <form class="ask-form" role="search" action="/blog/" method="get">
+        <label class="visually-hidden" for="ask-input">Ask a question or search the blog</label>
+        <input id="ask-input" name="q" type="search" autocomplete="off" placeholder="e.g. How do chatbots read text?" />
+        <button class="btn btn-primary" type="submit">Ask</button>
+      </form>
+
+      <div class="ask-chips" aria-label="Try asking">
+        {suggestions.map((s) => <button type="button" class="ask-chip">{s}</button>)}
+      </div>
+
+      <div class="ask-answer" id="ask-answer" aria-live="polite" hidden></div>
+      <p class="ask-note">I search AIERA-TS articles and the glossary, right here in your browser.</p>
+    </div>
+  </div>
+</section>
+
+<script type="application/json" id="ask-index" set:html={JSON.stringify(index).replace(/</g, '\\u003c')} />
+
+<style>
+  .ask { padding-block: 8px 24px; }
+  .ask-card { position: relative; overflow: hidden; border-radius: 20px; padding: 28px 30px 22px; border: 1px solid var(--line);
+    background: radial-gradient(ellipse 50% 80% at 100% 0%, var(--glow), transparent 60%), var(--surface);
+    box-shadow: 0 18px 40px rgba(15, 74, 44, .08); }
+  .ask-head { display: flex; gap: 16px; align-items: flex-start; }
+  .ask-avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center;
+    background: radial-gradient(circle at 35% 25%, #4FC488 0%, #17603C 60%, #0B3A22 100%);
+    box-shadow: 0 0 0 4px var(--surface), 0 0 0 5px rgba(201, 154, 46, .5), 0 8px 18px rgba(15, 74, 44, .3); }
+  .ask h2 { font-size: var(--step-2); }
+  .ask-sub { color: var(--muted); margin-top: 4px; max-width: 60ch; }
+  .ask-form { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+  .ask-form input { flex: 1 1 260px; min-width: 0; min-height: 52px; padding: 0 18px; font: 400 var(--step-0) var(--font-ui); color: var(--ink);
+    background: var(--bg); border: 1.5px solid var(--line); border-radius: 999px; }
+  .ask-form input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--glow); }
+  .ask-form .btn { border-radius: 999px; min-height: 52px; padding-inline: 26px; }
+  .ask-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .ask-chip { min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--accent-strong);
+    font: 500 var(--step--1) var(--font-ui); cursor: pointer; transition: border-color .15s, background .15s; }
+  .ask-chip:hover { border-color: var(--accent); background: var(--raise); }
+  .ask-answer { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+  .ask-note { margin-top: 14px; font-size: var(--step--1); color: var(--muted); }
+  :global(.ask-msg) { display: flex; gap: 10px; align-items: flex-start; color: var(--ink); font-weight: 500; }
+  :global(.ask-msg .dot) { flex: none; width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #4FC488, #17603C); display: grid; place-items: center; color: #F5CC4E; font-size: 14px; }
+  :global(.ask-list) { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+  :global(.ask-list a) { display: grid; gap: 2px; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: inherit; text-decoration: none; transition: border-color .15s; }
+  :global(.ask-list a:hover) { border-color: var(--accent); }
+  :global(.ask-list b) { font-size: var(--step-0); }
+  :global(.ask-list small) { color: var(--muted); font-size: var(--step--1); }
+  :global(.ask-list .kind) { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--spark); }
+  :global(.ask-more) { display: inline-block; margin-top: 12px; font-size: var(--step--1); font-weight: 600; }
+  @media (max-width: 600px) { .ask-card { padding: 22px 18px 18px; } .ask-form .btn { flex: 1 1 100%; } }
+</style>
+
+<script>
+  type P = { url: string; title: string; desc: string; topic: string; extra: string; mins: number };
+  type T = { url: string; term: string; def: string };
+  const data = JSON.parse(document.getElementById('ask-index')!.textContent!) as { posts: P[]; terms: T[] };
+  const form = document.querySelector<HTMLFormElement>('.ask-form')!;
+  const input = document.getElementById('ask-input') as HTMLInputElement;
+  const out = document.getElementById('ask-answer')!;
+
+  const STOP = new Set('a an and are as at be by can do does for from how i in is it me my of on or the to what when where which who why will with you your about tell explain'.split(' '));
+  // A few everyday words mapped to the terms the articles use
+  const SYN: Record<string, string[]> = {
+    chatbot: ['llm', 'language', 'chatbots'], chatbots: ['llm', 'language'], agent: ['agents', 'agentic'], agents: ['agentic'],
+    job: ['work', 'career', 'jobs'], jobs: ['work', 'career'], work: ['career', 'job'], image: ['images', 'vision', 'diffusion'], images: ['vision', 'diffusion', 'image'],
+    picture: ['image', 'vision', 'diffusion'], pictures: ['images', 'diffusion'], tool: ['tools', 'toolkit'], tools: ['toolkit'], free: ['tools'],
+    nature: ['planet', 'climate', 'wildlife'], climate: ['planet', 'nature'], learn: ['learning', 'training'], creative: ['creativity'], text: ['tokens', 'words'],
+    read: ['tokens', 'reads'], words: ['tokens', 'text'], test: ['evaluation', 'testing'], ranking: ['leaderboard', 'rankings'],
+  };
+  const norm = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[^\w\s]/g, ' ');
+  const words = (q: string) => {
+    const base = norm(q).split(/\s+/).filter((w) => w.length > 1 && !STOP.has(w));
+    return [...new Set(base.flatMap((w) => [w, ...(SYN[w] ?? [])]))];
+  };
+  const hit = (text: string, w: string) => new RegExp(`\\b${w}`, 'i').test(text);
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+  function answer(q: string) {
+    const ws = words(q);
+    if (!ws.length) { out.hidden = true; return; }
+    const posts = data.posts.map((p) => ({ p, s: ws.reduce((n, w) => n + (hit(p.title, w) ? 4 : 0) + (hit(p.topic, w) ? 2 : 0) + (hit(p.desc, w) ? 2 : 0) + (hit(p.extra, w) ? 1 : 0), 0) }))
+      .filter((x) => x.s > 0).sort((a, b) => b.s - a.s).slice(0, 3);
+    const terms = data.terms.map((t) => ({ t, s: ws.reduce((n, w) => n + (hit(t.term, w) ? 3 : 0) + (hit(t.def, w) ? 1 : 0), 0) }))
+      .filter((x) => x.s > 1).sort((a, b) => b.s - a.s).slice(0, 2);
+    if (!posts.length && !terms.length) {
+      out.innerHTML = `<p class="ask-msg"><span class="dot">✦</span><span>I couldn’t find an article on that yet. Try different words, browse <a href="/topics/">all topics</a>, or <a href="/contact/">suggest it</a> as a future article.</span></p>`;
+    } else {
+      const items = [
+        ...posts.map(({ p }) => `<li><a href="${p.url}"><span class="kind">${esc(p.topic)} · ${p.mins} min read</span><b>${esc(p.title)}</b><small>${esc(p.desc)}</small></a></li>`),
+        ...terms.map(({ t }) => `<li><a href="${t.url}"><span class="kind">Glossary</span><b>${esc(t.term)}</b><small>${esc(t.def)}</small></a></li>`),
+      ].join('');
+      const lead = posts.length ? `Here’s what I found for “${esc(q.trim())}”. I’d start with the first one.` : `I found these glossary terms for “${esc(q.trim())}”.`;
+      out.innerHTML = `<p class="ask-msg"><span class="dot">✦</span><span>${lead}</span></p><ul class="ask-list">${items}</ul><a class="ask-more" href="/blog/">Browse all articles →</a>`;
+    }
+    out.hidden = false;
+  }
+
+  form.addEventListener('submit', (e) => { e.preventDefault(); answer(input.value); });
+  let t: number | undefined;
+  input.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => answer(input.value), 200); });
+  document.querySelectorAll<HTMLButtonElement>('.ask-chip').forEach((b) => b.addEventListener('click', () => { input.value = b.textContent ?? ''; answer(input.value); input.focus(); }));
+</script>
