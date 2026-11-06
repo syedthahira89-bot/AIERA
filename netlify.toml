@@ -18,6 +18,7 @@
   status = 200
 
 # Old topic addresses (renamed in 2026), sent straight to the current topic
+
 [[redirects]]
   from = "/topics/llms/*"
   to = "/topics/llms-decoded/"
@@ -89,16 +90,11 @@
   status = 301
 
 # Renamed article address
+
 [[redirects]]
   from = "/blog/reward-hacking/*"
   to = "/blog/ai-clever-shortcuts/"
   status = 301
-
-# Serve Astro's custom 404 page for unknown URLs
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
 
 [[redirects]]
   from = "/topics/smarter-living/*"
@@ -139,3 +135,9 @@
   from = "/topics/agentic-and-gen-ai/*"
   to = "/topics/agents-and-genai/"
   status = 301
+
+# Serve Astro's custom 404 page for unknown URLs (must stay last: rules run top to bottom)
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

@@ -1,0 +1,28 @@
+# Redirects for Cloudflare Pages (and any host that reads _redirects).
+# Keep in sync with netlify.toml. Unknown pages show 404.html automatically.
+
+/favicon.ico  /favicon.png  200
+/apple-touch-icon-precomposed.png  /apple-touch-icon.png  200
+/topics/llms/*  /topics/llms-decoded/  301
+/topics/computer-vision/*  /topics/ml-fundamentals/  301
+/topics/reinforcement-learning/*  /topics/ml-fundamentals/  301
+/topics/math-foundations/*  /topics/ml-fundamentals/  301
+/topics/training/*  /topics/ml-fundamentals/  301
+/topics/mlops/*  /topics/ml-fundamentals/  301
+/topics/ai-in-everyday-life/*  /topics/everyday-ai/  301
+/topics/talking-machines/*  /topics/llms-decoded/  301
+/topics/eyes-of-ai/*  /topics/ml-fundamentals/  301
+/topics/learning-by-trying/*  /topics/ml-fundamentals/  301
+/topics/numbers-behind-the-magic/*  /topics/ml-fundamentals/  301
+/topics/how-ai-learns/*  /topics/ml-fundamentals/  301
+/topics/from-lab-to-life/*  /topics/ml-fundamentals/  301
+/topics/ai-and-you/*  /topics/everyday-ai/  301
+/blog/reward-hacking/*  /blog/ai-clever-shortcuts/  301
+/topics/smarter-living/*  /topics/everyday-ai/  301
+/topics/creative-freedom/*  /topics/creative-ai/  301
+/topics/new-work-paradigm/*  /topics/future-of-work/  301
+/topics/ai-and-the-planet/*  /topics/ai-for-the-planet/  301
+/topics/top-ai-tools/*  /topics/ai-toolkit/  301
+/topics/chatbots-and-language/*  /topics/llms-decoded/  301
+/topics/images-and-learning/*  /topics/ml-fundamentals/  301
+/topics/agentic-and-gen-ai/*  /topics/agents-and-genai/  301
