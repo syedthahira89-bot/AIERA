@@ -14,49 +14,55 @@ takeaways:
   - "You can always ask why a decision was made, check your data and ask for a person to review it."
 ---
 
-Have you ever had a text from your bank asking, *"Was this you?"* moments after an unusual payment? Or made an insurance claim and been surprised by how quickly it moved? Chances are, AI was quietly helping behind the scenes.
+Have you ever had a text from your bank asking, *"Was this you?"* moments after an unusual payment? Or made an insurance claim and been surprised by how quickly it moved? Chances are, AI was working quietly behind the scenes.
 
-I’ve built my career in banking and insurance, so this topic is close to my heart. These are industries that run on trust, careful decisions and looking after people's information. That's exactly why it's worth understanding how AI is changing them, and how you can make sure it works for you.
+I’ve built my career in banking and insurance, so this topic is close to my heart. These are industries that run on trust, careful decisions and looking after people's information. That's exactly why it's worth understanding how AI is changing them, and how you can make sure it works in your favour.
 
 ## Where you already meet AI
 
-You may not see it, but AI is already part of everyday money matters.
+You may not notice it, but AI is already part of everyday money matters.
 
-- **Fraud alerts.** AI models learn your usual spending patterns and flag payments that look out of character, often within seconds. This is one of the oldest and most helpful uses of AI in banking.
-- **Chat and voice assistants.** Many banks and insurers offer assistants that answer common questions at any hour, from "What's my balance?" to "How do I update my address?"
-- **Document checks.** When you open an account or apply for a loan, AI can help read and check documents, such as ID or payslips, so you're not waiting days for someone to type everything in.
+- **Fraud alerts.** AI models learn your usual spending patterns and flag payments that look out of character, often within seconds. It's one of the longest-standing and most valuable uses of AI in banking.
+- **Chat and voice assistants.** Many banks and insurers offer digital assistants that answer common questions at any hour, from "What's my balance?" to "How do I update my address?"
+- **Document checks.** When you open an account or apply for a loan, AI can help read and check documents, such as ID or payslips, so you're not left waiting days for someone to process them by hand.
 - **Lending decisions.** Lenders use models to help assess whether a loan is affordable, alongside rules and human checks.
 - **Insurance quotes and claims.** AI can help estimate risk for a quote, and some insurers use photos of damage to speed up simple claims, like a dented car door.
 
+![An illustration of how AI spots fraud. A card lists usual payments, such as a $42 grocery store purchase, an $18 train ticket and a $3.20 coffee, and flags an unusual $1,240 electronics purchase abroad. A phone shows the bank's alert: 'Was this you?', with buttons for 'Yes, it was me' and 'No, block my card'.](/images/banking-fraud-alert.jpg)
+
 ## What's getting better
 
-When it's used well, AI can make banking and insurance noticeably kinder to customers.
+When it's used well, AI can make banking and insurance noticeably smoother for customers.
 
 - **Speed.** Simple claims and applications can move in hours rather than weeks.
 - **Safety.** Spotting fraud quickly protects your money and your peace of mind.
-- **Help when you need it.** Assistants don't sleep, so simple questions don't have to wait until Monday.
-- **More time for people.** When AI handles repetitive paperwork, staff can spend more time on complex or sensitive cases, like a bereavement or a difficult claim.
+- **Help when you need it.** Digital assistants are available around the clock, so simple questions don't have to wait until Monday.
+- **More time for people.** When AI handles repetitive paperwork, staff can spend more time on complex or sensitive cases, such as a bereavement or a difficult claim.
+
+![The journey of a simple car insurance claim in four steps: you send photos of the dented door, AI checks the damage, policy and cost, a person approves it and answers questions, and the payment is sent, often within days.](/images/banking-claim-journey.jpg)
 
 ## What to watch for
 
-Because these decisions affect people's lives, they need extra care.
+Because these decisions affect people's lives, they deserve extra care.
 
-- **Fairness.** AI learns from past data, and past data can contain unfair patterns. A model could treat some groups less fairly without anyone intending it. Good organisations test their models carefully for this.
-- **Clear explanations.** If you're turned down for a loan or a claim, you deserve to know why. A complex model is no excuse for a vague answer.
+- **Fairness.** AI learns from past data, and past data can contain unfair patterns. A model could treat some groups less fairly without anyone intending it. Responsible organisations test their models carefully for this.
+- **Clear explanations.** If you're turned down for a loan or a claim, you deserve to know why, and using a complex model doesn't change that.
 - **Privacy.** Financial and health information is personal. It should be collected only when needed and protected carefully.
-- **Mistakes.** AI can get things wrong, so important decisions should always have a person able to step in.
+- **Errors.** AI can make mistakes, so important decisions should always have a person who can step in.
 
 The good news is that regulators are paying close attention. In the European Union, the AI Act treats AI used for **credit scoring** and for pricing **life and health insurance** as "high-risk", which brings stricter rules on testing, transparency and human oversight. In the United States, the Consumer Financial Protection Bureau has made clear that lenders must still give **specific reasons** when they turn someone down, even if a complex algorithm was involved.
 
 ## How to stay in charge
 
-You don't need to understand the technology to protect yourself. A few simple habits help:
+You don't need to understand the technology to protect yourself. A few simple habits go a long way:
 
-1. **Ask why.** If a decision goes against you, ask for the main reasons. You're entitled to a clear answer.
+1. **Ask why.** If a decision goes against you, ask for the main reasons. You should receive a clear answer.
 2. **Check your information.** Many decisions rely on your credit file and account history. Check them for mistakes and ask for corrections.
 3. **Ask for a person.** If something feels wrong, ask for a human review. Most organisations have a way to do this.
-4. **Watch for scams.** Criminals use AI too, for example to fake a familiar voice or write convincing messages. Your bank will never ask for your full PIN or password. If in doubt, hang up and call the number on the back of your card.
+4. **Watch for scams.** Fraudsters use AI too, for example to imitate a familiar voice or write convincing messages. Banks won't ask for your full PIN or online banking password. If in doubt, hang up and call the number on the back of your card.
 5. **Use official apps and websites.** Turn on alerts so you see unusual activity straight away.
+
+![A checklist of five habits to stay in charge of your money: ask why, check your information, ask for a person, watch for scams, and use official apps, beside a gold shield with a tick.](/images/banking-stay-in-charge.jpg)
 
 ## Common questions
 
@@ -70,7 +76,7 @@ It can help insurers price risk more precisely and handle claims more efficientl
 It depends on the company and where you live. Privacy policies should explain how your data is used, and in many countries you can ask what's held about you.
 
 **Will AI replace bank and insurance staff?**
-It's changing their work more than replacing it. Routine tasks are being automated, while judgement, empathy and complex cases remain very human. Our guide to [AI and your career](/blog/ai-and-your-job/) explores this.
+It's changing their work more than replacing it. Routine tasks are being automated, while judgement, empathy and complex cases remain firmly human. Our guide to [AI and your career](/blog/ai-and-your-job/) explores this.
 
 ## Try it this week
 
