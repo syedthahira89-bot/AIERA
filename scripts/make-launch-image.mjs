@@ -2,10 +2,11 @@
 //   node scripts/make-launch-image.mjs      (run `npm run build` first so the small image copies exist)
 // Output: linkedin/launch-wide.png and linkedin/launch-square.png (not stored in git).
 import { createRequire } from 'node:module';
-import { readFile, mkdir } from 'node:fs/promises';
+import { readFile, mkdir, readdir } from 'node:fs/promises';
 const { chromium } = createRequire(import.meta.url)('playwright');
 
 const uri = async (name) => `data:image/webp;base64,${(await readFile(`public/images/sized/${name}-800.webp`)).toString('base64')}`;
+const count = (await readdir('src/content/posts')).filter((f) => f.endsWith('.md')).length;
 const covers = await Promise.all(['cover-top-7-tools', 'cover-agentic', 'cover-nature'].map(uri));
 
 const wordmark = `<span class="wm"><span class="word">A<span class="i">ı<span class="dot"></span></span>era</span><span class="badge"><span class="ts">TS</span></span></span>`;
@@ -52,7 +53,7 @@ const wide = `<div class="card" style="width:1200px;height:627px">
     <div class="cv" style="left:70px;top:70px;width:380px;height:214px;transform:rotate(-7deg)"><img src="${covers[0]}"></div>
     <div class="cv" style="left:150px;top:350px;width:370px;height:208px;transform:rotate(6deg)"><img src="${covers[2]}"></div>
     <div class="cv" style="left:110px;top:200px;width:410px;height:231px;transform:rotate(-1deg);z-index:2"><img src="${covers[1]}"></div>
-    <span class="ribbon" style="left:340px;top:176px;z-index:3;font-size:15px;padding:8px 16px;transform:rotate(4deg)">✦ 16 articles to explore</span>
+    <span class="ribbon" style="left:340px;top:176px;z-index:3;font-size:15px;padding:8px 16px;transform:rotate(4deg)">✦ ${count} articles to explore</span>
   </div>
   ${spark(600, 84, 26)}${spark(1140, 520, 22)}${spark(1110, 60, 16)}${spark(590, 520, 14)}
 </div>`;
@@ -67,7 +68,7 @@ const square = `<div class="card" style="width:1080px;height:1080px">
     <div class="cv" style="left:84px;top:40px;width:400px;height:225px;transform:rotate(-6deg)"><img src="${covers[0]}"></div>
     <div class="cv" style="left:600px;top:40px;width:400px;height:225px;transform:rotate(6deg)"><img src="${covers[2]}"></div>
     <div class="cv" style="left:300px;top:110px;width:480px;height:270px;z-index:2"><img src="${covers[1]}"></div>
-    <span class="ribbon" style="left:640px;top:86px;z-index:3;font-size:18px;padding:9px 18px;transform:rotate(4deg)">✦ 16 articles to explore</span>
+    <span class="ribbon" style="left:640px;top:86px;z-index:3;font-size:18px;padding:9px 18px;transform:rotate(4deg)">✦ ${count} articles to explore</span>
   </div>
   <div style="position:absolute;left:84px;right:84px;bottom:76px;display:flex;align-items:center;justify-content:space-between;z-index:2">
     <div class="sub" style="font-size:22px;max-width:520px">Hopeful stories and jargon-free AI guides.<br>New article every Thursday.</div>
