@@ -1,7 +1,9 @@
 ---
 title: "AI in banking and insurance: what it means for you"
 description: "From fraud alerts to faster claims, AI is quietly changing how we bank and insure. Here's what it does well, what to watch for and how to stay in charge."
-pubDate: 2026-11-07
+pubDate: 2026-11-12
+# Scheduled for Thursday 12 November: remove the draft line (and move featured: true here) to publish
+draft: true
 topic: "Everyday AI"
 level: Beginner
 cover: /images/cover-banking.jpg
