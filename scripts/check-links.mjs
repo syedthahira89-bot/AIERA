@@ -24,7 +24,8 @@ const files = await htmlFiles(DIST);
 const ids = new Map(); // page path -> Set of ids
 const links = [];      // { from, href }
 for (const f of files) {
-  const html = await readFile(f, 'utf8');
+  // Ignore links written inside scripts (for example the Ask AIERA search builds its own links)
+  const html = (await readFile(f, 'utf8')).replace(/<script\b[\s\S]*?<\/script>/gi, '');
   const page = pageOf(f);
   ids.set(page, new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1])));
   for (const m of html.matchAll(/<a\s[^>]*href="([^"]+)"/g)) links.push({ from: page, href: m[1].replace(/&amp;/g, '&') });

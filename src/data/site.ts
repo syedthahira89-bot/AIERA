@@ -22,7 +22,7 @@ export const SITE = {
   googleSiteVerification: '',
   // Analytics (e.g. Plausible): paste the full snippet the provider gives you, script tags included.
   // While empty, no analytics script loads.
-  analyticsSnippet: '',
+  analyticsSnippet: `<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "34dcf99b16a04f9b93d6054b46d3b2ac"}'></script><!-- End Cloudflare Web Analytics -->`,
 };
 
 /** The two content pillars. Every topic belongs to one. */
