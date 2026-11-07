@@ -1,0 +1,14 @@
+// Cloudflare Workers settings for hosting AIERA-TS as a static site.
+// Cloudflare runs `npm run build`, then serves the finished site from the dist folder.
+// Netlify ignores this file.
+{
+  "name": "aiera-ts",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    // Unknown addresses show the site's own 404 page
+    "not_found_handling": "404-page",
+    // Pages end in a slash, like /blog/what-is-agentic-ai/
+    "html_handling": "auto-trailing-slash"
+  }
+}
