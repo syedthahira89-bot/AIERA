@@ -31,7 +31,7 @@ const filters = [{ name: 'All', count: posts.length }, ...TOPICS.map((t) => ({ n
         </div>
         <div>
           <p class="visually-hidden" id="result-status" aria-live="polite"></p>
-          <PostList posts={posts} />
+          <PostList posts={posts} headingLevel={2} />
           <div class="empty" id="empty" hidden>
             <p>No articles match your search. Try a broader term or clear the filters.</p>
             <button class="btn btn-quiet" type="button" id="clear-filters">Clear filters</button>

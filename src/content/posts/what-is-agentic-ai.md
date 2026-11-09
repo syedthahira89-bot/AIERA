@@ -31,7 +31,7 @@ An **AI agent** uses the same kind of model, but instead of stopping after one r
 
 "Agentic" simply means *able to act on its own*, within the limits you give it.
 
-| | Generative AI | Agentic AI |
+| Feature | Generative AI | Agentic AI |
 | --- | --- | --- |
 | You give it | A prompt | A goal |
 | It gives you | One answer or creation | A finished task (or a clear update) |

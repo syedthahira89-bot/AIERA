@@ -1,5 +1,16 @@
 ---
 import katexCss from 'katex/dist/katex.min.css?url';
+// Fonts are hosted on the site itself (faster, and visitors' browsers don't contact Google)
+import '@fontsource/instrument-serif/latin-400.css';
+import '@fontsource/instrument-serif/latin-400-italic.css';
+import '@fontsource/inter-tight/latin-400.css';
+import '@fontsource/inter-tight/latin-500.css';
+import '@fontsource/inter-tight/latin-600.css';
+import '@fontsource/inter-tight/latin-700.css';
+import '@fontsource/geist-mono/latin-400.css';
+import '@fontsource/geist-mono/latin-500.css';
+import serifFont from '@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2?url';
+import uiFont from '@fontsource/inter-tight/files/inter-tight-latin-400-normal.woff2?url';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -79,9 +90,8 @@ const ldJson = JSON.stringify(siteLd).replace(/</g, '\\u003c');
     {SITE.analyticsSnippet && <Fragment set:html={SITE.analyticsSnippet} />}
 
     {math && <link rel="stylesheet" href={katexCss} />}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
+    <link rel="preload" href={serifFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={uiFont} as="font" type="font/woff2" crossorigin />
 
     <script is:inline>
       try {

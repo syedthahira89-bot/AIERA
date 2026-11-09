@@ -23,7 +23,7 @@ const { topic, posts } = Astro.props;
       <p class="lede">{topic.blurb}</p>
       <div class="list">
         {posts.length
-          ? <PostList posts={posts} />
+          ? <PostList posts={posts} headingLevel={2} />
           : <p class="empty">No articles on this topic yet. <a href="/#newsletter">Subscribe</a> to hear when the first one is out.</p>}
       </div>
     </div>

@@ -36,7 +36,7 @@ export default defineConfig({
       rehypePlugins: [rehypeKatex, rehypeLazyImages],
     }),
     shikiConfig: {
-      themes: { light: 'github-light', dark: 'github-dark-dimmed' },
+      themes: { light: 'github-light-high-contrast', dark: 'github-dark-dimmed' },
       defaultColor: false, // emit --shiki-light / --shiki-dark so global.css follows the site theme
       wrap: false,
     },

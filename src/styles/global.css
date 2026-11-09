@@ -1,3 +1,6 @@
+/* Fallback fonts resized to match the web fonts, so text doesn't reflow (and push the page around) when the fonts arrive */
+@font-face { font-family: "Serif Fallback"; src: local("Times New Roman"), local("Liberation Serif"), local("Times"); size-adjust: 82%; }
+@font-face { font-family: "UI Fallback"; src: local("Arial"), local("Liberation Sans"), local("Helvetica"); size-adjust: 96.5%; }
 /* AIERA-TS design tokens. Dark-first: circuit navy, trace-glow cyan, solder gold. */
 :root {
   --bg: #061522;
@@ -13,8 +16,8 @@
   --glow: rgba(79, 216, 245, 0.18);
 
   /* Instrument Serif: slim, fashionable serif for headings (one weight, 400). Inter Tight: clear sans for reading and UI. */
-  --font-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
-  --font-ui: "Inter Tight", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: "Instrument Serif", "Serif Fallback", "Iowan Old Style", Georgia, serif;
+  --font-ui: "Inter Tight", "UI Fallback", "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-code: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
   --step--1: 0.875rem;
