@@ -4,7 +4,6 @@ description: "Chatbots chat. AI agents get it done. Meet the digital assistants 
 pubDate: 2026-11-05
 topic: "Agents & GenAI"
 level: Beginner
-featured: true
 cover: /images/cover-agentic.jpg
 coverAlt: "A clean, glossy cover on a soft sage-green background. On the left: the headline 'AI agents unpacked', a gold line, 'your new digital assistant', 'You set the goal. It plans, acts and checks, step by step.' and three buttons, Plan, Act and Check. On the right, a diagram of how an AI agent works: a goal card reading 'Plan a picnic for Sunday' flows into a green AI agent core, connected to four picture cards: Search (a park with a map pin and picnic table), Calendar (a sunny 24° Sunday forecast), Maps (a route map, 10 minutes away) and Tasks (a ticked shopping list beside a basket). A result card reads 'Plan ready: sunny, Riverside Park, 8 items'."
 takeaways:

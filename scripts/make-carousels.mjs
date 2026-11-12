@@ -15,6 +15,9 @@ const POSTS = 'src/content/posts';
 const OUT = 'linkedin';
 const SITE = 'aiera-ts.com';
 const only = process.argv.slice(2).filter((a) => !a.startsWith('-'));
+const includeDrafts = process.argv.includes('--drafts'); // npm run carousels -- --drafts my-article
+// Use a different picture on the first slide:  npm run carousels -- my-article --image=/images/my-picture.jpg
+const imageArg = (process.argv.find((a) => a.startsWith('--image=')) || '').slice('--image='.length);
 
 // Minimal front-matter reader for the fields we need
 function frontMatter(src) {
@@ -45,7 +48,7 @@ function slides(p, img, slug) {
   const tips = p.takeaways.slice(0, 3);
   return [
     `<section class="s cover"><span class="pill">✦ ${esc(p.topic)}</span><h1>${esc(head)}</h1>${sub ? `<p class="h2">${esc(sub)}</p>` : ''}
-      <div class="img"><img src="${img}"></div><p class="swipe">Swipe to learn more <b>→</b></p>${foot(1)}</section>`,
+      <div class="img"><img src="${img}"${imageArg ? ' class="whole"' : ''}></div><p class="swipe">Swipe to learn more <b>→</b></p>${foot(1)}</section>`,
     `<section class="s"><span class="kicker">In short</span><p class="big">${esc(p.description)}</p>${foot(2)}</section>`,
     ...tips.map((t, i) => `<section class="s"><span class="num">0${i + 1}</span><span class="kicker">Key takeaway</span><p class="big">${esc(t)}</p>${foot(3 + i)}</section>`),
     `<section class="s cta"><span class="kicker">Want the full guide?</span><p class="big">Read the whole article, free, on AIERA-TS.</p>
@@ -68,6 +71,7 @@ const CSS = `
   .h2 { margin: -6px 0 0; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 58px; line-height: 1.05; color: #13452C; }
   .img { border-radius: 30px; overflow: hidden; box-shadow: 0 0 0 6px #fff, 0 0 0 9px rgba(245,204,78,.9), 0 30px 60px rgba(23,96,60,.25); }
   .img img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+  .img img.whole { aspect-ratio: auto; } /* a chosen picture (--image) is shown whole */
   .swipe { margin: 0; font-size: 30px; font-weight: 700; color: #17603C; } .swipe b { color: #C98F14; }
   .kicker { font-size: 28px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #C98F14; }
   .num { font-size: 210px; font-weight: 800; line-height: .8; letter-spacing: -.05em; background: linear-gradient(180deg,#FFF1B8,#F5CC4E 45%,#C98F14); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 4px 0 rgba(255,255,255,.9)); }
@@ -90,8 +94,8 @@ const browser = await chromium.launch();
 for (const f of files) {
   const slug = f.replace(/\.md$/, '');
   const p = frontMatter(await readFile(join(POSTS, f), 'utf8'));
-  if (p.draft || !p.cover || p.takeaways.length < 3) { console.log(`skip ${slug} (needs a cover and three takeaways)`); continue; }
-  const html = `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@500;600;700;800&display=swap"><style>${CSS}</style></head><body>${slides(p, await dataUri(p.cover), slug)}</body></html>`;
+  if ((p.draft && !includeDrafts) || !p.cover || p.takeaways.length < 3) { console.log(`skip ${slug} (draft, or needs a cover and three takeaways)`); continue; }
+  const html = `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@500;600;700;800&display=swap"><style>${CSS}</style></head><body>${slides(p, await dataUri(imageArg || p.cover), slug)}</body></html>`;
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
   await page.setContent(html, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
