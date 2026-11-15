@@ -1,5 +1,5 @@
 ---
-title: "Traffic prediction with neural networks: how ETAs are made"
+title: "Traffic prediction, decoded: the AI behind your ETA"
 description: "How Google Maps combines live and historical traffic with graph neural networks to predict your arrival time, explained step by step with a small code example."
 pubDate: 2026-11-19
 # Planned for Thursday 19 November: remove the draft line to publish
