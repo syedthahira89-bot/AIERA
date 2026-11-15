@@ -23,7 +23,6 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 | ⭐ | Nov 5, 2026 | Agents & GenAI | AI agents unpacked: your new digital assistant | ✅ Published, Thursday feature (`what-is-agentic-ai`) |
 | 4 | Nov 5, 2026 | AI Toolkit | AI toolkit: the 7 best free AI tools for everyday life | ✅ Published (`top-7-ai-tools`), feature it on Nov 12 |
 | ⭐ | Nov 12, 2026 | Everyday AI | Banking and insurance security: the AI layers that keep you safe | ✅ Published, Thursday feature (`ai-in-banking-and-insurance`) |
-| ✚ | Nov 19, 2026 | Everyday AI | How Google search works: crawling, indexing and AI | Written, scheduled for Nov 19, draft until then (`how-google-search-works`) |
 | 5 | Nov 26, 2026 | LLMs Decoded | What is a chatbot, really? A beginner's guide | Planned |
 | 6 | Nov 26, 2026 | Everyday AI | How AI is helping doctors spot disease earlier | Planned |
 | 7 | Dec 3, 2026 | Creative AI | Writing with AI: a friendly guide for bloggers and students | Planned |
