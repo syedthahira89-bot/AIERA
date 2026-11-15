@@ -69,7 +69,7 @@ AI is also becoming a tool for protecting forests, wildlife, farmland and the cl
 - **Listening out for the forest:** [Rainforest Connection](https://rfcx.org/) hangs recycled smartphones in rainforest trees. AI listens for the sound of logging saws in protected areas and alerts local rangers in real time.
 - **Tracking wildlife:** [Wildlife Insights](https://www.wildlifeinsights.org/) sorts millions of camera-trap photos in a fraction of the time it would take by hand, and [Wildbook](https://www.wildme.org/) recognises individual whale sharks and zebras from their unique spots and stripes.
 - **Smarter farming:** John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) spots individual weeds and sprays only them, with reported herbicide savings of more than half. The PlantVillage Nuru app helps farmers in East Africa diagnose crop diseases from a phone photo, even offline.
-- **Flood warnings:** Google's [Flood Hub](https://sites.research.google/floods/) forecasts floods up to seven days ahead in more than 80 countries, giving families time to reach safety.
+- **Flood warnings:** Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in many countries, giving families time to reach safety.
 - **Cleaner traffic and buildings:** Google's [Project Green Light](https://sites.research.google/greenlight/) tunes traffic-light timing, with early results of up to 10% lower emissions at intersections. DeepMind's AI [cut the energy used to cool Google's data centres by up to 40%](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
 
 ## How to use AI to improve your own quality of life
@@ -100,3 +100,18 @@ New to some of these terms? Our friendly [AI glossary](/glossary/) explains word
 ## The takeaway
 
 AI began as a question about whether machines could think. Today a better question is how to use them well. From a nurse screening for eye disease to a ranger protecting a forest miles away, the best examples share one thing: AI takes on the tedious or impossible part of the job so that people can focus on care, judgement and connection. Used thoughtfully, it can help both people and nature live better.
+
+## Sources & further reading
+
+- Alan Turing, [*Computing Machinery and Intelligence*](https://doi.org/10.1093/mind/LIX.236.433) (Mind, 1950), the paper that asked "Can machines think?"
+- McCarthy et al., [*A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence*](http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf) (1955), which named the field.
+- Frank Rosenblatt, [*The Perceptron*](https://doi.org/10.1037/h0042519) (Psychological Review, 1958).
+- Joseph Weizenbaum, [*ELIZA*](https://doi.org/10.1145/365153.365168) (Communications of the ACM, 1966).
+- IBM, [*Deep Blue*](https://www.ibm.com/history/deep-blue), on the 1997 match with Garry Kasparov.
+- Krizhevsky, Sutskever & Hinton, [*ImageNet Classification with Deep Convolutional Neural Networks*](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html) (2012), known as AlexNet.
+- Google DeepMind, [*AlphaGo*](https://deepmind.google/research/breakthroughs/alphago/), on the 2016 match with Lee Sedol.
+- Vaswani et al., [*Attention Is All You Need*](https://arxiv.org/abs/1706.03762) (2017), the paper that introduced the transformer.
+- Reuters, [*ChatGPT sets record for fastest-growing user base*](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/) (2023).
+- The Nobel Prize, [*Nobel Prize in Chemistry 2024*](https://www.nobelprize.org/prizes/chemistry/2024/press-release/).
+- Google, [*Flood Hub*](https://sites.research.google/floods/), and PlantVillage at Penn State, [*PlantVillage*](https://plantvillage.psu.edu/), the team behind the Nuru app.
+- [AI for the planet: 5 ways AI is protecting nature](/blog/ai-protecting-nature/)

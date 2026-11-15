@@ -128,8 +128,13 @@ Pick **one** tool from this list and use it for one small task each day for a we
 
 > **A quick note:** these are my own friendly picks, and nobody paid to be included. Product names belong to their owners, and AIERA-TS isn't connected to any of these companies. Features and free plans change over time, so check each tool's website for the latest details.
 
-## Further reading
+## Sources & further reading
 
+Each tool's official website, where you can check the latest features and free plans (this list was written in November 2026):
+
+- OpenAI, [ChatGPT](https://chatgpt.com) · Google, [Gemini](https://gemini.google.com) · Microsoft, [Copilot](https://copilot.microsoft.com)
+- [Perplexity](https://www.perplexity.ai) · Google, [NotebookLM](https://notebooklm.google.com) · Google, [Lens](https://lens.google) · [Canva](https://www.canva.com)
+- Anthropic, [Claude](https://claude.ai) · Cornell Lab of Ornithology, [Merlin Bird ID](https://merlin.allaboutbirds.org) · [Be My Eyes](https://www.bemyeyes.com)
 - [AI agents unpacked: your new digital assistant](/blog/what-is-agentic-ai/)
 - [LLM evaluation made simple: how to test a chatbot fairly](/blog/evaluating-llm-outputs/)
 - [Creative AI: how to use AI as your creative co-pilot](/blog/ai-creativity-guide/)

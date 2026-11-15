@@ -45,7 +45,7 @@ $$
 
 The **softmax** turns each row of scores into percentages that add up to 100%. Then each word gathers information from the others in proportion to those percentages.
 
-## Let's try it with real numbers
+## Let's try it with some example numbers
 
 To keep things small, imagine "it" only compares itself with three words, and gets these scores:
 

@@ -12,7 +12,7 @@ takeaways:
   - "Stay in charge: give clear goals, limit what agents can access and review the result."
 ---
 
-**Agentic AI** is one of the biggest AI trends right now, and for good reason. It's the moment AI goes from *talking* about your to-do list to actually *ticking things off* it.
+**Agentic AI** is a fast-growing area of AI, and for good reason. It's the moment AI goes from *talking* about your to-do list to actually *ticking things off* it.
 
 Picture this: you ask a friend, *"Can you help me plan a picnic for Sunday?"* One friend sends you a lovely list of ideas. The other checks the weather, finds a park nearby, and hands you a ready-made shopping list.
 

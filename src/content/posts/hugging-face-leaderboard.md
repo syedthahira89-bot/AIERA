@@ -31,3 +31,8 @@ A leaderboard is a scoreboard. Models take the same set of tests, called **bench
 > Curious? Search for "leaderboard" on [Hugging Face Spaces](https://huggingface.co/spaces?search=leaderboard) and see how many different scoreboards there are.
 
 Want to go deeper? Our guide to [testing chatbots fairly](/blog/evaluating-llm-outputs/) explains why scores aren't the whole story.
+
+## Sources & further reading
+
+- Hugging Face, [*Open LLM Leaderboard*](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard), the leaderboard described above.
+- [LLM evaluation made simple: how to test a chatbot fairly](/blog/evaluating-llm-outputs/)

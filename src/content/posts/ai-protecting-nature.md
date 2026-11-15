@@ -34,7 +34,7 @@ Systems such as John Deere's [See & Spray](https://www.deere.com/en/sprayers/see
 
 ## 4. Warning families before floods
 
-Floods affect millions of people each year, and a few days' warning can make a huge difference. Google's [Flood Hub](https://sites.research.google/floods/) uses AI to forecast river floods up to seven days ahead in many countries, and shares warnings so families and local services have time to prepare.
+Floods affect millions of people each year, and a few days' warning can make a huge difference. Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in many countries, and shares warnings so families and local services have time to prepare.
 
 ## 5. Saving energy in cities and buildings
 
@@ -69,7 +69,13 @@ No. They help people focus their time where it matters most, like responding to 
 
 Next time you hear birdsong on a walk, imagine a phone in a rainforest tree listening to the very same kind of sound, helping someone far away keep that forest safe.
 
-## Further reading
+## Sources & further reading
 
+- [Rainforest Connection](https://rfcx.org/), on its listening devices in rainforest trees.
+- [Wildlife Insights](https://www.wildlifeinsights.org/) and [Wildbook](https://www.wildme.org/), on sorting camera-trap photos and recognising individual animals.
+- John Deere, [*See & Spray*](https://www.deere.com/en/sprayers/see-spray/).
+- PlantVillage at Penn State, [*PlantVillage*](https://plantvillage.psu.edu/), the team behind the Nuru app.
+- Google, [*Flood Hub*](https://sites.research.google/floods/) and [*Project Green Light*](https://sites.research.google/greenlight/).
+- Google DeepMind, [*DeepMind AI reduces Google data centre cooling bill by 40%*](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
 - [Everyday AI: a beginner’s guide from Turing to today](/blog/ai-origins-everyday-life/), which covers more everyday examples.
 - [Computer vision basics: what AI notices first in an image](/blog/cnn-first-layer/), the idea behind weed-spotting cameras.
