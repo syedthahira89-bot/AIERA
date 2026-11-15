@@ -22,7 +22,7 @@ Forests are full of sound: birds, insects, rain. They can also carry the sound o
 
 ## 2. Counting wildlife, photo by photo
 
-Scientists place hidden "camera traps" that photograph animals as they pass by. One project can collect millions of photos, far more than people could ever sort by hand.
+Scientists place hidden "camera traps" that photograph animals as they pass by. One project can collect far more photos than people could ever sort by hand.
 
 [Wildlife Insights](https://www.wildlifeinsights.org/) uses AI to sort camera-trap photos quickly, so researchers can spend their time on what the pictures mean. Other projects, like [Wildbook](https://www.wildme.org/), go even further and recognise *individual* animals, such as whale sharks and zebras, from their unique spots and stripes. That helps scientists follow populations over many years.
 
@@ -34,7 +34,7 @@ Systems such as John Deere's [See & Spray](https://www.deere.com/en/sprayers/see
 
 ## 4. Warning families before floods
 
-Floods affect millions of people each year, and a few days' warning can make a huge difference. Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in many countries, and shares warnings so families and local services have time to prepare.
+For families near rivers, a few days' warning can make a huge difference. Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in many countries, and shares warnings so families and local services have time to prepare.
 
 ## 5. Saving energy in cities and buildings
 

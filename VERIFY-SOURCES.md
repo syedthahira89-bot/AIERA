@@ -2,7 +2,7 @@
 
 These facts are in published articles, but Claude could not open the source pages to confirm them (outside websites were blocked in its workspace). Open each link, tick the box when the fact matches, and tell Claude about anything that differs so it can be corrected. This file is not part of the website.
 
-Last updated: 15 November 2026.
+Last updated: 15 November 2026. Facts with no source at all have been removed from the articles.
 
 ## Banking and insurance security (`ai-in-banking-and-insurance`)
 
@@ -26,14 +26,11 @@ Last updated: 15 November 2026.
 - [ ] The PlantVillage Nuru app works offline for farmers in East Africa: https://plantvillage.psu.edu/
 - [ ] See & Spray: reported herbicide savings of more than half: https://www.deere.com/en/sprayers/see-spray/
 - [ ] Project Green Light: up to 10% lower emissions at intersections: https://sites.research.google/greenlight/
-- [ ] Phones from Apple, Google and Samsung offer live captions; Duolingo uses AI to adjust lessons (no source linked yet)
-- [ ] Smartwatches can flag irregular heart rhythms (no source linked yet)
 
 ## AI for the planet (`ai-protecting-nature`)
 
 - [ ] Flood Hub forecasts up to seven days ahead (same as above)
 - [ ] PlantVillage Nuru works without an internet connection (same as above)
-- [ ] "Floods affect millions of people each year" (no source linked yet)
 
 ## AI toolkit (`top-7-ai-tools`)
 
@@ -42,7 +39,3 @@ Last updated: 15 November 2026.
 ## Hugging Face leaderboards (`hugging-face-leaderboard`)
 
 - [ ] The Open LLM Leaderboard compared thousands of openly shared models, and is now retired ("was"): https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard
-
-## Gradient descent 101 (`gradient-descent-felt`)
-
-- [ ] "Researchers often find that, for large modern models, many of these dips work well enough in practice" (no source linked yet)

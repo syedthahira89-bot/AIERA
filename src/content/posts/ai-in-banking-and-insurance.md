@@ -87,7 +87,7 @@ The reassuring part is that the industry doesn't rely on a single lock. It uses 
 
 ![Five layers of protection: you, your bank, card networks, insurers, and regulators and industry, with the caption 'Many layers working together to keep you safe'.](/images/banking-security-layers.jpg)
 
-- **Your bank** encrypts your information, offers strong sign-in such as **passkeys**, fingerprint and one-time codes, and runs security teams day and night. AI helps these specialists sift through millions of sign-ins and payments, highlighting the few that deserve a closer look.
+- **Your bank** encrypts your information, offers strong sign-in such as **passkeys**, fingerprint and one-time codes, and runs security teams day and night. AI helps these specialists sift through huge numbers of sign-ins and payments, highlighting the few that deserve a closer look.
 - **Card networks** protect every payment. Chip cards create a unique code each time, and phone wallets use *tokens*, so the shop never sees your real card number. Businesses that handle card data follow the **PCI DSS** security standard.
 - **Insurers** help people and businesses recover when something goes wrong. Because they often ask for protections such as two-step sign-in and backups before offering cyber cover, they encourage better security across the whole economy.
 - **Regulators and industry groups** set and test the rules. In the EU, the **Digital Operational Resilience Act (DORA)** has required banks and insurers to test their defences and report major incidents since January 2025. Through groups such as **FS-ISAC**, firms share warnings about new threats, so when one bank spots a new scam, others can prepare.

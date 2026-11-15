@@ -8,7 +8,7 @@ cover: /images/cover-ai-and-you.jpg
 coverAlt: "A friendly illustrated collage: a smiling woman setting a smart thermostat from her phone in a sunny kitchen, labelled AI at home, beside three smaller scenes labelled 75 years of AI, Out and about, and Caring for nature."
 takeaways:
   - "AI is a 75-year-old idea, from Alan Turing's 1950 question to today's helpers."
-  - "It already makes daily life easier, from spam filters and maps to live captions and health screening."
+  - "It already makes daily life easier, from spam filters and maps to translation and health screening."
   - "Use it wisely: check important facts, protect your privacy and keep people in charge of decisions."
 ---
 
@@ -46,7 +46,6 @@ Google Maps uses machine learning on live location data to predict traffic. Goog
 
 - **Spam filtering:** Google says Gmail's machine learning filters [block more than 99.9% of spam, phishing and malware](https://safety.google/gmail/) before it reaches inboxes.
 - **Translation:** apps like Google Translate can translate text from a phone camera in real time, so a traveller can read a street sign or a menu instantly.
-- **Live captions:** phones from Apple, Google and Samsung can caption any audio on screen, helping people who are deaf or hard of hearing, or anyone watching a video in a quiet place.
 
 ### Accessibility
 
@@ -54,7 +53,7 @@ Microsoft's free [Seeing AI](https://www.seeingai.com/) app describes people, te
 
 ### Health
 
-In 2018, the US Food and Drug Administration authorised IDx-DR (now LumineticsCore), the first autonomous AI system to screen for diabetic eye disease, after a [clinical trial in primary care clinics](https://doi.org/10.1038/s41746-018-0040-6). A nurse takes the photo and the patient gets a result in minutes, which matters in places with few eye doctors. Smartwatches can also flag irregular heart rhythms and prompt the wearer to see a doctor.
+In 2018, the US Food and Drug Administration authorised IDx-DR (now LumineticsCore), the first autonomous AI system to screen for diabetic eye disease, after a [clinical trial in primary care clinics](https://doi.org/10.1038/s41746-018-0040-6). A nurse takes the photo and the patient gets a result in minutes, which matters in places with few eye doctors.
 
 ### Home and energy
 
@@ -67,7 +66,7 @@ Smart thermostats learn your routine and heat or cool the home only when needed.
 AI is also becoming a tool for protecting forests, wildlife, farmland and the climate.
 
 - **Listening out for the forest:** [Rainforest Connection](https://rfcx.org/) hangs recycled smartphones in rainforest trees. AI listens for the sound of logging saws in protected areas and alerts local rangers in real time.
-- **Tracking wildlife:** [Wildlife Insights](https://www.wildlifeinsights.org/) sorts millions of camera-trap photos in a fraction of the time it would take by hand, and [Wildbook](https://www.wildme.org/) recognises individual whale sharks and zebras from their unique spots and stripes.
+- **Tracking wildlife:** [Wildlife Insights](https://www.wildlifeinsights.org/) uses AI to sort camera-trap photos far faster than people could by hand, and [Wildbook](https://www.wildme.org/) recognises individual whale sharks and zebras from their unique spots and stripes.
 - **Smarter farming:** John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) spots individual weeds and sprays only them, with reported herbicide savings of more than half. The PlantVillage Nuru app helps farmers in East Africa diagnose crop diseases from a phone photo, even offline.
 - **Flood warnings:** Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in many countries, giving families time to reach safety.
 - **Cleaner traffic and buildings:** Google's [Project Green Light](https://sites.research.google/greenlight/) tunes traffic-light timing, with early results of up to 10% lower emissions at intersections. DeepMind's AI [cut the energy used to cool Google's data centres by up to 40%](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
@@ -77,11 +76,11 @@ AI is also becoming a tool for protecting forests, wildlife, farmland and the cl
 You don't need to be technical to benefit. Some simple starting points:
 
 1. **Plan your day.** Ask an AI assistant to turn a messy to-do list into a schedule, or to suggest a weekly meal plan from what's already in your fridge, which also reduces food waste.
-2. **Learn something new.** Ask a chatbot to explain a topic "like I am 12", then ask follow-up questions. Language apps like Duolingo use AI to adjust lessons to your level.
+2. **Learn something new.** Ask a chatbot to explain a topic "like I am 12", then ask follow-up questions.
 3. **Save energy.** Use a smart thermostat or smart plugs, and check your energy supplier's app for usage insights.
 4. **Stay healthy.** Use step, sleep and heart-rate tracking as gentle reminders, but treat any health alert as a reason to talk to a professional, not as a diagnosis.
 5. **Help nature.** Apps such as iNaturalist and Merlin Bird ID identify plants, insects and birds from a photo or a recording. Your observations also feed real scientific research.
-6. **Make things accessible.** Turn on live captions, read-aloud and photo description features for yourself or a family member.
+6. **Make things accessible.** Try accessibility apps such as Seeing AI or Be My Eyes for yourself or a family member.
 
 ## Using AI wisely
 

@@ -73,7 +73,7 @@ Two practical tricks make this work at scale:
 ## Common questions
 
 **Does gradient descent always find the very best answer?**
-Not always. Real valleys can have many dips. Researchers often find that, for large modern models, many of these dips work well enough in practice, and the randomness of mini-batches helps the model avoid getting stuck in poor ones.
+Not always. Real valleys can have many dips, so the model may settle in a low spot that isn't the very lowest.
 
 **Who chooses the learning rate?**
 People do, usually by trying a few values and seeing which trains best. Many projects also lower the learning rate gradually during training, taking big strides early and careful steps near the end.
