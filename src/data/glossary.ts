@@ -54,7 +54,7 @@ export const GLOSSARY: GlossaryTerm[] = [
   { term: 'Token', definition: 'A small piece of text, often a word or part of a word, that a chatbot reads and writes instead of individual letters.', article: 'tokenizers-quirks' },
   { term: 'Training data', definition: 'The examples a model learns from, such as labelled photos, recorded speech or text.' },
   { term: 'Transformer', definition: 'The design, introduced in 2017, that most modern chatbots are built on. Its key idea is attention.', article: 'attention-step-by-step' },
-  { term: 'Turing test', definition: 'Alan Turing’s 1950 idea for judging machine intelligence: can a person tell a machine apart from a human in a text conversation?', article: 'ai-origins-everyday-life' },
+  { term: 'Turing test', definition: 'Alan Turing’s 1950 “imitation game” for thinking about machine intelligence: an interrogator questions a person and a machine without seeing them and tries to tell which is which.', article: 'ai-origins-everyday-life' },
   { term: 'Validation loss', definition: 'How well a model does on examples it has never seen while training. Watching it helps spot overfitting.', article: 'validation-loss-rising' },
   { term: 'Weight decay', definition: 'A gentle nudge during training that keeps a model’s settings small, encouraging simpler, more general answers.', article: 'validation-loss-rising' },
 ];

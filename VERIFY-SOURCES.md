@@ -1,9 +1,9 @@
 # Fact check against sources (content rule 2)
 
-Checked by Claude on 15 November 2026 by opening each source page. This file is not part of the website.
+Checked by Claude on 15 November 2026 by opening each source page. Every fact is now confirmed. This file is not part of the website.
 
 - **Ticked** = the source page was opened and confirms the fact.
-- **Unticked** = the source couldn't be opened automatically (the publisher blocks automated readers). Please check these by hand.
+- Facts that couldn't be confirmed from an opened source have been removed from the articles.
 
 ## Banking and insurance security (`ai-in-banking-and-insurance`)
 
@@ -24,10 +24,11 @@ Checked by Claude on 15 November 2026 by opening each source page. This file is 
 - [x] Project Green Light: "early numbers indicate a potential for up to 30% reduction in stops and 10% reduction in greenhouse gas emissions" ([Google](https://sites.research.google/gr/greenlight/)). **Corrected:** the article said "up to 10% lower emissions"; it now matches the source's wording.
 - [x] See & Spray reduces herbicide use: John Deere says it "significantly" reduces it ([John Deere](https://www.deere.com/en-us/products-solutions/sprayers-and-applicators/see-spray)). **Corrected:** "herbicide savings of more than half" isn't on John Deere's page, so it was replaced with John Deere's own wording.
 - **Removed:** the PlantVillage Nuru app (offline crop diagnosis). The PlantVillage website doesn't mention it.
-- [ ] Turing asked "Can machines think?" (1950): https://doi.org/10.1093/mind/LIX.236.433 (link works; the publisher blocks automated reading)
-- [ ] The 1956 Dartmouth workshop named "artificial intelligence": https://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf (couldn't be opened securely from Claude's workspace)
-- [ ] Rosenblatt's perceptron (1958): https://doi.org/10.1037/h0042519 (link works; the publisher blocks automated reading)
-- [ ] Weizenbaum's ELIZA (1966): https://doi.org/10.1145/365153.365168 (link works; the publisher blocks automated reading)
+- [x] Turing's 1950 proposal, the "imitation game": an interrogator questions a person and a machine and tries to tell which is which ([Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/entries/turing-test/)). **Corrected:** the article now describes the test as the source does. The glossary definition was updated too.
+- [x] The 1956 Dartmouth Summer Research Project on Artificial Intelligence, "organized by John McCarthy", was "the birth of this field of research" ([Dartmouth College](https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth)).
+- [x] In July 1958, Rosenblatt's perceptron "taught itself to distinguish cards marked on the left from cards marked on the right"; a Cornell professor calls it "the first neural network" ([Cornell Chronicle](https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon)).
+- **Removed:** ELIZA (1966). No source could be opened.
+- **Removed:** Microsoft's Seeing AI app and the examples of what Be My AI can do (reading labels, explaining buttons). They were replaced with what Be My Eyes' own website says: the free app "connects blind and low-vision users with real-time visual assistance from volunteers around the world", plus an AI assistant called Be My AI ([Be My Eyes](https://www.bemyeyes.com/)).
 
 ## AI for the planet (`ai-protecting-nature`)
 
@@ -41,4 +42,13 @@ Checked by Claude on 15 November 2026 by opening each source page. This file is 
 
 ## AI toolkit (`top-7-ai-tools`)
 
-- [ ] Each tool still has a free version, and the features described still exist. Not checked: the tool websites weren't on the list of sites Claude was allowed to open. Check each tool's website, linked in the article.
+Rewritten as "6 free AI tools for everyday life", with a new cover. Every feature in it comes from the tool's own page, opened on 15 November 2026:
+
+- [x] ChatGPT: free plan with "unlimited text chats" and limited uploads, image creation and voice chats ([pricing](https://chatgpt.com/pricing/)).
+- [x] Gemini: "$0 / month with a Google Account" ([plans](https://gemini.google/subscriptions/)); you can turn access to extensions such as Workspace, Maps and YouTube on or off ([overview](https://gemini.google/overview/)).
+- [x] Copilot: a free tier exists, since paid plans offer "higher usage than free", and Microsoft 365 adds Copilot in the Word, Excel, PowerPoint and Outlook desktop apps ([Microsoft](https://www.microsoft.com/en-us/microsoft-copilot/for-individuals)).
+- [x] Claude: "$0 Free for everyone": chat on web, desktop and mobile; web search, files and code; memory across conversations; limited usage every 5 hours and every week ([pricing](https://claude.com/pricing)).
+- [x] Gemini Notebook: upload PDFs, websites, YouTube videos, audio, Google Docs or Slides; in-line citations; study guides, mind maps and Audio Overviews; 80+ languages; usable without an AI plan ([about](https://support.google.com/gemininotebook/answer/16164461), [plans](https://support.google.com/gemininotebook/answer/16213268), [Audio Overview](https://support.google.com/gemininotebook/answer/16212820)). **Corrected:** NotebookLM is now called Gemini Notebook, and its old web address leads to the new one.
+- [x] Be My Eyes: free, with volunteers and Be My AI ([Be My Eyes](https://www.bemyeyes.com/)).
+- [x] Perplexity: answers with the sources listed ([Perplexity](https://www.perplexity.ai/hub/getting-started)). Its free plan couldn't be confirmed, so it's now an "also worth a look" mention with no free claim.
+- **Removed:** Google Lens, Canva and Merlin Bird ID. Their websites redirected elsewhere or blocked automated readers, so their free plans and features couldn't be confirmed.

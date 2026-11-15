@@ -18,11 +18,11 @@ Artificial intelligence can feel like it arrived overnight. In reality, it's an 
 
 ![Illustrated timeline of AI history: a mathematician writing at a desk, a room-sized vintage computer, a chessboard, a Go board and a modern smartphone showing a chat bubble.](/images/ai-everyday-history.jpg)
 
-**1950: a question.** Alan Turing asked, "Can machines think?" and proposed the Turing test: if a person chatting by text cannot tell a machine from a human, perhaps the machine is intelligent.
+**1950: a question.** Alan Turing took on the question of whether machines can think. He proposed an "imitation game", now called the Turing test: an interrogator questions a person and a machine without seeing them, and tries to work out which is which.
 
-**1956: a name.** John McCarthy and colleagues organised a summer workshop at Dartmouth College, and the term "artificial intelligence" was born.
+**1956: a name.** John McCarthy organised the Dartmouth Summer Research Project on Artificial Intelligence, the event where the term "artificial intelligence" was coined and the field of research was born.
 
-**1958 to 1966: first steps.** Frank Rosenblatt's perceptron learned simple patterns, an ancestor of today's neural networks. Joseph Weizenbaum's ELIZA chatted by matching keywords, the great-grandparent of modern chatbots.
+**1958: first steps.** Frank Rosenblatt demonstrated the perceptron, which taught itself to tell apart cards marked on the left from cards marked on the right. A Cornell professor calls it "the first neural network", and its principles helped spark today's AI revolution.
 
 **1970s and late 1980s: two "AI winters".** Hopes ran ahead of what computers could do at the time, so interest and funding cooled off twice.
 
@@ -49,7 +49,7 @@ Google Maps uses machine learning on live location data to predict traffic. Goog
 
 ### Accessibility
 
-Microsoft's free [Seeing AI](https://www.seeingai.com/) app describes people, text and objects aloud for blind and low-vision users. [Be My Eyes](https://www.bemyeyes.com/) added an AI assistant that can read a medicine label or explain the buttons on a washing machine, so tasks that once needed help can be done independently.
+The free [Be My Eyes](https://www.bemyeyes.com/) app connects blind and low-vision people with real-time visual help from volunteers around the world, and also offers an AI assistant called Be My AI.
 
 ### Health
 
@@ -80,7 +80,7 @@ You don't need to be technical to benefit. Some simple starting points:
 3. **Save energy.** Use a smart thermostat or smart plugs, and check your energy supplier's app for usage insights.
 4. **Stay healthy.** Use step, sleep and heart-rate tracking as gentle reminders, but treat any health alert as a reason to talk to a professional, not as a diagnosis.
 5. **Help nature.** Apps such as iNaturalist and Merlin Bird ID identify plants, insects and birds from a photo or a recording. Your observations also feed real scientific research.
-6. **Make things accessible.** Try accessibility apps such as Seeing AI or Be My Eyes for yourself or a family member.
+6. **Make things accessible.** Try the free Be My Eyes app for yourself or a family member, or sign up to help as a volunteer.
 
 ## Using AI wisely
 
@@ -102,10 +102,9 @@ AI began as a question about whether machines could think. Today a better questi
 
 ## Sources & further reading
 
-- Alan Turing, [*Computing Machinery and Intelligence*](https://doi.org/10.1093/mind/LIX.236.433) (Mind, 1950), the paper that asked "Can machines think?"
-- McCarthy et al., [*A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence*](http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf) (1955), which named the field.
-- Frank Rosenblatt, [*The Perceptron*](https://doi.org/10.1037/h0042519) (Psychological Review, 1958).
-- Joseph Weizenbaum, [*ELIZA*](https://doi.org/10.1145/365153.365168) (Communications of the ACM, 1966).
+- Stanford Encyclopedia of Philosophy, [*The Turing Test*](https://plato.stanford.edu/entries/turing-test/), on Turing's 1950 proposal and the imitation game.
+- Dartmouth College, [*Artificial Intelligence (AI) Coined at Dartmouth*](https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth), on the 1956 workshop.
+- Cornell Chronicle, [*Professor's perceptron paved the way for AI – 60 years too soon*](https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon) (2019).
 - IBM, [*Deep Blue*](https://www.ibm.com/history/deep-blue), on the 1997 match with Garry Kasparov.
 - Krizhevsky, Sutskever & Hinton, [*ImageNet Classification with Deep Convolutional Neural Networks*](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html) (2012), known as AlexNet.
 - Google DeepMind, [*AlphaGo*](https://deepmind.google/research/breakthroughs/alphago/), on the 2016 match with Lee Sedol.
