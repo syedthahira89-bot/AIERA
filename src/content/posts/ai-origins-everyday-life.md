@@ -67,9 +67,9 @@ AI is also becoming a tool for protecting forests, wildlife, farmland and the cl
 
 - **Listening out for the forest:** [Rainforest Connection](https://rfcx.org/) hangs recycled smartphones in rainforest trees. AI listens for the sound of logging saws in protected areas and alerts local rangers in real time.
 - **Tracking wildlife:** [Wildlife Insights](https://www.wildlifeinsights.org/) uses AI to sort camera-trap photos far faster than people could by hand, and [Wildbook](https://www.wildme.org/) recognises individual whale sharks and zebras from their unique spots and stripes.
-- **Smarter farming:** John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) spots individual weeds and sprays only them, with reported herbicide savings of more than half. The PlantVillage Nuru app helps farmers in East Africa diagnose crop diseases from a phone photo, even offline.
-- **Flood warnings:** Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in many countries, giving families time to reach safety.
-- **Cleaner traffic and buildings:** Google's [Project Green Light](https://sites.research.google/greenlight/) tunes traffic-light timing, with early results of up to 10% lower emissions at intersections. DeepMind's AI [cut the energy used to cool Google's data centres by up to 40%](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
+- **Smarter farming:** John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) spots individual weeds and sprays only them, which John Deere says significantly reduces herbicide use.
+- **Flood warnings:** Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in more than 150 countries, giving families time to reach safety.
+- **Cleaner traffic and buildings:** Google's [Project Green Light](https://sites.research.google/greenlight/) tunes traffic-light timing, and Google says early numbers show the potential for a 10% reduction in greenhouse gas emissions at intersections. DeepMind's AI [cut the energy used to cool Google's data centres by up to 40%](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
 
 ## How to use AI to improve your own quality of life
 
@@ -112,5 +112,5 @@ AI began as a question about whether machines could think. Today a better questi
 - Vaswani et al., [*Attention Is All You Need*](https://arxiv.org/abs/1706.03762) (2017), the paper that introduced the transformer.
 - Reuters, [*ChatGPT sets record for fastest-growing user base*](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/) (2023).
 - The Nobel Prize, [*Nobel Prize in Chemistry 2024*](https://www.nobelprize.org/prizes/chemistry/2024/press-release/).
-- Google, [*Flood Hub*](https://sites.research.google/floods/), and PlantVillage at Penn State, [*PlantVillage*](https://plantvillage.psu.edu/), the team behind the Nuru app.
+- Google, [*Flood Hub*](https://sites.research.google/gr/floodforecasting/), [*Project Green Light*](https://sites.research.google/gr/greenlight/) and John Deere, [*See & Spray*](https://www.deere.com/en-us/products-solutions/sprayers-and-applicators/see-spray).
 - [AI for the planet: 5 ways AI is protecting nature](/blog/ai-protecting-nature/)

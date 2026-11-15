@@ -30,11 +30,11 @@ Scientists place hidden "camera traps" that photograph animals as they pass by. 
 
 Traditionally, many farms spray a whole field to deal with weeds that only grow in some places. Computer vision changes that.
 
-Systems such as John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) use cameras and AI to spot individual weeds and spray only them, which can greatly reduce the amount of herbicide used. In East Africa, the PlantVillage Nuru app helps farmers check crops for disease from a phone photo, even without an internet connection.
+Systems such as John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) use cameras and AI to spot individual weeds and spray only them, which can greatly reduce the amount of herbicide used.
 
 ## 4. Warning families before floods
 
-For families near rivers, a few days' warning can make a huge difference. Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in many countries, and shares warnings so families and local services have time to prepare.
+For families near rivers, a few days' warning can make a huge difference. Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in more than 150 countries, and shares warnings so families and local services have time to prepare.
 
 ## 5. Saving energy in cities and buildings
 
@@ -73,9 +73,8 @@ Next time you hear birdsong on a walk, imagine a phone in a rainforest tree list
 
 - [Rainforest Connection](https://rfcx.org/), on its listening devices in rainforest trees.
 - [Wildlife Insights](https://www.wildlifeinsights.org/) and [Wildbook](https://www.wildme.org/), on sorting camera-trap photos and recognising individual animals.
-- John Deere, [*See & Spray*](https://www.deere.com/en/sprayers/see-spray/).
-- PlantVillage at Penn State, [*PlantVillage*](https://plantvillage.psu.edu/), the team behind the Nuru app.
-- Google, [*Flood Hub*](https://sites.research.google/floods/) and [*Project Green Light*](https://sites.research.google/greenlight/).
+- John Deere, [*See & Spray*](https://www.deere.com/en-us/products-solutions/sprayers-and-applicators/see-spray).
+- Google, [*Flood Hub*](https://sites.research.google/gr/floodforecasting/) and [*Project Green Light*](https://sites.research.google/gr/greenlight/).
 - Google DeepMind, [*DeepMind AI reduces Google data centre cooling bill by 40%*](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
 - [Everyday AI: a beginner’s guide from Turing to today](/blog/ai-origins-everyday-life/), which covers more everyday examples.
 - [Computer vision basics: what AI notices first in an image](/blog/cnn-first-layer/), the idea behind weed-spotting cameras.

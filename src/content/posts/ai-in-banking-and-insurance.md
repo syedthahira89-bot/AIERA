@@ -93,7 +93,7 @@ The reassuring part is that the industry doesn't rely on a single lock. It uses 
 - **Regulators and industry groups** set and test the rules. In the EU, the **Digital Operational Resilience Act (DORA)** has required banks and insurers to test their defences and report major incidents since January 2025. Through groups such as **FS-ISAC**, firms share warnings about new threats, so when one bank spots a new scam, others can prepare.
 - **Ethical hackers** are invited to test systems, with permission, so any weak spots are found and fixed early.
 
-**Safety nets for peace of mind.** In the United States, the **FDIC** protects deposits at insured banks up to \$250,000 per depositor, per bank, for each account ownership category, and your liability for unauthorised credit card charges is capped at \$50 by law. For debit cards, protection depends on how quickly you report a problem, so it's always worth telling your bank straight away.
+**Safety nets for peace of mind.** In the United States, deposits are automatically insured to at least \$250,000 at each **FDIC**-insured bank. If you ever spot a payment you don't recognise, tell your bank straight away.
 
 **Staying a step ahead.** Scammers have started using AI too, for example to imitate a familiar voice. The industry is meeting this challenge with AI of its own, recognising scam patterns such as a large, unexpected payment to a brand-new account. If your bank pauses a payment to ask a few gentle questions, it's simply looking out for you.
 
@@ -245,7 +245,6 @@ Open your banking app and look at your **security and alert settings**. Turn on 
 - PCI Security Standards Council, [*PCI DSS*](https://www.pcisecuritystandards.org/), the security standard for card data.
 - EIOPA, [*Digital Operational Resilience Act (DORA)*](https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en).
 - FDIC, [*Deposit insurance*](https://www.fdic.gov/resources/deposit-insurance).
-- Federal Trade Commission, [*Lost or stolen credit, ATM and debit cards*](https://consumer.ftc.gov/articles/lost-or-stolen-credit-atm-and-debit-cards).
 - FIDO Alliance, [*Passkeys*](https://fidoalliance.org/passkeys/), and IETF, [*RFC 6238: TOTP*](https://www.rfc-editor.org/rfc/rfc6238), the method behind one-time codes.
 - scikit-learn documentation, [*Isolation Forest*](https://scikit-learn.org/stable/modules/outlier_detection.html#isolation-forest), the method used in the fraud example.
 - [AI and your career: how to thrive in the future of work](/blog/ai-and-your-job/)

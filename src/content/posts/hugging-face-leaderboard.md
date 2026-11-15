@@ -20,7 +20,7 @@ Hugging Face is a website where people share AI models, datasets and demos, a bi
 
 ## What does a leaderboard show?
 
-A leaderboard is a scoreboard. Models take the same set of tests, called **benchmarks**, and get ranked by their scores. Some leaderboards test general knowledge or reasoning; others focus on maths, coding or a particular language. One of the best known was the **Open LLM Leaderboard**, which compared thousands of openly shared language models side by side.
+A leaderboard is a scoreboard. Models take the same set of tests, called **benchmarks**, and get ranked by their scores. Some leaderboards test general knowledge or reasoning; others focus on maths, coding or a particular language. One of the best known, Hugging Face's **Open LLM Leaderboard**, scored openly shared language models on the same tests. Its first version was visited by more than 2 million people before it was archived and replaced by a newer version in June 2024.
 
 ## How to read one wisely
 
@@ -34,5 +34,5 @@ Want to go deeper? Our guide to [testing chatbots fairly](/blog/evaluating-llm-o
 
 ## Sources & further reading
 
-- Hugging Face, [*Open LLM Leaderboard*](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard), the leaderboard described above.
+- Hugging Face, [*Open LLM Leaderboard: archived version*](https://huggingface.co/docs/leaderboards/open_llm_leaderboard/archive), on its first version and why it was replaced.
 - [LLM evaluation made simple: how to test a chatbot fairly](/blog/evaluating-llm-outputs/)
