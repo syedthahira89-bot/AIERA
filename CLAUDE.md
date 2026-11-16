@@ -15,6 +15,15 @@ Set by Thahira. "Sources" means the pages, documents and data actually opened an
 9. Do not invent statistics, figures, dates, benefits, limits, quotes or examples presented as real. Made-up illustrations (sample data, example payments) must be clearly labelled as made up.
 10. If the information is insufficient, say: "The available sources do not contain enough information to answer this." If sources conflict, clearly mention the conflict.
 
+## Fact check before handing over (every time)
+
+Run this check on every article, page and post while preparing it, and report the result to Thahira:
+
+1. **Fact-based:** every number, date, name and claim matches an opened source. Check each number against the source text.
+2. **Not overfitting (claiming too much):** nothing goes beyond what the source says. No "always", "every", "most" or "biggest" unless the source says so, no guessed causes, no general claims stretched from one example. Opinions and advice are worded as advice, not as facts.
+3. **Not underfitting (leaving too much out):** the important conditions, limits, dates and caveats are included, for example which country a rule applies to, when a survey was done, and that made-up examples are made up. If a needed fact can't be sourced, say so using the wording in content rule 10.
+4. Report: how many numbers were checked, what was toned down, what was added, and any facts that could not be checked.
+
 ## Copyright rules (always follow)
 
 1. Write everything in original words. Never copy sentences or paragraphs from sources, other blogs or AI tools' outputs found online.

@@ -24,6 +24,9 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 | 4 | Nov 5, 2026 | AI Toolkit | AI toolkit: the 7 best free AI tools for everyday life | ✅ Published (`top-7-ai-tools`), feature it on Nov 12 |
 | ⭐ | Nov 12, 2026 | Everyday AI | Banking and insurance security: the AI layers that keep you safe | ✅ Published, Thursday feature (`ai-in-banking-and-insurance`) |
 | ⭐ | Nov 19, 2026 | ML Fundamentals | Traffic prediction, decoded: the AI behind your ETA | Written, scheduled for Nov 19, draft until then (`traffic-prediction-neural-networks`) |
+| ✚ | Nov 16, 2026 | Everyday AI | AI in banking: how fraud checks and fair lending work | ✅ Published (`ai-in-banking`), part 1 of 3 |
+| ✚ | Nov 16, 2026 | Everyday AI | AI in insurance: pricing, claims and fair treatment | ✅ Published (`ai-in-insurance`), part 2 of 3 |
+| ✚ | Nov 16, 2026 | Everyday AI | Cybersecurity in finance: the layers that keep your money safe | ✅ Published (`cybersecurity-in-finance`), part 3 of 3. The banking and insurance article became an overview of the series |
 | 5 | Nov 26, 2026 | LLMs Decoded | What is a chatbot, really? A beginner's guide | Planned |
 | 6 | Nov 26, 2026 | Everyday AI | How AI is helping doctors spot disease earlier | Planned |
 | 7 | Dec 3, 2026 | Creative AI | Writing with AI: a friendly guide for bloggers and students | Planned |
