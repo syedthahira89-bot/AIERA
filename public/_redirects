@@ -18,6 +18,10 @@
 /topics/from-lab-to-life/*  /topics/ml-fundamentals/  301
 /topics/ai-and-you/*  /topics/everyday-ai/  301
 /blog/reward-hacking/*  /blog/ai-clever-shortcuts/  301
+/blog/top-7-ai-tools  /blog/free-ai-tools/  301
+/blog/top-7-ai-tools/*  /blog/free-ai-tools/  301
+/images/cover-top-7-tools.jpg  /images/cover-free-ai-tools.jpg  301
+/images/sized/cover-top-7-tools-og.jpg  /images/sized/cover-free-ai-tools-og.jpg  301
 /topics/smarter-living/*  /topics/everyday-ai/  301
 /topics/creative-freedom/*  /topics/creative-ai/  301
 /topics/new-work-paradigm/*  /topics/future-of-work/  301

@@ -7,7 +7,7 @@ const { chromium } = createRequire(import.meta.url)('playwright');
 
 const uri = async (name) => `data:image/webp;base64,${(await readFile(`public/images/sized/${name}-800.webp`)).toString('base64')}`;
 const count = (await readdir('src/content/posts')).filter((f) => f.endsWith('.md')).length;
-const covers = await Promise.all(['cover-top-7-tools', 'cover-agentic', 'cover-nature'].map(uri));
+const covers = await Promise.all(['cover-free-ai-tools', 'cover-agentic', 'cover-nature'].map(uri));
 
 const wordmark = `<span class="wm"><span class="word">A<span class="i">ı<span class="dot"></span></span>era</span><span class="badge"><span class="ts">TS</span></span></span>`;
 const spark = (x, y, s) => `<svg class="sp" style="left:${x}px;top:${y}px;width:${s}px;height:${s}px" viewBox="-16 -16 32 32"><path d="M0 -16 C 2 -5, 5 -2, 16 0 C 5 2, 2 5, 0 16 C -2 5, -5 2, -16 0 C -5 -2, -2 -5, 0 -16 Z" fill="url(#g)"/><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF1B8"/><stop offset=".5" stop-color="#F5CC4E"/><stop offset="1" stop-color="#C98F14"/></linearGradient></defs></svg>`;

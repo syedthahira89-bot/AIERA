@@ -40,7 +40,7 @@ Checked by Claude on 15 November 2026 by opening each source page. Every fact is
 
 - [x] The first version of the Open LLM Leaderboard was "visited by more than 2 million unique people" and was archived and "replaced by a newer version" in June 2024 ([Hugging Face](https://huggingface.co/docs/leaderboards/open_llm_leaderboard/archive)). **Corrected:** "compared thousands of openly shared language models" isn't stated in the source, so it was replaced with these facts.
 
-## AI toolkit (`top-7-ai-tools`)
+## AI toolkit (`free-ai-tools`)
 
 Rewritten as "6 free AI tools for everyday life", with a new cover. Every feature in it comes from the tool's own page, opened on 15 November 2026:
 

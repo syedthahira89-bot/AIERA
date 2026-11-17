@@ -110,6 +110,27 @@
   to = "/blog/ai-clever-shortcuts/"
   status = 301
 
+# AI toolkit renamed from "7 tools" to "6 tools" in November 2026
+[[redirects]]
+  from = "/blog/top-7-ai-tools"
+  to = "/blog/free-ai-tools/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/top-7-ai-tools/*"
+  to = "/blog/free-ai-tools/"
+  status = 301
+
+[[redirects]]
+  from = "/images/cover-top-7-tools.jpg"
+  to = "/images/cover-free-ai-tools.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/images/sized/cover-top-7-tools-og.jpg"
+  to = "/images/sized/cover-free-ai-tools-og.jpg"
+  status = 301
+
 [[redirects]]
   from = "/topics/smarter-living/*"
   to = "/topics/everyday-ai/"

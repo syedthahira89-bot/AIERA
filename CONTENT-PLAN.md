@@ -21,7 +21,7 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 | 2 | Nov 3, 2026 | Future of Work | AI and your career: how to thrive in the future of work | ✅ Published (`ai-and-your-job`) |
 | 3 | Nov 3, 2026 | AI for the Planet | AI for the planet: 5 ways AI is protecting nature | ✅ Published (`ai-protecting-nature`) |
 | ⭐ | Nov 5, 2026 | Agents & GenAI | AI agents unpacked: your new digital assistant | ✅ Published, Thursday feature (`what-is-agentic-ai`) |
-| 4 | Nov 5, 2026 | AI Toolkit | AI toolkit: the 7 best free AI tools for everyday life | ✅ Published (`top-7-ai-tools`), feature it on Nov 12 |
+| 4 | Nov 5, 2026 | AI Toolkit | AI toolkit: 6 free AI tools for everyday life | ✅ Published (`free-ai-tools`, formerly `top-7-ai-tools`), feature it on Nov 12 |
 | ⭐ | Nov 12, 2026 | Everyday AI | Banking and insurance security: the AI layers that keep you safe | ✅ Published, Thursday feature (`ai-in-banking-and-insurance`) |
 | ⭐ | Nov 19, 2026 | ML Fundamentals | Traffic prediction, decoded: the AI behind your ETA | Written, scheduled for Nov 19, draft until then (`traffic-prediction-neural-networks`) |
 | ✚ | Nov 16, 2026 | Everyday AI | AI in banking: how fraud checks and fair lending work | ✅ Published (`ai-in-banking`), part 1 of 3 |

@@ -4,7 +4,7 @@ description: "Six AI tools you can start using for free, checked against each to
 pubDate: 2026-11-05
 topic: "AI Toolkit"
 level: Beginner
-cover: /images/cover-top-7-tools.jpg
+cover: /images/cover-free-ai-tools.jpg
 coverAlt: "A bento-style collage on a soft sage background: a light title card with a big glossy green 6 reading 'free AI tools for everyone', beside six numbered tiles marked free: a chat suggesting quick dinners, a Saturday plan with a map pin, a laptop chat, an answer with numbered sources, class notes with an audio overview, and a phone offering live visual help from a volunteer and AI."
 takeaways:
   - "You only need one or two AI tools to start, and all six here can be used for free."
