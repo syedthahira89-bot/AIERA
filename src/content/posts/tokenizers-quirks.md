@@ -61,6 +61,8 @@ for word in ["strawberry", "12345", "unbelievably", "Hello", " hello"]:
     print(repr(word), [enc.decode([i]) for i in ids])
 ```
 
+**What the output means:** each line shows a word, then the list of pieces the tokenizer splits it into. A word that comes back as a single piece is in the vocabulary whole; a longer list means it was built from smaller, familiar pieces. Compare "Hello" and " hello" to see whether the space and the capital letter change the result.
+
 Try your own name, or a word from another language. How many pieces does it become?
 
 ## Common questions

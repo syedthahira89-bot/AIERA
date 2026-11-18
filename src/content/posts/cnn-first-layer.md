@@ -57,6 +57,8 @@ filters = model.conv1.weight.detach()  # shape: (64, 3, 7, 7)
 print(filters.shape)
 ```
 
+**What the output means:** it prints the shape of the first layer's filters, (64, 3, 7, 7). That's 64 filters, each with 3 colour channels (red, green and blue) and a 7 × 7 grid of numbers, so each filter is a tiny 7 × 7 colour picture.
+
 Scale each of the 64 filters to the 0 to 1 range and display them in a grid. What patterns can you spot?
 
 ## Sources & further reading

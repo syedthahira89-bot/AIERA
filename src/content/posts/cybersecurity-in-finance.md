@@ -7,9 +7,9 @@ level: Beginner
 cover: /images/cover-cybersecurity-finance.jpg
 coverAlt: "An illustration of cybersecurity in finance: a gold shield surrounded by five rings labelled You, Your bank, Card industry, Industry groups and Regulators, beside a phone showing a six-digit one-time code and a passkey prompt."
 takeaways:
-  - "Cybersecurity was the highest perceived systemic risk for UK financial firms in 2024, and also one of the areas where they saw the biggest benefits from AI."
+  - "UK financial firms see cybersecurity as a serious risk, and AI as one of the ways to defend against it."
   - "Protection comes in layers: you, your bank, the card industry, industry groups and regulators each add one."
-  - "One-time codes change every 30 seconds, and passkeys are designed to resist phishing."
+  - "Simple steps add strong protection: one-time codes expire quickly, and passkeys are designed to resist phishing."
 ---
 
 Your money is protected by several layers, not just one. Each layer is looked after by different people: you, your bank, the card industry, industry groups and regulators.

@@ -76,6 +76,17 @@ out, w = attention(Q, K, V)
 print(w.round(2))  # each row adds up to 1
 ```
 
+Output:
+
+```text
+[[0.3  0.47 0.08 0.14]
+ [0.33 0.07 0.25 0.35]
+ [0.32 0.39 0.23 0.06]
+ [0.1  0.03 0.68 0.18]]
+```
+
+**What the output means:** each row is one of four words, and its four numbers show how much attention that word pays to each word, including itself. Each row adds up to 1 (give or take rounding), so the fourth word, for example, gives 68% of its attention to the third. The numbers going in are random, so the pattern itself means nothing: the point is to see the method at work.
+
 ![Worked example from this article. The sentence 'The robot picked up the ball because it was light.' Each word gets three name tags: a query (what am I looking for?), a key (what do I have to offer?) and a value (what I'll share if picked). After softmax, the word 'it' gives 11% of its attention to 'robot' (score 1.0), 82% to 'ball' (score 3.0) and 7% to 'light' (score 0.5), so 'it' takes its new meaning mostly from 'ball'.](/images/attention-example.jpg)
 
 ## Why divide by the square root of d_k?

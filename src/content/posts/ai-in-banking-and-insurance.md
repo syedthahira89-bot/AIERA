@@ -7,7 +7,7 @@ level: Beginner
 cover: /images/cover-banking.jpg
 coverAlt: "A green bank card with a gold shield and tick, linked by a dotted line to a claim update card for a car repair claim with three ticked steps: photos checked, policy confirmed and approved by a person. The caption reads 'AI handles the paperwork, people make the decisions'."
 takeaways:
-  - "In a 2024 Bank of England and FCA survey, 75% of UK financial firms were already using AI, and insurers had the highest share at 95%."
+  - "AI is already part of everyday banking and insurance, from spotting unusual payments to handling claims."
   - "Rules on both sides of the Atlantic aim to keep AI decisions explainable and fair."
   - "Your money is protected by several layers, and you are one of them."
 ---

@@ -93,6 +93,17 @@ for step in range(10):
     print(step, round(x, 4), round(x * x, 4))
 ```
 
+The first lines it prints:
+
+```text
+0 -0.7 0.49
+1 -0.14 0.0196
+2 -0.028 0.0008
+3 -0.0056 0.0
+```
+
+**What the output means:** each line shows the step number, the new value of x and the loss. The first values match the table above (x goes from −0.7 to −0.14 to −0.028), and both x and the loss keep shrinking towards 0, the bottom of the valley. After a few steps the loss is so small that it rounds to 0.
+
 Change `lr` to 0.05, then 0.9, then 1.1. Can you predict what will happen before you run it?
 
 ## Sources & further reading

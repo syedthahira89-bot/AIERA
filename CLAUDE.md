@@ -15,6 +15,11 @@ Set by Thahira. "Sources" means the pages, documents and data actually opened an
 9. Do not invent statistics, figures, dates, benefits, limits, quotes or examples presented as real. Made-up illustrations (sample data, example payments) must be clearly labelled as made up.
 10. If the information is insufficient, say: "The available sources do not contain enough information to answer this." If sources conflict, clearly mention the conflict.
 
+## Takeaways and code examples (reader feedback, 18 November 2026)
+
+1. **Key takeaways** are 2 or 3 lessons the reader should remember, in plain, original words. Leave statistics, survey figures and dates in the article itself. Use a number only when the number is the point (for example "6 hours at a time").
+2. **Every code example ends with a plain-language explanation.** After the output, add a short "**What the output means:**" note of one to three sentences saying what the result shows and why it matters. Show the real output from running the code. If the code can't be run here, explain what it prints without inventing numbers. Made-up data stays labelled as made up.
+
 ## Fact check before handing over (every time)
 
 Run this check on every article, page and post while preparing it, and report the result to Thahira:
