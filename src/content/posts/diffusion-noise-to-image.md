@@ -74,4 +74,4 @@ Next time you see an AI-made image, picture it beginning as a screen of static, 
 - Ho & Salimans, [*Classifier-Free Diffusion Guidance*](https://arxiv.org/abs/2207.12598) (2022).
 - Rombach et al., [*High-Resolution Image Synthesis with Latent Diffusion Models*](https://arxiv.org/abs/2112.10752) (2021, published at CVPR 2022).
 - Carlini et al., [*Extracting Training Data from Diffusion Models*](https://arxiv.org/abs/2301.13188) (2023).
-- [AI weather forecasts: how neural networks predict tomorrow](/blog/ai-weather-forecasting/), including GenCast, a diffusion model that forecasts the weather.
+- [Sun, rain or storm? How neural networks forecast the weather](/blog/ai-weather-forecasting/), including GenCast, a diffusion model that forecasts the weather.
