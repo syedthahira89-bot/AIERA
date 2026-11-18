@@ -7,9 +7,9 @@ level: Beginner
 cover: /images/cover-ai-banking.jpg
 coverAlt: "An illustration of AI in banking: a phone shows a 'Was this you?' alert for an unusual payment, beside a risk score gauge and a card listing the main reasons behind a lending decision, with the label 'A person reviews the decision'."
 takeaways:
-  - "In a 2024 Bank of England and FCA survey, 75% of UK financial firms were already using AI, and fighting fraud was one of the biggest benefits they saw."
-  - "Fraud checks compare each payment with your usual pattern and ask you when something stands out."
-  - "In the US, lenders must give specific reasons when they turn down credit, even when a complex model is involved."
+  - "Fraud checks learn what your normal spending looks like, then ask you to confirm any payment that doesn't fit."
+  - "In the US, a lender who turns you down has to explain why in clear, specific terms, even if a complex AI model helped make the decision."
+  - "You can stay in charge: switch on payment alerts, ask why a decision was made, and ask for a person to review it."
 ---
 
 Have you ever had a message from your bank asking, *"Was this you?"* moments after an unusual payment? Fighting fraud is one of the areas where financial firms say AI helps most.
@@ -77,6 +77,8 @@ $65 at 18:00, 8 km from home -> looks normal
 $1,240 at 03:00, 6,500 km from home -> check with customer
 ```
 
+**What the output means:** the model first learned from 500 made-up everyday payments: mostly small amounts, during the day, close to home. The first two new payments look like those, so they pass as normal. The third is large, made at 3am and 6,500 km from home, so it stands out from everything the model has seen, and it's flagged for a check with the customer.
+
 Real systems use far more data and careful testing, but the principle is the same: compare each payment with what's usual, and ask when something stands out.
 
 ## Lending decisions and clear reasons
@@ -131,6 +133,8 @@ Main reasons:
 - missed payments: 1
 - years at address: 3
 ```
+
+**What the output means:** the risk score is the model's estimate, from 0 to 1, of how likely this applicant is to struggle with repayments, based on the made-up training data. At 0.64 it's above the 0.50 line, so the application goes to a person. The three "main reasons" are the details that pushed this applicant's score up the most: a higher debt-to-income ratio than most people in the data, one missed payment, and fewer years at their address.
 
 In this example the score doesn't decide on its own: it sends the application to a person, with reasons that are specific and easy to understand.
 
