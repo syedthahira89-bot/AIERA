@@ -2,6 +2,7 @@
 title: "Hugging Face leaderboards: how to read AI model rankings"
 description: "How Hugging Face's Open LLM Leaderboard compared AI models fairly, what it tested, and how to read any AI leaderboard wisely."
 pubDate: 2026-11-04
+updatedDate: 2026-11-18
 topic: "LLMs Decoded"
 level: Beginner
 cover: /images/cover-leaderboard.jpg

@@ -2,6 +2,7 @@
 title: "LLM evaluation made simple: how to test a chatbot fairly"
 description: "Measuring a chatbot's answers is trickier than it looks. Here are simple, fair ways to test AI and trust the results."
 pubDate: 2026-08-27
+updatedDate: 2026-11-18
 topic: "LLMs Decoded"
 level: Advanced
 cover: /images/cover-testing-chatbots.jpg

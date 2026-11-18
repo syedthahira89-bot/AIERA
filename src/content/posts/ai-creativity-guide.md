@@ -2,6 +2,7 @@
 title: "Creative AI: how to use AI as your creative co-pilot"
 description: "AI won't replace your imagination, but it can be a wonderful creative partner. Here's how to use it to start, explore and finish your ideas, in your own voice."
 pubDate: 2026-11-03
+updatedDate: 2026-11-18
 topic: "Creative AI"
 level: Beginner
 cover: /images/cover-creativity.jpg

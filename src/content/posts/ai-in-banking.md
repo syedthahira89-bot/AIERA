@@ -2,6 +2,7 @@
 title: "AI in banking: how fraud checks and fair lending work"
 description: "How banks use AI to spot unusual payments and support lending decisions, the rules that keep it fair, and simple habits that keep you in charge."
 pubDate: 2026-11-16
+updatedDate: 2026-11-18
 topic: "Everyday AI"
 level: Beginner
 cover: /images/cover-ai-banking.jpg

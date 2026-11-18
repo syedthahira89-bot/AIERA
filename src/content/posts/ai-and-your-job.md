@@ -2,6 +2,7 @@
 title: "AI and your career: how to thrive in the future of work"
 description: "A calm way to think about how AI could change your own role, task by task, and five practical steps to grow with the change."
 pubDate: 2026-11-03
+updatedDate: 2026-11-18
 topic: "Future of Work"
 level: Beginner
 cover: /images/cover-work.jpg

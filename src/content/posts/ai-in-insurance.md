@@ -2,6 +2,7 @@
 title: "AI in insurance: pricing, claims and fair treatment"
 description: "How insurers use AI to assess risk, set prices and handle claims, what European rules now require, and the questions worth asking as a customer."
 pubDate: 2026-11-16
+updatedDate: 2026-11-18
 topic: "Everyday AI"
 level: Beginner
 cover: /images/cover-ai-insurance.jpg

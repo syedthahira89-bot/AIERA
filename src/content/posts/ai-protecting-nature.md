@@ -2,6 +2,7 @@
 title: "AI for the planet: 3 ways AI is protecting nature"
 description: "From smarter farming to flood warnings and cleaner cities, here are three hopeful ways AI is helping people care for the planet, and how you can join in."
 pubDate: 2026-11-03
+updatedDate: 2026-11-18
 topic: "AI for the Planet"
 level: Beginner
 cover: /images/cover-nature.jpg

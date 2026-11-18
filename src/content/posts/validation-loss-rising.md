@@ -2,7 +2,7 @@
 title: "Overfitting in plain English: when AI memorises, not learns"
 description: "Why a model can ace its practice questions yet stumble on new ones, plus three gentle ways to help it learn."
 pubDate: 2026-10-08
-updatedDate: 2026-11-03
+updatedDate: 2026-11-18
 topic: "ML Fundamentals"
 level: Beginner
 cover: /images/cover-overfitting.jpg

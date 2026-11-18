@@ -2,6 +2,7 @@
 title: "Model drift 101: keeping AI reliable after launch"
 description: "The world keeps changing after an AI model goes live. Here's how teams notice the change and keep their models up to date."
 pubDate: 2026-09-03
+updatedDate: 2026-11-18
 topic: "ML Fundamentals"
 level: Intermediate
 cover: /images/cover-drift.jpg

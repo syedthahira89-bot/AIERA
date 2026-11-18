@@ -2,6 +2,7 @@
 title: "Cybersecurity in finance: the layers that keep your money safe"
 description: "How banks, the card industry, industry groups and regulators each add a layer of protection around your money, plus how one-time codes and passkeys work."
 pubDate: 2026-11-16
+updatedDate: 2026-11-18
 topic: "Everyday AI"
 level: Beginner
 cover: /images/cover-cybersecurity-finance.jpg

@@ -2,6 +2,7 @@
 title: "Computer vision basics: what AI notices first in an image"
 description: "Open up a vision model and you'll find it starts by noticing edges and colours, a lot like our own eyes."
 pubDate: 2026-10-01
+updatedDate: 2026-11-18
 topic: "ML Fundamentals"
 level: Beginner
 cover: /images/cover-image-filters.jpg

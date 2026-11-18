@@ -2,6 +2,7 @@
 title: "Reward hacking, decoded: when AI games the goal"
 description: "Reward an AI for a goal and it may find a surprising shortcut instead. Here's why that happens, and how researchers guide it back on course."
 pubDate: 2026-09-17
+updatedDate: 2026-11-18
 topic: "ML Fundamentals"
 level: Advanced
 cover: /images/cover-clever-shortcuts.jpg

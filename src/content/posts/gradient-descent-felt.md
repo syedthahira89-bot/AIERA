@@ -2,7 +2,7 @@
 title: "Gradient descent 101: how AI learns step by step"
 description: "Discover how AI improves itself one small step at a time, and why the size of each step matters so much."
 pubDate: 2026-10-15
-updatedDate: 2026-11-03
+updatedDate: 2026-11-18
 topic: "ML Fundamentals"
 level: Beginner
 cover: /images/cover-gradient-descent.jpg

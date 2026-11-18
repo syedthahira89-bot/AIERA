@@ -1,11 +1,24 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import sharp from 'sharp';
 import { unified } from '@astrojs/markdown-remark';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+
+// Tell search engines when each article last changed: updatedDate, or pubDate if it has never been updated
+const lastChanged = new Map(
+  readdirSync('src/content/posts').filter((f) => f.endsWith('.md')).map((f) => {
+    const fm = readFileSync(`src/content/posts/${f}`, 'utf8').split('---')[1];
+    const date = (fm.match(/^updatedDate:\s*(\S+)/m) || fm.match(/^pubDate:\s*(\S+)/m) || [])[1];
+    return [`/blog/${f.replace(/\.md$/, '')}/`, date];
+  }),
+);
+const withLastmod = (item) => {
+  const date = lastChanged.get(new URL(item.url).pathname);
+  return date ? { ...item, lastmod: new Date(date).toISOString() } : item;
+};
 
 // Pictures inside articles load only when the reader scrolls near them
 // and, where smaller copies exist (scripts/optimize-images.mjs), each screen picks the right size
@@ -39,7 +52,7 @@ function rehypeLazyImages() {
 
 export default defineConfig({
   site: 'https://aiera-ts.com',
-  integrations: [sitemap()],
+  integrations: [sitemap({ serialize: withLastmod })],
   markdown: {
     // remark/rehype pipeline so articles can use $inline$ and $$block$$ math (rendered by KaTeX)
     processor: unified({

@@ -2,6 +2,7 @@
 title: "AI toolkit: 6 free AI tools for everyday life"
 description: "Six AI tools you can start using for free, checked against each tool's own website: for questions, planning, writing, studying your notes and help to see."
 pubDate: 2026-11-05
+updatedDate: 2026-11-18
 topic: "AI Toolkit"
 level: Beginner
 cover: /images/cover-free-ai-tools.jpg

@@ -2,7 +2,7 @@
 title: "Diffusion models unpacked: how AI turns noise into images"
 description: "Many AI image tools start with pure noise and tidy it up, a little at a time, until a picture appears."
 pubDate: 2026-09-10
-updatedDate: 2026-11-03
+updatedDate: 2026-11-18
 topic: "ML Fundamentals"
 level: Intermediate
 cover: /images/cover-diffusion.jpg
