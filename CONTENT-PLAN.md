@@ -47,7 +47,7 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 
 ## Topic balance (weak-spot check, 18 November 2026)
 
-Live articles per topic (18 November 2026): ML Fundamentals 6, Everyday AI 5, LLMs Decoded 4, AI for the Planet 2, and 1 each for Future of Work, Creative AI, AI Toolkit and Agents & GenAI. Weeks 7, 8, 12 and 13 to 21 above give every one- or two-article topic at least three articles by March. Each article follows the content, fact-check and copyright rules in `CLAUDE.md`, using only opened sources.
+Live articles per topic (18 November 2026): ML Fundamentals 6, Everyday AI 5, LLMs Decoded 4, AI for the Planet 2, and 1 each for Future of Work, Creative AI, AI Toolkit and Agents & GenAI. Weeks 7, 8, 12 and 13 to 21 above give every thin topic at least three articles by March, except AI Toolkit, which reaches two (an AI note-takers article in the idea bank would make three). Each article follows the content, fact-check and copyright rules in `CLAUDE.md`, using only opened sources.
 
 Weeks 1–3 launched together so that every topic has at least one article.
 
