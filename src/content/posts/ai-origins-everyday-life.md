@@ -46,7 +46,7 @@ The free [Be My Eyes](https://www.bemyeyes.com/) app connects blind and low-visi
 
 ## Helping nature and the planet
 
-![Illustration of AI protecting nature: a phone listening device on a rainforest tree, a camera trap photographing a zebra, a tractor spraying individual weeds, and a flood forecast map beside a river.](/images/ai-everyday-nature.jpg)
+![Three panels titled 'Farming, flood warnings and energy': a camera on a tractor boom sprays only a weed between crop plants; houses by a river beside an example forecast chart up to 7 days ahead; and a traffic light with a data centre card showing cooling energy cut by up to 40%.](/images/ai-everyday-nature.jpg)
 
 AI is also becoming a tool for protecting forests, wildlife, farmland and the climate.
 

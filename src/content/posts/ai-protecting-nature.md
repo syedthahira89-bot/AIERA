@@ -5,7 +5,7 @@ pubDate: 2026-11-03
 topic: "AI for the Planet"
 level: Beginner
 cover: /images/cover-nature.jpg
-coverAlt: "A tree with a small phone listening device sending out sound waves, a leaf and the sun above, and a river with a location marker on its bank."
+coverAlt: "An illustration titled '3 ways AI is protecting nature', with three panels: farming, where a camera on a tractor boom sprays only a weed between crop plants; flood warnings, with houses by a river and an example forecast chart up to 7 days ahead; and energy, with a traffic light, a car and a data centre card showing cooling energy cut by up to 40%."
 takeaways:
   - "AI helps farms spray only the weeds, warns families about river floods up to seven days ahead, and cuts energy use in cities."
   - "Running AI uses energy too, so the most helpful projects save more than they use."

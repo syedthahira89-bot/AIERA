@@ -16,9 +16,9 @@ How would you grade an essay, a poem or a helpful explanation? There's rarely on
 
 ## Why well-known tests aren't the whole story
 
-Popular AI tests, often called **benchmarks**, are published online so everyone can compare results. But AI models learn from enormous amounts of online text, which can include those very tests. A high score might partly reflect familiarity rather than real skill.
+Popular AI tests, often called **benchmarks**, let everyone compare models on the same questions. But chatbots can do so many different things that fixed tests struggle to capture what people actually prefer in an answer. A 2023 study by Lianmin Zheng and colleagues made exactly this point.
 
-Benchmarks are still useful for broad comparisons. They just can't tell you how well a model will do on *your* particular task.
+Benchmarks are still useful for broad comparisons, and the same study found that different kinds of tests complement each other. They just can't tell you how well a model will do on *your* particular task.
 
 ## Build your own small test set
 
@@ -32,11 +32,20 @@ A great habit is to build your own set of questions:
 
 Using one model to grade another saves a lot of time, but a 2023 study of AI graders found a few habits worth knowing about:
 
-- **Order preference:** they may favour whichever answer they read first. Shuffle the order, or grade both orders and average the results.
+- **Order preference:** they may favour an answer because of its position. The researchers' fix was to swap the order and grade again.
 - **Length preference:** they may favour longer answers. Ask them to judge specific qualities, like accuracy or clarity, instead of overall impressions.
 - **Self-preference:** they may favour answers written by themselves.
+- **Limited reasoning:** they can struggle to grade maths and reasoning questions correctly.
 
-Before relying on an AI grader, compare its scores with a sample of human ratings, and check again whenever you change its instructions.
+![Diagram of four habits of AI graders and what to do: order (may favour an answer because of its position; swap the order and grade again), length (may favour longer answers; ask about specific qualities, like accuracy), self-preference (may favour its own answers) and reasoning (can struggle to grade maths and reasoning). A ring chart shows that GPT-4, as a grader, agreed with human judges more than 80% of the time, about as often as people agree with each other.](/images/ai-grader-habits.jpg)
+
+## How good are AI graders?
+
+To find out, the researchers compared AI graders with people, using two collections: **MT-Bench**, a set of 80 multi-turn questions, and **Chatbot Arena**, a website where people chat with two anonymous chatbots at once and rate their answers.
+
+The result was encouraging. A strong AI grader, GPT-4, agreed with human judges more than 80% of the time, about as often as people agree with each other. That makes AI grading a practical, much cheaper way to approximate human opinions, as long as you keep its habits in mind.
+
+Before relying on an AI grader for your own task, compare its scores with a sample of human ratings, and check again whenever you change its instructions.
 
 ## Something to think about
 
@@ -44,6 +53,6 @@ If you were testing a chatbot to help with your own work or studies, what are fi
 
 ## Sources & further reading
 
-- Zheng et al., [*Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*](https://arxiv.org/abs/2306.05685) (2023), which studies the position, verbosity and self-enhancement biases of AI graders.
+- Zheng et al., [*Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*](https://arxiv.org/abs/2306.05685) (2023), which studies the position, verbosity and self-enhancement biases and the reasoning limits of AI graders, and how often they agree with people.
 - Related: [reward hacking, decoded](/blog/ai-clever-shortcuts/), on why measures can drift from goals.
 - Related: [Hugging Face leaderboards: how to read AI model rankings](/blog/hugging-face-leaderboard/), on what public scoreboards can and can't tell you.

@@ -30,6 +30,24 @@ Nobody draws these patterns by hand. The model learns them from examples while t
 
 Each new layer looks at the patterns found by the layer before. In Zeiler and Fergus's model, the second layer responded to corners and combinations of edges and colours, the third to textures such as mesh patterns, the fourth to parts like dog faces and birds' legs, and the fifth to whole objects such as keyboards and dogs. It's a bit like learning to read: letters, then words, then sentences.
 
+![Diagram of an image model building up layer by layer: layer 1 picks up very fine and very broad patterns, layer 2 corners, edges and colours, layer 3 textures like mesh, layer 4 parts such as dog faces and birds' legs, and layer 5 whole objects such as keyboards and dogs. Based on Zeiler and Fergus (2013).](/images/cnn-layers.jpg)
+
+## Simple first, complex later
+
+Zeiler and Fergus also watched how these patterns developed during training. The lower layers settled within a few passes through the training data, but the upper layers only took shape after 40 to 50 passes. Their lesson: let a model train until it has fully settled.
+
+They found another difference between the layers. Small shifts, rotations or changes in size had a dramatic effect on what the first layer detected, but much less effect on the top layers. That's useful: a cat is still a cat if it moves a little to the left.
+
+## Is the model really looking at the object?
+
+A fair question is whether an image model actually looks at the object, or just at the background around it. Zeiler and Fergus tested this by covering different parts of a picture with a grey square and watching the model's answer.
+
+When they covered the object itself, the model's confidence in the right answer dropped sharply. So the model was genuinely finding the object, not just guessing from its surroundings.
+
+## Why seeing inside matters
+
+Visualising each layer wasn't just interesting. It helped Zeiler and Fergus spot ways to improve the model's design, and their improved model beat the earlier, well-known model by Krizhevsky and colleagues on the ImageNet image-recognition benchmark.
+
 ## Try it yourself
 
 ```python
@@ -39,11 +57,11 @@ filters = model.conv1.weight.detach()  # shape: (64, 3, 7, 7)
 print(filters.shape)
 ```
 
-Scale each of the 64 filters to the 0 to 1 range and display them in a grid. You'll see the edge and colour detectors for yourself. Which ones do you recognise?
+Scale each of the 64 filters to the 0 to 1 range and display them in a grid. What patterns can you spot?
 
 ## Sources & further reading
 
-- Krizhevsky, Sutskever & Hinton, [*ImageNet Classification with Deep Convolutional Neural Networks*](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html) (2012), the AlexNet paper, whose first-layer filters are famously edge-like.
-- Zeiler & Fergus, [*Visualizing and Understanding Convolutional Networks*](https://arxiv.org/abs/1311.2901) (2013), which showed what each layer of an image model responds to.
+- Krizhevsky, Sutskever & Hinton, [*ImageNet Classification with Deep Convolutional Neural Networks*](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html) (2012), the AlexNet paper.
+- Zeiler & Fergus, [*Visualizing and Understanding Convolutional Networks*](https://arxiv.org/abs/1311.2901) (2013), the source of the findings in this article.
 - Olah, Mordvintsev & Schubert, [*Feature Visualization*](https://distill.pub/2017/feature-visualization/) (Distill, 2017), a beautiful look at what each layer responds to.
 - Related: [diffusion models unpacked](/blog/diffusion-noise-to-image/).

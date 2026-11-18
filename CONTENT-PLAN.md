@@ -35,6 +35,14 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 | 10 | Dec 24, 2026 | Everyday AI | Using AI safely: a family guide to privacy | Planned |
 | 11 | Dec 31, 2026 | Personal | How I use AI in my own week | Planned, written by Thahira |
 | 12 | Jan 7, 2027 | AI for the Planet | Is AI good or bad for the environment? | Planned |
+| 13 | Jan 14, 2027 | Agents & GenAI | Giving an AI agent a task safely: a step-by-step guide | Planned, second article for this topic |
+| 14 | Jan 21, 2027 | AI Toolkit | AI tools for studying and learning | Planned, second article for this topic |
+| 15 | Jan 28, 2027 | Creative AI | Making images with AI responsibly: rights, credit and style | Planned, third article for this topic |
+| 16 | Feb 4, 2027 | AI for the Planet | AI and weather forecasting | Planned, third article for this topic |
+
+## Topic balance (weak-spot check, 18 November 2026)
+
+Live articles per topic: ML Fundamentals 6, Everyday AI 5, LLMs Decoded 4, and 1 each for Future of Work, Creative AI, AI for the Planet, AI Toolkit and Agents & GenAI. Weeks 7, 8, 12 and 13 to 16 above give every one-article topic at least one more article by early February. Each article follows the content, fact-check and copyright rules in `CLAUDE.md`, using only opened sources.
 
 Weeks 1–3 launched together so that every topic has at least one article.
 
