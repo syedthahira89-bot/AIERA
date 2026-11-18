@@ -46,7 +46,7 @@ const wide = `<div class="card" style="width:1200px;height:627px">
     <span class="live" style="align-self:flex-start;font-size:15px;padding:9px 18px"><i style="width:9px;height:9px"></i>Now live</span>
     <div style="font-size:84px">${wordmark}</div>
     <div class="h" style="font-size:46px">The bright side of AI,<br><em>made for curious minds.</em></div>
-    <div class="sub" style="font-size:19px;max-width:470px">Hopeful real-world stories and jargon-free guides to how AI works. A new article every week.</div>
+    <div class="sub" style="font-size:19px;max-width:470px">Hopeful real-world stories and jargon-free guides to how AI works. A new article every Thursday.</div>
     <div class="url" style="align-self:flex-start;font-size:20px;padding:11px 22px">aiera-ts.com <b>→</b></div>
   </div>
   <div class="stack" style="left:640px;top:0;width:560px;height:627px">
@@ -71,7 +71,7 @@ const square = `<div class="card" style="width:1080px;height:1080px">
     <span class="ribbon" style="left:640px;top:86px;z-index:3;font-size:18px;padding:9px 18px;transform:rotate(4deg)">✦ ${count} articles to explore</span>
   </div>
   <div style="position:absolute;left:84px;right:84px;bottom:76px;display:flex;align-items:center;justify-content:space-between;z-index:2">
-    <div class="sub" style="font-size:22px;max-width:520px">Hopeful stories and jargon-free AI guides.<br>New article every week.</div>
+    <div class="sub" style="font-size:22px;max-width:520px">Hopeful stories and jargon-free AI guides.<br>New article every Thursday.</div>
     <div class="url" style="font-size:24px;padding:14px 26px">aiera-ts.com <b>→</b></div>
   </div>
   ${spark(940, 110, 34)}${spark(1000, 420, 20)}${spark(60, 450, 18)}${spark(980, 900, 16)}

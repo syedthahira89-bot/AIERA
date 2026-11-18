@@ -3,7 +3,7 @@ export const SITE = {
   url: 'https://aiera-ts.com',
   tagline: 'The bright side of AI, made for curious minds.',
   description:
-    'Every week, AIERA-TS shares hopeful real-world stories and jargon-free guides to how AI works. No tech background needed.',
+    'Every Thursday, AIERA-TS shares hopeful real-world stories and jargon-free guides to how AI works. No tech background needed.',
   email: 'aiera.blog@gmail.com',
   author: {
     name: 'Thahira S',
