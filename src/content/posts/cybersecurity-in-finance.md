@@ -69,7 +69,7 @@ Time 1700000039: code 732303
 Time 1700000040: code 136087
 ```
 
-The code stays the same within one 30-second window, then changes, so a code someone sees soon stops working.
+**What the output means:** the first two times are 29 seconds apart but fall inside the same 30-second window, so they give the same code, 732303. One second later a new window starts, and the code changes to 136087. That's why a code someone sees soon stops working.
 
 ## Layer 2: your bank
 

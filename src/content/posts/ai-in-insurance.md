@@ -64,7 +64,7 @@ Full review by a claims handler
 Full review by a claims handler
 ```
 
-Here, `photo_confidence` stands for how sure an image model is about its damage estimate. If the model is unsure, or the claim is large, a person takes over. Even on the fast track, a person approves the final decision.
+**What the output means:** the first claim is small and the image model is confident, so it's fast-tracked, with a person approving the estimate. The second is the same amount, but the model is unsure, so a claims handler reviews it in full. The third is large, so it gets a full review too. Here, `photo_confidence` stands for how sure an image model is about its damage estimate, and the thresholds are made up. Even on the fast track, a person approves the final decision.
 
 ## The challenges regulators watch
 
