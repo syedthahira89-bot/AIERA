@@ -55,6 +55,8 @@ The more you rely on AI's first suggestion, the more your work can start to soun
 - **Add what only you know:** your memories, your sense of humour, the details from your life.
 - **Read it aloud.** If it doesn't sound like you, change it until it does.
 
+![Diagram titled 'AI widens your options. You choose, shape and finish.' Five ways AI can help: break the blank page, explore 'what if?', build a mood board, get gentle feedback and handle the boring bits. An arrow leads to four habits for keeping your own voice: start with your own idea, edit everything, add what only you know, and read it aloud.](/images/creative-copilot.jpg)
+
 ## Creating kindly and fairly
 
 Creativity has always been a conversation with other people's work, and AI adds some new questions. A few thoughtful habits:

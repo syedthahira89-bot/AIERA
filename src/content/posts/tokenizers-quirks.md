@@ -32,6 +32,8 @@ One well-known method is called **byte-pair encoding**, brought to language mode
 
 Each token gets an ID number, and those numbers are what the model actually receives. Before a chatbot "reads" your question, it has already become a list of numbers.
 
+![Diagram of byte-pair encoding in four steps: start with single characters; find the pair that appears side by side most often; join that pair into a new, bigger piece; repeat until the vocabulary reaches a chosen size. Below, an example of how a tokenizer might split 'strawberry' into 'str', 'aw' and 'berry'. The model gets a number for each piece, not the letters.](/images/tokens-bpe.jpg)
+
 ## Why token counts matter
 
 The number of tokens isn't the same as the number of words or letters, and the same sentence can split differently in different languages and models. Try the example above with your own sentences to see this.

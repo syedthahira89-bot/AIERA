@@ -46,6 +46,8 @@ Your answer is a useful way to think about AI too. Rather than asking whether a 
 - **Taste and responsibility:** deciding what's good, what's right, and owning the result.
 - **Connecting ideas** across different fields and people.
 
+![Two lists side by side. Tasks AI tends to help with: drafting emails, reports and summaries; searching and summarising long documents; routine data work; translation and transcription; and first-line questions, with a person ready. Strengths that stay very human: judgement in new, messy or high-stakes moments; care and trust; hands-on skill; taste and responsibility for the result; and connecting ideas across fields and people.](/images/job-tasks.jpg)
+
 ## Five practical steps to grow with the change
 
 1. **Map your week.** List the tasks you do most often. Mark which are repetitive and which need your judgement or relationships.

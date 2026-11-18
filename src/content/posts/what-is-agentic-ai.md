@@ -47,6 +47,8 @@ Most agents follow a simple loop, a little like how we tackle a to-do list.
 
 The agent repeats this loop until the goal is done, or until it needs your help. Researchers sometimes call this pattern **reasoning and acting**, because the AI alternates between thinking about what to do and actually doing it.
 
+![Diagram of how an agent works, using the goal 'Plan a picnic for Sunday'. Plan: break the goal into small steps. Act: use a tool, such as search, reading a file or filling in a form. Check: did it work, and is anything missing? The loop repeats until the goal is done, or the agent needs your help.](/images/agent-loop.jpg)
+
 ## Agents you might already use
 
 Anthropic's guide to building agents describes several kinds already in use:

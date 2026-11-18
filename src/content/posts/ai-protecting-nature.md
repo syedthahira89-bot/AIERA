@@ -30,6 +30,8 @@ Some of AI's quietest wins are in everyday energy use.
 - Google's [Project Green Light](https://sites.research.google/greenlight/) suggests better timing for traffic lights. Google says early numbers show the potential for up to 30% fewer stops and a 10% reduction in greenhouse gas emissions at intersections.
 - DeepMind's AI helped [reduce the energy used to cool Google's data centres](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/) by up to 40%.
 
+![The numbers at a glance, in four cards. Farming: See & Spray sprays only the weeds, which John Deere says significantly reduces herbicide use. Flood warnings: Flood Hub forecasts river floods up to 7 days ahead, in more than 150 countries. Traffic lights: Project Green Light's early numbers show the potential for a 10% cut in greenhouse gas emissions at intersections and up to 30% fewer stops. Data centres: DeepMind's AI cut the energy used to cool Google's data centres by up to 40%.](/images/nature-numbers.jpg)
+
 ## AI has a footprint too
 
 It's worth being balanced. Computers that run AI use energy, including for cooling, which is exactly why DeepMind's cooling work matters. The most helpful projects are the ones where AI saves more than it uses. As users, we can help by choosing AI where it genuinely saves time or energy, rather than for everything.

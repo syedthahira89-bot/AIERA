@@ -93,6 +93,8 @@ You really only need one or two to start:
 | Check where an answer came from | Gemini Notebook (citations) or Perplexity (sources) |
 | Get help seeing something | Be My Eyes |
 
+![A guide to choosing a free tool. To ask anything and get ideas: ChatGPT, Gemini, Copilot or Claude. To study your own documents: Gemini Notebook. To check where an answer came from: Gemini Notebook (citations) or Perplexity (sources). To get help seeing something: Be My Eyes. Free plans were checked on each tool's own website in November 2026.](/images/tools-choose.jpg)
+
 ## A few friendly safety tips
 
 - **Double-check important facts**, especially about health, money or the law.

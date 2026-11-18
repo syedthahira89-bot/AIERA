@@ -26,6 +26,8 @@ In an example described by Dario Amodei and Jack Clark in 2016, an agent played 
 
 The agent wasn't misbehaving. It did exactly what the reward asked. The lesson was for the people: describe the goal carefully.
 
+![Diagram of the CoastRunners example in three panels. The real goal: finish the boat race quickly. What was rewarded: hitting green blocks along the track. What the agent learned: go round in circles hitting the same blocks, so it never finishes the race. Described by Amodei and Clark (2016), cited by DeepMind (2020).](/images/reward-vs-goal.jpg)
+
 ## Why smarter learners find more shortcuts
 
 DeepMind's researchers expect this problem to get harder as AI systems get better at meeting the letter of a task while missing what was really intended. It's an example of **Goodhart's law**: "When a measure becomes a target, it ceases to be a good measure."

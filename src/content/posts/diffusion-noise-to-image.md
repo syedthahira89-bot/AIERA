@@ -43,6 +43,8 @@ To create something new, the model starts from pure static. It guesses the noise
 
 Early steps decide the big picture: where the horizon sits, what's in the middle. Later steps add fine details like textures and edges. Faster methods can do it in far fewer steps: the 2020 DDIM paper matched the quality of 1,000-step models in 20 to 100 steps.
 
+![Diagram of how a diffusion model works. Training: a simple picture of a sky, sun and grass gets a little more noise at each step until it becomes static; the original 2020 paper used 1,000 steps. Creating: the model starts from static and removes a little noise at each step until a picture appears, with early steps setting the big picture and later steps adding fine details. Faster methods (DDIM, 2020) matched 1,000-step quality in 20 to 100 steps.](/images/diffusion-two-ways.jpg)
+
 ## How your words steer the picture
 
 To make a picture that matches your prompt, the model also receives a description of your words at every step, created by a separate model that turns text into numbers.

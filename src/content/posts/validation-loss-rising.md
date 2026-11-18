@@ -38,6 +38,8 @@ While a model trains, we track two numbers:
 
 At first both go down together, which is great news. But sometimes, a few rounds later, training loss keeps falling while validation loss starts to rise. That gentle turn, shown by the star on the cover chart, is the sign of overfitting.
 
+![An illustration, not real data: training loss keeps falling over the training rounds, while validation loss falls, reaches its lowest point (marked 'Stop here') and then starts to rise. Beside it, three friendly ways to help: stop at the right moment, encourage simpler answers with weight decay and dropout, and show the model more variety.](/images/overfitting-curves.jpg)
+
 ## Not too simple, not too complex
 
 There's a Goldilocks balance here.

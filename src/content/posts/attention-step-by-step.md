@@ -76,6 +76,8 @@ out, w = attention(Q, K, V)
 print(w.round(2))  # each row adds up to 1
 ```
 
+![Worked example from this article. The sentence 'The robot picked up the ball because it was light.' Each word gets three name tags: a query (what am I looking for?), a key (what do I have to offer?) and a value (what I'll share if picked). After softmax, the word 'it' gives 11% of its attention to 'robot' (score 1.0), 82% to 'ball' (score 3.0) and 7% to 'light' (score 0.5), so 'it' takes its new meaning mostly from 'ball'.](/images/attention-example.jpg)
+
 ## Why divide by the square root of d_k?
 
 Here's a neat detail. If each query and key has $d_k$ numbers, their dot products tend to grow as $d_k$ grows. With $d_k = 64$, typical scores land around ±8. Softmax on numbers that big puts nearly all the attention on a single word, and the model finds it very hard to keep learning.

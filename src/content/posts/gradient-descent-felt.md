@@ -48,6 +48,8 @@ Start at $x = -3.5$ with a learning rate of 0.4. Each step multiplies $x$ by 0.2
 
 In just three steps, the loss drops from 12.25 to almost zero. Each step is smaller than the last, because the slope gets gentler as we approach the bottom. Nobody told the model to slow down. The maths does it naturally.
 
+![Worked example from this article: the valley L(x) = x squared. Starting at x = −3.5 with a learning rate of 0.4, each step multiplies x by 0.2: x goes from −3.5 to −0.7, −0.14 and −0.028, and the loss falls from 12.25 to 0.49, 0.0196 and 0.00078. Each step is smaller as the slope gets gentler.](/images/gradient-steps.jpg)
+
 ## How big should each step be?
 
 Now let's compare different step sizes on the same valley:
