@@ -2,7 +2,6 @@
 title: "Banking and insurance security: the AI layers that keep you safe"
 description: "A short guide to how AI helps keep your money and cover safe, with links to three in-depth articles on banking, insurance and cybersecurity."
 pubDate: 2026-11-12
-featured: true
 topic: "Everyday AI"
 level: Beginner
 cover: /images/cover-banking.jpg

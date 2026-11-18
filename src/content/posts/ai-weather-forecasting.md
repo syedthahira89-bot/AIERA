@@ -4,6 +4,7 @@ description: "How neural networks learned to forecast the weather from decades o
 pubDate: 2026-11-19
 topic: "AI for the Planet"
 level: Beginner
+featured: true
 cover: /images/cover-weather.jpg
 coverAlt: "An illustration titled 'How neural networks predict the weather'. Two globes, the weather 6 hours ago and now, feed a graph neural network that predicts 6 hours ahead. A larger globe covered in a grid of points, with sun and rain icons, notes that the steps repeat 6 hours at a time, up to 10 days ahead, on a grid of more than a million points about 28 km apart at the equator."
 takeaways:
