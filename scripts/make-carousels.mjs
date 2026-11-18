@@ -52,7 +52,7 @@ function slides(p, img, slug) {
     `<section class="s"><span class="kicker">In short</span><p class="big">${esc(p.description)}</p>${foot(2)}</section>`,
     ...tips.map((t, i) => `<section class="s"><span class="num">0${i + 1}</span><span class="kicker">Key takeaway</span><p class="big">${esc(t)}</p>${foot(3 + i)}</section>`),
     `<section class="s cta"><span class="kicker">Want the full guide?</span><p class="big">Read the whole article, free, on AIERA-TS.</p>
-      <p class="url">${SITE}/blog/${slug}</p><ul><li>♻️ Repost to help someone learn</li><li>💬 Tell me what you'd add</li><li>✉️ Get one idea every Thursday</li></ul>${foot(6)}</section>`,
+      <p class="url">${SITE}/blog/${slug}</p><ul><li>♻️ Repost to help someone learn</li><li>💬 Tell me what you'd add</li><li>✉️ Get one idea every week</li></ul>${foot(6)}</section>`,
   ].join('');
 }
 
