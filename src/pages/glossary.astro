@@ -13,12 +13,12 @@ for (const t of terms) {
 }
 const letters = [...groups.keys()];
 ---
-<BaseLayout title="AI glossary" description="Friendly, plain-language explanations of AI words, from attention to weight decay, each linked to an article that explores it further.">
+<BaseLayout title="AI glossary" description="Friendly, plain-language explanations of AI words, from attention to weight decay, each checked against a named source and linked to articles that explore it further.">
   <section class="page">
     <div class="wrap glossary">
       <header class="intro">
         <h1>AI glossary</h1>
-        <p class="lede">Curious about a word you've seen in an article? Here are {terms.length} AI terms explained in plain language, each with a link to learn more.</p>
+        <p class="lede">Curious about a word you've seen in an article? Here are {terms.length} AI terms explained in plain language. Each one names the source it’s based on, and most link to an article that explores it further.</p>
       </header>
 
       <div class="tools">
@@ -43,14 +43,13 @@ const letters = [...groups.keys()];
                 <dt>{t.term}</dt>
                 <dd>
                   <p>{t.definition}</p>
-                  {(t.article && titles.has(t.article)) || t.seeAlso ? (
-                    <p class="more">
-                      {t.article && titles.has(t.article) && <a href={`/blog/${t.article}/`}>Read: {titles.get(t.article)}</a>}
-                      {t.seeAlso && (
-                        <span class="see">See also: {t.seeAlso.map((s, i) => <>{i > 0 && ', '}<a href={`#${termId(s)}`}>{s}</a></>)}</span>
-                      )}
-                    </p>
-                  ) : null}
+                  <p class="more">
+                    {t.article && titles.has(t.article) && <a href={`/blog/${t.article}/`}>Read: {titles.get(t.article)}</a>}
+                    {t.seeAlso && (
+                      <span class="see">See also: {t.seeAlso.map((s, i) => <>{i > 0 && ', '}<a href={`#${termId(s)}`}>{s}</a></>)}</span>
+                    )}
+                  </p>
+                  <p class="src">Source{t.sources.length > 1 ? 's' : ''}: {t.sources.map((s, i) => <>{i > 0 && '; '}<a href={s.url} rel="noopener">{s.name}</a></>)}</p>
                 </dd>
               </div>
             ))}
@@ -91,6 +90,8 @@ const letters = [...groups.keys()];
   dd p { max-width: 66ch; }
   .more { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: var(--step--1); }
   .see { color: var(--muted); }
+  .src { margin-top: 4px; font-size: var(--step--1); color: var(--muted); }
+  .src a { color: inherit; }
   .empty { padding-block: 32px; color: var(--muted); }
   .suggest { margin-top: 40px; color: var(--muted); }
 </style>
