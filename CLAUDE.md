@@ -24,6 +24,22 @@ Run this check on every article, page and post while preparing it, and report th
 3. **Not underfitting (leaving too much out):** the important conditions, limits, dates and caveats are included, for example which country a rule applies to, when a survey was done, and that made-up examples are made up. If a needed fact can't be sourced, say so using the wording in content rule 10.
 4. Report: how many numbers were checked, what was toned down, what was added, and any facts that could not be checked.
 
+## Weak-spot check (always)
+
+Whenever working on the blog, and after every publish, look for weak spots and suggest fixes. Never fix them without Thahira's approval. Check:
+
+1. **Facts:** any fact not backed by an opened source (see the fact check above).
+2. **Thin articles:** articles under about 400 words, or that don't fully deliver what their title promises.
+3. **Links:** articles that no other article links to, and broken links.
+4. **Topics:** topics with only one or two articles.
+5. **Pictures:** articles with no pictures inside the text, pictures that no longer match the text, and pictures without a set size or a description.
+6. **Speed and quality:** Lighthouse scores below 90 for speed, accessibility, best practices or SEO.
+7. **Search basics:** missing or duplicate titles and descriptions, missing sharing images, and the sitemap and robots.txt.
+8. **Security:** the security headers still allow only the services the blog uses.
+9. **Promises and dates:** wording on the site that may no longer be true (for example, newsletter timing), and dates that look wrong.
+
+Report the weak spots as a short table, most important first: what's wrong, why it matters, and the suggested fix. Say which fixes Claude can do (batched into one publish after Thahira's "commit") and which she must do herself.
+
 ## Copyright rules (always follow)
 
 1. Write everything in original words. Never copy sentences or paragraphs from sources, other blogs or AI tools' outputs found online.
