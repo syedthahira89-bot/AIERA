@@ -23,6 +23,7 @@ Run this check on every article, page and post while preparing it, and report th
 2. **Not overfitting (claiming too much):** nothing goes beyond what the source says. No "always", "every", "most" or "biggest" unless the source says so, no guessed causes, no general claims stretched from one example. Opinions and advice are worded as advice, not as facts.
 3. **Not underfitting (leaving too much out):** the important conditions, limits, dates and caveats are included, for example which country a rule applies to, when a survey was done, and that made-up examples are made up. If a needed fact can't be sourced, say so using the wording in content rule 10.
 4. Report: how many numbers were checked, what was toned down, what was added, and any facts that could not be checked.
+5. **Always verify and validate:** before every hand-over and every publish, re-open each source and check every fact against it again, even if it was checked before. Never rely on memory or an earlier check. Record what was verified, corrected or removed in `VERIFY-SOURCES.md`.
 
 ## Weak-spot check (always)
 

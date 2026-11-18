@@ -23,7 +23,7 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 | ⭐ | Nov 5, 2026 | Agents & GenAI | AI agents unpacked: your new digital assistant | ✅ Published, Thursday feature (`what-is-agentic-ai`) |
 | 4 | Nov 5, 2026 | AI Toolkit | AI toolkit: 6 free AI tools for everyday life | ✅ Published (`free-ai-tools`, formerly `top-7-ai-tools`), feature it on Nov 12 |
 | ⭐ | Nov 12, 2026 | Everyday AI | Banking and insurance security: the AI layers that keep you safe | ✅ Published, Thursday feature (`ai-in-banking-and-insurance`) |
-| ⭐ | Nov 19, 2026 | ML Fundamentals | Traffic prediction, decoded: the AI behind your ETA | Written, scheduled for Nov 19, draft until then (`traffic-prediction-neural-networks`) |
+| ⭐ | Nov 19, 2026 | AI for the Planet | AI weather forecasts: how neural networks predict tomorrow | Written, for Nov 19 (`ai-weather-forecasting`). Replaces the traffic prediction article, which was removed |
 | ✚ | Nov 16, 2026 | Everyday AI | AI in banking: how fraud checks and fair lending work | ✅ Published (`ai-in-banking`), part 1 of 3 |
 | ✚ | Nov 16, 2026 | Everyday AI | AI in insurance: pricing, claims and fair treatment | ✅ Published (`ai-in-insurance`), part 2 of 3 |
 | ✚ | Nov 16, 2026 | Everyday AI | Cybersecurity in finance: the layers that keep your money safe | ✅ Published (`cybersecurity-in-finance`), part 3 of 3. The banking and insurance article became an overview of the series |
@@ -38,7 +38,7 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 | 13 | Jan 14, 2027 | Agents & GenAI | Giving an AI agent a task safely: a step-by-step guide | Planned, second article for this topic |
 | 14 | Jan 21, 2027 | AI Toolkit | AI tools for studying and learning | Planned, second article for this topic |
 | 15 | Jan 28, 2027 | Creative AI | Making images with AI responsibly: rights, credit and style | Planned, third article for this topic |
-| 16 | Feb 4, 2027 | AI for the Planet | AI and weather forecasting | Planned, third article for this topic |
+| 16 | Feb 4, 2027 | AI for the Planet | Topic to be chosen (weather forecasting moved to Nov 19) | Planned, third article for this topic |
 | 17 | Feb 11, 2027 | Future of Work | Learning alongside AI: a gentle guide to new skills at work | Planned, third article for this topic |
 
 ## Topic balance (weak-spot check, 18 November 2026)
