@@ -1,6 +1,6 @@
 ---
 title: "Everyday AI: a beginner’s guide from Turing to today"
-description: "From Alan Turing's 1950 question to flood warnings and talking cameras: where AI came from, how it helps daily life, and easy ways to start."
+description: "From Alan Turing's 1950 question to flood warnings and traffic predictions: where AI came from, how it helps daily life, and easy ways to start."
 pubDate: 2026-10-27
 topic: "Everyday AI"
 level: Beginner
@@ -8,11 +8,11 @@ cover: /images/cover-ai-and-you.jpg
 coverAlt: "A friendly illustrated collage: a smiling woman setting a smart thermostat from her phone in a sunny kitchen, labelled AI at home, beside three smaller scenes labelled 75 years of AI, Out and about, and Caring for nature."
 takeaways:
   - "AI is a 75-year-old idea, from Alan Turing's 1950 question to today's helpers."
-  - "It already makes daily life easier, from spam filters and maps to translation and health screening."
+  - "It already helps in daily life, from traffic predictions to visual help for blind and low-vision people."
   - "Use it wisely: check important facts, protect your privacy and keep people in charge of decisions."
 ---
 
-Artificial intelligence can feel like it arrived overnight. In reality, it's an idea more than 75 years old, and it has been quietly filtering your email, estimating your arrival time and translating menus for years. Here's where it came from, how it's making life easier for people and the planet, and how you can put it to work yourself.
+Artificial intelligence can feel like it arrived overnight. In reality, it's an idea more than 75 years old, and it has been quietly helping with everyday tasks, such as estimating your arrival time, for years. Here's where it came from, how it's making life easier for people and the planet, and how you can put it to work yourself.
 
 ## Where AI came from
 
@@ -24,11 +24,9 @@ Artificial intelligence can feel like it arrived overnight. In reality, it's an 
 
 **1958: first steps.** Frank Rosenblatt demonstrated the perceptron, which taught itself to tell apart cards marked on the left from cards marked on the right. A Cornell professor calls it "the first neural network", and its principles helped spark today's AI revolution.
 
-**1970s and late 1980s: two "AI winters".** Hopes ran ahead of what computers could do at the time, so interest and funding cooled off twice.
+**1997 to 2016: landmark wins.** IBM's Deep Blue beat chess champion Garry Kasparov in 1997, and DeepMind's AlphaGo beat Go champion Lee Sedol in 2016.
 
-**1997 to 2016: landmark wins.** IBM's Deep Blue beat chess champion Garry Kasparov in 1997. AlexNet started the deep learning boom in 2012, and DeepMind's AlphaGo beat Go champion Lee Sedol in 2016.
-
-**2017 to today: AI for everyone.** The transformer, introduced in 2017, became the design behind today's language models. ChatGPT reached an estimated 100 million users within about two months of its 2022 launch ([Reuters](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/)), and AlphaFold's protein predictions earned a share of the 2024 Nobel Prize in Chemistry ([Nobel Prize](https://www.nobelprize.org/prizes/chemistry/2024/press-release/)).
+**2017 to today: AI for everyone.** The transformer, introduced in a 2017 paper, became the design behind today's language models.
 
 > The big shift: early AI followed rules that people wrote by hand. Modern AI learns patterns from examples. That's why it can handle messy tasks like understanding speech or spotting disease in a photo.
 
@@ -42,22 +40,9 @@ Most helpful AI isn't dramatic. It removes small frictions, many times a day.
 
 Google Maps uses machine learning on live location data to predict traffic. Google and DeepMind [reported up to 50% better arrival-time accuracy](https://deepmind.google/discover/blog/traffic-prediction-with-advanced-graph-neural-networks/) in some cities, which means less time stuck in traffic.
 
-### Communication and language
-
-- **Spam filtering:** Google says Gmail's machine learning filters [block more than 99.9% of spam, phishing and malware](https://safety.google/gmail/) before it reaches inboxes.
-- **Translation:** apps like Google Translate can translate text from a phone camera in real time, so a traveller can read a street sign or a menu instantly.
-
 ### Accessibility
 
 The free [Be My Eyes](https://www.bemyeyes.com/) app connects blind and low-vision people with real-time visual help from volunteers around the world, and also offers an AI assistant called Be My AI.
-
-### Health
-
-In 2018, the US Food and Drug Administration authorised IDx-DR (now LumineticsCore), the first autonomous AI system to screen for diabetic eye disease, after a [clinical trial in primary care clinics](https://doi.org/10.1038/s41746-018-0040-6). A nurse takes the photo and the patient gets a result in minutes, which matters in places with few eye doctors.
-
-### Home and energy
-
-Smart thermostats learn your routine and heat or cool the home only when needed. [ENERGY STAR estimates](https://www.energystar.gov/products/smart_thermostats) that certified smart thermostats save about 8% on heating and cooling bills on average: lower bills and lower energy use at once.
 
 ## Helping nature and the planet
 
@@ -65,8 +50,6 @@ Smart thermostats learn your routine and heat or cool the home only when needed.
 
 AI is also becoming a tool for protecting forests, wildlife, farmland and the climate.
 
-- **Listening out for the forest:** [Rainforest Connection](https://rfcx.org/) hangs recycled smartphones in rainforest trees. AI listens for the sound of logging saws in protected areas and alerts local rangers in real time.
-- **Tracking wildlife:** [Wildlife Insights](https://www.wildlifeinsights.org/) uses AI to sort camera-trap photos far faster than people could by hand, and [Wildbook](https://www.wildme.org/) recognises individual whale sharks and zebras from their unique spots and stripes.
 - **Smarter farming:** John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) spots individual weeds and sprays only them, which John Deere says significantly reduces herbicide use.
 - **Flood warnings:** Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in more than 150 countries, giving families time to reach safety.
 - **Cleaner traffic and buildings:** Google's [Project Green Light](https://sites.research.google/greenlight/) tunes traffic-light timing, and Google says early numbers show the potential for a 10% reduction in greenhouse gas emissions at intersections. DeepMind's AI [cut the energy used to cool Google's data centres by up to 40%](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
@@ -77,10 +60,9 @@ You don't need to be technical to benefit. Some simple starting points:
 
 1. **Plan your day.** Ask an AI assistant to turn a messy to-do list into a schedule, or to suggest a weekly meal plan from what's already in your fridge, which also reduces food waste.
 2. **Learn something new.** Ask a chatbot to explain a topic "like I am 12", then ask follow-up questions.
-3. **Save energy.** Use a smart thermostat or smart plugs, and check your energy supplier's app for usage insights.
+3. **Save energy.** Look for simple ways to track and cut your home energy use, such as your energy supplier's app.
 4. **Stay healthy.** Use step, sleep and heart-rate tracking as gentle reminders, but treat any health alert as a reason to talk to a professional, not as a diagnosis.
-5. **Help nature.** Apps such as iNaturalist and Merlin Bird ID identify plants, insects and birds from a photo or a recording. Your observations also feed real scientific research.
-6. **Make things accessible.** Try the free Be My Eyes app for yourself or a family member, or sign up to help as a volunteer.
+5. **Make things accessible.** Try the free Be My Eyes app for yourself or a family member, or sign up to help as a volunteer.
 
 ## Using AI wisely
 
@@ -89,7 +71,7 @@ AI is a powerful helper, but it isn't perfect. A few habits keep it working for 
 - **Check important facts.** Chatbots can sound sure of themselves and still be mistaken. Verify anything about health, money or law with a trusted source.
 - **Protect your privacy.** Avoid sharing passwords, ID numbers or private medical details with AI tools.
 - **Watch for bias.** AI learns from data made by people, so it can repeat unfair patterns. Good systems are tested across different groups of people.
-- **Mind the footprint.** Training and running large models uses electricity and water. Use AI where it truly saves time or resources.
+- **Mind the footprint.** Running AI uses energy, including for cooling the computers. Use AI where it truly saves time or resources.
 - **Keep humans in charge.** The best results come when AI handles the repetitive work and people make the decisions that need judgement and care.
 
 ## Words to know
@@ -98,7 +80,7 @@ New to some of these terms? Our friendly [AI glossary](/glossary/) explains word
 
 ## The takeaway
 
-AI began as a question about whether machines could think. Today a better question is how to use them well. From a nurse screening for eye disease to a ranger protecting a forest miles away, the best examples share one thing: AI takes on the tedious or impossible part of the job so that people can focus on care, judgement and connection. Used thoughtfully, it can help both people and nature live better.
+AI began as a question about whether machines could think. Today a better question is how to use them well. From flood warnings to traffic lights that cut emissions, the best examples share one thing: AI takes on the tedious or impossible part of a job so that people can focus on care, judgement and connection. Used thoughtfully, it can help both people and nature live better.
 
 ## Sources & further reading
 
@@ -106,10 +88,8 @@ AI began as a question about whether machines could think. Today a better questi
 - Dartmouth College, [*Artificial Intelligence (AI) Coined at Dartmouth*](https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth), on the 1956 workshop.
 - Cornell Chronicle, [*Professor's perceptron paved the way for AI – 60 years too soon*](https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon) (2019).
 - IBM, [*Deep Blue*](https://www.ibm.com/history/deep-blue), on the 1997 match with Garry Kasparov.
-- Krizhevsky, Sutskever & Hinton, [*ImageNet Classification with Deep Convolutional Neural Networks*](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html) (2012), known as AlexNet.
 - Google DeepMind, [*AlphaGo*](https://deepmind.google/research/breakthroughs/alphago/), on the 2016 match with Lee Sedol.
 - Vaswani et al., [*Attention Is All You Need*](https://arxiv.org/abs/1706.03762) (2017), the paper that introduced the transformer.
-- Reuters, [*ChatGPT sets record for fastest-growing user base*](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/) (2023).
-- The Nobel Prize, [*Nobel Prize in Chemistry 2024*](https://www.nobelprize.org/prizes/chemistry/2024/press-release/).
 - Google, [*Flood Hub*](https://sites.research.google/gr/floodforecasting/), [*Project Green Light*](https://sites.research.google/gr/greenlight/) and John Deere, [*See & Spray*](https://www.deere.com/en-us/products-solutions/sprayers-and-applicators/see-spray).
-- [AI for the planet: 5 ways AI is protecting nature](/blog/ai-protecting-nature/)
+- [AI for the planet: 3 ways AI is protecting nature](/blog/ai-protecting-nature/)
+- [AI and your career: how to thrive in the future of work](/blog/ai-and-your-job/)

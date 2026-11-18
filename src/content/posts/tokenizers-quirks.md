@@ -9,7 +9,7 @@ cover: /images/cover-tokens.jpg
 coverAlt: "The word \"strawberry\" with an arrow pointing to three coloured pieces, \"str\", \"aw\" and \"berry\", each with an example token number underneath."
 takeaways:
   - "Chatbots don't read letters; they read tokens, small pieces of words turned into numbers."
-  - "In English, one token is about four characters, which matters for limits and pricing."
+  - "Token counts, not word counts, are what many AI services use to set their prices."
   - "Tokens explain quirks like miscounting letters in \"strawberry\" and stumbling on long numbers."
 ---
 
@@ -23,31 +23,27 @@ Tokens work the same way. Common words like "the" or "because" are single ready-
 
 ## Building a vocabulary, piece by piece
 
-The most common method is called **byte-pair encoding**. It works like this:
+One well-known method is called **byte-pair encoding**, brought to language models in a 2015 paper by Rico Sennrich and colleagues. It works like this:
 
-1. Start with the smallest pieces of text: individual bytes, which cover every letter, number and symbol.
+1. Start with the smallest pieces of text: individual characters.
 2. Look through a huge collection of writing and find the pair of pieces that appears side by side most often.
 3. Join that pair into a new, bigger piece, and add it to the vocabulary.
-4. Repeat, again and again, until the vocabulary reaches a chosen size, often between 50,000 and 200,000 tokens.
+4. Repeat, again and again, until the vocabulary reaches a chosen size.
 
 Each token gets an ID number, and those numbers are what the model actually receives. Before a chatbot "reads" your question, it has already become a list of numbers.
 
-## A quick rule of thumb
+## Why token counts matter
 
-For everyday English, one token is roughly **four characters**, or about three quarters of a word. So 100 tokens is around 75 words. Other languages often need more tokens for the same meaning, because their words appeared less often in the text used to build the vocabulary.
+The number of tokens isn't the same as the number of words or letters, and the same sentence can split differently in different languages and models. Try the example above with your own sentences to see this.
 
-This matters for two practical reasons:
-
-- **Limits.** A chatbot's memory for a conversation, called its *context window*, is measured in tokens, not words.
-- **Cost.** Many AI services charge by the number of tokens you send and receive.
-
+Token counts matter for **cost**: many AI services charge by the number of tokens you send and receive. Anthropic's price list for its Claude models, for example, is set per million tokens.
 ## Why counting letters can be tricky
 
 Take the word `strawberry`. A tokenizer might split it into pieces such as `str`, `aw` and `berry`. The model receives a number for each piece, not the individual letters inside it. So when you ask "how many r's are in strawberry?", it can't simply look. It has to recall the spelling it picked up from reading lots of text.
 
 ## Why long numbers can be tricky too
 
-Numbers get split wherever the joins happened to fall. `12345` might become `123` and `45`, while `12346` splits a little differently. That makes digit-by-digit arithmetic harder. Some newer tokenizers split numbers into single digits for exactly this reason.
+Numbers get split wherever the joins happened to fall. `12345` might become `123` and `45`, while `12346` splits a little differently. That makes digit-by-digit arithmetic harder.
 
 ## Spaces, capitals and emoji
 
@@ -78,6 +74,7 @@ It would work, but texts would become very long lists, which makes models slower
 
 ## Sources & further reading
 
-- Sennrich, Haddow & Birch, [*Neural Machine Translation of Rare Words with Subword Units*](https://arxiv.org/abs/1508.07909) (2016), which brought byte-pair encoding to language models.
+- Sennrich, Haddow & Birch, [*Neural Machine Translation of Rare Words with Subword Units*](https://arxiv.org/abs/1508.07909) (2015, published at ACL 2016), which brought byte-pair encoding to language models.
+- Anthropic, [*Claude pricing*](https://claude.com/pricing), an example of prices set per million tokens.
 - OpenAI's open-source tokenizer, [tiktoken](https://github.com/openai/tiktoken), used in the example above.
 - Next in this series: [LLM attention, demystified](/blog/attention-step-by-step/)

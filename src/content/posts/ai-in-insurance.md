@@ -14,7 +14,7 @@ takeaways:
 
 When you ask for a car insurance quote or make a claim after a dented door, AI is increasingly part of what happens next.
 
-This article is one of three: this one covers **insurance**, and the others cover [banking](/blog/ai-in-banking/) and [cybersecurity](/blog/cybersecurity-in-finance/).
+This article is one of three: this one covers **insurance**, and the others cover [banking](/blog/ai-in-banking/) and [cybersecurity](/blog/cybersecurity-in-finance/). For a short summary of all three, see the [series overview](/blog/ai-in-banking-and-insurance/).
 
 ## Insurance has always run on data
 

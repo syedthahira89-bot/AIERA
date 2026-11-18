@@ -1,78 +1,58 @@
 ---
-title: "AI for the planet: 5 ways AI is protecting nature"
-description: "From listening to rainforests to warning families about floods, here are five hopeful ways AI is helping people care for the planet, and how you can join in."
+title: "AI for the planet: 3 ways AI is protecting nature"
+description: "From smarter farming to flood warnings and cleaner cities, here are three hopeful ways AI is helping people care for the planet, and how you can join in."
 pubDate: 2026-11-03
 topic: "AI for the Planet"
 level: Beginner
 cover: /images/cover-nature.jpg
 coverAlt: "A tree with a small phone listening device sending out sound waves, a leaf and the sun above, and a river with a location marker on its bank."
 takeaways:
-  - "AI helps protect nature by listening to rainforests, counting wildlife and warning about floods."
-  - "Smart farming and energy tools cut waste, though AI itself uses electricity and water."
-  - "You can join in with apps like iNaturalist and Merlin, and by saving energy at home."
+  - "AI helps farms spray only the weeds, warns families about river floods up to seven days ahead, and cuts energy use in cities."
+  - "Running AI uses energy too, so the most helpful projects save more than they use."
+  - "You can join in by saving energy at home and wasting less food."
 ---
+When we picture nature, we don't usually picture computers. But some of the most hopeful uses of AI today are happening in farm fields, along rivers and in our cities. Let's explore three of them, and some simple ways you can help too.
 
-When we picture nature, we don't usually picture computers. But some of the most hopeful uses of AI today are happening in rainforests, oceans and farm fields. Let's explore five of them, and some simple ways you can help too.
-
-## 1. Listening to the rainforest
-
-Forests are full of sound: birds, insects, rain. They can also carry the sound of logging saws in protected areas, often too far away for rangers to hear.
-
-[Rainforest Connection](https://rfcx.org/) hangs recycled smartphones high in rainforest trees. AI listens to the sounds around the clock and alerts local rangers in real time when something needs their attention. The same recordings also help scientists track which species are present, a bit like taking the forest's pulse.
-
-## 2. Counting wildlife, photo by photo
-
-Scientists place hidden "camera traps" that photograph animals as they pass by. One project can collect far more photos than people could ever sort by hand.
-
-[Wildlife Insights](https://www.wildlifeinsights.org/) uses AI to sort camera-trap photos quickly, so researchers can spend their time on what the pictures mean. Other projects, like [Wildbook](https://www.wildme.org/), go even further and recognise *individual* animals, such as whale sharks and zebras, from their unique spots and stripes. That helps scientists follow populations over many years.
-
-## 3. Farming with a lighter touch
+## 1. Farming with a lighter touch
 
 Traditionally, many farms spray a whole field to deal with weeds that only grow in some places. Computer vision changes that.
 
-Systems such as John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) use cameras and AI to spot individual weeds and spray only them, which can greatly reduce the amount of herbicide used.
+Systems such as John Deere's [See & Spray](https://www.deere.com/en/sprayers/see-spray/) use cameras and AI to spot individual weeds and spray only them. Compared with spraying the whole field, John Deere says this significantly reduces herbicide use.
 
-## 4. Warning families before floods
+## 2. Warning families before floods
 
 For families near rivers, a few days' warning can make a huge difference. Google's [Flood Hub](https://sites.research.google/floods/) forecasts river floods up to seven days ahead in more than 150 countries, and shares warnings so families and local services have time to prepare.
 
-## 5. Saving energy in cities and buildings
+## 3. Saving energy in cities and buildings
 
 Some of AI's quietest wins are in everyday energy use.
 
-- Google's [Project Green Light](https://sites.research.google/greenlight/) suggests better timing for traffic lights, so fewer cars sit idling at red lights.
-- DeepMind's AI helped [reduce the energy used to cool Google's data centres](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
-- At home, smart thermostats learn your routine and heat or cool only when needed.
+- Google's [Project Green Light](https://sites.research.google/greenlight/) suggests better timing for traffic lights. Google says early numbers show the potential for up to 30% fewer stops and a 10% reduction in greenhouse gas emissions at intersections.
+- DeepMind's AI helped [reduce the energy used to cool Google's data centres](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/) by up to 40%.
 
 ## AI has a footprint too
 
-It's worth being balanced. Training and running large AI models uses electricity and, for cooling, water. The most helpful projects are the ones where AI saves far more resources than it uses, like the examples above. As users, we can help by choosing AI where it genuinely saves time or energy, rather than for everything.
+It's worth being balanced. Computers that run AI use energy, including for cooling, which is exactly why DeepMind's cooling work matters. The most helpful projects are the ones where AI saves more than it uses. As users, we can help by choosing AI where it genuinely saves time or energy, rather than for everything.
 
 ## How you can join in
 
-You don't need to be a scientist to help nature with AI:
+You don't need to be a scientist to help nature:
 
-1. **Identify what you see.** Apps such as [iNaturalist](https://www.inaturalist.org/) and [Merlin Bird ID](https://merlin.allaboutbirds.org/) identify plants, insects and birds from a photo or a recording.
-2. **Share your sightings.** Your observations can feed real scientific research, helping experts understand where species live and how that's changing.
-3. **Save energy at home.** A smart thermostat, smart plugs or your energy supplier's app can help you spot easy savings.
-4. **Waste less food.** Ask an AI assistant for recipes using what's already in your fridge.
+1. **Save energy at home.** Look for simple ways to track and cut your energy use, such as your energy supplier's app.
+2. **Waste less food.** Ask an AI assistant for recipes using what's already in your fridge.
+3. **Choose AI thoughtfully.** Use it where it genuinely saves time, effort or energy.
 
 ## Common questions
 
 **Is AI good or bad for the environment?**
-Both, depending on how it's used. It uses energy, but it can also help save energy and protect ecosystems. The goal is to make sure the benefits clearly outweigh the costs.
-
-**Do these projects replace rangers and scientists?**
-No. They help people focus their time where it matters most, like responding to an alert or studying a surprising photo.
+It depends on how it's used. Running AI uses energy, but the examples above show it can also help save energy and resources. The goal is to make sure the benefits clearly outweigh the costs.
 
 ## Something to think about
 
-Next time you hear birdsong on a walk, imagine a phone in a rainforest tree listening to the very same kind of sound, helping someone far away keep that forest safe.
+Next time you're stopped at a red light, imagine an AI system working out how to time that light so fewer cars have to wait.
 
 ## Sources & further reading
 
-- [Rainforest Connection](https://rfcx.org/), on its listening devices in rainforest trees.
-- [Wildlife Insights](https://www.wildlifeinsights.org/) and [Wildbook](https://www.wildme.org/), on sorting camera-trap photos and recognising individual animals.
 - John Deere, [*See & Spray*](https://www.deere.com/en-us/products-solutions/sprayers-and-applicators/see-spray).
 - Google, [*Flood Hub*](https://sites.research.google/gr/floodforecasting/) and [*Project Green Light*](https://sites.research.google/gr/greenlight/).
 - Google DeepMind, [*DeepMind AI reduces Google data centre cooling bill by 40%*](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).

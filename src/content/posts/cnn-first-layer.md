@@ -7,28 +7,28 @@ level: Beginner
 cover: /images/cover-image-filters.jpg
 coverAlt: "A grid of 32 small tiles showing edges at different angles, light-to-dark fades and soft colour spots, like the first patterns an image model learns."
 takeaways:
-  - "Image models start by noticing simple edges, fades and colours, much like our own eyes."
-  - "Nobody programs these patterns; the model discovers them because they're the most useful building blocks."
-  - "Layer by layer, edges become textures, then parts, then whole objects."
+  - "Image models build understanding in layers, starting from simple patterns in the pixels."
+  - "Nobody programs these patterns; the model learns them from examples during training."
+  - "Researchers who visualised one model found corners, then textures, then parts like dog faces, then whole objects."
 ---
 
-When you look at a photo of a cat, you just *see* a cat. But what does an AI see first? The answer is surprisingly intuitive, and it looks a lot like how our own eyes and brain begin.
+When you look at a photo of a cat, you just *see* a cat. But what does an AI see first? The answer is surprisingly intuitive.
 
 ## Little windows sliding across a picture
 
-Many image models are built from **convolutional layers**. Each layer has a set of small "windows", called filters, often just 3×3 or 7×7 pixels. Each filter slides across the picture and asks one question everywhere it goes: *"Does this patch look like my pattern?"*
+Many image models are built from **convolutional layers**. Each layer has a set of small "windows", called filters, just a few pixels across. Each filter slides across the picture and asks one question everywhere it goes: *"Does this patch look like my pattern?"*
 
 The answers form a new image, called a feature map, that glows wherever the pattern appears.
 
 ## Here's the delightful part
 
-Because the first filters look directly at pixels, we can display them as tiny pictures of their own. In a trained model, they turn out to be wonderfully neat: edges at different angles, smooth fades from light to dark, and patches of contrasting colour.
+Because the first filters look directly at pixels, we can display them as tiny pictures of their own. When Matthew Zeiler and Rob Fergus visualised a trained image model in 2013, its first-layer filters picked up a mix of very fine and very broad patterns.
 
-Nobody draws these patterns by hand. The model discovers them while learning, because edges and colour changes are the most useful building blocks for recognising almost anything. Scientists have found similar edge-detecting cells in the early visual areas of the brain.
+Nobody draws these patterns by hand. The model learns them from examples while training.
 
 ## Building up, layer by layer
 
-Each new layer looks at the patterns found by the layer before. So edges combine into corners and textures, those combine into parts like eyes, ears or wheels, and those combine into whole objects. It's a bit like learning to read: letters, then words, then sentences.
+Each new layer looks at the patterns found by the layer before. In Zeiler and Fergus's model, the second layer responded to corners and combinations of edges and colours, the third to textures such as mesh patterns, the fourth to parts like dog faces and birds' legs, and the fifth to whole objects such as keyboards and dogs. It's a bit like learning to read: letters, then words, then sentences.
 
 ## Try it yourself
 
@@ -44,5 +44,6 @@ Scale each of the 64 filters to the 0 to 1 range and display them in a grid. You
 ## Sources & further reading
 
 - Krizhevsky, Sutskever & Hinton, [*ImageNet Classification with Deep Convolutional Neural Networks*](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html) (2012), the AlexNet paper, whose first-layer filters are famously edge-like.
+- Zeiler & Fergus, [*Visualizing and Understanding Convolutional Networks*](https://arxiv.org/abs/1311.2901) (2013), which showed what each layer of an image model responds to.
 - Olah, Mordvintsev & Schubert, [*Feature Visualization*](https://distill.pub/2017/feature-visualization/) (Distill, 2017), a beautiful look at what each layer responds to.
 - Related: [diffusion models unpacked](/blog/diffusion-noise-to-image/).

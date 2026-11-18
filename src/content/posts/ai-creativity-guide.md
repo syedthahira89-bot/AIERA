@@ -83,3 +83,5 @@ Pick one small creative project: a birthday poem, a new recipe, a weekend sketch
 - [Diffusion models unpacked: how AI turns noise into images](/blog/diffusion-noise-to-image/)
 - [LLM tokens decoded: how AI models read text](/blog/tokenizers-quirks/)
 - [Everyday AI: a beginner’s guide from Turing to today](/blog/ai-origins-everyday-life/)
+- [AI toolkit: 6 free AI tools for everyday life](/blog/free-ai-tools/), for free tools to start with
+- [AI and your career: how to thrive in the future of work](/blog/ai-and-your-job/)

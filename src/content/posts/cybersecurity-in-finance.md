@@ -14,7 +14,7 @@ takeaways:
 
 Your money is protected by several layers, not just one. Each layer is looked after by different people: you, your bank, the card industry, industry groups and regulators.
 
-This article is one of three: this one covers **cybersecurity**, and the others cover [banking](/blog/ai-in-banking/) and [insurance](/blog/ai-in-insurance/).
+This article is one of three: this one covers **cybersecurity**, and the others cover [banking](/blog/ai-in-banking/) and [insurance](/blog/ai-in-insurance/). For a short summary of all three, see the [series overview](/blog/ai-in-banking-and-insurance/).
 
 ## Why finance takes security so seriously
 

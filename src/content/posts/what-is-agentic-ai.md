@@ -12,7 +12,7 @@ takeaways:
   - "Stay in charge: give clear goals, limit what agents can access and review the result."
 ---
 
-**Agentic AI** is a fast-growing area of AI, and for good reason. It's the moment AI goes from *talking* about your to-do list to actually *ticking things off* it.
+**Agentic AI** is the moment AI goes from *talking* about your to-do list to actually *ticking things off* it.
 
 Picture this: you ask a friend, *"Can you help me plan a picnic for Sunday?"* One friend sends you a lovely list of ideas. The other checks the weather, finds a park nearby, and hands you a ready-made shopping list.
 
@@ -49,10 +49,12 @@ The agent repeats this loop until the goal is done, or until it needs your help.
 
 ## Agents you might already use
 
-- **Research assistants** that search several websites, read them, and write you a summary with links.
-- **Coding assistants** that read a project, make changes across many files, and run tests to check their work.
-- **Browser and computer assistants** that can click, type and fill in forms for you, with your permission.
-- **Customer support agents** that can look up an order and arrange a return, instead of only answering questions.
+Anthropic's guide to building agents describes several kinds already in use:
+
+- **Research assistants** that run several rounds of searching and analysis to gather information.
+- **Coding assistants** that make changes across many files and use automated tests to check their work.
+- **Computer assistants** that can use a computer to carry out tasks, with your permission.
+- **Customer support agents** that can look up order history and handle actions such as issuing refunds, not only answer questions.
 
 ## Staying in charge
 
@@ -88,3 +90,4 @@ Pick one small, low-stakes task, like planning a weekend outing or comparing thr
 - [ReAct: Synergizing reasoning and acting in language models](https://arxiv.org/abs/2210.03629): the 2022 research paper behind the "reason, then act" loop
 - [Reward hacking, decoded: when AI games the goal](/blog/ai-clever-shortcuts/): why clear goals matter
 - [LLM evaluation made simple: how to test a chatbot fairly](/blog/evaluating-llm-outputs/)
+- [AI toolkit: 6 free AI tools for everyday life](/blog/free-ai-tools/), for free AI assistants to try

@@ -1,14 +1,14 @@
 ---
 title: "AI and your career: how to thrive in the future of work"
-description: "AI is changing work, but mostly task by task. Here's a calm way to think about your own role, and five practical steps to grow with the change."
+description: "A calm way to think about how AI could change your own role, task by task, and five practical steps to grow with the change."
 pubDate: 2026-11-03
 topic: "Future of Work"
 level: Beginner
 cover: /images/cover-work.jpg
 coverAlt: "A calendar of tasks where the repetitive ones flow to a small AI helper, freeing up time shown by a clock with an open, highlighted section."
 takeaways:
-  - "AI changes work task by task, not job by job."
-  - "Routine drafting, searching and data work change first; judgement, care and hands-on skills stay human."
+  - "A helpful way to think about AI and your job is task by task, not job by job."
+  - "Look for repetitive tasks AI could help with, and invest in the judgement, care and skills only you bring."
   - "Map your week, try AI on one repetitive task, and keep learning in small steps."
 ---
 
@@ -24,11 +24,11 @@ A teacher plans lessons, explains ideas, marks homework, writes reports, support
 
 So the more useful question is usually not *"Will AI take my job?"* but *"Which of my tasks will AI change, and what will I do with the time?"*
 
-## What history suggests
+## A question worth asking
 
-New tools have reshaped work many times before. Spreadsheets didn't end accounting; they changed what accountants spend their days on, from adding up columns by hand to analysing and advising. Word processors changed office work. Online maps changed travel planning.
+Think about a tool that changed your own work, such as spreadsheets, email or online maps. Did it remove your role, or change the tasks you spend your day on?
 
-These shifts weren't painless for everyone, and some roles did shrink. But the pattern is that **tasks change faster than whole jobs**, and people who learn the new tools often find their work becomes more interesting.
+Your answer is a useful way to think about AI too. Rather than asking whether a whole job will disappear, look at the individual tasks inside it, and which of them a new tool might change.
 
 ## Tasks AI tends to help with
 
@@ -52,18 +52,18 @@ These shifts weren't painless for everyone, and some roles did shrink. But the p
 2. **Experiment with one task.** Pick one repetitive task and try an AI tool on it for a week. Keep notes on what worked and what didn't.
 3. **Learn to ask well.** Clear instructions, good examples and careful checking are the most valuable AI skills, and they work with every tool.
 4. **Invest in your human strengths.** Communication, problem-solving and leadership grow more valuable as routine tasks get easier.
-5. **Keep learning in small steps.** Fifteen minutes a week reading about your field and the tools in it adds up quickly. Many courses are free.
+5. **Keep learning in small steps.** Fifteen minutes a week reading about your field and the tools in it adds up quickly.
 
 ## A note of balance
 
-It's OK to feel uncertain. Change can be unsettling even when it brings good things. Some industries will change faster than others, and it's reasonable to want employers and governments to support people through those changes with training and time to adapt.
+It's OK to feel uncertain. Change can be unsettling even when it brings good things. It's reasonable to want employers and governments to support people through those changes with training and time to adapt.
 
 The most empowering thing you can do is stay curious and get hands-on. People who understand a tool's strengths and limits are best placed to decide how it should be used.
 
 ## Common questions
 
 **Which jobs will change the most?**
-Roles with lots of routine screen-based tasks, like drafting standard documents or processing forms, are likely to change sooner. Roles built on hands-on work, care or complex judgement tend to change more slowly.
+The available sources do not contain enough information to answer this. A practical step is to look at your own tasks: which are repetitive, and which need your judgement, care or relationships?
 
 **Should I change careers?**
 Usually there's no need to rush. Start by bringing AI into your current role. You'll learn far more about where your field is heading by trying the tools than by reading predictions.
@@ -77,6 +77,6 @@ Write down three tasks from your week that you'd happily hand to a helper. Pick 
 
 ## Sources & further reading
 
-- World Economic Forum, [*The Future of Jobs Report 2025*](https://www.weforum.org/publications/the-future-of-jobs-report-2025/), a large survey of employers on how skills and roles are changing.
+- World Economic Forum, [*The Future of Jobs Report 2025*](https://www.weforum.org/publications/the-future-of-jobs-report-2025/), for further reading.
 - [Everyday AI: a beginner’s guide from Turing to today](/blog/ai-origins-everyday-life/)
 - [Creative AI: how to use AI as your creative co-pilot](/blog/ai-creativity-guide/)

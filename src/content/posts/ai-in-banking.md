@@ -14,7 +14,7 @@ takeaways:
 
 Have you ever had a message from your bank asking, *"Was this you?"* moments after an unusual payment? Fighting fraud is one of the areas where financial firms say AI helps most.
 
-I've built my career in banking and insurance, so this topic is close to my heart. This article is one of three: this one covers **banking**, and the others cover [insurance](/blog/ai-in-insurance/) and [cybersecurity](/blog/cybersecurity-in-finance/).
+I've built my career in banking and insurance, so this topic is close to my heart. This article is one of three: this one covers **banking**, and the others cover [insurance](/blog/ai-in-insurance/) and [cybersecurity](/blog/cybersecurity-in-finance/). For a short summary of all three, see the [series overview](/blog/ai-in-banking-and-insurance/).
 
 If you enjoy a peek under the hood, look out for the **"For the technically curious"** sections, each with a small code example. If not, feel free to skip them.
 
@@ -29,7 +29,7 @@ The Bank of England and the Financial Conduct Authority (FCA) surveyed 118 UK fi
 
 The survey also shows that people stay involved. Of all the AI use cases, 55% involve some automated decision-making, but only **2%** make decisions fully on their own.
 
-![An example of how AI spots fraud. A card lists usual payments, such as a $42 grocery shop, an $18 train ticket and a $3.20 coffee, and flags an unusual $1,240 electronics purchase abroad. A phone shows the bank's alert: 'Was this you?', with buttons for 'Yes, it was me' and 'No, block my card'. All amounts are made up.](/images/banking-fraud-alert.jpg)
+![An example of how AI spots fraud. A card lists usual payments, such as a \$42 grocery shop, an \$18 train ticket and a \$3.20 coffee, and flags an unusual \$1,240 electronics purchase abroad. A phone shows the bank's alert: 'Was this you?', with buttons for 'Yes, it was me' and 'No, block my card'. All amounts are made up.](/images/banking-fraud-alert.jpg)
 
 ## Inside a fraud check
 
@@ -37,7 +37,7 @@ The idea behind a fraud check is simple: **learn what "normal" looks like for yo
 
 A simple fraud model might look at **signals** such as the amount, the time, the place, the shop and the device. It combines them into a **risk score**. A low score lets the payment through; a high score might pause it and ask you to confirm.
 
-![A diagram of an example fraud model. Five made-up signals (an amount of $1,240 when usually under $100, a time of 3am, a location 6,500 km away, a first visit to the shop and a recognised phone) feed into an AI model, which gives a risk score of 0.94 out of 1.00 and pauses the payment to ask, 'Was this you?'.](/images/banking-fraud-model.jpg)
+![A diagram of an example fraud model. Five made-up signals (an amount of \$1,240 when usually under \$100, a time of 3am, a location 6,500 km away, a first visit to the shop and a recognised phone) feed into an AI model, which gives a risk score of 0.94 out of 1.00 and pauses the payment to ask, 'Was this you?'.](/images/banking-fraud-model.jpg)
 
 ### For the technically curious: spotting the unusual payment
 

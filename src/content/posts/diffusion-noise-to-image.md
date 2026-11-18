@@ -9,8 +9,8 @@ cover: /images/cover-diffusion.jpg
 coverAlt: "Five squares in a row, changing from random static into a clear picture of a sun over green hills."
 takeaways:
   - "Diffusion models create images by starting from pure static and removing a little noise at each step."
-  - "They learn by guessing which noise was added to millions of real pictures."
-  - "Your prompt steers every step, and latent diffusion makes it fast enough for everyday computers."
+  - "They learn by guessing which noise was added to real pictures."
+  - "Your prompt steers every step, and latent diffusion reduces the computing needed."
 ---
 
 Have you ever watched an old TV showing nothing but static, and imagined a picture hiding inside? Many of today's AI image tools work in a surprisingly similar way. They start with pure noise and gently clean it up, step by step, until a picture appears. They're called **diffusion models**, and the idea behind them is elegant.
@@ -23,7 +23,7 @@ A diffusion model is a sculptor for pictures. Its block of stone is random stati
 
 ## Step one: slowly add noise
 
-During training, the model is shown real pictures with a little random noise sprinkled on top. Over many steps, often 1,000, the noise grows until the picture fades into static. Thanks to some neat maths, we can jump straight to any step $t$:
+During training, the model is shown real pictures with a little random noise sprinkled on top. Over many steps (the original 2020 paper used 1,000), the noise grows until the picture fades into static. Thanks to some neat maths, we can jump straight to any step $t$:
 
 $$
 x_t = \sqrt{\bar\alpha_t}\, x_0 + \sqrt{1 - \bar\alpha_t}\, \epsilon, \qquad \epsilon \sim \mathcal{N}(0, I)
@@ -33,7 +33,7 @@ Here $x_0$ is the original picture, $\epsilon$ is the noise, and $\bar\alpha_t$ 
 
 ## Step two: learn to spot the noise
 
-The model's job sounds simple: look at a noisy picture, and guess exactly which noise was added. It is trained on millions of examples at every noise level, comparing its guess with the real noise each time and adjusting itself with [gradient descent](/blog/gradient-descent-felt/).
+The model's job sounds simple: look at a noisy picture, and guess exactly which noise was added. It is trained on many examples at every noise level, comparing its guess with the real noise each time and adjusting itself with [gradient descent](/blog/gradient-descent-felt/).
 
 Here's the clever part. To guess the noise well, the model has to understand what pictures *usually* look like: that skies tend to be at the top, that faces have two eyes, that grass is often green. All of that knowledge ends up inside the model.
 
@@ -41,28 +41,25 @@ Here's the clever part. To guess the noise well, the model has to understand wha
 
 To create something new, the model starts from pure static. It guesses the noise, removes a little of it, and repeats. With each step, shapes, colours and details gradually appear, just like the five squares on the cover above.
 
-Early steps decide the big picture: where the horizon sits, what's in the middle. Later steps add fine details like textures and edges. Faster methods can produce a picture in just 20 to 50 steps instead of 1,000.
+Early steps decide the big picture: where the horizon sits, what's in the middle. Later steps add fine details like textures and edges. Faster methods can do it in far fewer steps: the 2020 DDIM paper matched the quality of 1,000-step models in 20 to 100 steps.
 
 ## How your words steer the picture
 
 To make a picture that matches your prompt, the model also receives a description of your words at every step, created by a separate model that turns text into numbers.
 
-A technique called **classifier-free guidance** then helps it follow your words closely. At each step, the model makes two guesses: one with your prompt and one without. It then leans further in the direction of the prompted guess. Many image tools let you adjust how strongly it leans, often with a setting called the **guidance scale**. Higher values follow the prompt more literally; lower values give the model more creative freedom.
+A technique called **classifier-free guidance** then helps it follow your words closely. At each step, the model makes two guesses: one with your prompt and one without. It then leans further in the direction of the prompted guess. How strongly it leans can be adjusted. The researchers who introduced the technique describe this as a trade-off between picture quality and variety.
 
 ## Working in a smaller space
 
-Cleaning up a large, detailed picture pixel by pixel takes a lot of computing. So many popular image tools first squeeze pictures into a much smaller, compressed form, do all the noise-removing there, and then expand the result back into a full picture at the end. This approach is called **latent diffusion**, and it's a big reason these tools can run on everyday computers.
+Cleaning up a large, detailed picture pixel by pixel takes a lot of computing. **Latent diffusion**, described in a 2021 paper, first squeezes pictures into a much smaller, compressed form, does all the noise-removing there, and then expands the result back into a full picture at the end. This greatly reduces the computing needed.
 
 ## Common questions
 
 **Does the model copy or stitch together existing images?**
-No. It learns general patterns from many pictures, then builds new ones from static. That said, models can sometimes reproduce very common images too closely, which is one reason training data and image rights are important topics.
+It's designed to learn general patterns and build new pictures from static. But a 2023 study showed that diffusion models can memorise some individual training images and reproduce them, which is one reason training data and image rights are important topics.
 
 **Why does the same prompt give a different picture each time?**
-Because every picture starts from a different patch of random static. Many tools let you set a "seed" number to start from the same static and get the same result again.
-
-**Are diffusion models only for pictures?**
-Not at all. The same idea is used for audio, video and even designing new molecules.
+Because every picture starts from a different patch of random static. The DDIM paper found that starting from the same static gives pictures with very similar overall features.
 
 ## Something to think about
 
@@ -73,4 +70,5 @@ Next time you see an AI-made image, picture it beginning as a screen of static, 
 - Ho, Jain & Abbeel, [*Denoising Diffusion Probabilistic Models*](https://arxiv.org/abs/2006.11239) (2020), the paper that popularised this approach.
 - Song, Meng & Ermon, [*Denoising Diffusion Implicit Models*](https://arxiv.org/abs/2010.02502) (2020), a faster way to generate in fewer steps.
 - Ho & Salimans, [*Classifier-Free Diffusion Guidance*](https://arxiv.org/abs/2207.12598) (2022).
-- Rombach et al., [*High-Resolution Image Synthesis with Latent Diffusion Models*](https://arxiv.org/abs/2112.10752) (2022).
+- Rombach et al., [*High-Resolution Image Synthesis with Latent Diffusion Models*](https://arxiv.org/abs/2112.10752) (2021, published at CVPR 2022).
+- Carlini et al., [*Extracting Training Data from Diffusion Models*](https://arxiv.org/abs/2301.13188) (2023).

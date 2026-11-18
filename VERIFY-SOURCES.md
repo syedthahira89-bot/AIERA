@@ -52,3 +52,25 @@ Rewritten as "6 free AI tools for everyday life", with a new cover. Every featur
 - [x] Be My Eyes: free, with volunteers and Be My AI ([Be My Eyes](https://www.bemyeyes.com/)).
 - [x] Perplexity: answers with the sources listed ([Perplexity](https://www.perplexity.ai/hub/getting-started)). Its free plan couldn't be confirmed, so it's now an "also worth a look" mention with no free claim.
 - **Removed:** Google Lens, Canva and Merlin Bird ID. Their websites redirected elsewhere or blocked automated readers, so their free plans and features couldn't be confirmed.
+## Older articles: fact-check pass (18 November 2026)
+
+Checked by opening each source. Facts that differed were corrected to match the source.
+
+- [x] **Attention:** the original transformer used 8 heads of size 64 with a model dimension of 512, and self-attention work grows with the square of the text length ([Vaswani et al., 2017](https://arxiv.org/abs/1706.03762)).
+- [x] **Diffusion:** the original paper used 1,000 steps ([Ho et al., 2020](https://arxiv.org/abs/2006.11239)). **Corrected:** faster methods matched 1,000-step quality in 20 to 100 steps, not "20 to 50" ([DDIM, 2020](https://arxiv.org/abs/2010.02502)). **Corrected:** the latent diffusion paper is from 2021 (published at CVPR 2022). **Added:** diffusion models can memorise and reproduce some training images ([Carlini et al., 2023](https://arxiv.org/abs/2301.13188)). **Removed:** the unsourced "guidance scale", "seed" and "audio, video and molecules" claims.
+- [x] **Computer vision:** **Rewritten** to match [Zeiler & Fergus (2013)](https://arxiv.org/abs/1311.2901): corners, then textures, then parts like dog faces, then whole objects. **Removed:** "3×3 or 7×7", "most useful building blocks" and the unsourced brain comparison.
+- [x] **Tokens:** byte-pair encoding was brought to language models by [Sennrich et al.](https://arxiv.org/abs/1508.07909) (2015, published at ACL 2016). **Removed:** the unsourced "four characters per token", the "50,000 to 200,000" vocabulary size and the digit-splitting claim. **Added:** pricing per million tokens ([Claude pricing](https://claude.com/pricing)).
+- [x] **LLM evaluation:** AI graders show position, verbosity and self-enhancement biases ([Zheng et al., 2023](https://arxiv.org/abs/2306.05685)). **Corrected:** "style preference" became "self-preference". **Removed:** the unsourced "100 to 300 examples".
+- [x] **Reward hacking:** CoastRunners is described by [DeepMind (2020)](https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/), citing Amodei & Clark (2016). **Corrected:** the agent went in circles hitting the same blocks, so the unsourced "lagoon" and scoring claims were removed. Goodhart's law and reward-model over-optimisation come from [Gao et al. (2022)](https://arxiv.org/abs/2210.10760), and longer answers from RLHF from [Singhal et al. (2023)](https://arxiv.org/abs/2310.03716). **Removed:** the unsourced list of fixes.
+- [x] **AI agents:** the ReAct paper is from 2022 ([arXiv](https://arxiv.org/abs/2210.03629)), and the four kinds of agents now match [Anthropic's guide](https://www.anthropic.com/engineering/building-effective-agents). **Removed:** the "fast-growing area" claim.
+- [x] **Gradient descent:** Adam (2014) ([arXiv](https://arxiv.org/abs/1412.6980)). The rest is worked maths.
+- [x] **Overfitting:** **Corrected:** the unsourced "remove duplicates" claim was replaced with the sourced memorisation study.
+- [x] **Everyday AI and AI for the planet:** DeepMind cut data-centre cooling energy by up to 40% ([DeepMind, 2016](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/)), and Maps arrival times improved by up to 50% ([DeepMind, 2020](https://deepmind.google/discover/blog/traffic-prediction-with-advanced-graph-neural-networks/)).
+
+### Removed (18 November 2026, Thahira chose "remove")
+
+These sites couldn't be added to Claude's workspace, so the facts below were removed instead of being left unchecked:
+
+- **Everyday AI:** ChatGPT's 100 million users; AlphaFold and the 2024 Nobel Prize; Gmail's 99.9% spam figure; the IDx-DR eye-screening approval; ENERGY STAR's 8% thermostat saving; AlexNet starting the deep learning boom; the two "AI winters"; Google Translate camera translation; Rainforest Connection; Wildlife Insights and Wildbook; iNaturalist and Merlin. Unsourced claims that AI uses water were also softened.
+- **AI for the planet:** retitled from "5 ways" to "3 ways". The rainforest listening and wildlife-tracking sections were removed, along with the iNaturalist and Merlin tips and the smart thermostat claim. The farming, flood and energy sections remain, all checked.
+- **AI and your career:** the history examples and job predictions were turned into reflective questions and advice. The World Economic Forum report stays as further reading only.

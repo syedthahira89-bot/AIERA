@@ -5,7 +5,7 @@
 Set by Thahira. "Sources" means the pages, documents and data actually opened and read for the piece.
 
 1. Use only information explicitly supported by the sources.
-2. Do not use outside knowledge, assumptions, or information not present in the sources. If a source cannot be opened (for example, the network is blocked), do not present the fact as sourced: list it for Thahira to verify, or leave it out.
+2. Do not use outside knowledge, assumptions, or information not present in the sources. If a source can't be opened (for example, the network is blocked), leave the fact out, and tell Thahira what was removed.
 3. Include all relevant information needed to cover the topic completely.
 4. Do not omit important conditions, exclusions, limitations, exceptions or caveats.
 5. Focus only on information directly relevant to the topic and its title.

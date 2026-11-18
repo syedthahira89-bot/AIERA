@@ -19,7 +19,7 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 | --- | --- | --- | --- | --- |
 | 1 | Nov 3, 2026 | Creative AI | Creative AI: how to use AI as your creative co-pilot | ✅ Published (`ai-creativity-guide`) |
 | 2 | Nov 3, 2026 | Future of Work | AI and your career: how to thrive in the future of work | ✅ Published (`ai-and-your-job`) |
-| 3 | Nov 3, 2026 | AI for the Planet | AI for the planet: 5 ways AI is protecting nature | ✅ Published (`ai-protecting-nature`) |
+| 3 | Nov 3, 2026 | AI for the Planet | AI for the planet: 3 ways AI is protecting nature | ✅ Published (`ai-protecting-nature`) |
 | ⭐ | Nov 5, 2026 | Agents & GenAI | AI agents unpacked: your new digital assistant | ✅ Published, Thursday feature (`what-is-agentic-ai`) |
 | 4 | Nov 5, 2026 | AI Toolkit | AI toolkit: 6 free AI tools for everyday life | ✅ Published (`free-ai-tools`, formerly `top-7-ai-tools`), feature it on Nov 12 |
 | ⭐ | Nov 12, 2026 | Everyday AI | Banking and insurance security: the AI layers that keep you safe | ✅ Published, Thursday feature (`ai-in-banking-and-insurance`) |

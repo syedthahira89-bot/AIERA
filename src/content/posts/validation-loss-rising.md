@@ -72,7 +72,7 @@ A little is normal, and most models do slightly better on their training example
 There's no single number. It depends on how complex the task and the model are. A useful rule is to watch the validation loss: if it keeps improving as you add data, more data is still helping.
 
 **Do giant models like chatbots overfit?**
-They can memorise rare passages they've seen many times, which is one reason researchers remove duplicates from training data and test models on fresh questions.
+Large models can memorise some of their training data: a 2023 study showed that image-generating diffusion models can reproduce individual training images. That's one reason to test models on fresh questions they haven't seen.
 
 ## Something to think about
 
@@ -82,4 +82,5 @@ Can you remember a time you memorised something without really understanding it?
 
 - Google, [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course), with friendly lessons on generalisation and overfitting.
 - Srivastava et al., [*Dropout: A Simple Way to Prevent Neural Networks from Overfitting*](https://jmlr.org/papers/v15/srivastava14a.html) (2014).
+- Carlini et al., [*Extracting Training Data from Diffusion Models*](https://arxiv.org/abs/2301.13188) (2023).
 - Previous in this series: [gradient descent 101](/blog/gradient-descent-felt/).
