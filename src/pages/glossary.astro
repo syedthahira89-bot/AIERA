@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { GLOSSARY, termId } from '../data/glossary';
+import { GLOSSARY, GLOSSARY_UPDATED, termId } from '../data/glossary';
+import { formatDate } from '../data/site';
 import { getPosts } from '../lib/posts';
 
 const posts = await getPosts();
@@ -19,6 +20,7 @@ const letters = [...groups.keys()];
       <header class="intro">
         <h1>AI glossary</h1>
         <p class="lede">Curious about a word you've seen in an article? Here are {terms.length} AI terms explained in plain language. Each one names the source it’s based on, and most link to an article that explores it further.</p>
+        <p class="checked">Last checked against its sources on {formatDate(new Date(GLOSSARY_UPDATED))}.</p>
       </header>
 
       <div class="tools">
@@ -69,6 +71,7 @@ const letters = [...groups.keys()];
 <style>
   .glossary { max-width: 860px; }
   .lede { max-width: 56ch; }
+  .checked { font-size: var(--step--1); color: var(--muted); margin-top: 6px; }
   .tools { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 64px); z-index: 2; background: var(--bg); padding-block: 16px; margin-top: 24px; border-bottom: 1px solid var(--line); display: grid; gap: 12px; }
   .search { position: relative; max-width: 420px; }
   .search input {

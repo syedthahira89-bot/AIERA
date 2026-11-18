@@ -15,6 +15,9 @@ const lastChanged = new Map(
     return [`/blog/${f.replace(/\.md$/, '')}/`, date];
   }),
 );
+// The glossary has no front matter, so its date comes from GLOSSARY_UPDATED in src/data/glossary.ts
+const glossaryDate = (readFileSync('src/data/glossary.ts', 'utf8').match(/GLOSSARY_UPDATED = '([^']+)'/) || [])[1];
+if (glossaryDate) lastChanged.set('/glossary/', glossaryDate);
 const withLastmod = (item) => {
   const date = lastChanged.get(new URL(item.url).pathname);
   return date ? { ...item, lastmod: new Date(date).toISOString() } : item;

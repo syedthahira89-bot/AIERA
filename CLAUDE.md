@@ -62,4 +62,5 @@ Report the weak spots as a short table, most important first: what's wrong, why 
 - Thahira reviews everything before it goes live. Never commit or push until she says "commit".
 - Batch changes into one publish to save Netlify usage.
 - When an article's content changes, set its `updatedDate` to that day. The site shows "Updated …" and tells Google through the sitemap.
+- When a glossary definition changes, set `GLOSSARY_UPDATED` in `src/data/glossary.ts` to that day.
 - Before handing over content, list any facts that could not be checked against an opened source.

@@ -16,6 +16,9 @@ export interface GlossaryTerm {
   sources: GlossarySource[];
 }
 
+/** The day the glossary was last checked against its sources. Update it whenever a definition changes. */
+export const GLOSSARY_UPDATED = '2026-11-18';
+
 export const GLOSSARY: GlossaryTerm[] = [
   { term: 'Adam', definition: 'A method for training models by gradient descent, introduced in 2014. It adapts its steps using running estimates worked out from the gradients, and suits problems with lots of data or many settings.', article: 'gradient-descent-felt', seeAlso: ['Gradient descent', 'Learning rate'], sources: [{ name: 'Kingma & Ba, Adam (2014)', url: 'https://arxiv.org/abs/1412.6980' }] },
   { term: 'Algorithm', definition: 'The procedure and maths a computer follows. In machine learning, it’s how a system finds patterns in its training data and uses them to make predictions.', seeAlso: ['Machine learning (ML)'], sources: [{ name: 'IBM, What are machine learning algorithms?', url: 'https://www.ibm.com/think/topics/machine-learning-algorithms' }] },
