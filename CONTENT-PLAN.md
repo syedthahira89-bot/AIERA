@@ -38,14 +38,29 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 | 13 | Jan 14, 2027 | Agents & GenAI | Giving an AI agent a task safely: a step-by-step guide | Planned, second article for this topic |
 | 14 | Jan 21, 2027 | AI Toolkit | AI tools for studying and learning | Planned, second article for this topic |
 | 15 | Jan 28, 2027 | Creative AI | Making images with AI responsibly: rights, credit and style | Planned, third article for this topic |
-| 16 | Feb 4, 2027 | AI for the Planet | Topic to be chosen (weather forecasting moved to Nov 19) | Planned, third article for this topic |
+| 16 | Feb 4, 2027 | AI for the Planet | Wildfire, flood and wind: AI forecasts that protect people | Planned, third article for this topic. Start from DeepMind's GenCast page |
 | 17 | Feb 11, 2027 | Future of Work | Learning alongside AI: a gentle guide to new skills at work | Planned, third article for this topic |
+| 18 | Feb 18, 2027 | Agents & GenAI | When AI does the task: how agents work through your to-do list | Planned, third article for this topic |
+| 19 | Feb 25, 2027 | Everyday AI | Can you trust AI search answers? How to check them | Planned, adds variety beyond finance |
+| 20 | Mar 4, 2027 | Future of Work | AI and your first job: what's changing for new graduates | Planned. Use the full Stanford AI Index 2026 report, not news coverage |
+| 21 | Mar 11, 2027 | Creative AI | AI video makers: how text becomes moving pictures | Planned, fourth article for this topic |
 
 ## Topic balance (weak-spot check, 18 November 2026)
 
-Live articles per topic: ML Fundamentals 6, Everyday AI 5, LLMs Decoded 4, and 1 each for Future of Work, Creative AI, AI for the Planet, AI Toolkit and Agents & GenAI. Weeks 7, 8, 12 and 13 to 17 above give every one-article topic at least one more article by early February. Each article follows the content, fact-check and copyright rules in `CLAUDE.md`, using only opened sources.
+Live articles per topic (18 November 2026): ML Fundamentals 6, Everyday AI 5, LLMs Decoded 4, AI for the Planet 2, and 1 each for Future of Work, Creative AI, AI Toolkit and Agents & GenAI. Weeks 7, 8, 12 and 13 to 21 above give every one- or two-article topic at least three articles by March. Each article follows the content, fact-check and copyright rules in `CLAUDE.md`, using only opened sources.
 
 Weeks 1–3 launched together so that every topic has at least one article.
+
+## Idea bank (trending topics, 18 November 2026)
+
+Suggested from 2026 AI trend coverage (agents that carry out tasks, multimodal and smaller models, checking AI answers, AI and entry-level jobs). These are ideas only: every fact must come from a source opened while writing.
+
+- Agents & GenAI: How AI agents use tools: search, apps and your files
+- Everyday AI: Voice-clone and deepfake scams: how to spot them
+- LLMs Decoded: Thinking models: how AI "reasons" before it answers
+- LLMs Decoded: Small language models: AI that runs on your phone
+- AI Toolkit: AI note-takers and meeting assistants: a beginner's guide
+- ML Fundamentals: Build a neural network from scratch, step by step
 
 ## Learning-path steps still to write
 
