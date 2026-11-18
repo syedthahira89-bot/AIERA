@@ -7,6 +7,12 @@
   NODE_VERSION = "22.23.4"
 
 # Browsers and crawlers request these legacy icon paths by default; serve the PNG icons instead of a 404
+# Some crawlers guess /sitemap.xml; send them to the real sitemap
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap-index.xml"
+  status = 301
+
 [[redirects]]
   from = "/favicon.ico"
   to = "/favicon.png"

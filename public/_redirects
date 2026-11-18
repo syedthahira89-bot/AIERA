@@ -1,6 +1,7 @@
 # Redirects for Cloudflare Pages (and any host that reads _redirects).
 # Keep in sync with netlify.toml. Unknown pages show 404.html automatically.
 
+/sitemap.xml  /sitemap-index.xml  301
 /favicon.ico  /favicon.png  200
 /apple-touch-icon-precomposed.png  /apple-touch-icon.png  200
 /topics/llms/*  /topics/llms-decoded/  301
