@@ -23,7 +23,7 @@ To make a post the feature, add `featured: true` to its front matter and remove 
 | ⭐ | Nov 5, 2026 | Agents & GenAI | AI agents unpacked: your new digital assistant | ✅ Published, Thursday feature (`what-is-agentic-ai`) |
 | 4 | Nov 5, 2026 | AI Toolkit | AI toolkit: 6 free AI tools for everyday life | ✅ Published (`free-ai-tools`, formerly `top-7-ai-tools`), feature it on Nov 12 |
 | ⭐ | Nov 12, 2026 | Everyday AI | Banking and insurance security: the AI layers that keep you safe | ✅ Published, Thursday feature (`ai-in-banking-and-insurance`) |
-| ⭐ | Nov 19, 2026 | AI for the Planet | Sun, rain or storm? How neural networks forecast the weather | Written, for Nov 19 (`ai-weather-forecasting`). Replaces the traffic prediction article, which was removed |
+| ⭐ | Nov 19, 2026 | AI for the Planet | Sun, wind or storm? How neural networks forecast the weather | Written, for Nov 19 (`ai-weather-forecasting`). Replaces the traffic prediction article, which was removed |
 | ✚ | Nov 16, 2026 | Everyday AI | AI in banking: how fraud checks and fair lending work | ✅ Published (`ai-in-banking`), part 1 of 3 |
 | ✚ | Nov 16, 2026 | Everyday AI | AI in insurance: pricing, claims and fair treatment | ✅ Published (`ai-in-insurance`), part 2 of 3 |
 | ✚ | Nov 16, 2026 | Everyday AI | Cybersecurity in finance: the layers that keep your money safe | ✅ Published (`cybersecurity-in-finance`), part 3 of 3. The banking and insurance article became an overview of the series |

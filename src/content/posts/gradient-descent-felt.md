@@ -100,4 +100,4 @@ Change `lr` to 0.05, then 0.9, then 1.1. Can you predict what will happen before
 - Google, [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course), a free, beginner-friendly course with lessons on loss and gradient descent.
 - Kingma & Ba, [*Adam: A Method for Stochastic Optimization*](https://arxiv.org/abs/1412.6980) (2014), the paper behind the Adam optimizer.
 - Next in this series: [overfitting in plain English](/blog/validation-loss-rising/)
-- [Sun, rain or storm? How neural networks forecast the weather](/blog/ai-weather-forecasting/), with a tiny forecasting network that learns by gradient descent.
+- [Sun, wind or storm? How neural networks forecast the weather](/blog/ai-weather-forecasting/), with a tiny forecasting network that learns by gradient descent.

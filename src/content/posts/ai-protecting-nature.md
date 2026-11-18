@@ -60,4 +60,4 @@ Next time you're stopped at a red light, imagine an AI system working out how to
 - Google DeepMind, [*DeepMind AI reduces Google data centre cooling bill by 40%*](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/).
 - [Everyday AI: a beginner’s guide from Turing to today](/blog/ai-origins-everyday-life/), which covers more everyday examples.
 - [Computer vision basics: what AI notices first in an image](/blog/cnn-first-layer/), the idea behind weed-spotting cameras.
-- [Sun, rain or storm? How neural networks forecast the weather](/blog/ai-weather-forecasting/), on how AI learns to forecast the weather and warn of extreme events.
+- [Sun, wind or storm? How neural networks forecast the weather](/blog/ai-weather-forecasting/), on how AI learns to forecast the weather and warn of extreme events.
