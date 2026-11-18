@@ -54,14 +54,10 @@ Every set of training examples contains a little randomness: unusual cases, typo
 
 ## Three friendly ways to help
 
-1. **Stop at the right moment.** Keep the version of the model from the round when validation loss was lowest. Most tools call this *early stopping* and can do it for you.
-2. **Encourage simpler answers.** Techniques like *weight decay* (gently keeping the model's settings small) and *dropout* (briefly switching off random parts of the network during training) nudge the model toward general patterns rather than tiny details.
-3. **Show it more variety.** More examples help most. You can also create variety by flipping or cropping images, or rephrasing sentences. This is called *data augmentation*.
+1. **Stop at the right moment.** Pause training before the model starts fitting its training examples too closely. This is called *early stopping*, and many machine learning packages can do it for you. Stop too early, though, and the model may underfit instead.
+2. **Encourage simpler answers.** Techniques like *weight decay* (keeping the network's weights small) and *dropout* (randomly leaving out parts of the network during training) are forms of regularisation: ways to reduce overfitting.
+3. **Show it more variety.** Training with more data can help the model find the real pattern. You can also create extra examples from the ones you already have. This is called *data augmentation*.
 
-```python
-# In PyTorch, weight decay is a single setting on the optimizer
-optimizer = torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=0.01)
-```
 
 > **A helpful check first:** sometimes validation loss rises because the new examples are simply different, for example collected later or from different people. It's worth checking that before changing the model. Our guide to [model drift](/blog/monitoring-drift/) explores this.
 
@@ -82,7 +78,9 @@ Can you remember a time you memorised something without really understanding it?
 
 ## Sources & further reading
 
-- Google, [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course), with friendly lessons on generalisation and overfitting.
-- Srivastava et al., [*Dropout: A Simple Way to Prevent Neural Networks from Overfitting*](https://jmlr.org/papers/v15/srivastava14a.html) (2014).
+- IBM, [*What is overfitting?*](https://www.ibm.com/think/topics/overfitting), on overfitting, underfitting, early stopping and training with more data.
+- IBM, [*What is regularization?*](https://www.ibm.com/think/topics/regularization), on dropout, weight decay and data augmentation.
+- Google, [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course), for further reading.
+- Srivastava et al., [*Dropout: A Simple Way to Prevent Neural Networks from Overfitting*](https://jmlr.org/papers/v15/srivastava14a.html) (2014), the original dropout paper, for further reading.
 - Carlini et al., [*Extracting Training Data from Diffusion Models*](https://arxiv.org/abs/2301.13188) (2023).
 - Previous in this series: [gradient descent 101](/blog/gradient-descent-felt/).

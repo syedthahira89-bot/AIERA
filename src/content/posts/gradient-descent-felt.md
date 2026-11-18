@@ -10,7 +10,7 @@ coverAlt: "A curved valley with a trail of dots stepping down one side to a glow
 takeaways:
   - "Gradient descent is how AI improves: measure the error, take a small step downhill, repeat."
   - "The learning rate sets the step size; too small is slow and too large overshoots."
-  - "The same idea scales to billions of settings with mini-batches and smart optimisers like Adam."
+  - "The same idea works for models with billions of settings, helped by smaller batches and optimisers like Adam."
 ---
 
 Have you ever wondered how an AI model actually *gets better*? It isn't magic. Behind almost every model, from photo filters to chatbots, is one beautifully simple idea called **gradient descent**. Let's explore it together, no framework required.
@@ -67,10 +67,10 @@ You can feel each of these for yourself in the [interactive demo on the home pag
 
 Real models don't have one setting. They have millions or even billions, called **parameters**. The good news is that the idea stays exactly the same: the gradient becomes a long list of slopes, one per setting, and every setting takes its own small step downhill at the same time.
 
-Two practical tricks make this work at scale:
+Two practical ideas help:
 
-- **Mini-batches.** Instead of checking every training example before each step, the model looks at a small random handful, say 32 or 256 examples. That's much faster, and the little bit of randomness even helps. This is called **stochastic gradient descent**.
-- **Smart step sizes.** One step size can be just right in one direction and far too big in another. Helpers such as the **Adam** optimizer adjust the step size for each setting separately, a bit like a hiker who takes careful steps on steep ground and longer strides on flat paths.
+- **Smaller batches.** Instead of checking every training example before each step, the model can update itself after one example at a time (**stochastic gradient descent**) or after a small group of examples (**mini-batch gradient descent**).
+- **Smarter steps.** Helpers such as the **Adam** optimizer, introduced in 2014, adapt their steps using running estimates worked out from the gradients. Its authors say it suits problems with lots of data or many settings.
 
 ## Common questions
 
@@ -78,7 +78,7 @@ Two practical tricks make this work at scale:
 Not always. Real valleys can have many dips, so the model may settle in a low spot that isn't the very lowest.
 
 **Who chooses the learning rate?**
-People do, usually by trying a few values and seeing which trains best. Many projects also lower the learning rate gradually during training, taking big strides early and careful steps near the end.
+People do, usually by trying a few values and seeing which trains best. Learning rate schedules can also change it during training.
 
 **Is this how the human brain learns?**
 Probably not in exactly this way, but the spirit of "notice the error, adjust a little, repeat" is something we all do when practising a skill.
@@ -97,7 +97,9 @@ Change `lr` to 0.05, then 0.9, then 1.1. Can you predict what will happen before
 
 ## Sources & further reading
 
-- Google, [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course), a free, beginner-friendly course with lessons on loss and gradient descent.
+- IBM, [*What is gradient descent?*](https://www.ibm.com/think/topics/gradient-descent), on how gradient descent works, its types and local minima.
+- IBM, [*What is learning rate?*](https://www.ibm.com/think/topics/learning-rate), on choosing the learning rate and learning rate schedules.
+- Google, [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course), a free course, for further reading.
 - Kingma & Ba, [*Adam: A Method for Stochastic Optimization*](https://arxiv.org/abs/1412.6980) (2014), the paper behind the Adam optimizer.
 - Next in this series: [overfitting in plain English](/blog/validation-loss-rising/)
 - [Sun, wind or storm? How neural networks forecast the weather](/blog/ai-weather-forecasting/), with a tiny forecasting network that learns by gradient descent.

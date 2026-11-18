@@ -80,7 +80,7 @@ The free Be My Eyes app connects blind and low-vision people with real-time visu
 
 ## Also worth a look
 
-**[Perplexity](https://www.perplexity.ai)** gives answers with a list of the sources it used, so you can check where information came from. Check its website for its current plans.
+**[Perplexity](https://www.perplexity.ai)** searches the web and gives answers with numbered citations that link to the original sources, so you can check where information came from. Check its website for its current plans.
 
 ## How to choose
 
@@ -129,6 +129,6 @@ Each tool's own page, opened on 15 November 2026:
 - Anthropic, [*Claude pricing*](https://claude.com/pricing)
 - Google, [*Learn about Gemini Notebook*](https://support.google.com/gemininotebook/answer/16164461), [*Gemini Notebook plans*](https://support.google.com/gemininotebook/answer/16213268) and [*Audio Overview*](https://support.google.com/gemininotebook/answer/16212820)
 - [*Be My Eyes*](https://www.bemyeyes.com/)
-- Perplexity, [*Getting started*](https://www.perplexity.ai/hub/getting-started)
+- Perplexity, [*How does Perplexity work?*](https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work) and [*Getting started*](https://www.perplexity.ai/hub/getting-started)
 - [AI agents unpacked: your new digital assistant](/blog/what-is-agentic-ai/)
 - [LLM evaluation made simple: how to test a chatbot fairly](/blog/evaluating-llm-outputs/)
