@@ -1,56 +1,65 @@
 ---
 title: "LLM evaluation made simple: how to test a chatbot fairly"
-description: "Measuring a chatbot's answers is trickier than it looks. Here are simple, fair ways to test AI and trust the results."
+description: "How do you test a chatbot fairly when there's no single right answer? Simple ways to check AI answers, and the habits to watch when AI grades AI."
 pubDate: 2026-08-27
-updatedDate: 2026-11-18
+updatedDate: 2026-11-19
 topic: "LLMs Decoded"
 level: Advanced
 cover: /images/cover-testing-chatbots.jpg
 coverAlt: "A chat message bubble with an arrow pointing to a checklist with ticks for Accurate, Clear, Helpful and Kind."
 takeaways:
-  - "Public benchmarks are useful, but they can't show how well a model does on your task."
-  - "Build a small, private test set of real examples with clear good answers."
-  - "If AI grades AI, watch for its preferences for answer order, longer answers and its own answers."
+  - "Public tests are useful, but they can't tell you how well an AI does on your own task."
+  - "Make your own small test: real questions, written-down good answers, kept private."
+  - "AI graders can be swayed by answer order, longer answers and their own writing, so check them against people."
 ---
 
-How would you grade an essay, a poem or a helpful explanation? There's rarely one right answer. That's exactly the challenge when we test chatbots, and it's why careful, fair testing is such an interesting part of AI.
+How would you grade a poem, or a helpful explanation? There's rarely one right answer. That's the challenge when we test chatbots.
 
-## Why well-known tests aren't the whole story
+## The big idea in one sentence
 
-Popular AI tests, often called **benchmarks**, let everyone compare models on the same questions. But chatbots can do so many different things that fixed tests struggle to capture what people actually prefer in an answer. A 2023 study by Lianmin Zheng and colleagues made exactly this point.
+**To trust a chatbot, test it on questions that matter to you, and be careful when you let another AI do the grading.**
 
-Benchmarks are still useful for broad comparisons, and the same study found that different kinds of tests complement each other. They just can't tell you how well a model will do on *your* particular task.
+## Why public tests aren't the whole story
 
-## Build your own small test set
+Public AI tests, called **benchmarks**, let everyone compare models on the same questions, a bit like a standard exam. But chatbots do so many different things that fixed tests struggle to capture what people actually prefer. A 2023 study by Lianmin Zheng and colleagues made this point.
 
-A great habit is to build your own set of questions:
+Benchmarks are still useful, and that study found different kinds of tests work well together. They just can't tell you how well an AI will do on *your* task.
 
-1. Gather **real examples** from the task you care about, including the tricky and unusual ones.
+## Make your own small test
+
+A good habit is to make your own test, like writing your own quiz:
+
+1. **Collect real questions** from what you actually use AI for, including tricky ones.
 2. **Write down what a good answer looks like** for each.
-3. **Keep the set private.** Don't use it in prompts or training, so it stays a fair test.
+3. **Keep it private.** Don't share it or use it to train the AI, so it stays a fair test.
 
-## When AI helps grade AI
+## When AI grades AI
 
-Using one model to grade another saves a lot of time, but a 2023 study of AI graders found a few habits worth knowing about:
+Grading thousands of answers by hand takes ages, so people can ask one AI to grade another. The 2023 study found AI graders have some habits, a bit like a teacher with favourites:
 
-- **Order preference:** they may favour an answer because of its position. The researchers' fix was to swap the order and grade again.
-- **Length preference:** they may favour longer answers. Ask them to judge specific qualities, like accuracy or clarity, instead of overall impressions.
-- **Self-preference:** they may favour answers written by themselves.
-- **Limited reasoning:** they can struggle to grade maths and reasoning questions correctly.
+| Habit | What happens | What helps |
+| --- | --- | --- |
+| **Order** | It may prefer an answer because of where it appears | Swap the order and grade again |
+| **Length** | It may prefer longer answers | Ask it to judge specific things, like accuracy |
+| **Self-preference** | It may prefer answers it wrote itself | Keep this in mind |
+| **Maths and reasoning** | It can struggle to grade them correctly | Check those grades carefully |
 
 ![Diagram of four habits of AI graders and what to do: order (may favour an answer because of its position; swap the order and grade again), length (may favour longer answers; ask about specific qualities, like accuracy), self-preference (may favour its own answers) and reasoning (can struggle to grade maths and reasoning). A ring chart shows that GPT-4, as a grader, agreed with human judges more than 80% of the time, about as often as people agree with each other.](/images/ai-grader-habits.jpg)
 
-## How good are AI graders?
+## So, are AI graders any good?
 
-To find out, the researchers compared AI graders with people, using two collections: **MT-Bench**, a set of 80 multi-turn questions, and **Chatbot Arena**, a website where people chat with two anonymous chatbots at once and rate their answers.
+The researchers compared AI graders with real people using two collections:
 
-The result was encouraging. A strong AI grader, GPT-4, agreed with human judges more than 80% of the time, about as often as people agree with each other. That makes AI grading a practical, much cheaper way to approximate human opinions, as long as you keep its habits in mind.
+- **MT-Bench:** 80 challenging questions, each a short back-and-forth conversation.
+- **Chatbot Arena:** a website where people chat with two anonymous chatbots at once and pick the better answer.
 
-Before relying on an AI grader for your own task, compare its scores with a sample of human ratings, and check again whenever you change its instructions.
+The result: a strong AI grader, GPT-4, agreed with people **more than 80%** of the time, about as often as people agree with each other. So AI grading can be a useful, much cheaper stand-in for human opinions, as long as you remember its habits.
+
+Before trusting an AI grader for your own task, check its grades against some people's ratings first.
 
 ## Something to think about
 
-If you were testing a chatbot to help with your own work or studies, what are five questions you'd want it to answer well? Writing them down is the first step to a great test set.
+If you were testing a chatbot to help with your schoolwork, what five questions would you want it to answer well? Writing them down is the first step to a good test.
 
 ## Sources & further reading
 

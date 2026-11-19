@@ -1,57 +1,95 @@
 ---
 title: "LLM tokens decoded: how AI models read text"
-description: "Chatbots don't read letters the way we do. Discover how they break text into pieces, and why that explains some of their surprising habits."
+description: "Chatbots don't read letters like we do. Here's how they chop text into pieces called tokens, explained with building blocks and a tiny example you can run."
 pubDate: 2026-09-24
-updatedDate: 2026-11-18
+updatedDate: 2026-11-19
 topic: "LLMs Decoded"
 level: Intermediate
 cover: /images/cover-tokens.jpg
 coverAlt: "The word \"strawberry\" with an arrow pointing to three coloured pieces, \"str\", \"aw\" and \"berry\", each with an example token number underneath."
 takeaways:
-  - "Chatbots don't read letters; they read tokens, small pieces of words turned into numbers."
-  - "Token counts, not word counts, are what many AI services use to set their prices."
-  - "Tokens explain quirks like miscounting letters in \"strawberry\" and stumbling on long numbers."
+  - "Chatbots don't read letters. They read tokens: small pieces of words, each turned into a number."
+  - "Common pieces get joined into bigger tokens, so even brand-new words can be built from familiar parts."
+  - "Tokens explain some odd AI habits, like trouble counting the letters in a word."
 ---
 
-Here's a curious fact: chatbots don't actually read letters. Before any text reaches the model, it is chopped into pieces called **tokens**. Once you know how that works, some of AI's surprising habits, and even how chatbots are priced, start to make perfect sense.
+Here's something surprising: chatbots don't actually read letters. Before your question reaches the AI, it gets chopped into pieces called **tokens**. Once you know how that works, some of AI's strange habits start to make sense.
 
-## An everyday way to picture it
+## The big idea in one sentence
 
-Think of a box of building blocks. You could build everything from tiny single bricks, but it would take ages. So the box also includes ready-made pieces: a door, a window, a wheel. Builders reach for the big pieces when they fit, and use small bricks for everything else.
+**A chatbot breaks text into small pieces called tokens, turns each piece into a number, and works with those numbers instead of letters.**
 
-Tokens work the same way. Common words like "the" or "because" are single ready-made pieces. Rarer words are built from a few smaller, familiar pieces.
+## Think of building blocks
 
-## Building a vocabulary, piece by piece
+Imagine a box of LEGO. You could build everything from tiny single bricks, but it would take ages. So the box also has ready-made pieces, like a door or a wheel. You use the big pieces when they fit, and small bricks for everything else.
 
-One well-known method is called **byte-pair encoding**, brought to language models in a 2015 paper by Rico Sennrich and colleagues. It works like this:
+Tokens work the same way. Common words can be one ready-made piece. Rarer words are built from a few smaller pieces.
 
-1. Start with the smallest pieces of text: individual characters.
-2. Look through a huge collection of writing and find the pair of pieces that appears side by side most often.
-3. Join that pair into a new, bigger piece, and add it to the vocabulary.
-4. Repeat, again and again, until the vocabulary reaches a chosen size.
+## How the pieces are chosen
 
-Each token gets an ID number, and those numbers are what the model actually receives. Before a chatbot "reads" your question, it has already become a list of numbers.
+One popular method is called **byte-pair encoding**. A 2015 paper by Rico Sennrich and colleagues used it so translation AI could handle rare words it had never seen. Here's how it builds its set of pieces:
+
+1. Start with single letters.
+2. Look through lots of text and find the **pair of pieces that appears side by side most often**.
+3. Join that pair into one new, bigger piece.
+4. Repeat, until there are as many pieces as you want.
+
+Then each piece gets an ID number. Those numbers are what the AI actually works with.
 
 ![Diagram of byte-pair encoding in four steps: start with single characters; find the pair that appears side by side most often; join that pair into a new, bigger piece; repeat until the vocabulary reaches a chosen size. Below, an example of how a tokenizer might split 'strawberry' into 'str', 'aw' and 'berry'. The model gets a number for each piece, not the letters.](/images/tokens-bpe.jpg)
 
-## Why token counts matter
+### Try it: a tiny token-maker you can run
 
-The number of tokens isn't the same as the number of words or letters, and the same sentence can split differently in different languages and models. Try the example above with your own sentences to see this.
+This made-up example uses five short words and how often each appears. It runs the joining steps three times.
 
-Token counts matter for **cost**: many AI services charge by the number of tokens you send and receive. Anthropic's price list for its Claude models, for example, is set per million tokens.
-## Why counting letters can be tricky
+```python
+from collections import Counter
 
-Take the word `strawberry`. A tokenizer might split it into pieces such as `str`, `aw` and `berry`. The model receives a number for each piece, not the individual letters inside it. So when you ask "how many r's are in strawberry?", it can't simply look. It has to recall the spelling it picked up from reading lots of text.
+# A tiny made-up "collection of writing": each word and how often it appears
+words = {"hug": 10, "hugs": 5, "pug": 4, "pun": 3, "bun": 6}
+pieces = {w: list(w) for w in words}          # start with single letters
 
-## Why long numbers can be tricky too
+for step in range(1, 4):
+    pairs = Counter()
+    for w, count in words.items():
+        p = pieces[w]
+        for a, b in zip(p, p[1:]):
+            pairs[a + b] += count             # count side-by-side pairs
+    best = pairs.most_common(1)[0][0]         # the most common pair
+    for w in words:                           # join that pair everywhere
+        p, out, i = pieces[w], [], 0
+        while i < len(p):
+            if i + 1 < len(p) and p[i] + p[i + 1] == best:
+                out.append(best); i += 2
+            else:
+                out.append(p[i]); i += 1
+        pieces[w] = out
+    print(f"Step {step}: join '{best}' ->", "  ".join("|".join(pieces[w]) for w in words))
+```
 
-Numbers get split wherever the joins happened to fall. `12345` might become `123` and `45`, while `12346` splits a little differently. That makes digit-by-digit arithmetic harder.
+Output:
 
-## Spaces, capitals and emoji
+```text
+Step 1: join 'ug' -> h|ug  h|ug|s  p|ug  p|u|n  b|u|n
+Step 2: join 'hug' -> hug  hug|s  p|ug  p|u|n  b|u|n
+Step 3: join 'un' -> hug  hug|s  p|ug  p|un  b|un
+```
 
-Tokenizers are wonderfully particular. "Hello", " hello" with a space in front, and "HELLO" can all be different tokens. Emoji and unusual symbols are often split into several byte-sized pieces. None of this is a problem for the model, which has seen it all many times, but it's why the same idea can use a different number of tokens depending on how it's written.
+**What the output means:** each line shows the five words, with a "|" between their pieces. In step 1, "u" and "g" sit side by side most often (in hug, hugs and pug), so they become one piece, "ug". In step 2, "h" + "ug" becomes "hug", the most common word. In step 3, "u" + "n" becomes "un". Notice that "hugs" is now built from two familiar pieces, "hug" + "s". That's how a tokenizer can handle words it has never seen.
 
-## Try it yourself
+## Why AI finds some easy things hard
+
+**Counting letters.** A tokenizer might split "strawberry" into pieces like "str", "aw" and "berry". The AI gets a number for each piece, not the letters inside. So when you ask "How many r's are in strawberry?", it can't just look. It has to remember the spelling from what it has read.
+
+**Capitals and spaces.** "Hello" and " hello" (with a space in front) can be different tokens. So the same idea can use a different number of tokens depending on how it's written.
+
+## Why tokens matter for cost
+
+Many AI services charge by the number of tokens you send and receive. Anthropic's price list for its Claude models, for example, is set per million tokens. That's why a long question or answer can cost more than a short one.
+
+## Try the real thing at home
+
+OpenAI's **tiktoken** is a free tool that shows how text is split for OpenAI's models. On your own computer, run `pip install tiktoken`, then:
 
 ```python
 import tiktoken
@@ -61,24 +99,19 @@ for word in ["strawberry", "12345", "unbelievably", "Hello", " hello"]:
     print(repr(word), [enc.decode([i]) for i in ids])
 ```
 
-**What the output means:** each line shows a word, then the list of pieces the tokenizer splits it into. A word that comes back as a single piece is in the vocabulary whole; a longer list means it was built from smaller, familiar pieces. Compare "Hello" and " hello" to see whether the space and the capital letter change the result.
+**What the output means:** each line shows a word, then the pieces it's split into. A word that stays in one piece is in the vocabulary whole. A longer list means it was built from smaller pieces. Compare "Hello" and " hello" to see if the space and capital change anything. (The tool downloads its word list when it first runs, which isn't possible in our workspace, so we can't show the output here.)
 
-Try your own name, or a word from another language. How many pieces does it become?
-
-## Common questions
-
-**Do all chatbots use the same tokens?**
-No. Each model family builds its own vocabulary, so the same sentence can split differently and use a different number of tokens.
+## Quick questions
 
 **Why not just use whole words?**
-There are far too many words, names and spellings, and new ones appear every day. Pieces let a model handle any text, even words it has never seen, by building them from familiar parts.
+There are too many words, names and spellings, and new ones appear all the time. Byte-pair encoding was brought in to handle rare and unknown words by building them from smaller pieces.
 
-**Why not use single letters?**
-It would work, but texts would become very long lists, which makes models slower and gives them less room to remember a conversation.
+**Do I need to understand tokens to use AI?**
+No, but it helps explain why AI sometimes stumbles on spelling, and why longer messages can cost more.
 
 ## Sources & further reading
 
 - Sennrich, Haddow & Birch, [*Neural Machine Translation of Rare Words with Subword Units*](https://arxiv.org/abs/1508.07909) (2015, published at ACL 2016), which brought byte-pair encoding to language models.
 - Anthropic, [*Claude pricing*](https://claude.com/pricing), an example of prices set per million tokens.
-- OpenAI's open-source tokenizer, [tiktoken](https://github.com/openai/tiktoken), used in the example above.
+- [tiktoken on PyPI](https://pypi.org/project/tiktoken/), a fast byte-pair tokeniser for OpenAI's models, used in the "try at home" example.
 - Next in this series: [LLM attention, demystified](/blog/attention-step-by-step/)

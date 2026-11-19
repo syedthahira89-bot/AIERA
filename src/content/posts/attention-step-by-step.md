@@ -1,63 +1,75 @@
 ---
 title: "LLM attention, demystified: how models know what “it” means"
-description: "Follow one little word through a transformer and discover how AI decides which other words matter most."
+description: "How AI works out what a word like “it” means, explained with a party, a library and one worked example you can check yourself."
 pubDate: 2026-10-22
-updatedDate: 2026-11-18
+updatedDate: 2026-11-19
 topic: "LLMs Decoded"
 level: Intermediate
 cover: /images/attention-cover.jpg
 coverAlt: "Diagram of the sentence \"The robot picked up the ball because it was light\", with curves from the word \"it\" to every other word. The thickest curve goes to \"ball\"."
 takeaways:
-  - "Attention lets every word in a sentence decide which other words matter most to its meaning."
-  - "Each word has a query, a key and a value; softmax turns their scores into shares of attention."
-  - "Many attention heads work in parallel, which is what made today's large language models possible."
+  - "Attention lets each word in a sentence decide which other words matter most to its meaning."
+  - "Each word asks a question, compares it with every other word, and listens most to the best matches."
+  - "Running many attention steps side by side is what made today's large language models possible."
 ---
 
-Read this sentence: *"The robot picked up the ball because it was light."* What does "it" mean? You probably knew straight away: the ball. But how would a computer work that out?
+Read this sentence: *"The robot picked up the ball because it was light."* What does "it" mean? You knew straight away: the ball. But how could a computer work that out?
 
-That small puzzle is exactly what **attention** solves. It is the idea at the heart of every modern chatbot, and once you see how it works, a lot of AI suddenly makes sense. Let's follow that one little word, "it", through the process together.
+That puzzle is what **attention** solves. It's the idea behind the transformer, the design that led to today's large language models, like the ones behind ChatGPT.
 
-## An everyday way to picture it
+## The big idea in one sentence
 
-Imagine you're at a busy party and someone says, "She just got back from Japan." Without thinking, you glance around the room to work out who "she" is. Your attention lands on the friend who mentioned a trip last week, and the rest of the room fades into the background.
+**Each word looks at all the other words in the sentence and decides how much each one matters to its meaning.**
 
-A transformer does something very similar for every word in a sentence. Each word "glances around" at all the others and decides how much each one matters to its meaning right now.
+## Think of a busy party
+
+Someone says, *"She just got back from Japan."* Without thinking, you glance around the room to work out who "she" is. Your attention lands on the friend who mentioned a trip, and everyone else fades into the background.
+
+Attention lets each word do the same: glance at every other word and focus on the ones that matter.
 
 ## Every word gets three name tags
 
-Inside a transformer, each word (more precisely, each *token*) starts as a list of numbers called an embedding, $x_i$. The model then creates three new versions of it by multiplying with three learned tables of numbers:
+Inside the AI, each word gets three versions of itself:
 
-- a **query** $q_i = x_i W_Q$: *"What am I looking for?"*
-- a **key** $k_i = x_i W_K$: *"What do I have to offer?"*
-- a **value** $v_i = x_i W_V$: *"Here's what I'll share if you pick me."*
+| Name tag | The question it answers | In a library… |
+| --- | --- | --- |
+| **Query** | "What am I looking for?" | What you type into the search box |
+| **Key** | "What do I have to offer?" | The label on each book |
+| **Value** | "Here's what I'll share if you pick me." | The book itself |
 
-A friendly way to picture it is a library. The query is what you type into the search box, the keys are the labels on every book, and the values are the books themselves.
+"It" holds up its query and compares it with every other word's key. A good match gets a high score.
 
-## Asking every other word a question
+## A worked example you can check
 
-Now "it" holds up its query and compares it with every other word's key. The comparison is a simple dot product: multiply matching numbers together and add them up. A high score means "you look relevant to me".
+Let's keep it tiny. Imagine "it" compares itself with just three words and gets these made-up scores:
 
-Do this for every pair of words and you get a grid of scores. Written for all words at once, the whole idea fits in one tidy formula:
+| Word | Score | Share of attention |
+| --- | --- | --- |
+| robot | 1.0 | 11% |
+| ball | 3.0 | 82% |
+| light | 0.5 | 7% |
 
-$$
-\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right) V
-$$
+A step called **softmax** turns the scores into shares that add up to 100%. So "it" pays about 82% of its attention to "ball". Its new meaning becomes mostly "ball", with small touches of "robot" and "light".
 
-The **softmax** turns each row of scores into percentages that add up to 100%. Then each word gathers information from the others in proportion to those percentages.
+![Worked example from this article. The sentence 'The robot picked up the ball because it was light.' Each word gets three name tags: a query (what am I looking for?), a key (what do I have to offer?) and a value (what I'll share if picked). After softmax, the word 'it' gives 11% of its attention to 'robot' (score 1.0), 82% to 'ball' (score 3.0) and 7% to 'light' (score 0.5), so 'it' takes its new meaning mostly from 'ball'.](/images/attention-example.jpg)
 
-## Let's try it with some example numbers
+> **For the maths fans:** softmax raises *e* (about 2.718) to the power of each score (2.72, 20.09 and 1.65), then divides each by their total (24.45). The original paper also divides the scores by the square root of the vector size first, so they don't grow too big.
 
-To keep things small, imagine "it" only compares itself with three words, and gets these scores:
+## How does it know the word order?
 
-| Word | Score | e^score | Share of attention |
-| --- | --- | --- | --- |
-| robot | 1.0 | 2.72 | 11% |
-| ball | 3.0 | 20.09 | 82% |
-| light | 0.5 | 1.65 | 7% |
+On its own, attention would treat "dog bites man" and "man bites dog" the same. So the original transformer adds a little extra information to each word about its **position**, using wave patterns called sines and cosines. Now every word knows what it is *and* where it sits.
 
-Softmax raises *e* (about 2.718) to the power of each score, then divides each result by the total (24.45). So "ball" gets about 82% of the attention. The new meaning of "it" becomes mostly the value of "ball", with small touches of "robot" and "light". That's exactly the story in the cover picture above.
+AI that writes one word at a time also uses a **mask**, so each word can only look at the words before it. That way it never peeks at words it hasn't written yet.
 
-Curious to try it yourself? Here is the whole thing in a few lines of Python:
+## Many questions at once
+
+One attention step lets each word ask one question. **Multi-head attention** lets it ask several at once, side by side. The original transformer used **8 heads**. In the paper's examples, some heads seemed to link words like "its" back to what they referred to.
+
+## Why was this such a big deal?
+
+Older language AI read text one word at a time, in order, which made it slow to train on long text. Attention lets every word look at every other word directly, and the work can be done in parallel, all at once. That's a big part of what made much larger models practical.
+
+### For the technically curious: attention in a few lines of Python
 
 ```python
 import numpy as np
@@ -85,45 +97,23 @@ Output:
  [0.1  0.03 0.68 0.18]]
 ```
 
-**What the output means:** each row is one of four words, and its four numbers show how much attention that word pays to each word, including itself. Each row adds up to 1 (give or take rounding), so the fourth word, for example, gives 68% of its attention to the third. The numbers going in are random, so the pattern itself means nothing: the point is to see the method at work.
+**What the output means:** each row is one of four words, and its four numbers show how much attention that word pays to each word, including itself. Each row adds up to 1 (give or take rounding), so the fourth word gives 68% of its attention to the third. The inputs are random, so the pattern itself means nothing: the point is to see the method at work.
 
-![Worked example from this article. The sentence 'The robot picked up the ball because it was light.' Each word gets three name tags: a query (what am I looking for?), a key (what do I have to offer?) and a value (what I'll share if picked). After softmax, the word 'it' gives 11% of its attention to 'robot' (score 1.0), 82% to 'ball' (score 3.0) and 7% to 'light' (score 0.5), so 'it' takes its new meaning mostly from 'ball'.](/images/attention-example.jpg)
+## Quick questions
 
-## Why divide by the square root of d_k?
-
-Here's a neat detail. If each query and key has $d_k$ numbers, their dot products tend to grow as $d_k$ grows. With $d_k = 64$, typical scores land around ±8. Softmax on numbers that big puts nearly all the attention on a single word, and the model finds it very hard to keep learning.
-
-Dividing by $\sqrt{d_k}$ gently brings the scores back to a comfortable size. Attention stays nicely spread out early in training, and the model can learn to focus sharply only where that really helps.
-
-## How does the model know word order?
-
-Attention on its own treats a sentence like a bag of words: "dog bites man" and "man bites dog" would look the same. So transformers add a little extra information to each embedding about its **position** in the sentence. The original transformer used gentle wave patterns (sines and cosines) for this, and newer models use other clever schemes. Either way, every word knows both *what* it is and *where* it sits.
-
-> **A fun fact:** chatbots that write text one word at a time use a "mask" so each word can only look at itself and the words before it. That way the model never peeks at words it hasn't written yet.
-
-## Many heads, many questions
-
-One round of attention lets each word ask one question. **Multi-head attention** lets it ask several at once. One head might learn to connect pronouns like "it" to their nouns, while another keeps track of matching brackets or quotation marks.
-
-Each head has its own $W_Q$, $W_K$ and $W_V$. Their answers are joined together and passed through one more table, $W_O$. The original transformer used 8 heads of size 64 for a model dimension of 512.
-
-## Common questions
-
-**Is attention the same as human attention?**
-Not really. It borrows the name because it decides what to focus on, but it's a calculation with numbers, not awareness.
-
-**Why was attention such a big deal?**
-Older language models read text one word at a time, so long-distance connections faded. Attention lets every word look at every other word directly, and it can run in parallel on modern chips, which made much larger models practical.
+**Is AI attention the same as human attention?**
+No. The name was inspired by how people focus on what matters, but AI attention is a calculation with numbers.
 
 **Does attention get slower with longer text?**
-Yes. Every word compares itself with every other word, so doubling the text roughly quadruples the work. Researchers have many clever ideas to make long texts more efficient.
+Yes. Every word compares itself with every other word, so doubling the length of the text roughly quadruples the work.
 
 ## Try it yourself
 
-Pick a sentence with a tricky "it", "they" or "this", and guess which word each one should pay attention to. You've just done, by intuition, what a transformer learns to do with numbers.
+Find a sentence with a tricky "it" or "they". Which word should it pay attention to? You've just done, by instinct, what a transformer learns to do with numbers.
 
 ## Sources & further reading
 
 - Vaswani et al., [*Attention Is All You Need*](https://arxiv.org/abs/1706.03762) (2017), the paper that introduced the transformer.
-- Jay Alammar, [*The Illustrated Transformer*](https://jalammar.github.io/illustrated-transformer/), a beautifully visual walkthrough.
+- IBM, [*What is an attention mechanism?*](https://www.ibm.com/think/topics/attention-mechanism)
+- Jay Alammar, [*The Illustrated Transformer*](https://jalammar.github.io/illustrated-transformer/), a visual walkthrough, for further reading.
 - Our friendly guide to [tokens](/blog/tokenizers-quirks/), which explains what the "words" in this post really are.
