@@ -49,6 +49,8 @@ const GLOSSARY_LINKS = [
   ['Graph neural network', 'graph neural networks?'],
   ['Hallucination', 'hallucinations?'],
   ['Human in the loop', 'human[- ]in[- ]the[- ]loop'],
+  ['Isolation Forest', 'Isolation Forest'],
+  ['scikit-learn', 'scikit-learn'],
   ['Large language model (LLM)', 'large language models?|LLMs?'],
   ['Learning rate', 'learning rates?'],
   ['Machine learning (ML)', 'machine learning'],

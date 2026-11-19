@@ -2,7 +2,7 @@
 title: "AI in banking: how fraud checks and fair lending work"
 description: "How banks use AI to spot unusual payments and support lending decisions, the rules that keep it fair, and simple habits that keep you in charge."
 pubDate: 2026-11-16
-updatedDate: 2026-11-18
+updatedDate: 2026-11-19
 topic: "Everyday AI"
 level: Beginner
 cover: /images/cover-ai-banking.jpg
@@ -38,7 +38,7 @@ The idea behind a fraud check is simple: **learn what "normal" looks like for yo
 
 A simple fraud model might look at **signals** such as the amount, the time, the place, the shop and the device. It combines them into a **risk score**. A low score lets the payment through; a high score might pause it and ask you to confirm.
 
-![A diagram of an example fraud model. Five made-up signals (an amount of \$1,240 when usually under \$100, a time of 3am, a location 6,500 km away, a first visit to the shop and a recognised phone) feed into an AI model, which gives a risk score of 0.94 out of 1.00 and pauses the payment to ask, 'Was this you?'.](/images/banking-fraud-model.jpg)
+![A diagram of an example fraud model. Five made-up signals (an amount of \$1,240 when usually under \$100, a time of 3am, a location 4,000 miles away, a first visit to the shop and a recognised phone) feed into an AI model, which gives a risk score of 0.94 out of 1.00 and pauses the payment to ask, 'Was this you?'.](/images/banking-fraud-model.jpg)
 
 ### For the technically curious: spotting the unusual payment
 
@@ -50,35 +50,35 @@ from sklearn.ensemble import IsolationForest
 
 rng = np.random.default_rng(42)
 
-# 500 everyday card payments: [amount in $, hour of day, distance from home in km]
+# 500 everyday card payments: [amount in $, hour of day, distance from home in miles]
 usual = np.column_stack([
     rng.gamma(shape=2, scale=25, size=500),   # mostly small amounts
     rng.normal(loc=14, scale=3, size=500),    # daytime
-    rng.exponential(scale=5, size=500),       # close to home
+    rng.exponential(scale=3, size=500),       # close to home
 ])
 
 model = IsolationForest(contamination=0.01, random_state=42).fit(usual)
 
 new_payments = np.array([
     [38, 13, 2],       # lunch near home
-    [65, 18, 8],       # weekly shop
-    [1240, 3, 6500],   # electronics abroad at 3am
+    [65, 18, 5],       # weekly shop
+    [1240, 3, 4000],   # electronics abroad at 3am
 ])
 
 for payment, score in zip(new_payments, model.decision_function(new_payments)):
     status = "check with customer" if score < 0 else "looks normal"
-    print(f"${payment[0]:,.0f} at {payment[1]:02.0f}:00, {payment[2]:,.0f} km from home -> {status}")
+    print(f"${payment[0]:,.0f} at {payment[1]:02.0f}:00, {payment[2]:,.0f} miles from home -> {status}")
 ```
 
 Output:
 
 ```text
-$38 at 13:00, 2 km from home -> looks normal
-$65 at 18:00, 8 km from home -> looks normal
-$1,240 at 03:00, 6,500 km from home -> check with customer
+$38 at 13:00, 2 miles from home -> looks normal
+$65 at 18:00, 5 miles from home -> looks normal
+$1,240 at 03:00, 4,000 miles from home -> check with customer
 ```
 
-**What the output means:** the model first learned from 500 made-up everyday payments: mostly small amounts, during the day, close to home. The first two new payments look like those, so they pass as normal. The third is large, made at 3am and 6,500 km from home, so it stands out from everything the model has seen, and it's flagged for a check with the customer.
+**What the output means:** the model first learned from 500 made-up everyday payments: mostly small amounts, during the day, close to home. The first two new payments look like those, so they pass as normal. The third is large, made at 3am and 4,000 miles from home, so it stands out from everything the model has seen, and it's flagged for a check with the customer.
 
 Real systems use far more data and careful testing, but the principle is the same: compare each payment with what's usual, and ask when something stands out.
 
