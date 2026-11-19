@@ -126,3 +126,13 @@ Rewritten in simpler language, with sources re-opened today: IBM's [gradient des
 - [x] Commonly used to train models and neural networks; a high learning rate risks overshooting and a low one is slow; local minima; stochastic and mini-batch gradient descent; testing several learning rates and learning rate schedules (IBM). The "8 billion parameters" example (IBM deep learning page). Adam introduced in 2014 and suited to problems with lots of data or many parameters (paper).
 - [x] The worked example (x × x, starting at −3.5, learning rate 0.4) and the learning-rate table are our own maths, re-calculated.
 - The basketball, shower and foggy-hill comparisons are illustrations. **Removed:** "behind almost every model, from photo filters to chatbots" (the source says "commonly used") and the unsourced "Is this how the human brain learns?" answer.
+
+## Overfitting simplified (19 November 2026)
+
+Rewritten in simpler language, with sources re-opened today: IBM's [overfitting](https://www.ibm.com/think/topics/overfitting) and [regularization](https://www.ibm.com/think/topics/regularization) pages, and [Carlini et al. (2023)](https://arxiv.org/abs/2301.13188).
+
+- [x] Overfitting from training too long or a model that's too complex, learning the "noise"; low error on training data with high error on test data is the sign; setting a test set aside; underfitting from too little training or unhelpful inputs; the "sweet spot"; early stopping (and underfitting if stopped too early), weight decay, dropout, more data and data augmentation (IBM). Diffusion models memorise individual training images, and more than a thousand were extracted (Carlini et al.).
+- The email example and the "surprise quiz" comparison are labelled as made up or illustrations. The training and validation curves are labelled as an illustration.
+- **Removed (no opened source):** "A little overfitting is normal, and most models do slightly better on training examples", the "How much data is enough?" rule of thumb, and "the fewer examples you have, the easier coincidences look like patterns".
+- [x] Gradient descent diagram redrawn: the first row of the table now says "Start", matching the article.
+- [x] Glossary "Data augmentation" (19 November 2026): a regularization technique that expands the training set with artificial samples made from existing training data ([IBM, regularization](https://www.ibm.com/think/topics/regularization), re-opened today). Linked from the overfitting article.

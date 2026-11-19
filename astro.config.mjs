@@ -34,6 +34,7 @@ const GLOSSARY_LINKS = [
   ['Computer vision', 'computer vision'],
   ['Concept drift', 'concept drift'],
   ['Convolution', 'convolutions?'],
+  ['Data augmentation', 'data augmentation'],
   ['Data drift', 'data drift'],
   ['Deep learning', 'deep learning'],
   ['Diffusion model', 'diffusion models?'],
