@@ -1,6 +1,6 @@
 ---
 title: "Sun, wind or storm? How neural networks forecast the weather"
-description: "How neural networks learned to forecast the weather from decades of past data, how they treat the Earth as a graph, and why they work alongside traditional forecasts."
+description: "How neural networks learned to forecast the weather from decades of past data, how they see the Earth as a graph, and why they work with traditional forecasts."
 pubDate: 2026-11-19
 topic: "AI for the Planet"
 level: Beginner
