@@ -8,94 +8,95 @@ featured: true
 cover: /images/cover-weather.jpg
 coverAlt: "An illustration titled 'How neural networks predict the weather'. Two globes, the weather 6 hours ago and now, feed a graph neural network that predicts 6 hours ahead. A larger globe covered in a grid of points, with sun and rain icons, notes that the steps repeat 6 hours at a time, up to 10 days ahead, on a grid of more than a million points about 28 km apart at the equator."
 takeaways:
-  - "A neural network learns from examples. Shown decades of past weather, it learns how the weather usually changes."
-  - "GraphCast looks at the weather 6 hours ago and now, guesses the next 6 hours, and repeats this to forecast up to 10 days ahead."
-  - "AI doesn't replace traditional forecasting: the two work together."
+  - "A neural network learns from examples, a bit like studying past test papers. GraphCast studied about 40 years of old weather."
+  - "It looks at the weather 6 hours ago and now, guesses the next 6 hours, then repeats to forecast up to 10 days ahead."
+  - "AI doesn't replace normal weather forecasting. The two work as a team."
 ---
 
-Before heading out, you probably check the weather app: sunny at noon, rain by 6pm. Each icon is a guess about the future, and some are now made with the help of **neural networks**, a kind of AI that learns from examples.
+Before you leave the house, you probably check the weather app: sunny at lunch, rain by 6pm. Every one of those icons is a guess about the future. Today, some of those guesses are made with help from **neural networks**, a type of AI that learns from examples.
 
-Here's how Google DeepMind's weather models work, step by step.
+Here's how one of them works, in plain steps.
 
-> **A note on dates:** the sources for this article were published between 2022 and 2024. They describe the models as they were then.
+> **A note on dates:** the sources for this article were published between 2022 and 2024. They describe the AI as it was then.
 
-## First, what is a neural network?
+## What is a neural network?
 
-It's a computer model made of simple building blocks, called "neurons", stacked in layers. It learns from examples how to turn **inputs** (the information you give it) into an **output** (its answer).
+It's a computer program that learns patterns from examples. It's built from lots of tiny parts, called "neurons", arranged in layers. You give it information (the **input**), and it gives you an answer (the **output**).
 
-**A simple way to picture it:** imagine a friend who has watched the sky every day for years. Tell them "it's warm and the wind is picking up", and they'll make a good guess about this evening. Nobody gave them a rulebook. They learned the pattern from experience. A neural network learns in a similar way, from data.
+**Think of it like studying for a test.** You do lots of practice questions, check your answers, and learn from your mistakes. After enough practice, you can answer questions you've never seen. A neural network learns the same way:
+
+1. It makes a guess.
+2. It checks the guess against the right answer.
+3. It adjusts itself a little, then tries again, over and over.
 
 ![A diagram of a simple neural network for weather, drawn as an illustration. Three inputs on the left (the temperature 6 hours ago, the temperature now and the wind now) feed into two layers of connected circles in the middle, which lead to one output on the right: the temperature in 6 hours. A note explains that during training the network compares its guesses with what really happened and adjusts itself.](/images/weather-nn-basics.jpg)
 
-During training, it guesses, checks the guess against what really happened, and adjusts how much each piece of information counts. Over many examples, its guesses improve.
+## Old way vs new way
 
-## The old way and the new way
-
-| | Traditional forecasts | AI forecasts (GraphCast) |
+| | Normal weather forecasts | AI forecasts (GraphCast) |
 | --- | --- | --- |
-| Starts from | Physics equations written by experts | About four decades of past weather data |
-| How it works | Supercomputers solve the equations | A neural network learns how weather usually changes |
-| Time for a 10-day forecast | Can take hours on a large supercomputer | Under a minute on a single machine |
+| How it starts | Experts write physics equations | The AI studies about 40 years of past weather |
+| Who does the work | Huge supercomputers solve the equations | A neural network spots the patterns |
+| Time for a 10-day forecast | Can take hours | Under a minute |
 
-## Where does the AI learn from?
+**GraphCast** is the AI weather model made by Google DeepMind.
 
-GraphCast learned from **ERA5**, about four decades of the world's weather kept by the European Centre for Medium-Range Weather Forecasts (ECMWF). It's built from satellite pictures, radar and weather stations, with a traditional forecasting model filling any gaps.
+## Where did it learn from?
 
-## Picture the Earth as a giant photo
+GraphCast studied about **four decades** of real weather records from around the world: satellite pictures, radar and weather stations. A European weather centre keeps these records, and it uses a normal forecasting program to fill in any gaps.
 
-Think of a photo on your phone. Zoom in and it's made of tiny dots, called pixels, and each one holds a colour.
+So the AI actually needs the old way to learn. The two work as a team.
 
-GraphCast sees the Earth in a similar way. It covers the planet with more than **a million dots**, about **28 km (17 miles) apart** at the equator. Instead of a colour, each dot holds the weather in that spot: temperature, wind and air pressure at ground level, plus humidity, wind and temperature at **37 heights** up in the sky.
+## The Earth as a giant photo
 
-GraphCast is a **graph neural network**: a kind of neural network that works with things and the links between them, such as towns joined by roads. DeepMind describes it as especially useful for information spread across a map, like these dots.
+Zoom in on a photo on your phone and you'll see it's made of tiny dots called pixels. Each pixel holds a colour.
+
+GraphCast sees the planet the same way. It covers the Earth with more than **a million dots**, about **28 km (17 miles) apart**. Instead of a colour, each dot holds the weather there: temperature, wind and air pressure at the ground, plus readings at **37 different heights** up in the sky.
+
+GraphCast is a special kind called a **graph neural network**. That just means it's good at information spread across a map, and at how things connect, like towns linked by roads.
 
 ## Six hours at a time
 
-**A simple way to picture it:** imagine a ball rolling across the floor. If you know where it was a moment ago and where it is now, you can guess where it will be next. Then you can use that guess to make the next one.
+**Picture a ball rolling across the floor.** If you know where it was a second ago and where it is now, you can guess where it'll be next. Then you can use that guess to make the next one.
 
 GraphCast does the same with the weather:
 
 1. It looks at two snapshots: the weather **6 hours ago** and **now**.
 2. It guesses the weather **6 hours from now**.
-3. It treats that guess as the new "now" and repeats.
+3. It treats that guess as the new "now" and goes again.
 
-Forty of these 6-hour steps make **10 days**.
+Do that 40 times, and you've got a forecast for **10 days**.
 
 ![A diagram of how GraphCast forecasts the weather. Two snapshots of the globe, the weather 6 hours ago and the weather now, go into a graph neural network, which predicts the weather 6 hours ahead. An arrow loops the prediction back in, and the steps repeat, 6 hours at a time, up to 10 days.](/images/weather-six-hours.jpg)
 
 ## Is it any good?
 
-DeepMind compared GraphCast with HRES, the leading traditional forecast from ECMWF, which it calls the industry gold standard:
+DeepMind tested GraphCast against a forecast from a European weather centre that DeepMind calls the industry's gold standard.
 
-- GraphCast was more accurate on **more than 90%** of 1,380 tests.
-- Looking only at the layer of air closest to the ground, where accurate forecasts matter most, it was more accurate on **99.7%**.
+- Out of 1,380 tests, GraphCast did better on **more than 90%**.
+- For the layer of air closest to the ground, where accurate forecasts matter most, it did better on **99.7%**.
 
-## A real example: Hurricane Lee
-
-GraphCast wasn't trained to look for storms, yet it spotted some early. In **September 2023**, it predicted about **nine days** ahead that Hurricane Lee would reach land in Nova Scotia. Traditional forecasts settled on Nova Scotia about **six days** ahead.
+**A real example:** in September 2023, GraphCast predicted about **nine days** ahead that Hurricane Lee would hit land in Nova Scotia. Normal forecasts were sure about Nova Scotia only about **six days** ahead. That's three extra days to get ready.
 
 ## Many forecasts at once: GenCast
 
-No forecast is perfect, especially beyond a few days. So weather agencies also make many predictions at once, called an **ensemble**.
+No forecast is perfect, especially more than a few days ahead. So weather agencies also make lots of forecasts at once and compare them. This is called an **ensemble**.
 
-**A simple way to picture it:** if most predictions show a storm hitting the same area, the forecast is fairly certain. If they point to different places, it's less certain.
+**Think of asking 50 friends** to guess where a storm will go. If most of them point to the same place, you can feel fairly sure. If they all point to different places, nobody really knows yet.
 
-In December 2024, DeepMind introduced **GenCast**, which does this with AI:
-
-- Each forecast is a set of **50 or more** predictions, up to **15 days** ahead.
-- It was trained on weather up to 2018 and tested on 2019, weather it had never seen.
-
-Compared with ECMWF's traditional ensemble forecast on 1,320 tests, GenCast was more accurate on 97.2% of them according to DeepMind's blog, or 97.4% according to the research paper. **The two sources give slightly different figures.**
+In December 2024, DeepMind released **GenCast**, which does this with AI. It makes **50 or more** forecasts at once, up to **15 days** ahead. To test it fairly, DeepMind trained it on weather up to 2018 and then tested it on 2019, weather it had never seen.
 
 ![A diagram of storm forecasts in three panels. A single forecast draws one best estimate of the storm's path. An ensemble made days ahead draws many possible paths that spread out, so the forecast is less certain. For the same storm closer to land, the paths bunch together, so the forecast is more certain. The paths are an illustration.](/images/weather-ensemble.jpg)
 
-## Where you might meet these models
+Out of 1,320 tests against the European centre's best ensemble, GenCast did better on 97.2% according to DeepMind's blog, or 97.4% according to the research paper. **The two sources give slightly different numbers.**
 
-DeepMind says Google's AI weather models are starting to power features in **Google Search and Maps**. It's also clear that **traditional models remain essential**: they supply the training data and starting conditions these AI models need.
+## Where you might see it
 
-### For the technically curious: a tiny forecasting network
+DeepMind says Google's AI weather models are starting to show up in **Google Search and Maps**. It also says normal forecasting is still essential: it provides the data the AI learns from, and the starting weather for each forecast.
 
-This tiny network works the same basic way: give it the temperature 6 hours ago and now, and ask for 6 hours ahead. The temperatures are made up, and there's one place instead of a million.
+### For the technically curious: build a tiny forecaster
+
+Here's a mini neural network in Python that works the same basic way: give it the temperature 6 hours ago and now, and it guesses 6 hours ahead. The temperatures are made up, and it covers one place instead of a million.
 
 ```python
 import numpy as np
@@ -149,19 +150,19 @@ midnight: forecast 10.6 °C   made-up pattern 10.8 °C
      6am: forecast 10.7 °C   made-up pattern 10.8 °C
 ```
 
-**What the output means:** the network learned a made-up daily pattern (warm afternoons, cool nights) from 60 days of examples. It then forecast a whole day, 6 hours at a time, and its guesses land within half a degree of the pattern. Like GraphCast, each new forecast builds on the one before. It learns by [gradient descent](/blog/gradient-descent-felt/).
+**What the output means:** the network learned a made-up daily pattern (warm afternoons, cool nights) from 60 days of examples. Then it forecast a whole day, 6 hours at a time, and its guesses landed within half a degree of the pattern. It learns by [gradient descent](/blog/gradient-descent-felt/).
 
-## Common questions
+## Quick questions
 
-**Is a neural network like a brain?**
-Only loosely. The idea was inspired by neurons in the human brain, but a neural network is a computer model that learns patterns from data.
+**Is a neural network a brain?**
+No. The idea was inspired by brain cells, but it's a computer program that learns patterns from data.
 
-**Does my weather app use these models?**
-The available sources do not contain enough information to answer this for any particular app. DeepMind says Google's AI weather models are starting to power features in Google Search and Maps.
+**Does my weather app use this?**
+The available sources do not contain enough information to answer this for any particular app. DeepMind says Google's AI weather models are starting to appear in Google Search and Maps.
 
 ## Try it this week
 
-Check this weekend's forecast each morning until then, and watch it firm up.
+Check the forecast for Saturday every morning this week. Does it change as Saturday gets closer?
 
 ## Sources & further reading
 
