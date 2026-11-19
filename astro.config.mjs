@@ -40,7 +40,7 @@ const GLOSSARY_LINKS = [
   ['Dropout', 'dropout'],
   ['Early stopping', 'early stopping'],
   ['Embedding', 'embeddings?'],
-  ['Ensemble forecast', 'ensemble forecasts?'],
+  ['Ensemble', 'ensembles?(?: forecasts?)?'],
   ['Feature map', 'feature maps?'],
   ['Fine-tuning', 'fine-tun(?:ing|ed)'],
   ['Generative AI', 'generative AI'],

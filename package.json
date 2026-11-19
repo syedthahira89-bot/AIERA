@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "prebuild": "node scripts/optimize-images.mjs",
-    "build": "astro build",
+    "build": "astro build --force",
     "preview": "astro preview",
     "astro": "astro",
     "check-links": "node scripts/check-links.mjs",
