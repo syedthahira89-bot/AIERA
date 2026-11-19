@@ -1,87 +1,103 @@
 ---
 title: "Gradient descent 101: how AI learns step by step"
-description: "Discover how AI improves itself one small step at a time, and why the size of each step matters so much."
+description: "How AI learns from its mistakes, one small step at a time, explained with a shower, a foggy hill and a three-step example you can check yourself."
 pubDate: 2026-10-15
-updatedDate: 2026-11-18
+updatedDate: 2026-11-19
 topic: "ML Fundamentals"
 level: Beginner
 cover: /images/cover-gradient-descent.jpg
 coverAlt: "A curved valley with a trail of dots stepping down one side to a glowing dot at the lowest point, marked with a star."
 takeaways:
-  - "Gradient descent is how AI improves: measure the error, take a small step downhill, repeat."
-  - "The learning rate sets the step size; too small is slow and too large overshoots."
-  - "The same idea works for models with billions of settings, helped by smaller batches and optimisers like Adam."
+  - "AI learns from its mistakes: it measures how wrong it is, makes a small change to be a bit less wrong, and repeats."
+  - "The step size matters: tiny steps are slow, and giant leaps can overshoot the answer."
+  - "The same simple idea trains models with billions of settings."
 ---
 
-Have you ever wondered how an AI model actually *gets better*? It isn't magic. Behind almost every model, from photo filters to chatbots, is one beautifully simple idea called **gradient descent**. Let's explore it together, no framework required.
+When you learn to shoot a basketball, you miss, notice *how* you missed, and adjust. Too short? Throw a bit harder. Too far left? Aim a bit right. Do that enough times and you get good.
 
-## An everyday version you already know
+AI learns in a surprisingly similar way. The method is called **gradient descent**, and it's commonly used to train AI models, including neural networks.
 
-Think about adjusting the shower in the morning. Too cold? You turn the handle a little toward hot. Now too warm? You nudge it back a touch. After a few small adjustments, it's just right.
+## The big idea in one sentence
 
-You didn't calculate the perfect position. You felt how far off you were, adjusted in the right direction, and repeated. That's the heart of gradient descent.
+**Measure how wrong you are, make a small change that makes you a little less wrong, and repeat.**
 
-## A walk downhill in the fog
+That's it. Everything else in this article is just that idea, explained.
 
-Here's another way to picture it. Imagine you're standing on a hillside in thick fog, and your goal is to reach the bottom of the valley. You can't see far, but you can feel which way the ground slopes under your feet. So you take a small step downhill, feel the slope again, and take another.
+## An everyday example: the shower
 
-In AI, the "height" is the model's **loss**, a number that measures how far its answers are from the right ones. The slope is the **gradient**. For a single setting $x$, the slope is written $\frac{dL}{dx}$, and each step looks like this:
+Think about getting the shower temperature right:
 
-$$
-x \leftarrow x - \eta \, \frac{dL}{dx}
-$$
+1. You feel the water. **Too cold.** (You measure how wrong it is.)
+2. You turn the handle a little towards hot. (You make a small change in the right direction.)
+3. You feel it again. Now a bit too warm, so you nudge it back. (You repeat.)
 
-The Greek letter $\eta$ (eta) is the **learning rate**: how big each step is.
+After a few tries, it's just right. You never worked out the perfect handle position. You just kept making small corrections. That's gradient descent.
 
-## Let's walk it step by step
+## Picture a foggy hill
 
-Let's use the simplest valley there is, $L(x) = x^2$. The bottom is at $x = 0$. Its slope is $2x$, so every step becomes $x \leftarrow x(1 - 2\eta)$.
+Imagine you're on a hill in thick fog, trying to reach the bottom of the valley. You can't see where it is. But you can feel which way the ground slopes under your feet. So you take a small step downhill, feel the slope again, and take another step.
 
-Start at $x = -3.5$ with a learning rate of 0.4. Each step multiplies $x$ by 0.2:
+For an AI, the hill stands for its mistakes:
 
-| Step | x | Loss (x²) |
+| On the hill | In the AI | What it means |
 | --- | --- | --- |
-| 0 | −3.5 | 12.25 |
+| How high you are | The **loss** | A number for how wrong the AI's answers are. Lower is better. |
+| Which way is downhill | The **gradient** | Which direction to change things to be less wrong |
+| How big your step is | The **learning rate** | How much the AI changes itself each time |
+| The bottom of the valley | The goal | As few mistakes as possible |
+
+## Watch it happen, step by step
+
+Here's the simplest possible example. Imagine an AI with just one setting, called x. Its mistake score (the loss) is x × x, so the best value is x = 0, where the loss is 0.
+
+The AI starts at x = −3.5, which is quite wrong (the loss is 12.25). With a learning rate of 0.4, each step happens to multiply x by 0.2:
+
+| Step | x | Loss (how wrong) |
+| --- | --- | --- |
+| Start | −3.5 | 12.25 |
 | 1 | −0.7 | 0.49 |
 | 2 | −0.14 | 0.0196 |
 | 3 | −0.028 | 0.00078 |
 
-In just three steps, the loss drops from 12.25 to almost zero. Each step is smaller than the last, because the slope gets gentler as we approach the bottom. Nobody told the model to slow down. The maths does it naturally.
+In just three steps, the mistake score drops from 12.25 to almost zero. Notice the steps get smaller as it gets close, because the slope gets gentler near the bottom. Nobody told it to slow down. It happens naturally.
 
 ![Worked example from this article: the valley L(x) = x squared. Starting at x = −3.5 with a learning rate of 0.4, each step multiplies x by 0.2: x goes from −3.5 to −0.7, −0.14 and −0.028, and the loss falls from 12.25 to 0.49, 0.0196 and 0.00078. Each step is smaller as the slope gets gentler.](/images/gradient-steps.jpg)
 
-## How big should each step be?
+> **For the maths fans:** the slope of x × x is 2x, so each step is x → x − (learning rate × 2x). With a learning rate of 0.4, that's x → 0.2 × x.
 
-Now let's compare different step sizes on the same valley:
+## Why step size matters
 
-| Learning rate | What happens to x each step | What it feels like |
+Step size is a Goldilocks problem. Here's the same example with different learning rates:
+
+| Learning rate | What happens | Like… |
 | --- | --- | --- |
-| 0.05 | multiplied by 0.9 | Slow and steady |
-| 0.4 | multiplied by 0.2 | Quick and smooth |
-| 0.9 | multiplied by −0.8 | Bouncing side to side, but still settling |
-| 1.1 | multiplied by −1.2 | Each bounce gets bigger, so it never settles |
+| 0.05 | x shrinks by 10% each step | Tiny baby steps: you get there, but slowly |
+| 0.4 | x shrinks by 80% each step | Confident steps: quick and smooth |
+| 0.9 | x flips side to side but still shrinks | Wobbly: overshooting, but still settling |
+| 1.1 | x flips side to side and grows | Leaping right over the valley: it never settles |
 
-You can feel each of these for yourself in the [interactive demo on the home page](/#concept). Try sliding the learning rate slowly from small to large and watch the path change.
+Too small and learning takes forever. Too big and the AI overshoots the answer. You can try this yourself in the [interactive demo on the home page](/#concept).
 
-## From one setting to millions
+## From one setting to billions
 
-Real models don't have one setting. They have millions or even billions, called **parameters**. The good news is that the idea stays exactly the same: the gradient becomes a long list of slopes, one per setting, and every setting takes its own small step downhill at the same time.
+Our example had one setting. Real AI models have millions or even billions, called **parameters**. A large language model with 8 billion parameters, for example, has 8 billion numbers to adjust.
 
-Two practical ideas help:
+The good news: the idea doesn't change. Each setting gets its own slope, and they all take a small step downhill together. Two tricks help at that size:
 
-- **Smaller batches.** Instead of checking every training example before each step, the model can update itself after one example at a time (**stochastic gradient descent**) or after a small group of examples (**mini-batch gradient descent**).
-- **Smarter steps.** Helpers such as the **Adam** optimizer, introduced in 2014, adapt their steps using running estimates worked out from the gradients. Its authors say it suits problems with lots of data or many settings.
+- **Learning from a few examples at a time.** Instead of checking every example before each step, the AI can update after one example, or after a small group. This is called **stochastic** or **mini-batch gradient descent**.
+- **Smarter steps.** Helpers such as **Adam**, introduced in 2014, adjust the steps as training goes. Its authors say it suits problems with lots of data or many settings.
 
-## Common questions
+## Where you've seen it
 
-**Does gradient descent always find the very best answer?**
-Not always. Real valleys can have many dips, so the model may settle in a low spot that isn't the very lowest.
+The tiny weather forecaster in our [neural networks and weather article](/blog/ai-weather-forecasting/) learns by gradient descent. And if an AI practises too long on the same examples, it can start memorising them instead of learning. Our guide to [overfitting](/blog/validation-loss-rising/) explains that.
 
-**Who chooses the learning rate?**
-People do, usually by trying a few values and seeing which trains best. Learning rate schedules can also change it during training.
+## Quick questions
 
-**Is this how the human brain learns?**
-Probably not in exactly this way, but the spirit of "notice the error, adjust a little, repeat" is something we all do when practising a skill.
+**Does it always find the perfect answer?**
+Not always. Real "valleys" can have several dips, and the AI may settle in a low spot that isn't the very lowest.
+
+**Who picks the learning rate?**
+People do, often by testing several values and keeping the one that works best. It can also be changed during training, using what's called a learning rate schedule.
 
 ## Try it yourself
 
