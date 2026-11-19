@@ -107,3 +107,12 @@ All 48 definitions were rewritten or checked against opened sources, and each te
 - **Banking article** (`ai-in-banking`): the made-up fraud example now uses miles instead of kilometres (2, 5 and 4,000 miles; usual distances scaled to match). The code was re-run with scikit-learn 1.9.1 and the output in the article is the real result. The fraud model diagram was redrawn with "4,000 miles away".
 - [x] **scikit-learn** (glossary): free, open source (BSD licence), tools for predictive data analysis, built on NumPy, SciPy and matplotlib ([scikit-learn](https://scikit-learn.org/stable/)).
 - [x] **Isolation Forest** (glossary): isolates points by random feature and split choices; random partitioning gives shorter paths for anomalies ([scikit-learn, outlier detection](https://scikit-learn.org/stable/modules/outlier_detection.html)).
+
+## Weather article simplified (19 November 2026)
+
+Rewritten in simpler language at Thahira's request, with every source re-opened today: DeepMind's GraphCast and GenCast posts, both papers, and IBM's [What is a neural network?](https://www.ibm.com/think/topics/neural-networks).
+
+- [x] New "What is a neural network?" section: layers of simple "neurons" that learn from data to turn inputs into outputs, inspired by brain neurons (IBM). The "friend who watches the sky" comparison and the new diagram are labelled as illustrations.
+- [x] All numbers re-checked: four decades, 28 km (about 17 miles, a conversion), more than a million points, 5 surface and 6 atmospheric measurements at 37 heights, 6-hour steps, 10 days (40 steps, worked out), more than 90% of 1,380, 99.7%, nine and six days for Hurricane Lee, 50 or more predictions, 15 days, trained to 2018 and tested on 2019, 1,320 tests, 97.2% (blog) and 97.4% (paper).
+- **Removed to keep it simple:** the TPU machine details, GenCast's 8-minute timing, the Typhoon Hagibis example, the diffusion-model note and DeepMind's "most accurate" quote.
+- [x] Second simplification (19 November 2026): the photo-and-pixels and rolling-ball comparisons are labelled as illustrations. "Things and the links between them" follows IBM's [graph neural network](https://www.ibm.com/think/topics/graph-neural-network) page (re-opened today), and "especially useful for information spread across a map" follows DeepMind's "spatially structured data". IBM is now credited in the article's sources. **Removed:** the floods and heat-wave bullet and the "next week's forecast" question, to keep the article short.
